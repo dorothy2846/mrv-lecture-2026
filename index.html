@@ -766,23 +766,24 @@ section.slide.pp>h2.ppt{display:none}
   <div class="kicker">EU ETS · 연료별 비교</div>
   <h2>EU ETS 제출량 비교: 실제 선박 3척</h2>
   <div class="shipsel" id="sc_sel"></div>
-  <div class="row" style="align-items:flex-start;gap:26px">
-    <div class="col" style="flex:.9">
-      <table class="t compact" id="sc_tab"></table>
-      <p id="sc_src" style="font-size:16px;color:#5B6776;margin-top:8px"></p>
+  <div class="row" style="align-items:flex-start;gap:30px">
+    <div class="col" style="flex:.82">
+      <table class="t compact sctab" id="sc_tab"></table>
+      <p id="sc_src" style="font-size:15.5px;color:#5B6776;margin-top:8px"></p>
+      <div class="sccmp"><div class="hd">세 선박의 제출량 (EUA)</div><div id="sc_cmp"></div></div>
     </div>
-    <div class="col" style="flex:1.1">
-      <div class="calcin">배출량 (수정 가능)
-        <label>EU 역내 <input id="sc_in" type="number" step="any"> tCO₂e</label>
-        <label>EU↔비EU <input id="sc_x" type="number" step="any"> tCO₂e</label>
-        <label>EUA <input id="sc_eua" type="number" value="80" step="any" style="width:60px"> €/t</label>
+    <div class="col" style="flex:1.18">
+      <div class="calcin scin"><span>배출량 tCO₂e (수정 가능)</span>
+        <label>EU 역내 <input id="sc_in" type="number" step="any"></label>
+        <label>EU↔비EU <input id="sc_x" type="number" step="any"></label>
+        <label>EUA € <input id="sc_eua" type="number" value="80" step="any" style="width:62px"></label>
       </div>
       <div class="calc">
-      <div class="cs"><i>1</i><span class="lb">EU 역내 (100%)</span><span class="ex" id="sc_e1"></span><span class="rs" id="sc_r1"></span><small>EU 항구 간 + EU 항내</small></div>
-      <div class="cs"><i>2</i><span class="lb">EU↔비EU (50%)</span><span class="ex" id="sc_e2"></span><span class="rs" id="sc_r2"></span></div>
-      <div class="cs"><i>3</i><span class="lb">제출량</span><span class="ex" id="sc_e3"></span><span class="rs" id="sc_r3"></span><small>2026년분 규칙 (100% · CH₄·N₂O 포함)</small></div>
+      <div class="cs"><i>1</i><span class="lb">EU 역내 × 100%</span><span class="ex" id="sc_e1"></span><span class="rs" id="sc_r1"></span><small>EU 항구 간 + EU 항내</small></div>
+      <div class="cs"><i>2</i><span class="lb">EU↔비EU × 50%</span><span class="ex" id="sc_e2"></span><span class="rs" id="sc_r2"></span></div>
+      <div class="cs"><i>3</i><span class="lb">제출량</span><span class="ex" id="sc_e3"></span><span class="rs" id="sc_r3"></span><small>2026년분 규칙</small></div>
       <div class="cs"><i>4</i><span class="lb">비용</span><span class="ex" id="sc_e4"></span><span class="rs" id="sc_r4"></span></div>
-      <div class="cs"><i>5</i><span class="lb">연료 1 t당 평균</span><span class="ex" id="sc_e5"></span><span class="rs" id="sc_r5"></span><small id="sc_s5"></small></div>
+      <div class="cs two"><i>5</i><span class="lb">연료 1 t당 평균</span><span class="ex" id="sc_e5"></span><span class="rs" id="sc_r5"></span><small id="sc_s5"></small></div>
       </div>
     </div>
   </div>
@@ -6065,7 +6066,13 @@ section.slide.pp>h2.ppt{display:none}
 .fm .n{display:inline-block;width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;font-size:15px;font-weight:700;text-align:center;line-height:26px;margin-right:8px}
 .fm h3{display:inline;font-size:20px} .fm p{font-size:17.5px;line-height:1.45;margin-top:8px} .fm .k{margin-top:8px;font-size:17px;font-weight:700;color:var(--teal,#0FA3B1)}
 .fm3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px} .fm3 .card h3{font-size:19px} .fm3 .card p{font-size:17.5px;line-height:1.45;margin-top:4px}
-.shipsel{display:flex;gap:8px;margin-bottom:10px} .shipsel button{font:inherit;font-size:17px;padding:6px 14px;border:1.5px solid var(--navy);border-radius:6px;background:#fff;color:var(--navy);cursor:pointer;font-weight:700} .shipsel button.on{background:var(--navy);color:#fff}
+.shipsel{display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--navy);border-radius:8px;overflow:hidden;margin-bottom:16px}
+.shipsel button{font:inherit;font-size:19px;padding:10px 12px;border:0;border-right:1.5px solid var(--navy);background:#fff;color:var(--navy);cursor:pointer;font-weight:700} .shipsel button:last-child{border-right:0} .shipsel button.on{background:var(--navy);color:#fff}
+.sctab td:nth-child(n+2),.sctab th:nth-child(n+2){text-align:right;font-variant-numeric:tabular-nums} .sctab tr:last-child td{border-top:2px solid var(--navy);font-weight:700}
+.sccmp{margin-top:16px;border:1px solid #dfe5ec;border-radius:8px;padding:12px 16px} .sccmp .hd{font-size:16px;color:#5B6776;font-weight:700;margin-bottom:8px}
+.sccmp .r{display:grid;grid-template-columns:128px 1fr 104px;align-items:center;gap:10px;font-size:17px;margin-top:6px} .sccmp .r b{font-weight:700;color:var(--navy)}
+.sccmp .r i{display:block;height:18px;border-radius:3px;background:#c9d3df} .sccmp .r.on i{background:#0FA3B1} .sccmp .r span:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+.scin{flex-wrap:nowrap} .scin input{width:86px}
 </style>
 
 
@@ -6138,11 +6145,12 @@ section.slide.pp>h2.ppt{display:none}
     [...$('sc_sel').children].forEach((b,j)=>b.className=j==k?'on':'');
     let t='<tr><th>연료 (t)</th><th>EU 역내</th><th>EU↔비EU</th></tr>',s1=0,s2=0;
     h.f.forEach(r=>{t+='<tr><td><b>'+r[0]+'</b></td><td>'+N(r[1])+'</td><td>'+N(r[2])+'</td></tr>';s1+=r[1];s2+=r[2]});
-    t+='<tr><td><b>합계</b></td><td><b>'+N(s1)+'</b></td><td><b>'+N(s2)+'</b></td></tr>'; $('sc_tab').innerHTML=t; $('sc_src').textContent=h.src; sc(); }
+    t+='<tr><td>합계</td><td>'+N(s1)+'</td><td>'+N(s2)+'</td></tr>'; $('sc_tab').innerHTML=t; $('sc_src').textContent=h.src;
+    const mx=Math.max(...SH.map(q=>q.a+q.b*.5)); $('sc_cmp').innerHTML=SH.map((q,j)=>'<div class="r'+(j==k?' on':'')+'"><b>'+q.n.split(' · ')[0]+'</b><span><i style="width:'+(100*(q.a+q.b*.5)/mx).toFixed(1)+'%"></i></span><span>'+N(q.a+q.b*.5)+'</span></div>').join(''); sc(); }
   function sc(){ if(!$('sc_in'))return; const h=SH[si],a=+$('sc_in').value||0,b=+$('sc_x').value||0,eua=+$('sc_eua').value||0,tot=a+b*.5;
     let fu=0; h.f.forEach(r=>fu+=r[1]+r[2]);
-    set('sc_e1',N(a,1)+' × 100%'); set('sc_r1','= '+N(a)+' t');
-    set('sc_e2',N(b,1)+' × 50%'); set('sc_r2','= '+N(b*.5)+' t');
+    set('sc_e1',N(a,1)); set('sc_r1','= '+N(a)+' t');
+    set('sc_e2',N(b,1)+' × 0.5'); set('sc_r2','= '+N(b*.5)+' t');
     set('sc_e3',N(a)+' + '+N(b*.5)); set('sc_r3','= '+N(tot)+' EUA');
     set('sc_e4',N(tot)+' × €'+N(eua)); set('sc_r4','= '+eur(tot*eua));
     set('sc_e5','('+N(a)+' + '+N(b)+') ÷ '+N(fu)+' t'); set('sc_r5','= '+N((a+b)/fu,2)+' tCO₂e/t'); set('sc_s5',h.note);
