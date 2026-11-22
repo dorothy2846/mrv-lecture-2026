@@ -3031,72 +3031,10 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>배는 원천값만 보고합니다. 전력량, 리퍼 수, STS 작업 여부, PoS, 전력 인도증입니다. 감면 계산은 육상이 연간 단계에서 합니다. 그래서 매일 보는 일별 CII에는 보정이 들어 있지 않습니다. 일별 값이 D로 나와도 연간 등급과는 다를 수 있습니다.</p>
     <p>세 번째 상자에서 육상이 증빙을 판독하고, 마지막 상자의 검증기관은 증빙이 없으면 감면 전 값을 인정합니다. 그림 아래 굵은 줄대로, 배에서 원천값이 오지 않으면 육상은 감면을 계산할 수 없습니다.</p>
     <p>아래 두 사례는 제가 검증하면서 본 실제 데이터입니다. 왼쪽, 바이오연료를 쓰는 31척 중 2척이 배출계수를 임의로 적어 보내서 재계산과 85톤, 615톤 차이가 났습니다. 오른쪽, 올해 바이오 수급 74건 가운데 첨부 누락은 전부 PoS 항목이 없던 옛 양식에서 나왔습니다. 양식에 항목이 없으면 배에서는 보내지 않습니다.</p>
-    <p>다음 장에서 CII 보정 항목별로 배가 보고할 값을 보겠습니다.</p>
+    <p>먼저 보정이 CII 산식의 어디에 들어가는지 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p2" data-time="15:28" data-sec="2교시|선박 보고와 육상 처리" data-grp="2.3 감면 · 대체연료 :: 감면 보고 원칙 → CII 보정 → 지역 규제 감면 → 바이오연료 → 육상전원 → 보고 점검" data-stage="2" data-src="p2b_ship_input.html#5">
-  <div class="kicker">감면 · IMO CII 보정 보고</div>
-  <h2>CII 보정: 선박 보고 항목과 육상 검증 항목</h2>
-  <table class="t mtx">
-    <tr><th style="width:13%">보정</th><th style="width:21%">대상</th><th>선박 보고</th><th style="width:18%">육상 검증</th><th style="width:17%">담당자 확인 항목</th></tr>
-    <tr><td><b>FC_electrical</b></td><td>리퍼 · 화물냉각 · 하역펌프 전력</td><td>화물용 전력 kWh(계량기) × SFOC(연료소비율, 기본 175/200 g/kWh)<br>계량기 없는 리퍼: 리퍼 수 대체식</td><td>선종 적합 · 차감 합 일치</td><td>하역펌프 인정 범위 해석</td></tr>
-    <tr><td><b>FC_boiler</b></td><td>탱커 화물 가열 · 증기 구동 하역펌프</td><td>보일러 소비량 (보조·복합)</td><td>보정값 ≤ 보일러 CO₂</td><td><b>가열분 분리 기록 여부</b></td></tr>
-    <tr><td><b>FC_others</b></td><td>독립 엔진 구동 하역펌프</td><td>하역펌프 엔진 소비량 (IGG는 공제 제외)</td><td>FC_others 재계산</td><td>–</td></tr>
-    <tr><td><b>AF_tanker</b></td><td>STS 항차(≤600 nm·≤72 h)<br>셔틀 탱커는 제원 기준(보고 무관)</td><td>화물작업 보고의 STS 작업 여부</td><td>STS 건수</td><td>자격 조건(거리·시간) 재판정</td></tr>
-    <tr><td><b>항차조정</b></td><td>Reg.3.1 사유(선박 안전·인명 구조) / 내빙등급선의 빙해 항해</td><td>조정 시작·종료 보고 + 사유</td><td>전체 CO₂ 10% 초과 시 재확인 (예시 기준)</td><td><b>구간과 증빙(로그북) 대조</b></td></tr>
-    <tr><td><b>N₂ 차감</b></td><td>LNG 화물 질소</td><td>LNG 밀도 · COQ 조성</td><td>COQ 소수 넷째 자리 대조</td><td>CTMS(화물 계량 시스템) 값 누락 여부</td></tr>
-  </table>
-  <p style="margin-top:12px;font-size:20px"><b>FC 전력·보일러·기타는 (0.75 − 0.03·yᵢ)배만 공제</b> (2023 = 0.75 … 2026 = 0.66) · 발전기 총 전력 계산값(√3·V·I·PF·h)은 참고, 화물분은 계량 또는 기국 승인</p>
-  <p class="small" style="margin-top:6px">N₂ 차감 근거는 SEEMP 지침(MEPC.395(82)) · 빙해·케미컬선 계수(fi·fm·fc)와 Capacity 상·하한은 선박 보고 항목이 아닌 육상 제원 관리 항목</p>
-  <aside class="notes">
-    <p>CII 보정 항목을 배가 보고하는 값과 육상이 확인하는 값으로 나눈 표입니다. 표 전체는 자료로 보시고 두 군데만 짚겠습니다.</p>
-    <p>[표 아래 굵은 줄] 첫째, 전기, 보일러, 기타 보정은 쓴 연료를 전부 빼 주지 않습니다. 2026년분은 0.66배만 공제됩니다.</p>
-    <p>[마지막 열 굵은 글씨] 둘째, 맨 오른쪽 열의 굵은 글씨 두 곳입니다. 보일러 가열분을 따로 기록했는지, 항차조정 구간이 로그북과 맞는지입니다. 숫자 대조만으로는 확인이 안 돼서 육상 담당자가 직접 봐야 합니다. 예를 들어 항차조정은 시작과 종료를 보고하고 사유를 적었더라도, 그 구간이 로그북 기록과 다르면 인정받기 어렵습니다. 검증기관이 물어볼 곳도 여기입니다.</p>
-    <p>항차조정 구간을 어떻게 보고하는지는 다음 장에서 문제로 확인하겠습니다.</p>
-  </aside>
-</section>
-<section class="slide p2 quiz" data-time="15:28" data-sec="2교시|선박 보고와 육상 처리" data-grp="2.3 감면 · 대체연료 :: 감면 보고 원칙 → CII 보정 → 지역 규제 감면 → 바이오연료 → 육상전원 → 보고 점검" data-stage="2" data-src="p2b_ship_input.html#7">
-  <div class="kicker">퀴즈 · 항차조정</div>
-  <h2 style="margin-bottom:18px">항차조정 구간 보고</h2>
-  <div class="ct"><div class="q">탱커가 조난 선박 구조로 3일간 항로를 벗어났습니다(Reg.3.1 사유). 이 구간 연료·거리를 CII에서 제외받는 방법은?</div>
-    <div class="opts"><div class="opt"><b class="k">A</b><span>아무것도 · 육상이 AIS로 알아서 판정</span></div><div class="opt right"><b class="k">B</b><span>조정 <b>시작·종료 보고</b> + 사유 + 로그북</span></div><div class="opt"><b class="k">C</b><span>정오보고 비고란에 "Rescue" 한 줄</span></div><div class="opt"><b class="k">D</b><span>연말에 검증기관에 메일</span></div></div>
-    <div class="why callout"><b>정답 B · 조정 시작·종료 보고 + 사유 + 로그북</b>
-<ul class="sol"><li><b>이유</b>: CII에서 빼려면 그 구간의 연료와 거리가 따로 집계돼야 함 → 시작과 종료를 따로 보고해야 구간이 나뉨</li><li><b>증빙</b>: 사유(인명 구조 등)와 로그북 기록이 있어야 검증에서 인정</li><li><b>오답 이유</b>: A는 AIS로 사유를 알 수 없음 · C의 비고란은 계산에 쓰이지 않음 · D는 구간별 연료·거리 데이터가 없어 제외량을 산정할 수 없음</li></ul>
-</div></div>
-  <aside class="notes">
-    <p>문제 하나 풀겠습니다. 탱커가 조난 선박을 구조하느라 사흘간 항로를 벗어났습니다. 이 구간을 CII에서 빼려면 배는 뭘 해야 할까요? 보기는 A 육상이 AIS로 알아서 판정, B 시작·종료 보고와 사유와 로그북, C 비고란에 한 줄, D 연말에 검증기관에 메일입니다. 잠깐 생각해 보십시오.</p>
-    <p>[5초 · R키]</p>
-    <p>정답은 B입니다. 시작과 종료를 따로 보고해 구간을 나눠야 그 사이 연료와 거리를 뺄 수 있습니다. 비고란 한 줄은 사람은 읽어도 계산에는 들어가지 않습니다. 연말 메일은 이미 늦습니다. 그리고 조정 구간이 연간 CO₂의 10%를 넘으면 육상에서 다시 확인하는 식의 기준을 두시길 권합니다. 10%는 예시 기준입니다. 너무 많이 빼면 검증에서 먼저 확인 대상이 됩니다.</p>
-  </aside>
-</section>
-<section class="slide p2 dg" data-time="15:31" data-sec="2교시|선박 보고와 육상 처리" data-grp="2.3 감면 · 대체연료 :: 감면 보고 원칙 → CII 보정 → 지역 규제 감면 → 바이오연료 → 육상전원 → 보고 점검" data-stage="2" data-src="p_diag.html#1">
-  <div class="kicker">그림 · 항차조정</div>
-  <h2>항차조정 구간: 시작·종료 보고로 표시한 3일</h2>
-  <svg viewBox="0 0 1400 430" role="img" aria-label="항차조정 구간의 보고와 CII 산입 범위">
-    <text x="40" y="34" font-size="19" font-weight="800" fill="#0B2545">항해 전체 (예: 10일)</text>
-    <rect x="40" y="50" width="500" height="58" fill="#0B2545"/><rect x="540" y="50" width="390" height="58" fill="#A66A00"/><rect x="930" y="50" width="430" height="58" fill="#0B2545"/>
-    <g font-size="19" font-weight="800" fill="#fff" text-anchor="middle"><text x="290" y="86">정상 항해</text><text x="735" y="86">조난 선박 구조 · 3일</text><text x="1145" y="86">정상 항해</text></g>
-    <g stroke="#A66A00" stroke-width="2.5"><line x1="540" y1="50" x2="540" y2="150"/><line x1="930" y1="50" x2="930" y2="150"/></g>
-    <g font-size="18" font-weight="800" fill="#7A4E00"><text x="548" y="140">▲ 조정 시작 보고</text><text x="922" y="140" text-anchor="end">조정 종료 보고 ▲</text></g>
-    <g font-size="16" fill="#3D4B5C"><text x="548" y="162">시각 · 위치 · 사유(Reg.3.1)</text><text x="922" y="162" text-anchor="end">시각 · 위치 · 잔량(ROB)</text></g>
-    <text x="40" y="222" font-size="19" font-weight="800" fill="#0B2545">CII 계산에 들어가는 범위</text>
-    <text x="40" y="266" font-size="18" font-weight="700" fill="#3D4B5C">분자 · 연료</text>
-    <rect x="200" y="244" width="402" height="34" fill="#0B7C87"/><rect x="602" y="244" width="314" height="34" fill="#fff" stroke="#A66A00" stroke-width="2" stroke-dasharray="6 5"/><rect x="916" y="244" width="346" height="34" fill="#0B7C87"/>
-    <text x="759" y="267" text-anchor="middle" font-size="17" font-weight="800" fill="#7A4E00">제외</text>
-    <text x="40" y="318" font-size="18" font-weight="700" fill="#3D4B5C">분모 · 거리</text>
-    <rect x="200" y="296" width="402" height="34" fill="#0B7C87"/><rect x="602" y="296" width="314" height="34" fill="#fff" stroke="#A66A00" stroke-width="2" stroke-dasharray="6 5"/><rect x="916" y="296" width="346" height="34" fill="#0B7C87"/>
-    <text x="759" y="319" text-anchor="middle" font-size="17" font-weight="800" fill="#7A4E00">제외</text>
-    <text x="1280" y="293" font-size="17" font-weight="700" fill="#0B7C87">연료와 거리를</text><text x="1280" y="315" font-size="17" font-weight="700" fill="#0B7C87">함께 뺌</text>
-    <g font-size="18" fill="#0B2545"><rect x="40" y="366" width="1320" height="50" rx="8" fill="#EEF6F8"/><text x="60" y="398"><tspan font-weight="800">필요한 것 3가지</tspan> · 조정 시작·종료 보고 2건 · 사유(인명 구조 등 Reg.3.1 해당) · 갑판 로그북 기록 → 하나라도 없으면 제외 불가</text></g>
-  </svg>
-  <aside class="notes">
-    <p>방금 문제의 답을 그림으로 그렸습니다. 위쪽 띠가 항해 전체입니다. 가운데 갈색이 조난 선박을 구조하느라 항로를 벗어난 3일입니다.</p>
-    <p>갈색 구간 양 끝에 세모가 있습니다. 조정 시작 보고와 조정 종료 보고입니다. 선박이 이 두 건을 보내야 육상이 구간을 알 수 있습니다. 비고란에 한 줄 적은 것으로는 시각과 위치가 남지 않습니다.</p>
-    <p>아래 두 줄이 CII 계산입니다. 분자인 연료에서 이 구간을 빼고, 분모인 거리에서도 같은 구간을 뺍니다. 연료만 빼고 거리를 남기면 CII가 실제보다 좋게 나옵니다.</p>
-    <p>맨 아래가 필요한 것 세 가지입니다. 시작과 종료 보고, 사유, 갑판 로그북입니다. 하나라도 없으면 제외받지 못합니다.</p>
-  </aside>
-</section>
-<section class="slide" data-time="15:32" data-sec="2교시|선박 보고와 육상 처리" data-grp="2.3 감면 · 대체연료 :: 감면 보고 원칙 → CII 보정 → 지역 규제 감면 → 바이오연료 → 육상전원 → 보고 점검" data-stage="2" data-src="p1_visual.html#3">
+<section class="slide" data-time="15:28" data-sec="2교시|선박 보고와 육상 처리" data-grp="2.3 감면 · 대체연료 :: 감면 보고 원칙 → CII 보정 → 지역 규제 감면 → 바이오연료 → 육상전원 → 보고 점검" data-stage="2" data-src="p1_visual.html#3">
   <div class="kicker">감면 · IMO CII 보정계수 (MEPC.355(78))</div>
   <h2>CII 보정: 산식에서 보정 항목이 작용하는 위치</h2>
   <div class="cf">
@@ -3128,7 +3066,69 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>CII 보정을 산식 위에서 보겠습니다. CII는 위쪽 분자가 CO₂ 배출량, 아래쪽 분모가 수송작업입니다. 보정은 대부분 분자의 연료에서 빼는 방식입니다.</p>
     <p>[분자] 왼쪽이 총 연료 소비량이고, 거기서 세 가지를 뺍니다. 첫째 항차조정 구간 연료입니다. 인명 구조처럼 선박 안전 때문에 항로를 벗어난 구간, 내빙등급선이 얼음 바다를 지난 구간입니다. 둘째 STS 항차와 셔틀 탱커 연료입니다. 셋째 화물 때문에 쓴 연료입니다. 리퍼와 화물냉각 전력, 화물 가열 보일러, 하역펌프 엔진입니다. 이 셋째는 전량이 아니라 올해 기준 0.66배만 빠집니다.</p>
     <p>[분모] 항차조정으로 연료를 뺀 구간은 거리도 같이 뺍니다. 연료만 빼고 거리를 남기면 등급이 실제보다 좋게 나오기 때문입니다. 용량 보정계수는 내빙등급선 같은 일부 선박에만 있고 증서로 정해집니다.</p>
-    <p>청록색 칸은 모두 배가 입력해야 빠집니다. 구간의 시작과 종료, STS 표시, 전력량, 기기별 소비량입니다. 입력이 없으면 총 연료 그대로 계산됩니다. 다음 장에서 사례 세 가지로 보겠습니다.</p>
+    <p>청록색 칸은 모두 배가 입력해야 빠집니다. 구간의 시작과 종료, STS 표시, 전력량, 기기별 소비량입니다. 입력이 없으면 총 연료 그대로 계산됩니다. 다음 장에서 보정 항목별로 배가 보고할 값을 보겠습니다.</p>
+  </aside>
+</section>
+<section class="slide p2" data-time="15:29" data-sec="2교시|선박 보고와 육상 처리" data-grp="2.3 감면 · 대체연료 :: 감면 보고 원칙 → CII 보정 → 지역 규제 감면 → 바이오연료 → 육상전원 → 보고 점검" data-stage="2" data-src="p2b_ship_input.html#5">
+  <div class="kicker">감면 · IMO CII 보정 보고</div>
+  <h2>CII 보정: 선박 보고 항목과 육상 검증 항목</h2>
+  <table class="t mtx">
+    <tr><th style="width:13%">보정</th><th style="width:21%">대상</th><th>선박 보고</th><th style="width:18%">육상 검증</th><th style="width:17%">담당자 확인 항목</th></tr>
+    <tr><td><b>FC_electrical</b></td><td>리퍼 · 화물냉각 · 하역펌프 전력</td><td>화물용 전력 kWh(계량기) × SFOC(연료소비율, 기본 175/200 g/kWh)<br>계량기 없는 리퍼: 리퍼 수 대체식</td><td>선종 적합 · 차감 합 일치</td><td>하역펌프 인정 범위 해석</td></tr>
+    <tr><td><b>FC_boiler</b></td><td>탱커 화물 가열 · 증기 구동 하역펌프</td><td>보일러 소비량 (보조·복합)</td><td>보정값 ≤ 보일러 CO₂</td><td><b>가열분 분리 기록 여부</b></td></tr>
+    <tr><td><b>FC_others</b></td><td>독립 엔진 구동 하역펌프</td><td>하역펌프 엔진 소비량 (IGG는 공제 제외)</td><td>FC_others 재계산</td><td>–</td></tr>
+    <tr><td><b>AF_tanker</b></td><td>STS 항차(≤600 nm·≤72 h)<br>셔틀 탱커는 제원 기준(보고 무관)</td><td>화물작업 보고의 STS 작업 여부</td><td>STS 건수</td><td>자격 조건(거리·시간) 재판정</td></tr>
+    <tr><td><b>항차조정</b></td><td>Reg.3.1 사유(선박 안전·인명 구조) / 내빙등급선의 빙해 항해</td><td>조정 시작·종료 보고 + 사유</td><td>전체 CO₂ 10% 초과 시 재확인 (예시 기준)</td><td><b>구간과 증빙(로그북) 대조</b></td></tr>
+    <tr><td><b>N₂ 차감</b></td><td>LNG 화물 질소</td><td>LNG 밀도 · COQ 조성</td><td>COQ 소수 넷째 자리 대조</td><td>CTMS(화물 계량 시스템) 값 누락 여부</td></tr>
+  </table>
+  <p style="margin-top:12px;font-size:20px"><b>FC 전력·보일러·기타는 (0.75 − 0.03·yᵢ)배만 공제</b> (2023 = 0.75 … 2026 = 0.66) · 발전기 총 전력 계산값(√3·V·I·PF·h)은 참고, 화물분은 계량 또는 기국 승인</p>
+  <p class="small" style="margin-top:6px">N₂ 차감 근거는 SEEMP 지침(MEPC.395(82)) · 빙해·케미컬선 계수(fi·fm·fc)와 Capacity 상·하한은 선박 보고 항목이 아닌 육상 제원 관리 항목</p>
+  <aside class="notes">
+    <p>CII 보정 항목을 배가 보고하는 값과 육상이 확인하는 값으로 나눈 표입니다. 표 전체는 자료로 보시고 두 군데만 짚겠습니다.</p>
+    <p>[표 아래 굵은 줄] 첫째, 전기, 보일러, 기타 보정은 쓴 연료를 전부 빼 주지 않습니다. 2026년분은 0.66배만 공제됩니다.</p>
+    <p>[마지막 열 굵은 글씨] 둘째, 맨 오른쪽 열의 굵은 글씨 두 곳입니다. 보일러 가열분을 따로 기록했는지, 항차조정 구간이 로그북과 맞는지입니다. 숫자 대조만으로는 확인이 안 돼서 육상 담당자가 직접 봐야 합니다. 예를 들어 항차조정은 시작과 종료를 보고하고 사유를 적었더라도, 그 구간이 로그북 기록과 다르면 인정받기 어렵습니다. 검증기관이 물어볼 곳도 여기입니다.</p>
+    <p>항차조정 구간을 어떻게 보고하는지는 다음 장에서 문제로 확인하겠습니다.</p>
+  </aside>
+</section>
+<section class="slide p2 quiz" data-time="15:30" data-sec="2교시|선박 보고와 육상 처리" data-grp="2.3 감면 · 대체연료 :: 감면 보고 원칙 → CII 보정 → 지역 규제 감면 → 바이오연료 → 육상전원 → 보고 점검" data-stage="2" data-src="p2b_ship_input.html#7">
+  <div class="kicker">퀴즈 · 항차조정</div>
+  <h2 style="margin-bottom:18px">항차조정 구간 보고</h2>
+  <div class="ct"><div class="q">탱커가 조난 선박 구조로 3일간 항로를 벗어났습니다(Reg.3.1 사유). 이 구간 연료·거리를 CII에서 제외받는 방법은?</div>
+    <div class="opts"><div class="opt"><b class="k">A</b><span>아무것도 · 육상이 AIS로 알아서 판정</span></div><div class="opt right"><b class="k">B</b><span>조정 <b>시작·종료 보고</b> + 사유 + 로그북</span></div><div class="opt"><b class="k">C</b><span>정오보고 비고란에 "Rescue" 한 줄</span></div><div class="opt"><b class="k">D</b><span>연말에 검증기관에 메일</span></div></div>
+    <div class="why callout"><b>정답 B · 조정 시작·종료 보고 + 사유 + 로그북</b>
+<ul class="sol"><li><b>이유</b>: CII에서 빼려면 그 구간의 연료와 거리가 따로 집계돼야 함 → 시작과 종료를 따로 보고해야 구간이 나뉨</li><li><b>증빙</b>: 사유(인명 구조 등)와 로그북 기록이 있어야 검증에서 인정</li><li><b>오답 이유</b>: A는 AIS로 사유를 알 수 없음 · C의 비고란은 계산에 쓰이지 않음 · D는 구간별 연료·거리 데이터가 없어 제외량을 산정할 수 없음</li></ul>
+</div></div>
+  <aside class="notes">
+    <p>문제 하나 풀겠습니다. 탱커가 조난 선박을 구조하느라 사흘간 항로를 벗어났습니다. 이 구간을 CII에서 빼려면 배는 뭘 해야 할까요? 보기는 A 육상이 AIS로 알아서 판정, B 시작·종료 보고와 사유와 로그북, C 비고란에 한 줄, D 연말에 검증기관에 메일입니다. 잠깐 생각해 보십시오.</p>
+    <p>[5초 · R키]</p>
+    <p>정답은 B입니다. 시작과 종료를 따로 보고해 구간을 나눠야 그 사이 연료와 거리를 뺄 수 있습니다. 비고란 한 줄은 사람은 읽어도 계산에는 들어가지 않습니다. 연말 메일은 이미 늦습니다. 그리고 조정 구간이 연간 CO₂의 10%를 넘으면 육상에서 다시 확인하는 식의 기준을 두시길 권합니다. 10%는 예시 기준입니다. 너무 많이 빼면 검증에서 먼저 확인 대상이 됩니다.</p>
+  </aside>
+</section>
+<section class="slide p2 dg" data-time="15:33" data-sec="2교시|선박 보고와 육상 처리" data-grp="2.3 감면 · 대체연료 :: 감면 보고 원칙 → CII 보정 → 지역 규제 감면 → 바이오연료 → 육상전원 → 보고 점검" data-stage="2" data-src="p_diag.html#1">
+  <div class="kicker">그림 · 항차조정</div>
+  <h2>항차조정 구간: 시작·종료 보고로 표시한 3일</h2>
+  <svg viewBox="0 0 1400 430" role="img" aria-label="항차조정 구간의 보고와 CII 산입 범위">
+    <text x="40" y="34" font-size="19" font-weight="800" fill="#0B2545">항해 전체 (예: 10일)</text>
+    <rect x="40" y="50" width="500" height="58" fill="#0B2545"/><rect x="540" y="50" width="390" height="58" fill="#A66A00"/><rect x="930" y="50" width="430" height="58" fill="#0B2545"/>
+    <g font-size="19" font-weight="800" fill="#fff" text-anchor="middle"><text x="290" y="86">정상 항해</text><text x="735" y="86">조난 선박 구조 · 3일</text><text x="1145" y="86">정상 항해</text></g>
+    <g stroke="#A66A00" stroke-width="2.5"><line x1="540" y1="50" x2="540" y2="150"/><line x1="930" y1="50" x2="930" y2="150"/></g>
+    <g font-size="18" font-weight="800" fill="#7A4E00"><text x="548" y="140">▲ 조정 시작 보고</text><text x="922" y="140" text-anchor="end">조정 종료 보고 ▲</text></g>
+    <g font-size="16" fill="#3D4B5C"><text x="548" y="162">시각 · 위치 · 사유(Reg.3.1)</text><text x="922" y="162" text-anchor="end">시각 · 위치 · 잔량(ROB)</text></g>
+    <text x="40" y="222" font-size="19" font-weight="800" fill="#0B2545">CII 계산에 들어가는 범위</text>
+    <text x="40" y="266" font-size="18" font-weight="700" fill="#3D4B5C">분자 · 연료</text>
+    <rect x="200" y="244" width="402" height="34" fill="#0B7C87"/><rect x="602" y="244" width="314" height="34" fill="#fff" stroke="#A66A00" stroke-width="2" stroke-dasharray="6 5"/><rect x="916" y="244" width="346" height="34" fill="#0B7C87"/>
+    <text x="759" y="267" text-anchor="middle" font-size="17" font-weight="800" fill="#7A4E00">제외</text>
+    <text x="40" y="318" font-size="18" font-weight="700" fill="#3D4B5C">분모 · 거리</text>
+    <rect x="200" y="296" width="402" height="34" fill="#0B7C87"/><rect x="602" y="296" width="314" height="34" fill="#fff" stroke="#A66A00" stroke-width="2" stroke-dasharray="6 5"/><rect x="916" y="296" width="346" height="34" fill="#0B7C87"/>
+    <text x="759" y="319" text-anchor="middle" font-size="17" font-weight="800" fill="#7A4E00">제외</text>
+    <text x="1280" y="293" font-size="17" font-weight="700" fill="#0B7C87">연료와 거리를</text><text x="1280" y="315" font-size="17" font-weight="700" fill="#0B7C87">함께 뺌</text>
+    <g font-size="18" fill="#0B2545"><rect x="40" y="366" width="1320" height="50" rx="8" fill="#EEF6F8"/><text x="60" y="398"><tspan font-weight="800">필요한 것 3가지</tspan> · 조정 시작·종료 보고 2건 · 사유(인명 구조 등 Reg.3.1 해당) · 갑판 로그북 기록 → 하나라도 없으면 제외 불가</text></g>
+  </svg>
+  <aside class="notes">
+    <p>방금 문제의 답을 그림으로 그렸습니다. 위쪽 띠가 항해 전체입니다. 가운데 갈색이 조난 선박을 구조하느라 항로를 벗어난 3일입니다.</p>
+    <p>갈색 구간 양 끝에 세모가 있습니다. 조정 시작 보고와 조정 종료 보고입니다. 선박이 이 두 건을 보내야 육상이 구간을 알 수 있습니다. 비고란에 한 줄 적은 것으로는 시각과 위치가 남지 않습니다.</p>
+    <p>아래 두 줄이 CII 계산입니다. 분자인 연료에서 이 구간을 빼고, 분모인 거리에서도 같은 구간을 뺍니다. 연료만 빼고 거리를 남기면 CII가 실제보다 좋게 나옵니다.</p>
+    <p>맨 아래가 필요한 것 세 가지입니다. 시작과 종료 보고, 사유, 갑판 로그북입니다. 하나라도 없으면 제외받지 못합니다. 다음 장에서 입력 사례 세 가지를 보겠습니다.</p>
   </aside>
 </section>
 <section class="slide p1-lg" data-time="15:33" data-sec="2교시|선박 보고와 육상 처리" data-grp="2.3 감면 · 대체연료 :: 감면 보고 원칙 → CII 보정 → 지역 규제 감면 → 바이오연료 → 육상전원 → 보고 점검" data-stage="2" data-src="p1_regulation.html#27">
@@ -3810,7 +3810,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>다음 장에서 처리 단계를 한 장으로 정리한 뒤, 예시 화면과 실습으로 넘어가겠습니다.</p>
   </aside>
 </section>
-<section class="slide p2" data-time="16:02" data-sec="2교시|선박 보고와 육상 처리" data-grp="2.4 육상 처리 :: 계산 체인 → 레그 분할 → EU 범위 → 기항 판정" data-stage="3" data-src="p2_bonus.html#10">
+<section class="slide p2" data-time="16:03" data-sec="2교시|선박 보고와 육상 처리" data-grp="2.4 육상 처리 :: 계산 체인 → 레그 분할 → EU 범위 → 기항 판정" data-stage="3" data-src="p2_bonus.html#10">
   <div class="kicker">처리 보충 · 원천과 산출물</div>
   <h2>레그 데이터와 규제별 산출물</h2>
   <div class="row" style="align-items:stretch">
@@ -3847,7 +3847,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>마침 EU도 올해 7월에 MRV, ETS, FuelEU를 하나의 모니터링 계획, 하나의 보고서로 합치자는 개정안을 냈습니다. 아직 제안 단계지만 방향은 분명합니다. 원천 데이터를 하나로 정확하게 만들고, 산출은 자동으로 뽑는 쪽입니다.</p>
   </aside>
 </section>
-<section class="slide demo" data-demo-url="" data-time="16:03" data-sec="2교시|선박 보고와 육상 처리" data-grp="2.5 시연과 실습 :: 웹 화면 예시 → 보고 점검 → EU 범위 판정" data-stage="3" data-src="demo2.html#1">
+<section class="slide demo" data-demo-url="" data-time="16:04" data-sec="2교시|선박 보고와 육상 처리" data-grp="2.5 시연과 실습 :: 웹 화면 예시 → 보고 점검 → EU 범위 판정" data-stage="3" data-src="demo2.html#1">
   <div class="kicker">시연 · 2교시 · 웹 화면 예시</div>
   <h2>웹 화면 예시: 레그별 EU 범위와 ETS 대상량</h2>
   <style>
@@ -3967,7 +3967,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>이런 오류는 보고하는 시점에 배에서 잡는 편이 몇 달 뒤 육상에서 잡는 것보다 훨씬 쉽습니다. 검증기관이 3월에 지적하면 그때는 선원도 바뀌었고 증빙도 찾기 어렵습니다. [시간이 남으면 "정상 보고서" 버튼으로 비교] 다음은 EU 범위 판정 실습입니다.</p>
   </aside>
 </section>
-<section class="slide labslide" data-time="16:13" data-sec="2교시|선박 보고와 육상 처리" data-grp="2.5 시연과 실습 :: 웹 화면 예시 → 보고 점검 → EU 범위 판정" data-stage="3" data-src="lab2.html#2">
+<section class="slide labslide" data-time="16:14" data-sec="2교시|선박 보고와 육상 처리" data-grp="2.5 시연과 실습 :: 웹 화면 예시 → 보고 점검 → EU 범위 판정" data-stage="3" data-src="lab2.html#2">
   <div class="kicker">2교시 · EU 범위 판정</div>
   <h2 style="margin-bottom:14px">EU 범위 판정 실습</h2>
   <div class="lab" id="Q1">
@@ -4378,7 +4378,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>항구를 이렇게까지 맞추는 이유는 오른쪽 아래 줄에 있습니다. EU 항구인지 아닌지가 바뀌면 ETS와 FuelEU 범위가 바뀝니다. 그래서 항구 마스터의 항구 코드를 정비해 둬야 합니다. 이 기준으로 대조하려면 먼저 서류를 정확히 읽어야 합니다. 서류마다 어디를 읽는지 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:12" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 공급서(BDN) → 화물 서류 → 기관 로그북 → 벙커링 대조 예 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#1">
+<section class="slide p3-s" data-time="16:12" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#1">
   <div class="kicker">증빙 대조 · 대조 기준</div>
   <h2>보고값과 증빙 서류: 같아야 하는 값의 위치</h2>
   <table class="xc">
@@ -4403,7 +4403,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>맨 오른쪽 열을 보시면 초록은 한 글자도 다르면 안 되는 값이고, 갈색은 허용오차를 두는 값입니다. 아래 줄이 원칙입니다. 보고와 서류가 다르면 서류가 기준입니다. 다음 장부터 서류를 한 장씩 읽어 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3" data-time="16:13" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 공급서(BDN) → 화물 서류 → 기관 로그북 → 벙커링 대조 예 → 오류 유형" data-stage="0" data-src="p3e_evidence.html#1">
+<section class="slide p3" data-time="16:13" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="0" data-src="p3e_evidence.html#1">
   <div class="kicker">증빙 서류 · BDN</div>
   <h2>연료 공급서(BDN)에서 읽는 항목과 오독하기 쉬운 곳</h2>
   <div class="row" style="gap:28px;align-items:flex-start">
@@ -4438,234 +4438,10 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>첫 서류는 연료 공급서, BDN입니다. 왼쪽은 설명용으로 다시 만든 서식이고 수치는 예시입니다. 번호가 붙은 다섯 칸을 순서대로 읽겠습니다.</p>
     <p>1번 항구입니다. 선석이나 터미널 이름이 아니라 항구 이름을 넣습니다. 바지선 이름 칸과 헷갈리지 않게 합니다. 2번 일자는 공급을 마친 날입니다. BDN 번호나 인보이스 일자가 아닙니다. 3번 수량은 Delivered 칸의 톤 값, 여기서는 250.120입니다. 세제곱미터나 배럴만 적혀 있으면 임의로 환산하지 않고 공급자에게 톤 값을 받습니다.</p>
     <p>4번과 5번에서 오류가 가장 많이 나옵니다. 밀도는 kg/m³로 적힌 경우가 많습니다. 982.8을 그대로 넣지 않고 0.9828로 넣습니다. 50도 밀도가 아니라 15도 값입니다. 점도는 "@50°C"의 50을 값으로 읽는 일이 있습니다. 50은 측정 온도이고 값은 그 옆의 103.1입니다.</p>
-    <p>맨 아래 줄도 보십시오. BDN과 품질성적서가 같이 있으면 BDN 값을 먼저 씁니다. 바지선이 나눠서 공급했으면 BDN 장마다 따로 입력합니다. 다음은 화물 서류입니다.</p>
+    <p>맨 아래 줄도 보십시오. BDN과 품질성적서가 같이 있으면 BDN 값을 먼저 씁니다. 바지선이 나눠서 공급했으면 BDN 장마다 따로 입력합니다. 다음은 잔량의 증빙인 기관 로그북입니다.</p>
   </aside>
 </section>
-<section class="slide p3" data-time="16:14" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 공급서(BDN) → 화물 서류 → 기관 로그북 → 벙커링 대조 예 → 오류 유형" data-stage="0" data-src="p3e_evidence.html#2">
-  <div class="kicker">증빙 서류 · 화물</div>
-  <h2>화물 서류별 수량 기재 위치</h2>
-  <table class="t compact">
-    <tr><th style="width:21%">서류</th><th style="width:44%">수량이 적힌 곳</th><th>주의</th></tr>
-    <tr><td><b>SOF</b> (작업 시간 기록)</td><td>머리말의 화물·수량 또는 하단 수량표 (선박 측 수치 우선)</td><td>제목의 LOADING / DISCHARGING이 방향</td></tr>
-    <tr><td><b>일일 작업 보고</b></td><td>TOTALS의 누계(TO DATE) 행</td><td>당일분(THIS SHIFT) 행은 작업 전체량이 아님</td></tr>
-    <tr><td><b>얼리지·양하 보고서</b></td><td>화물 구분(parcel)별 합계 톤을 모두 더한 값</td><td>일부 구분만 더하는 누락 · 배럴만 있으면 밀도와 함께 기재</td></tr>
-    <tr><td><b>LNG 화물 계산서</b> (CTMS)</td><td>선박 측 수량 · 작업 전·후 값 구분</td><td>LNG는 m³ 기준</td></tr>
-    <tr><td><b>적부도·적화 컴퓨터 출력</b></td><td>작업 후 선내 총량</td><td>이번 작업량이 아님</td></tr>
-    <tr><td><b>NOR · 세관 서류 · 항의서</b></td><td>수량 없음</td><td>수량 증빙으로 쓸 수 없음</td></tr>
-  </table>
-  <div class="row" style="gap:16px;margin-top:14px">
-    <div class="col"><div class="callout warn" style="font-size:18.5px"><b>자주 나오는 오독</b> · 화물창 용적(m³) 합계를 화물량으로 · 배수량·재화중량을 화물량으로 · 흘수(m)를 화물량으로</div></div>
-    <div class="col"><div class="callout" style="font-size:18.5px"><b>단위</b> · 톤(MT) 값이 있으면 톤으로 · 배럴·m³·TEU는 단위를 함께 기재 · 서류에 없는 값은 계산해서 넣지 않음</div></div>
-  </div>
-  <aside class="notes">
-    <p>화물 서류는 종류가 많고, 서류마다 수량이 적힌 자리가 다릅니다. 표를 위에서부터 읽겠습니다.</p>
-    <p>SOF는 머리말이나 하단 수량표를 봅니다. 일일 작업 보고는 TOTALS의 누계 행을 봅니다. 당일분 행은 작업 전체량이 아닙니다. 얼리지 보고서는 화물 구분별 합계를 모두 더합니다.</p>
-    <p>적부도나 적화 컴퓨터 출력에 나오는 값은 작업 후 선내 총량입니다. 이번 작업량이 아닙니다. 마지막 줄 NOR, 세관 서류, 항의서에는 수량이 없습니다.</p>
-    <p>표 아래에 자주 나오는 오독 세 가지를 적었습니다. 화물창 용적 합계, 배수량이나 재화중량, 흘수를 화물량으로 읽는 경우입니다. 서류에 없는 값은 계산해서 넣지 않습니다. 다음 장부터 실제 화물 서류를 선종별로 보겠습니다.</p>
-  </aside>
-</section>
-<section class="slide p3-s" data-time="16:15" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 공급서(BDN) → 화물 서류 → 기관 로그북 → 벙커링 대조 예 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#4">
-  <div class="kicker">증빙 대조 · 자동차선 화물</div>
-  <h2>자동차선 화물 대조: 서류 2장의 합계와 보고값</h2>
-  <div class="rd" style="grid-template-columns:.95fr 1.05fr">
-    <div style="display:flex;flex-direction:column;gap:10px">
-      <figure><figcaption>서류 1 · 적재 요약(Hatch Summary) · 빈 줄 생략</figcaption><img src="img/doc_hatch.png" alt="적재 요약"></figure>
-      <figure style="width:66%"><figcaption>서류 2 · Loading Condition Summary</figcaption><img src="img/doc_lcs.png" alt="Loading Condition Summary"></figure>
-    </div>
-    <div class="rs">
-      <div><i>1</i><p><b>서류 1의 TOTAL 줄</b> · 차량 3,046대 · 5,537.0 t · 빈 장비(MAFI) 8대 · 61.6 t</p></div>
-      <div><i>2</i><p><b>서류 2의 DECK TOTAL</b> · 3,054 · 5,598.60 t</p></div>
-      <div class="ok"><i>3</i><p><b>서류끼리 대조</b> · 3,046 + 8 = 3,054 · 5,537.0 + 61.6 = 5,598.6 → 일치</p></div>
-      <div class="ok"><i>4</i><p><b>보고값</b> · 화물 개수 3,054 · 화물 중량 5,598.60 t</p></div>
-      <div class="ng"><i>!</i><p><b>자주 나오는 오류</b> · 차량만 센 3,046을 보고 · OTHERS TOTAL 8,409.0 t(평형수·연료)을 화물로 보고</p></div>
-    </div>
-  </div>
-  <p class="small" style="margin-top:8px">예시 선박의 실제 서류 · 선박명과 항구는 가림</p>
-  <aside class="notes">
-    <p>실제 서류로 화물량을 맞춰 보겠습니다. 자동차선이고, 선박명과 항구는 가렸습니다.</p>
-    <p>왼쪽 위가 적재 요약입니다. 맨 아래 TOTAL 줄에 빨간 네모가 두 개 있습니다. 차량 3,046대, 그리고 오른쪽에 빈 장비 8대입니다. 무게는 5,537톤과 61.6톤입니다.</p>
-    <p>왼쪽 아래는 같은 날 발급된 Loading Condition Summary입니다. 노란 칸 DECK TOTAL이 3,054, 무게가 5,598.60톤입니다.</p>
-    <p>두 서류를 맞춰 봅니다. 3,046에 8을 더하면 3,054입니다. 무게도 5,537에 61.6을 더하면 5,598.6입니다. 두 서류가 같은 숫자를 가리킵니다.</p>
-    <p>보고에 적을 값은 3,054와 5,598.60톤입니다. 자동차선의 화물량은 차량 대수가 아니라 실은 화물 전체입니다. 차량만 세어 3,046으로 보고한 건이 자주 나옵니다. 왼쪽의 OTHERS TOTAL 8,409톤은 평형수와 연료라서 화물이 아닙니다.</p>
-  </aside>
-</section>
-<section class="slide p3-s" data-time="16:16" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 공급서(BDN) → 화물 서류 → 기관 로그북 → 벙커링 대조 예 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#6">
-  <div class="kicker">증빙 대조 · 자동차선 하역 기록</div>
-  <h2>자동차선 하역 기록지: 작업 시각과 적재 누계</h2>
-  <div class="rd" style="grid-template-columns:1.05fr .95fr">
-    <figure><figcaption>항구별 하역 기록지 · 시각은 현지시각(LT)</figcaption><img src="img/doc_ops.png" alt="하역 기록지"></figure>
-    <div class="rs">
-      <div><i>1</i><p><b>작업 시각</b> · 적재 개시 08:37 · 완료 17:28(LT) → 보고의 화물작업 개시 · 종료 시각과 대조</p></div>
-      <div><i>2</i><p><b>이번 항구 적재</b> · 1,026대 · 1,753.10 t</p></div>
-      <div><i>3</i><p><b>직전까지 선내 화물</b> · 1,280대 · 2,260.40 t</p></div>
-      <div class="ok"><i>4</i><p><b>누계 검산</b> · 1,280 + 1,026 = 2,306대 · 2,260.40 + 1,753.10 = 4,013.50 t</p></div>
-      <div class="ok"><i>5</i><p><b>보고값</b> · 맨 아래 줄의 TTL CARGO 2,306 · TTL WT 4,013.50</p></div>
-      <div class="ng"><i>!</i><p><b>읽는 칸 주의</b> · 같은 줄 WEIGHT 칸은 2,260.40(직전 값) · 합계는 오른쪽 TTL WT 칸</p></div>
-    </div>
-  </div>
-  <p class="small" style="margin-top:8px">예시 선박의 실제 서류 · 선박명과 항구는 가림</p>
-  <aside class="notes">
-    <p>자동차선이 항구마다 남기는 하역 기록지입니다. 실제 서류입니다.</p>
-    <p>위쪽은 시각입니다. 램프를 연 시각, 적재를 시작한 시각 08시 37분, 끝낸 시각 17시 28분이 현지시각으로 적혀 있습니다. 보고의 화물작업 개시와 종료 시각을 이 값과 맞춰 봅니다.</p>
-    <p>아래쪽은 화물입니다. 이번 항구에서 1,026대, 1,753.10톤을 실었습니다. 그 전까지 배에 있던 화물이 1,280대, 2,260.40톤입니다.</p>
-    <p>검산합니다. 1,280에 1,026을 더하면 2,306대입니다. 무게는 2,260.40에 1,753.10을 더해 4,013.50톤입니다. 맨 아래 줄 오른쪽의 TTL CARGO와 TTL WT가 이 값입니다. 보고에는 이 두 값을 적습니다.</p>
-    <p>한 가지 조심할 칸이 있습니다. 맨 아래 줄의 왼쪽 WEIGHT 칸에는 2,260.40이 적혀 있습니다. 직전 값이 그대로 남은 것입니다. 이 칸을 읽으면 무게가 1,753톤 모자라게 보고됩니다. 합계는 오른쪽 TTL WT 칸에서 읽습니다.</p>
-  </aside>
-</section>
-<section class="slide p3-s" data-time="16:17" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 공급서(BDN) → 화물 서류 → 기관 로그북 → 벙커링 대조 예 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#7">
-  <div class="kicker">증빙 대조 · 자동차선 적하 요약서</div>
-  <h2>적하 요약서 한 장 전체: 화물 합계, 재화중량 검산, 서명</h2>
-  <div class="rd" style="grid-template-columns:auto 1fr">
-    <figure><figcaption>Loading Condition Summary · 회색 칸은 가린 부분</figcaption><img src="img/doc_lcs2.png" alt="Loading Condition Summary 전체" style="height:500px;width:auto"></figure>
-    <div class="rs">
-      <div><i>1</i><p><b>머리말(가림)</b> · 선박명 · 항차 번호 · 출항항과 도착항 → 보고의 항차와 같은지 확인</p></div>
-      <div><i>2</i><p><b>갑판별 대수</b> · 12개 갑판의 합 = 4,340대 → DECK TOTAL과 일치</p></div>
-      <div><i>3</i><p><b>DECK TOTAL</b> · 4,340대 · 7,454.54 t = 보고의 화물량</p></div>
-      <div class="ok"><i>4</i><p><b>재화중량 검산</b> · OTHERS TOTAL 9,190.45 + DECK TOTAL 7,454.54 = 16,644.99 ≈ DEAD WEIGHT 16,645.0</p></div>
-      <div><i>5</i><p><b>흘수</b> · 선수 · 중앙 · 선미 9.303 m → 출항보고의 흘수와 대조</p></div>
-      <div><i>6</i><p><b>아래쪽(가림)</b> · 작성일 · 일등항해사 서명 · 선장 확인 · 선박 직인 → 빠지면 증빙 불인정</p></div>
-    </div>
-  </div>
-  <p class="small" style="margin-top:8px">예시 선박의 실제 서류 · OTHERS TOTAL = 평형수 · 연료 · 청수 · 상수(Constant)</p>
-  <aside class="notes">
-    <p>앞에서 본 적하 요약서를 이번에는 한 장 전체로 보겠습니다. 다른 항차의 실제 서류입니다. 회색 칸은 제가 가린 부분입니다.</p>
-    <p>맨 위 가린 자리에 선박명, 항차 번호, 출항항과 도착항이 있습니다. 보고의 항차와 같은 서류인지부터 확인합니다.</p>
-    <p>가운데가 갑판별 대수와 무게입니다. 열두 개 갑판을 더하면 4,340대이고, DECK TOTAL도 4,340대입니다. 무게는 7,454.54톤입니다. 이 값이 보고의 화물량입니다.</p>
-    <p>이 서류에서는 검산을 하나 더 할 수 있습니다. 왼쪽 OTHERS TOTAL 9,190.45톤은 평형수, 연료, 청수 같은 화물이 아닌 무게입니다. 여기에 화물 7,454.54톤을 더하면 16,644.99톤입니다. 아래의 DEAD WEIGHT 16,645.0톤과 맞습니다. 화물 무게를 잘못 읽었다면 이 등식이 맞지 않습니다.</p>
-    <p>그 아래 흘수 9.303미터는 출항보고의 흘수와 맞춰 봅니다. 맨 아래 가린 자리에는 작성일, 일등항해사 서명, 선장 확인, 선박 직인이 있습니다. 서명과 직인이 없는 서류는 증빙으로 인정하지 않습니다.</p>
-  </aside>
-</section>
-<section class="slide p3-s" data-time="16:19" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 공급서(BDN) → 화물 서류 → 기관 로그북 → 벙커링 대조 예 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#5">
-  <div class="kicker">증빙 대조 · 컨테이너선 화물</div>
-  <h2>컨테이너선 화물 대조: Cargo Recapitulation에서 읽는 줄</h2>
-  <div class="rd" style="grid-template-columns:1.05fr .95fr">
-    <figure><figcaption>출항 시 화물 집계표(Cargo Recapitulation · DEP. COND.)</figcaption><img src="img/doc_recap.png" alt="Cargo Recapitulation"></figure>
-    <div class="rs">
-      <div><i>1</i><p><b>머리말</b> · 날짜와 DEP. COND.(출항 상태) 확인 · 도착 상태 서류는 사용 불가</p></div>
-      <div><i>2</i><p><b>이번 항구 적재 줄(노란 TOTAL)</b> · 240개 = 20피트 163 + 40피트 77 · 4,176 t</p></div>
-      <div class="ok"><i>3</i><p><b>TEU 검산</b> · 163 + 77 × 2 = 317 TEU → 서류의 TEU 칸과 일치</p></div>
-      <div><i>4</i><p><b>적·공·냉동 구분</b> · 적컨 139 / 41 · 공컨 24 / 36 · 냉동 2 / 12 → 일반 적컨 = 137 / 29</p></div>
-      <div class="ok"><i>5</i><p><b>GRAND TOTAL의 Wgt 11,956 t</b> = 출항 시 선내 전체 화물 중량 → 보고의 화물 총중량</p></div>
-      <div class="ng"><i>!</i><p><b>자주 나오는 오류</b> · 이번 항구 적재분 4,176 t을 화물 총중량으로 보고</p></div>
-    </div>
-  </div>
-  <p class="small" style="margin-top:8px">예시 선박의 실제 서류 · 선박 번호와 항구 코드는 가림 · 20피트 / 40피트 순</p>
-  <aside class="notes">
-    <p>컨테이너선입니다. 출항할 때 뽑는 화물 집계표이고, 실제 서류입니다.</p>
-    <p>먼저 머리말입니다. 날짜가 맞는지, 오른쪽에 DEP. COND., 곧 출항 상태라고 적혀 있는지 봅니다. 도착 상태로 뽑은 서류는 쓸 수 없습니다.</p>
-    <p>다음은 노란 줄입니다. 이번 항구에서 실은 화물의 합계입니다. 컨테이너 240개, 20피트 163개와 40피트 77개, 무게 4,176톤입니다. 검산을 하나 합니다. 163에 77의 두 배를 더하면 317입니다. 서류의 TEU 칸도 317입니다.</p>
-    <p>옆으로 가면 적컨, 공컨, 냉동 컨테이너가 나뉘어 있습니다. 냉동은 적컨 안에 들어 있어서, 일반 적컨은 139에서 2를 빼고 41에서 12를 뺀 137개와 29개입니다.</p>
-    <p>맨 아래 GRAND TOTAL의 무게 11,956톤이 출항할 때 배에 실려 있는 화물 전체입니다. 보고의 화물 총중량에는 이 값을 적습니다. 이번 항구에서 실은 4,176톤을 적는 오류가 자주 나옵니다. 수송작업은 배에 실린 전체 무게로 계산하기 때문입니다.</p>
-  </aside>
-</section>
-<section class="slide p3-s" data-time="16:20" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 공급서(BDN) → 화물 서류 → 기관 로그북 → 벙커링 대조 예 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#8">
-  <div class="kicker">증빙 대조 · 컨테이너선 Bay Plan</div>
-  <h2>컨테이너선 Bay Plan: 요약표의 개수, TEU, 무게</h2>
-  <div class="rd" style="grid-template-columns:1.1fr .9fr">
-    <figure><figcaption>Bay Plan · 색은 양하항 구분</figcaption><img src="img/doc_bay.png" alt="Bay Plan"></figure>
-    <div class="rs">
-      <figure style="margin:0;border:1px solid #C9D1DC;background:#fff;padding:8px"><figcaption>아래쪽 요약표 · E 공컨 · F 적컨 · R 냉동</figcaption><img src="img/doc_baysum.png" alt="Bay Plan 요약표" style="width:100%;display:block"></figure>
-      <div><i>1</i><p><b>그림</b> · 베이별 적재 위치 · 색칠한 칸이 이번 항구 적재분</p></div>
-      <div><i>2</i><p><b>요약표 Total 줄</b> · 공컨 56 / 30 · 적컨 66 / 1 · 합계 153개 · 1,734 t</p></div>
-      <div class="ok"><i>3</i><p><b>개수 검산</b> · 양하항별 104 + 41 + 8 = 153개 · 1,268 + 344 + 122 = 1,734 t</p></div>
-      <div class="ok"><i>4</i><p><b>TEU 환산</b> · 20피트 122 + 40피트 31 × 2 = 184 TEU</p></div>
-      <div class="ng"><i>!</i><p><b>범위 주의</b> · 이 표는 이번 항구 적재분 · 선내 전체 화물 중량은 화물 집계표의 GRAND TOTAL</p></div>
-    </div>
-  </div>
-  <p class="small" style="margin-top:8px">예시 선박의 실제 서류 · 선박명과 항구 코드는 가림 · 20피트 / 40피트 순</p>
-  <aside class="notes">
-    <p>컨테이너선이 내는 또 하나의 서류, Bay Plan입니다. 실제 서류입니다.</p>
-    <p>위 그림은 배를 앞에서 뒤로 잘라 본 단면입니다. 베이마다 컨테이너가 어디에 실렸는지 보여 줍니다. 색칠한 칸이 이번 항구에서 실은 것이고, 색은 내릴 항구를 뜻합니다. 그림에서 개수를 셀 필요는 없습니다.</p>
-    <p>읽을 곳은 아래 요약표입니다. E는 공컨, F는 적컨, R은 냉동입니다. Total 줄을 보면 공컨이 20피트 56개와 40피트 30개, 적컨이 20피트 66개와 40피트 1개입니다. 합계 153개, 1,734톤입니다.</p>
-    <p>검산은 두 가지입니다. 내릴 항구별로 104, 41, 8을 더하면 153입니다. 무게도 1,268, 344, 122를 더하면 1,734입니다. TEU로 바꾸면 20피트 122개에 40피트 31개의 두 배를 더해 184 TEU입니다.</p>
-    <p>범위를 조심해야 합니다. 이 표는 이번 항구에서 실은 것만 담고 있습니다. 배에 실린 전체 무게는 앞 장에서 본 화물 집계표의 GRAND TOTAL에서 읽습니다.</p>
-  </aside>
-</section>
-<section class="slide p3-s" data-time="16:21" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 공급서(BDN) → 화물 서류 → 기관 로그북 → 벙커링 대조 예 → 오류 유형" data-stage="4" data-src="p3a_validation.html#17">
-  <div class="kicker">화물 검증 · 예시 기준 · 규정값 아님</div>
-  <h2>선종별 화물 검증 기준</h2>
-  <div class="row" style="gap:26px;align-items:center">
-    <div class="col" style="flex:1.25">
-      <table class="t compact">
-        <tr><th style="width:150px">선종</th><th>대조 방식</th><th style="width:30%">허용</th></tr>
-        <tr><td><b>컨테이너</b></td><td>적·양하 × 20ft/40ft × 공·Full·리퍼 12칸, 총중량, TEU 수지</td><td>총중량 ±3%,<br>TEU ±1% 또는 2 TEU</td></tr>
-        <tr><td><b>LNG</b></td><td>적·양하·작업 후 수량, COQ(화물 품질 증명서) 조성, CBM 수지</td><td>±1% 또는 0.5 t,<br>조성 소수 넷째 자리</td></tr>
-        <tr><td><b>LPG</b></td><td>수량</td><td>±1% 또는 0.5 t</td></tr>
-        <tr><td><b>자동차선</b></td><td>중량 (대수는 참고)</td><td>±1% 또는 0.5 t</td></tr>
-        <tr><td><b>RoRo</b></td><td>대수 (중량 있으면 중량도)</td><td>대수 완전 일치,<br>중량 ±3%</td></tr>
-        <tr><td><b>일반화물</b></td><td>배수량 × 비중 − 경하중량 − 연료 = DWT</td><td>±2.9%</td></tr>
-        <tr><td><b>벌크·탱커 등</b></td><td>적·양하·선내량 (벌크선·탱커·케미컬선)</td><td>±3%</td></tr>
-      </table>
-    </div>
-    <div class="col" style="flex:.75">
-      <div class="case">
-        <div class="ch"><span class="tag">사례</span>컨테이너 12칸 전수 대조</div>
-        <div class="cb">
-          <table class="t compact">
-            <tr><th>칸</th><th>보고</th><th>적부도</th></tr>
-            <tr><td class="nw">적재 40ft Full</td><td>412</td><td>412</td></tr>
-            <tr><td class="nw">적재 40ft 리퍼</td><td>36</td><td class="ng">63</td></tr>
-            <tr><td class="nw">총중량 (t)</td><td>18,240</td><td>18,511</td></tr>
-          </table>
-          <p style="margin-top:12px">총중량 1.5% 차이로 일치 · 리퍼 개수 자리 바뀜 → <span class="chip ng">불일치</span></p>
-          <p style="margin-top:8px">리퍼 개수 = CII 전력 보정 근거</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <aside class="notes">
-    <p>화물은 선종마다 맞추는 대상이 다릅니다. 왼쪽 표가 선종별 대조 방식과 허용 범위이고, 예시 기준입니다.</p>
-    <p>세 줄만 읽겠습니다. 컨테이너선은 적재와 양하, 20피트와 40피트, 공·Full·리퍼로 나눈 12칸을 봅니다. 여기에 총중량과 TEU 수지를 더합니다. LNG선은 수량과 함께 COQ의 조성을 소수 넷째 자리까지 봅니다. 일반화물선은 배수량에 비중을 곱하고 경하중량과 연료를 빼는 DWT 식으로 봅니다.</p>
-    <p>오른쪽은 컨테이너 12칸을 전부 대조한 사례입니다. 40피트 Full은 412개로 같습니다. 총중량은 18,240톤과 18,511톤, 1.5% 차이라 일치입니다. 그런데 40피트 리퍼가 보고는 36, 적부도는 63입니다. 숫자 자리가 바뀐 오타입니다.</p>
-    <p>오타 하나를 불일치로 잡는 이유는 사례 맨 아래 줄에 있습니다. 리퍼 개수는 CII에서 전력 보정을 받는 근거입니다. LNG선의 조성은 다음 장에서 따로 봅니다.</p>
-  </aside>
-</section>
-<section class="slide p3-s" data-time="16:22" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 공급서(BDN) → 화물 서류 → 기관 로그북 → 벙커링 대조 예 → 오류 유형" data-stage="4" data-src="p3a_validation.html#18">
-  <div class="kicker">LNG선 화물</div>
-  <h2>LNG선 COQ 조성과 N₂ 차감</h2>
-  <div class="row" style="gap:30px;align-items:center">
-    <div class="col" style="flex:1.1">
-      <svg class="p3-flow" viewBox="0 0 640 92" width="100%">
-        <text x="0" y="22" font-size="20" font-weight="700" fill="#0B2545">COQ 조성 (몰 분율, 예시)</text>
-        <rect x="0" y="40" width="533" height="48" fill="#0B2545"/><text x="14" y="71" fill="#fff" font-weight="700" font-size="20">CH₄ 메탄 0.9134</text>
-        <rect x="533" y="40" width="66" height="48" fill="#9AA6B2"/>
-        <rect x="599" y="40" width="29" height="48" fill="#C3CCD5"/>
-        <rect x="628" y="40" width="12" height="48" fill="#0FA3B1"/>
-      </svg>
-      <p class="nt" style="margin-top:8px">C₂H₆ 0.0712 · C₃H₈ 0.0101 · 기타 0.0034 · <b style="color:var(--navy)">N₂ 0.0019</b> · 합계 1.0000</p>
-      <div class="card" style="margin-top:14px">
-        <h3>COQ 무결성 검사</h3>
-        <div class="p3-steps">
-          <span class="p3-num">1</span><span class="tx">조성 합 = 1 (±0.005)</span>
-          <span class="p3-num">2</span><span class="tx">분자량 재계산 일치 (±2%), N₂ 분자량 (±0.01)</span>
-          <span class="p3-num">3</span><span class="tx">보고 조성 ↔ COQ 조성 <b>소수 넷째 자리 일치</b></span>
-          <span class="p3-num">4</span><span class="tx">작업 전 + 적재 − 양하 = 작업 후 (±1% 또는 0.5 CBM)</span>
-        </div>
-      </div>
-      <p class="nt" style="color:var(--navy);font-weight:700">질소 질량 = 부피 × 밀도 × (28.013 × X<sub>N₂</sub>) / Σ(Mᵢ·Xᵢ)</p>
-    </div>
-    <div class="col" style="flex:.9">
-      <div class="case">
-        <div class="ch"><span class="tag">사례</span>조성 미입력</div>
-        <div class="cb">
-          <div class="p3-vs" style="margin-bottom:14px">
-            <div><div class="lb">보고 조성</div><div class="v ng">(빈칸)</div></div>
-            <div><div class="lb">COQ 첨부</div><div class="v">조성 있음</div></div>
-          </div>
-          <p>COQ 있음 · 보고 없음 → <span class="chip ng">불일치</span><br>COQ도 없음 → 미첨부</p>
-        </div>
-      </div>
-      <div class="callout" style="margin-top:18px">조성 빈칸이면 <b>N₂ 차감 0</b> · CII 분자 증가</div>
-    </div>
-  </div>
-  <aside class="notes">
-    <p>LNG선은 화물 품질 증명서, COQ를 한 장 더 봅니다. 왼쪽 위가 조성 예시입니다. 메탄이 0.9134로 대부분이고, 질소는 0.0019입니다.</p>
-    <p>이 적은 질소를 챙기는 이유가 있습니다. DCS에 보고하는 LNG 소비량에서 화물 속 질소 질량을 빼기 때문입니다. 그만큼 CII 분자가 줄어듭니다. 질소 질량은 왼쪽 맨 아래 식처럼 부피, 밀도, 조성으로 계산합니다.</p>
-    <p>그 위의 무결성 검사 네 가지를 읽겠습니다. 조성의 합이 1인지 봅니다. 분자량을 다시 계산해서 맞는지 봅니다. 보고한 조성이 COQ와 소수 넷째 자리까지 같은지 봅니다. 작업 전 수량에 적재를 더하고 양하를 빼면 작업 후 수량이 되는지 봅니다.</p>
-    <p>오른쪽 사례는 조성 미입력입니다. COQ에는 조성이 있는데 보고 칸은 비어 있었습니다. 그냥 넘어가기 쉬운 항목인데 불일치로 잡습니다. 조성이 비면 질소 차감이 0이 되고 CII 분자가 늘어납니다. 받을 수 있는 차감을 못 받는 것입니다.</p>
-  </aside>
-</section>
-<section class="slide p3" data-time="16:23" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 공급서(BDN) → 화물 서류 → 기관 로그북 → 벙커링 대조 예 → 오류 유형" data-stage="0" data-src="p3e_evidence.html#3">
+<section class="slide p3" data-time="16:14" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="0" data-src="p3e_evidence.html#3">
   <div class="kicker">증빙 서류 · 로그북</div>
   <h2>기관 로그북에서 잔량(ROB)을 읽는 곳</h2>
   <div class="row" style="gap:28px;align-items:flex-start">
@@ -4705,7 +4481,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오른쪽 표 아래 첫 줄을 꼭 보십시오. 로그북의 검산이 맞지 않아도 계산값으로 바꾸지 않습니다. 적힌 값을 그대로 쓰고 불일치로 기록합니다. 소비량이나 기기별 값을 잔량으로 읽는 일도 자주 나옵니다. 이렇게 읽은 서류를 보고와 대조한 결과가 다음 장입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:24" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 공급서(BDN) → 화물 서류 → 기관 로그북 → 벙커링 대조 예 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#2">
+<section class="slide p3-s" data-time="16:15" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#2">
   <div class="kicker">증빙 대조 · 벙커링 1건</div>
   <h2>벙커링 1건 대조: 보고 · BDN · 기관 로그북</h2>
   <div class="xb">
@@ -4749,14 +4525,238 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
   </div>
   <p class="small" style="margin-top:10px">밀도 956.8 kg/m³ = 0.9568 g/cm³ · 로그북 칸은 예시</p>
   <aside class="notes">
-    <p>앞 표의 첫 줄, 연료 수급량을 대조해 보겠습니다. 보고와 BDN의 숫자는 실제로 대조한 건의 값입니다. 서류 세 장을 나란히 놓았습니다.</p>
+    <p>처음에 본 대조표의 첫 줄, 연료 수급량을 대조해 보겠습니다. 보고와 BDN의 숫자는 실제로 대조한 건의 값입니다. 서류 세 장을 나란히 놓았습니다.</p>
     <p>왼쪽이 선박이 보낸 벙커링 보고입니다. 수급량이 119.99톤입니다. 가운데가 연료 공급서, BDN입니다. 공급량은 117.99톤입니다. 2톤이 다릅니다. 9와 7, 숫자 한 자리를 잘못 친 겁니다.</p>
     <p>어느 쪽이 맞는지는 오른쪽 기관 로그북으로 확인합니다. 로그북 수급 칸이 BDN과 같은 117.99이면, 서류 두 장이 같으니 서류가 맞고 보고가 틀린 겁니다.</p>
     <p>밀도도 보십시오. 보고는 0.9568, BDN은 956.8입니다. 단위만 다르고 같은 값입니다. 이건 오류가 아닙니다.</p>
-    <p>2톤을 그냥 두면 그날 이후 잔량이 계속 2톤씩 높게 나옵니다. 연말 연간 대조에서 2톤이 모자란 채로 드러납니다. 그래서 벙커링 보고는 들어온 날 바로 대조합니다.</p>
+    <p>2톤을 그냥 두면 그날 이후 잔량이 계속 2톤씩 높게 나옵니다. 연말 연간 대조에서 2톤이 모자란 채로 드러납니다. 그래서 벙커링 보고는 들어온 날 바로 대조합니다. 연료 서류는 여기까지이고, 다음은 화물 서류입니다.</p>
   </aside>
 </section>
-<section class="slide p3" data-time="16:25" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 공급서(BDN) → 화물 서류 → 기관 로그북 → 벙커링 대조 예 → 오류 유형" data-stage="0" data-src="p3e_evidence.html#4">
+<section class="slide p3" data-time="16:16" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="0" data-src="p3e_evidence.html#2">
+  <div class="kicker">증빙 서류 · 화물</div>
+  <h2>화물 서류별 수량 기재 위치</h2>
+  <table class="t compact">
+    <tr><th style="width:21%">서류</th><th style="width:44%">수량이 적힌 곳</th><th>주의</th></tr>
+    <tr><td><b>SOF</b> (작업 시간 기록)</td><td>머리말의 화물·수량 또는 하단 수량표 (선박 측 수치 우선)</td><td>제목의 LOADING / DISCHARGING이 방향</td></tr>
+    <tr><td><b>일일 작업 보고</b></td><td>TOTALS의 누계(TO DATE) 행</td><td>당일분(THIS SHIFT) 행은 작업 전체량이 아님</td></tr>
+    <tr><td><b>얼리지·양하 보고서</b></td><td>화물 구분(parcel)별 합계 톤을 모두 더한 값</td><td>일부 구분만 더하는 누락 · 배럴만 있으면 밀도와 함께 기재</td></tr>
+    <tr><td><b>LNG 화물 계산서</b> (CTMS)</td><td>선박 측 수량 · 작업 전·후 값 구분</td><td>LNG는 m³ 기준</td></tr>
+    <tr><td><b>적부도·적화 컴퓨터 출력</b></td><td>작업 후 선내 총량</td><td>이번 작업량이 아님</td></tr>
+    <tr><td><b>NOR · 세관 서류 · 항의서</b></td><td>수량 없음</td><td>수량 증빙으로 쓸 수 없음</td></tr>
+  </table>
+  <div class="row" style="gap:16px;margin-top:14px">
+    <div class="col"><div class="callout warn" style="font-size:18.5px"><b>자주 나오는 오독</b> · 화물창 용적(m³) 합계를 화물량으로 · 배수량·재화중량을 화물량으로 · 흘수(m)를 화물량으로</div></div>
+    <div class="col"><div class="callout" style="font-size:18.5px"><b>단위</b> · 톤(MT) 값이 있으면 톤으로 · 배럴·m³·TEU는 단위를 함께 기재 · 서류에 없는 값은 계산해서 넣지 않음</div></div>
+  </div>
+  <aside class="notes">
+    <p>화물 서류는 종류가 많고, 서류마다 수량이 적힌 자리가 다릅니다. 표를 위에서부터 읽겠습니다.</p>
+    <p>SOF는 머리말이나 하단 수량표를 봅니다. 일일 작업 보고는 TOTALS의 누계 행을 봅니다. 당일분 행은 작업 전체량이 아닙니다. 얼리지 보고서는 화물 구분별 합계를 모두 더합니다.</p>
+    <p>적부도나 적화 컴퓨터 출력에 나오는 값은 작업 후 선내 총량입니다. 이번 작업량이 아닙니다. 마지막 줄 NOR, 세관 서류, 항의서에는 수량이 없습니다.</p>
+    <p>표 아래에 자주 나오는 오독 세 가지를 적었습니다. 화물창 용적 합계, 배수량이나 재화중량, 흘수를 화물량으로 읽는 경우입니다. 서류에 없는 값은 계산해서 넣지 않습니다. 다음 장부터 실제 화물 서류를 선종별로 보겠습니다.</p>
+  </aside>
+</section>
+<section class="slide p3-s" data-time="16:17" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#4">
+  <div class="kicker">증빙 대조 · 자동차선 화물</div>
+  <h2>자동차선 화물 대조: 서류 2장의 합계와 보고값</h2>
+  <div class="rd" style="grid-template-columns:.95fr 1.05fr">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <figure><figcaption>서류 1 · 적재 요약(Hatch Summary) · 빈 줄 생략</figcaption><img src="img/doc_hatch.png" alt="적재 요약"></figure>
+      <figure style="width:66%"><figcaption>서류 2 · Loading Condition Summary</figcaption><img src="img/doc_lcs.png" alt="Loading Condition Summary"></figure>
+    </div>
+    <div class="rs">
+      <div><i>1</i><p><b>서류 1의 TOTAL 줄</b> · 차량 3,046대 · 5,537.0 t · 빈 장비(MAFI) 8대 · 61.6 t</p></div>
+      <div><i>2</i><p><b>서류 2의 DECK TOTAL</b> · 3,054 · 5,598.60 t</p></div>
+      <div class="ok"><i>3</i><p><b>서류끼리 대조</b> · 3,046 + 8 = 3,054 · 5,537.0 + 61.6 = 5,598.6 → 일치</p></div>
+      <div class="ok"><i>4</i><p><b>보고값</b> · 화물 개수 3,054 · 화물 중량 5,598.60 t</p></div>
+      <div class="ng"><i>!</i><p><b>자주 나오는 오류</b> · 차량만 센 3,046을 보고 · OTHERS TOTAL 8,409.0 t(평형수·연료)을 화물로 보고</p></div>
+    </div>
+  </div>
+  <p class="small" style="margin-top:8px">예시 선박의 실제 서류 · 선박명과 항구는 가림</p>
+  <aside class="notes">
+    <p>실제 서류로 화물량을 맞춰 보겠습니다. 자동차선이고, 선박명과 항구는 가렸습니다.</p>
+    <p>왼쪽 위가 적재 요약입니다. 맨 아래 TOTAL 줄에 빨간 네모가 두 개 있습니다. 차량 3,046대, 그리고 오른쪽에 빈 장비 8대입니다. 무게는 5,537톤과 61.6톤입니다.</p>
+    <p>왼쪽 아래는 같은 날 발급된 Loading Condition Summary입니다. 노란 칸 DECK TOTAL이 3,054, 무게가 5,598.60톤입니다.</p>
+    <p>두 서류를 맞춰 봅니다. 3,046에 8을 더하면 3,054입니다. 무게도 5,537에 61.6을 더하면 5,598.6입니다. 두 서류가 같은 숫자를 가리킵니다.</p>
+    <p>보고에 적을 값은 3,054와 5,598.60톤입니다. 자동차선의 화물량은 차량 대수가 아니라 실은 화물 전체입니다. 차량만 세어 3,046으로 보고한 건이 자주 나옵니다. 왼쪽의 OTHERS TOTAL 8,409톤은 평형수와 연료라서 화물이 아닙니다.</p>
+  </aside>
+</section>
+<section class="slide p3-s" data-time="16:18" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#6">
+  <div class="kicker">증빙 대조 · 자동차선 하역 기록</div>
+  <h2>자동차선 하역 기록지: 작업 시각과 적재 누계</h2>
+  <div class="rd" style="grid-template-columns:1.05fr .95fr">
+    <figure><figcaption>항구별 하역 기록지 · 시각은 현지시각(LT)</figcaption><img src="img/doc_ops.png" alt="하역 기록지"></figure>
+    <div class="rs">
+      <div><i>1</i><p><b>작업 시각</b> · 적재 개시 08:37 · 완료 17:28(LT) → 보고의 화물작업 개시 · 종료 시각과 대조</p></div>
+      <div><i>2</i><p><b>이번 항구 적재</b> · 1,026대 · 1,753.10 t</p></div>
+      <div><i>3</i><p><b>직전까지 선내 화물</b> · 1,280대 · 2,260.40 t</p></div>
+      <div class="ok"><i>4</i><p><b>누계 검산</b> · 1,280 + 1,026 = 2,306대 · 2,260.40 + 1,753.10 = 4,013.50 t</p></div>
+      <div class="ok"><i>5</i><p><b>보고값</b> · 맨 아래 줄의 TTL CARGO 2,306 · TTL WT 4,013.50</p></div>
+      <div class="ng"><i>!</i><p><b>읽는 칸 주의</b> · 같은 줄 WEIGHT 칸은 2,260.40(직전 값) · 합계는 오른쪽 TTL WT 칸</p></div>
+    </div>
+  </div>
+  <p class="small" style="margin-top:8px">예시 선박의 실제 서류 · 선박명과 항구는 가림</p>
+  <aside class="notes">
+    <p>자동차선이 항구마다 남기는 하역 기록지입니다. 실제 서류입니다.</p>
+    <p>위쪽은 시각입니다. 램프를 연 시각, 적재를 시작한 시각 08시 37분, 끝낸 시각 17시 28분이 현지시각으로 적혀 있습니다. 보고의 화물작업 개시와 종료 시각을 이 값과 맞춰 봅니다.</p>
+    <p>아래쪽은 화물입니다. 이번 항구에서 1,026대, 1,753.10톤을 실었습니다. 그 전까지 배에 있던 화물이 1,280대, 2,260.40톤입니다.</p>
+    <p>검산합니다. 1,280에 1,026을 더하면 2,306대입니다. 무게는 2,260.40에 1,753.10을 더해 4,013.50톤입니다. 맨 아래 줄 오른쪽의 TTL CARGO와 TTL WT가 이 값입니다. 보고에는 이 두 값을 적습니다.</p>
+    <p>한 가지 조심할 칸이 있습니다. 맨 아래 줄의 왼쪽 WEIGHT 칸에는 2,260.40이 적혀 있습니다. 직전 값이 그대로 남은 것입니다. 이 칸을 읽으면 무게가 1,753톤 모자라게 보고됩니다. 합계는 오른쪽 TTL WT 칸에서 읽습니다.</p>
+  </aside>
+</section>
+<section class="slide p3-s" data-time="16:19" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#7">
+  <div class="kicker">증빙 대조 · 자동차선 적하 요약서</div>
+  <h2>적하 요약서 한 장 전체: 화물 합계, 재화중량 검산, 서명</h2>
+  <div class="rd" style="grid-template-columns:auto 1fr">
+    <figure><figcaption>Loading Condition Summary · 회색 칸은 가린 부분</figcaption><img src="img/doc_lcs2.png" alt="Loading Condition Summary 전체" style="height:500px;width:auto"></figure>
+    <div class="rs">
+      <div><i>1</i><p><b>머리말(가림)</b> · 선박명 · 항차 번호 · 출항항과 도착항 → 보고의 항차와 같은지 확인</p></div>
+      <div><i>2</i><p><b>갑판별 대수</b> · 12개 갑판의 합 = 4,340대 → DECK TOTAL과 일치</p></div>
+      <div><i>3</i><p><b>DECK TOTAL</b> · 4,340대 · 7,454.54 t = 보고의 화물량</p></div>
+      <div class="ok"><i>4</i><p><b>재화중량 검산</b> · OTHERS TOTAL 9,190.45 + DECK TOTAL 7,454.54 = 16,644.99 ≈ DEAD WEIGHT 16,645.0</p></div>
+      <div><i>5</i><p><b>흘수</b> · 선수 · 중앙 · 선미 9.303 m → 출항보고의 흘수와 대조</p></div>
+      <div><i>6</i><p><b>아래쪽(가림)</b> · 작성일 · 일등항해사 서명 · 선장 확인 · 선박 직인 → 빠지면 증빙 불인정</p></div>
+    </div>
+  </div>
+  <p class="small" style="margin-top:8px">예시 선박의 실제 서류 · OTHERS TOTAL = 평형수 · 연료 · 청수 · 상수(Constant)</p>
+  <aside class="notes">
+    <p>앞에서 본 적하 요약서를 이번에는 한 장 전체로 보겠습니다. 다른 항차의 실제 서류입니다. 회색 칸은 제가 가린 부분입니다.</p>
+    <p>맨 위 가린 자리에 선박명, 항차 번호, 출항항과 도착항이 있습니다. 보고의 항차와 같은 서류인지부터 확인합니다.</p>
+    <p>가운데가 갑판별 대수와 무게입니다. 열두 개 갑판을 더하면 4,340대이고, DECK TOTAL도 4,340대입니다. 무게는 7,454.54톤입니다. 이 값이 보고의 화물량입니다.</p>
+    <p>이 서류에서는 검산을 하나 더 할 수 있습니다. 왼쪽 OTHERS TOTAL 9,190.45톤은 평형수, 연료, 청수 같은 화물이 아닌 무게입니다. 여기에 화물 7,454.54톤을 더하면 16,644.99톤입니다. 아래의 DEAD WEIGHT 16,645.0톤과 맞습니다. 화물 무게를 잘못 읽었다면 이 등식이 맞지 않습니다.</p>
+    <p>그 아래 흘수 9.303미터는 출항보고의 흘수와 맞춰 봅니다. 맨 아래 가린 자리에는 작성일, 일등항해사 서명, 선장 확인, 선박 직인이 있습니다. 서명과 직인이 없는 서류는 증빙으로 인정하지 않습니다.</p>
+  </aside>
+</section>
+<section class="slide p3-s" data-time="16:21" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#5">
+  <div class="kicker">증빙 대조 · 컨테이너선 화물</div>
+  <h2>컨테이너선 화물 대조: Cargo Recapitulation에서 읽는 줄</h2>
+  <div class="rd" style="grid-template-columns:1.05fr .95fr">
+    <figure><figcaption>출항 시 화물 집계표(Cargo Recapitulation · DEP. COND.)</figcaption><img src="img/doc_recap.png" alt="Cargo Recapitulation"></figure>
+    <div class="rs">
+      <div><i>1</i><p><b>머리말</b> · 날짜와 DEP. COND.(출항 상태) 확인 · 도착 상태 서류는 사용 불가</p></div>
+      <div><i>2</i><p><b>이번 항구 적재 줄(노란 TOTAL)</b> · 240개 = 20피트 163 + 40피트 77 · 4,176 t</p></div>
+      <div class="ok"><i>3</i><p><b>TEU 검산</b> · 163 + 77 × 2 = 317 TEU → 서류의 TEU 칸과 일치</p></div>
+      <div><i>4</i><p><b>적·공·냉동 구분</b> · 적컨 139 / 41 · 공컨 24 / 36 · 냉동 2 / 12 → 일반 적컨 = 137 / 29</p></div>
+      <div class="ok"><i>5</i><p><b>GRAND TOTAL의 Wgt 11,956 t</b> = 출항 시 선내 전체 화물 중량 → 보고의 화물 총중량</p></div>
+      <div class="ng"><i>!</i><p><b>자주 나오는 오류</b> · 이번 항구 적재분 4,176 t을 화물 총중량으로 보고</p></div>
+    </div>
+  </div>
+  <p class="small" style="margin-top:8px">예시 선박의 실제 서류 · 선박 번호와 항구 코드는 가림 · 20피트 / 40피트 순</p>
+  <aside class="notes">
+    <p>컨테이너선입니다. 출항할 때 뽑는 화물 집계표이고, 실제 서류입니다.</p>
+    <p>먼저 머리말입니다. 날짜가 맞는지, 오른쪽에 DEP. COND., 곧 출항 상태라고 적혀 있는지 봅니다. 도착 상태로 뽑은 서류는 쓸 수 없습니다.</p>
+    <p>다음은 노란 줄입니다. 이번 항구에서 실은 화물의 합계입니다. 컨테이너 240개, 20피트 163개와 40피트 77개, 무게 4,176톤입니다. 검산을 하나 합니다. 163에 77의 두 배를 더하면 317입니다. 서류의 TEU 칸도 317입니다.</p>
+    <p>옆으로 가면 적컨, 공컨, 냉동 컨테이너가 나뉘어 있습니다. 냉동은 적컨 안에 들어 있어서, 일반 적컨은 139에서 2를 빼고 41에서 12를 뺀 137개와 29개입니다.</p>
+    <p>맨 아래 GRAND TOTAL의 무게 11,956톤이 출항할 때 배에 실려 있는 화물 전체입니다. 보고의 화물 총중량에는 이 값을 적습니다. 이번 항구에서 실은 4,176톤을 적는 오류가 자주 나옵니다. 수송작업은 배에 실린 전체 무게로 계산하기 때문입니다.</p>
+  </aside>
+</section>
+<section class="slide p3-s" data-time="16:22" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#8">
+  <div class="kicker">증빙 대조 · 컨테이너선 Bay Plan</div>
+  <h2>컨테이너선 Bay Plan: 요약표의 개수, TEU, 무게</h2>
+  <div class="rd" style="grid-template-columns:1.1fr .9fr">
+    <figure><figcaption>Bay Plan · 색은 양하항 구분</figcaption><img src="img/doc_bay.png" alt="Bay Plan"></figure>
+    <div class="rs">
+      <figure style="margin:0;border:1px solid #C9D1DC;background:#fff;padding:8px"><figcaption>아래쪽 요약표 · E 공컨 · F 적컨 · R 냉동</figcaption><img src="img/doc_baysum.png" alt="Bay Plan 요약표" style="width:100%;display:block"></figure>
+      <div><i>1</i><p><b>그림</b> · 베이별 적재 위치 · 색칠한 칸이 이번 항구 적재분</p></div>
+      <div><i>2</i><p><b>요약표 Total 줄</b> · 공컨 56 / 30 · 적컨 66 / 1 · 합계 153개 · 1,734 t</p></div>
+      <div class="ok"><i>3</i><p><b>개수 검산</b> · 양하항별 104 + 41 + 8 = 153개 · 1,268 + 344 + 122 = 1,734 t</p></div>
+      <div class="ok"><i>4</i><p><b>TEU 환산</b> · 20피트 122 + 40피트 31 × 2 = 184 TEU</p></div>
+      <div class="ng"><i>!</i><p><b>범위 주의</b> · 이 표는 이번 항구 적재분 · 선내 전체 화물 중량은 화물 집계표의 GRAND TOTAL</p></div>
+    </div>
+  </div>
+  <p class="small" style="margin-top:8px">예시 선박의 실제 서류 · 선박명과 항구 코드는 가림 · 20피트 / 40피트 순</p>
+  <aside class="notes">
+    <p>컨테이너선이 내는 또 하나의 서류, Bay Plan입니다. 실제 서류입니다.</p>
+    <p>위 그림은 배를 앞에서 뒤로 잘라 본 단면입니다. 베이마다 컨테이너가 어디에 실렸는지 보여 줍니다. 색칠한 칸이 이번 항구에서 실은 것이고, 색은 내릴 항구를 뜻합니다. 그림에서 개수를 셀 필요는 없습니다.</p>
+    <p>읽을 곳은 아래 요약표입니다. E는 공컨, F는 적컨, R은 냉동입니다. Total 줄을 보면 공컨이 20피트 56개와 40피트 30개, 적컨이 20피트 66개와 40피트 1개입니다. 합계 153개, 1,734톤입니다.</p>
+    <p>검산은 두 가지입니다. 내릴 항구별로 104, 41, 8을 더하면 153입니다. 무게도 1,268, 344, 122를 더하면 1,734입니다. TEU로 바꾸면 20피트 122개에 40피트 31개의 두 배를 더해 184 TEU입니다.</p>
+    <p>범위를 조심해야 합니다. 이 표는 이번 항구에서 실은 것만 담고 있습니다. 배에 실린 전체 무게는 앞 장에서 본 화물 집계표의 GRAND TOTAL에서 읽습니다.</p>
+  </aside>
+</section>
+<section class="slide p3-s" data-time="16:23" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3a_validation.html#17">
+  <div class="kicker">화물 검증 · 예시 기준 · 규정값 아님</div>
+  <h2>선종별 화물 검증 기준</h2>
+  <div class="row" style="gap:26px;align-items:center">
+    <div class="col" style="flex:1.25">
+      <table class="t compact">
+        <tr><th style="width:150px">선종</th><th>대조 방식</th><th style="width:30%">허용</th></tr>
+        <tr><td><b>컨테이너</b></td><td>적·양하 × 20ft/40ft × 공·Full·리퍼 12칸, 총중량, TEU 수지</td><td>총중량 ±3%,<br>TEU ±1% 또는 2 TEU</td></tr>
+        <tr><td><b>LNG</b></td><td>적·양하·작업 후 수량, COQ(화물 품질 증명서) 조성, CBM 수지</td><td>±1% 또는 0.5 t,<br>조성 소수 넷째 자리</td></tr>
+        <tr><td><b>LPG</b></td><td>수량</td><td>±1% 또는 0.5 t</td></tr>
+        <tr><td><b>자동차선</b></td><td>중량 (대수는 참고)</td><td>±1% 또는 0.5 t</td></tr>
+        <tr><td><b>RoRo</b></td><td>대수 (중량 있으면 중량도)</td><td>대수 완전 일치,<br>중량 ±3%</td></tr>
+        <tr><td><b>일반화물</b></td><td>배수량 × 비중 − 경하중량 − 연료 = DWT</td><td>±2.9%</td></tr>
+        <tr><td><b>벌크·탱커 등</b></td><td>적·양하·선내량 (벌크선·탱커·케미컬선)</td><td>±3%</td></tr>
+      </table>
+    </div>
+    <div class="col" style="flex:.75">
+      <div class="case">
+        <div class="ch"><span class="tag">사례</span>컨테이너 12칸 전수 대조</div>
+        <div class="cb">
+          <table class="t compact">
+            <tr><th>칸</th><th>보고</th><th>적부도</th></tr>
+            <tr><td class="nw">적재 40ft Full</td><td>412</td><td>412</td></tr>
+            <tr><td class="nw">적재 40ft 리퍼</td><td>36</td><td class="ng">63</td></tr>
+            <tr><td class="nw">총중량 (t)</td><td>18,240</td><td>18,511</td></tr>
+          </table>
+          <p style="margin-top:12px">총중량 1.5% 차이로 일치 · 리퍼 개수 자리 바뀜 → <span class="chip ng">불일치</span></p>
+          <p style="margin-top:8px">리퍼 개수 = CII 전력 보정 근거</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>화물은 선종마다 맞추는 대상이 다릅니다. 왼쪽 표가 선종별 대조 방식과 허용 범위이고, 예시 기준입니다.</p>
+    <p>세 줄만 읽겠습니다. 컨테이너선은 적재와 양하, 20피트와 40피트, 공·Full·리퍼로 나눈 12칸을 봅니다. 여기에 총중량과 TEU 수지를 더합니다. LNG선은 수량과 함께 COQ의 조성을 소수 넷째 자리까지 봅니다. 일반화물선은 배수량에 비중을 곱하고 경하중량과 연료를 빼는 DWT 식으로 봅니다.</p>
+    <p>오른쪽은 컨테이너 12칸을 전부 대조한 사례입니다. 40피트 Full은 412개로 같습니다. 총중량은 18,240톤과 18,511톤, 1.5% 차이라 일치입니다. 그런데 40피트 리퍼가 보고는 36, 적부도는 63입니다. 숫자 자리가 바뀐 오타입니다.</p>
+    <p>오타 하나를 불일치로 잡는 이유는 사례 맨 아래 줄에 있습니다. 리퍼 개수는 CII에서 전력 보정을 받는 근거입니다. LNG선의 조성은 다음 장에서 따로 봅니다.</p>
+  </aside>
+</section>
+<section class="slide p3-s" data-time="16:24" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3a_validation.html#18">
+  <div class="kicker">LNG선 화물</div>
+  <h2>LNG선 COQ 조성과 N₂ 차감</h2>
+  <div class="row" style="gap:30px;align-items:center">
+    <div class="col" style="flex:1.1">
+      <svg class="p3-flow" viewBox="0 0 640 92" width="100%">
+        <text x="0" y="22" font-size="20" font-weight="700" fill="#0B2545">COQ 조성 (몰 분율, 예시)</text>
+        <rect x="0" y="40" width="533" height="48" fill="#0B2545"/><text x="14" y="71" fill="#fff" font-weight="700" font-size="20">CH₄ 메탄 0.9134</text>
+        <rect x="533" y="40" width="66" height="48" fill="#9AA6B2"/>
+        <rect x="599" y="40" width="29" height="48" fill="#C3CCD5"/>
+        <rect x="628" y="40" width="12" height="48" fill="#0FA3B1"/>
+      </svg>
+      <p class="nt" style="margin-top:8px">C₂H₆ 0.0712 · C₃H₈ 0.0101 · 기타 0.0034 · <b style="color:var(--navy)">N₂ 0.0019</b> · 합계 1.0000</p>
+      <div class="card" style="margin-top:14px">
+        <h3>COQ 무결성 검사</h3>
+        <div class="p3-steps">
+          <span class="p3-num">1</span><span class="tx">조성 합 = 1 (±0.005)</span>
+          <span class="p3-num">2</span><span class="tx">분자량 재계산 일치 (±2%), N₂ 분자량 (±0.01)</span>
+          <span class="p3-num">3</span><span class="tx">보고 조성 ↔ COQ 조성 <b>소수 넷째 자리 일치</b></span>
+          <span class="p3-num">4</span><span class="tx">작업 전 + 적재 − 양하 = 작업 후 (±1% 또는 0.5 CBM)</span>
+        </div>
+      </div>
+      <p class="nt" style="color:var(--navy);font-weight:700">질소 질량 = 부피 × 밀도 × (28.013 × X<sub>N₂</sub>) / Σ(Mᵢ·Xᵢ)</p>
+    </div>
+    <div class="col" style="flex:.9">
+      <div class="case">
+        <div class="ch"><span class="tag">사례</span>조성 미입력</div>
+        <div class="cb">
+          <div class="p3-vs" style="margin-bottom:14px">
+            <div><div class="lb">보고 조성</div><div class="v ng">(빈칸)</div></div>
+            <div><div class="lb">COQ 첨부</div><div class="v">조성 있음</div></div>
+          </div>
+          <p>COQ 있음 · 보고 없음 → <span class="chip ng">불일치</span><br>COQ도 없음 → 미첨부</p>
+        </div>
+      </div>
+      <div class="callout" style="margin-top:18px">조성 빈칸이면 <b>N₂ 차감 0</b> · CII 분자 증가</div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>LNG선은 화물 품질 증명서, COQ를 한 장 더 봅니다. 왼쪽 위가 조성 예시입니다. 메탄이 0.9134로 대부분이고, 질소는 0.0019입니다.</p>
+    <p>이 적은 질소를 챙기는 이유가 있습니다. DCS에 보고하는 LNG 소비량에서 화물 속 질소 질량을 빼기 때문입니다. 그만큼 CII 분자가 줄어듭니다. 질소 질량은 왼쪽 맨 아래 식처럼 부피, 밀도, 조성으로 계산합니다.</p>
+    <p>그 위의 무결성 검사 네 가지를 읽겠습니다. 조성의 합이 1인지 봅니다. 분자량을 다시 계산해서 맞는지 봅니다. 보고한 조성이 COQ와 소수 넷째 자리까지 같은지 봅니다. 작업 전 수량에 적재를 더하고 양하를 빼면 작업 후 수량이 되는지 봅니다.</p>
+    <p>오른쪽 사례는 조성 미입력입니다. COQ에는 조성이 있는데 보고 칸은 비어 있었습니다. 그냥 넘어가기 쉬운 항목인데 불일치로 잡습니다. 조성이 비면 질소 차감이 0이 되고 CII 분자가 늘어납니다. 받을 수 있는 차감을 못 받는 것입니다. 이렇게 서류를 대조해 나온 결과가 다음 장입니다.</p>
+  </aside>
+</section>
+<section class="slide p3" data-time="16:25" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="0" data-src="p3e_evidence.html#4">
   <div class="kicker">증빙 서류 · 대조 결과</div>
   <h2>증빙 대조에서 확인된 오류 유형</h2>
   <div class="row" style="gap:24px;align-items:flex-start">
@@ -4788,7 +4788,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>맨 아래 줄을 보십시오. 불일치로 나온 건은 서류가 맞고 보고가 틀린 경우였습니다. 보고값에 맞춰 서류를 다시 해석하지 않습니다. 서류에 적힌 값으로 보고를 고칩니다. 여기부터는 실제로 걸린 사례를 하나씩 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:26" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#9">
+<section class="slide p3-s" data-time="16:27" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#9">
   <div class="kicker">사례 1 · 거리</div>
   <h2>거리 기준 혼용: 대지거리 · 대수거리 · 계획 거리</h2>
   <div class="row" style="gap:30px;align-items:start">
@@ -5007,7 +5007,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>그 아래 선박 작업 원칙 세 줄은 그대로 선박에 전달하시면 됩니다. BDN 한 장에 벙커링 보고 한 건, 수정은 기존 보고의 개정본으로, 나눠 받았으면 BDN도 분할 번호로 붙입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:32" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#14">
+<section class="slide p3-s" data-time="16:33" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#14">
   <div class="kicker">사례 5 · 보고 누락</div>
   <h2>보고 누락: 윤활유 수급 보고의 BDN에 MGO 기재</h2>
   <div class="row" style="gap:30px;align-items:center">
@@ -5041,7 +5041,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>이 사례에서 고칠 것은 오른쪽의 검증 제외 기준입니다. 보고값이 0이라는 이유만으로 검증에서 빼면 이 8건은 잡히지 않습니다. 증빙에도 연료가 없다는 것을 확인했을 때만 제외합니다. 확인하지 못한 항목은 정상으로 보지 않는다는 판정 원칙 그대로입니다. 빠진 MGO 85톤은 CO₂로 약 273톤입니다. 그만큼이 ETS와 FuelEU 계산에서 빠집니다. 다음은 증빙 파일 형식입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:33" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#16">
+<section class="slide p3-s" data-time="16:34" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#16">
   <div class="kicker">사례 6 · 증빙 형식</div>
   <h2>증빙 파일 형식 기준</h2>
   <div class="row" style="gap:30px;align-items:start">
@@ -5075,7 +5075,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>배에서는 번거로워합니다. 그래도 검증기관 심사 때 같은 요청을 다시 받는 것보다 낫습니다. 선박 지침에 "로그북은 사진으로" 한 줄을 넣어 두십시오. 사례는 여기까지이고, 다음은 연말에 하는 연간 연료 대조입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s dg" data-time="16:34" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p_diag.html#3">
+<section class="slide p3-s dg" data-time="16:35" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p_diag.html#3">
   <div class="kicker">그림 · 연간 연료 대조</div>
   <h2>연간 연료 대조: 쓴 양을 두 가지 방법으로 구해 비교</h2>
   <svg viewBox="0 0 1400 440" role="img" aria-label="탱크 기준과 소비 기준 비교">
@@ -5105,7 +5105,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>두 숫자가 같으면 일 년 치 보고가 맞는 겁니다. 다르면 보고가 빠졌거나, 수급을 두 번 셌거나, 잔량을 잘못 적은 겁니다. 다음 장에서 판정 기준을 보고, 그다음 장에서 이 계산을 한 줄씩 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:35" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#19">
+<section class="slide p3-s" data-time="16:36" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#19">
   <div class="kicker">연간 연료 대조</div>
   <h2>연간 연료 대조: 소비 기준과 탱크 기준</h2>
   <div class="row" style="gap:30px;align-items:start">
@@ -5268,7 +5268,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>표 아래 Lock Date는 데이터 동결일입니다. 검증기관에 낼 데이터를 확정하면 그 날짜 이전 보고는 선박이 고칠 수 없게 잠급니다. 제출한 숫자와 사내 숫자가 달라지는 일을 막기 위해서입니다. 이 절차를 벙커링 보고 한 건으로 직접 해 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide labslide" data-time="16:43" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="lab3a.html#1">
+<section class="slide labslide" data-time="16:44" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="lab3a.html#1">
   <div class="kicker">3교시 · 증빙 대조 실습</div>
   <h2 style="margin-bottom:12px">벙커링 보고 검증 실습</h2>
   <div class="lab" id="V1">
@@ -5329,7 +5329,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>마지막 줄이 공통 항목입니다. 수정 가능한 파일, BDN 중복 첨부, 잔량 연속성입니다. 여기가 틀리면 위의 모든 규제 보고가 함께 틀립니다. 여기까지가 사내 점검 항목이고, 검증기관이 지적하는 항목은 다음 장에 있습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:49" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용" data-stage="5" data-src="p3a_validation.html#21">
+<section class="slide p3-s" data-time="16:50" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용" data-stage="5" data-src="p3a_validation.html#21">
   <div class="kicker">검증기관 관점</div>
   <h2>검증기관 주요 지적 사항</h2>
   <table class="t">
@@ -5545,7 +5545,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>아래 줄을 보십시오. 자동화한 것은 반복 계산과 서류 판독, 대조입니다. 판정과 결정은 사람이 합니다. 엑셀로 관리하셔도 순서는 같습니다. 입력을 점검하고, 계산하고, 증빙과 맞추고, 현황표를 만듭니다.</p>
   </aside>
 </section>
-<section class="slide p3-s dg" data-time="17:01" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p_diag.html#6">
+<section class="slide p3-s dg" data-time="17:01" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p_diag.html#6">
   <div class="kicker">성능 개선 · 전체 흐름</div>
   <h2>탄소 모니터링에서 원인 분석까지: 데이터 활용의 다섯 단계</h2>
   <div class="flw"><div class="fl"><div class="fh"><i>1</i><b>탄소 모니터링</b></div><div class="fq">지금 어디에 있는가</div><p>누적 CII 비율 · EU ETS 대상량 · FuelEU 잔액을 매달 확인</p><div class="fe">예: 9월 말 CII 비율 1.07 → D 구간</div></div><div class="fa">→</div><div class="fl"><div class="fh"><i>2</i><b>시뮬레이션</b></div><div class="fq">이대로 가면 연말에 어떻게 되는가</div><p>남은 항차 계획을 넣어 선택지별 결과 계산</p><div class="fe">예: 현행 유지 D · 1 kn 감속 C</div></div><div class="fa">→</div><div class="fl"><div class="fh"><i>3</i><b>의사결정</b></div><div class="fq">무엇을 할 것인가</div><p>비용 합계와 일정 영향을 비교해 조합 선택</p><div class="fe">예: 감속 + 다음 정박 때 선체 청소</div></div><div class="fa">→</div><div class="fl"><div class="fh"><i>4</i><b>성능 분석</b></div><div class="fq">실행한 효과가 나왔는가</div><p>날씨를 보정한 속력–연료 곡선으로 전후 비교</p><div class="fe">예: 청소 후 같은 속력에서 연료 −8%</div></div><div class="fa">→</div><div class="fl"><div class="fh"><i>5</i><b>원인 분석</b></div><div class="fq">기대와 다르면 왜 그런가</div><p>오손 · 기상 · 흘수 · 기관 상태 · 보고 오류로 나눠 확인</p><div class="fe">예: 연료 증가분 가운데 보고 오류분 분리</div></div></div>
@@ -5558,7 +5558,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>아래 화살표처럼 원인을 고치면 다시 첫 단계로 돌아갑니다. 다섯 단계가 모두 선박이 보낸 같은 동정보고로 돌아갑니다. 다음 장부터 성능 분석을 먼저 보고, 뒤에서 시뮬레이션으로 돌아오겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:02" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3b_performance.html#3">
+<section class="slide p3-s" data-time="17:02" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#3">
   <div class="kicker">성능 분석</div>
   <h2>선박 성능의 정의: 날씨 보정 후 추진 연비</h2>
   <svg class="p3-flow" viewBox="0 0 1432 136" width="100%">
@@ -5596,10 +5596,10 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>여기부터 성능 개선입니다. 먼저 선박 성능이 무엇인지부터 정합니다. 날씨 영향을 뺀 추진 연비입니다.</p>
     <p>위 막대가 하루 연료 소비를 나눈 그림입니다. 잔잔한 바다에서의 기본 저항이 가장 큽니다. 여기에 바람과 파도, 조류가 붙고, 마지막에 오손과 노후로 더 드는 연료가 붙습니다. 바람과 조류는 바꿀 수 없으니 보정해서 뺍니다. 남는 오손과 노후가 개선 대상입니다.</p>
     <p>오른쪽 사례를 보십시오. 두 날 모두 하루 38톤을 썼습니다. 하루는 풍력계급 7의 맞바람이었고 하루는 잔잔했습니다. 날씨를 보정하면 잔잔한 날이 더 나쁩니다. 바람이 없는데 38톤을 썼다면 선체 오손을 의심합니다.</p>
-    <p>왼쪽 목록이 이 분석에 필요한 데이터입니다. 속력, 흘수와 트림, 풍향·풍속과 파고, 기준 곡선, 그리고 선체 청소 같은 이벤트 일자입니다. 앞에서 검증한 보고가 맞아야 이 분석도 맞습니다. 속력과 연료의 관계는 문제 하나로 시작하겠습니다.</p>
+    <p>왼쪽 목록이 이 분석에 필요한 데이터입니다. 속력, 흘수와 트림, 풍향·풍속과 파고, 기준 곡선, 그리고 선체 청소 같은 이벤트 일자입니다. 앞에서 검증한 보고가 맞아야 이 분석도 맞습니다. 다음 장에서 성능을 재는 원리를 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s dg" data-time="17:03" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="0" data-src="p_diag.html#7">
+<section class="slide p3-s dg" data-time="17:03" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="0" data-src="p_diag.html#7">
   <div class="kicker">성능 분석 · 원리</div>
   <h2>성능 분석의 원리(ISO 19030): 같은 출력에서 줄어든 속력</h2>
   <div class="row" style="gap:26px;align-items:start">
@@ -5621,32 +5621,10 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>원리는 왼쪽 그림 하나입니다. 가로가 물에 대한 속력, 세로가 축마력입니다. 곡선은 입거 직후 깨끗한 선체의 기준입니다. 이 출력이면 14노트가 나와야 합니다. 그런데 지금은 같은 출력에 13.3노트입니다. 그 차이를 속력 손실이라고 부릅니다. 5%입니다.</p>
     <p>오른쪽이 순서입니다. 먼저 속력, 축마력, 흘수, 바람을 잽니다. 다음으로 바람이 센 날, 얕은 바다, 속력을 올리거나 줄이는 구간의 값을 버립니다. 셋째, 남은 값에서 바람의 영향을 빼고 흘수를 기준 조건으로 맞춥니다. 넷째, 기준 곡선과 비교해 속력 손실을 구합니다.</p>
     <p>이 값으로 네 가지를 봅니다. 입거가 얼마나 효과가 있었는지, 운항 중에 성능이 얼마나 떨어졌는지, 언제 청소해야 하는지, 청소가 효과가 있었는지입니다.</p>
-    <p>표준의 기본 방법은 센서 자동 수집입니다. 정오보고로도 할 수 있지만 하루에 한 점이라 정확도가 낮습니다. 그래서 비교 기간을 길게 잡습니다. 숫자는 설명용입니다.</p>
+    <p>표준의 기본 방법은 센서 자동 수집입니다. 정오보고로도 할 수 있지만 하루에 한 점이라 정확도가 낮습니다. 그래서 비교 기간을 길게 잡습니다. 숫자는 설명용입니다. 다음 장에서 이 차이를 연료로 바꿔 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide quiz" data-time="17:04" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3b_performance.html#4">
-  <style>section.quiz .ct .opts{margin-top:28px;gap:20px} section.quiz .ct .opt{font-size:28px;padding:30px 26px;align-items:center} section.quiz .ct .q{font-size:32px} section.quiz .ct .steps{margin-top:26px;font-size:19px}</style>
-  <div class="kicker">퀴즈 · 감속</div>
-  <h2>1 kn 감속 시 연료 절감률</h2>
-  <div class="ct">
-    <div class="q">14 kn으로 다니던 배가 13 kn으로 1 kn 낮춥니다. 같은 거리를 갈 때 주기관 연료 절감률은?</div>
-    <div class="opts">
-      <div class="opt"><b class="k">A</b><span>약 7%</span></div>
-      <div class="opt right"><b class="k">B</b><span>약 14%</span></div>
-      <div class="opt"><b class="k">C</b><span>약 20%</span></div>
-      <div class="opt"><b class="k">D</b><span>약 30%</span></div>
-    </div>
-    <div class="why callout"><b>정답 B · 약 14%</b>
-<ul class="sol"><li><b>관계</b>: 주기관 출력은 속력의 세제곱에 비례 → 시간당 연료 ∝ 속력³</li><li><b>같은 거리</b>: 느리게 가면 항해 시간이 늘어남 (∝ 1/속력) → 거리당 연료 ∝ 속력²</li><li><b>계산</b>: (13 ÷ 14)² = 0.862 → <b>약 14% 절감</b></li><li><b>오답 이유</b>: A는 속력 감소율(7%)만 본 값 · C는 세제곱(시간당 절감률 20%)을 그대로 쓴 값 · 발전기 연료는 줄지 않아 선박 전체로는 약 12%</li></ul></div>
-  </div>
-  <aside class="notes">
-    <p>14노트로 다니던 배가 13노트로 1노트를 낮춥니다. 같은 거리를 갈 때 주기관 연료는 얼마나 줄까요. 보기는 약 7%, 14%, 20%, 30%입니다. 잠깐 생각해 보십시오.</p>
-    <p>[5초 · R키]</p>
-    <p>정답은 B, 약 14%입니다. 주기관 출력은 속력의 세제곱에 비례합니다. 그래서 시간당 연료는 세제곱으로 줄어듭니다. 대신 천천히 가면 항해 시간이 늘어납니다. 둘을 합치면 같은 거리에서는 연료가 속력의 제곱에 비례합니다. 13 나누기 14를 제곱하면 0.862, 약 14% 절감입니다.</p>
-    <p>오답도 보겠습니다. A는 속력이 줄어든 비율 7%만 본 값입니다. C는 세제곱을 그대로 쓴 값으로, 시간당 절감률입니다. 발전기 연료는 줄지 않기 때문에 선박 전체로는 약 12%입니다. 이 14%는 뒤의 속력 실습에서 다시 나옵니다.</p>
-  </aside>
-</section>
-<section class="slide p3-s" data-time="17:07" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3b_performance.html#5">
+<section class="slide p3-s" data-time="17:05" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#5">
   <div class="kicker">속력–연료 곡선</div>
   <h2>속력–연료 기준 곡선과 현재 곡선</h2>
   <div class="row" style="gap:28px;align-items:center">
@@ -5687,13 +5665,13 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     </div>
   </div>
   <aside class="notes">
-    <p>방금 문제의 세제곱 관계를 그린 것이 왼쪽 그래프입니다. 가로가 속력, 세로가 하루 연료 소비입니다.</p>
+    <p>속력과 연료의 관계를 그린 것이 왼쪽 그래프입니다. 연료는 속력의 세제곱에 비례합니다. 가로가 속력, 세로가 하루 연료 소비입니다.</p>
     <p>남색 실선이 기준 곡선입니다. 시운전이나 선체 청소 직후의 상태입니다. 빨간 점들은 날씨를 보정한 최근 실측값이고, 빨간 점선이 그 점들로 그린 현재 곡선입니다. 두 곡선 사이의 간격이 지금 더 쓰고 있는 연료입니다.</p>
     <p>오른쪽 사례를 번호대로 계산하겠습니다. 14노트로 다니는 배입니다. 1번, 기준 33.8톤이 지금은 38.9톤입니다. 하루 5.1톤, 15% 늘었습니다. 2번, 5.1톤에 250일을 곱하면 연간 1,275톤입니다. 3번, 톤당 600달러를 곱하면 약 76만 달러입니다. 4번, 1,275톤에 3.151을 곱하면 CO₂ 약 4,000톤입니다. EU 관련 항차라면 ETS 비용이 더 붙습니다. 수치는 설명용 예시입니다.</p>
     <p>성능 관리는 이 간격을 매달 추적하는 일입니다. 간격이 벌어지는 가장 흔한 원인이 다음 장입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:09" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3b_performance.html#6">
+<section class="slide p3-s" data-time="17:06" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#6">
   <div class="kicker">선체·프로펠러 오손</div>
   <h2>선체·프로펠러 오손과 청소 효과</h2>
   <div class="row" style="gap:28px;align-items:center">
@@ -5725,10 +5703,10 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>간격이 벌어지는 가장 흔한 원인은 선체와 프로펠러 오손입니다. 왼쪽 그래프는 가로가 운항 개월, 세로가 추가 동력입니다.</p>
     <p>따개비와 해조류가 붙으면서 같은 속력에 필요한 동력이 달마다 조금씩 올라갑니다. 따뜻한 바다에 오래 정박하면 더 빨리 쌓입니다. 그래프에서는 청소 전에 15%까지 올라갔습니다. 수중 청소와 프로펠러 연마를 하면 한 번에 5%로 내려옵니다. 오른쪽 위 숫자처럼 선체 청소의 개선 효과는 일반적으로 5에서 15%로 봅니다.</p>
     <p>이 추세선이 있어야 청소 시점을 정할 수 있습니다. 청소 비용과 그동안 더 쓰는 연료비를 비교하는 것입니다.</p>
-    <p>오른쪽 아래 사례는 원인을 가르는 방법입니다. 속력에 비해 축마력이 늘었으면 선체나 프로펠러 쪽입니다. 축마력에 비해 연료가 늘었으면 엔진, 곧 연료소비율 쪽입니다. 그래서 축마력 데이터와 연료 데이터를 함께 봅니다. 배 상태 다음은 운항 방법입니다.</p>
+    <p>오른쪽 아래 사례는 원인을 가르는 방법입니다. 속력에 비해 축마력이 늘었으면 선체나 프로펠러 쪽입니다. 축마력에 비해 연료가 늘었으면 엔진, 곧 연료소비율 쪽입니다. 그래서 축마력 데이터와 연료 데이터를 함께 봅니다. 다음 장에서 청소 시점을 정하는 계산을 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s dg" data-time="17:10" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p_diag.html#4">
+<section class="slide p3-s dg" data-time="17:07" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p_diag.html#4">
   <div class="kicker">성능 분석 · 의사결정 1</div>
   <h2>선체 청소 시점 결정: 늘어난 연료비와 청소비 비교</h2>
   <div class="row" style="gap:26px;align-items:start">
@@ -5751,10 +5729,56 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>왼쪽 그림입니다. 가로가 마지막 청소 뒤 지난 달수, 세로가 같은 속력에서 늘어난 연료입니다. 선체에 따개비와 해조류가 붙으면 선이 올라갑니다. 14개월째에 8%가 됐습니다. 청소하면 뚝 떨어지고, 안 하면 빨간 점선처럼 계속 올라갑니다.</p>
     <p>오른쪽이 계산입니다. 하루 30톤 쓰는 배가 8% 더 쓰면 2.4톤입니다. 연료비로 하루 1,320유로입니다. 여기에 탄소비용이 붙습니다. 2.4톤에 배출계수 3.114, 대상 비율 50%, 배출권 80유로를 곱하면 299유로입니다. 합쳐서 하루 1,619유로를 더 씁니다.</p>
     <p>청소비가 3만 유로면 19일이면 회수합니다. 다음 정박 때 청소하는 쪽이 이득입니다. 탄소비용이 생기기 전에는 23일이 걸렸을 계산입니다. 탄소비용이 붙으면서 청소 시점이 앞당겨졌습니다.</p>
-    <p>이 판단은 정오보고의 속력과 연료가 맞아야 할 수 있습니다. 숫자는 설명용입니다.</p>
+    <p>이 판단은 정오보고의 속력과 연료가 맞아야 할 수 있습니다. 숫자는 설명용입니다. 다음 장에서 성능 분석과 데이터 품질의 관계를 정리하겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:11" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3b_performance.html#7">
+<section class="slide p3-s" data-time="17:08" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3c_checklist.html#2">
+  <div class="kicker">성능 분석 정리</div>
+  <h2>성능 분석과 데이터 품질</h2>
+  <svg class="p3-flow" viewBox="0 0 1432 290" width="100%">
+    <defs><marker id="p3c1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5B6776"/></marker></defs>
+    <g fill="none" stroke="#5B6776" stroke-width="2" marker-end="url(#p3c1)"><line x1="252" y1="76" x2="292" y2="76"/><line x1="548" y1="76" x2="588" y2="76"/><line x1="844" y1="76" x2="884" y2="76"/><line x1="1140" y1="76" x2="1180" y2="76"/>
+      <path stroke-dasharray="6 5" d="M1308,132 L1308,234 L124,234 L124,138"/>
+    </g>
+    <rect x="480" y="220" width="472" height="28" fill="#fff"/>
+    <text x="716" y="241" text-anchor="middle" font-size="19" fill="#5B6776" font-weight="600">조치 효과는 다음 달 검증된 데이터로 재측정</text>
+    <g text-anchor="middle"><rect x="1" y="20" width="247" height="112" rx="6" fill="#EEF6F8" stroke="#0FA3B1" stroke-width="2"/><text x="124" y="70" font-size="23" font-weight="700" fill="#0B2545">검증된 보고</text><text x="124" y="104" font-size="18" fill="#5B6776">증빙과 일치한 데이터</text><rect x="296" y="20" width="248" height="112" rx="6" fill="#fff" stroke="#0B2545" stroke-width="1.5"/><text x="420" y="70" font-size="23" font-weight="700" fill="#0B2545">기준선</text><text x="420" y="104" font-size="18" fill="#5B6776">속력–연료 · SFOC</text><rect x="592" y="20" width="248" height="112" rx="6" fill="#fff" stroke="#0B2545" stroke-width="1.5"/><text x="716" y="70" font-size="23" font-weight="700" fill="#0B2545">추세·원인</text><text x="716" y="104" font-size="18" fill="#5B6776">오손 · 엔진 · 운항</text><rect x="888" y="20" width="248" height="112" rx="6" fill="#fff" stroke="#0B2545" stroke-width="1.5"/><text x="1012" y="70" font-size="23" font-weight="700" fill="#0B2545">개선 조치</text><text x="1012" y="104" font-size="18" fill="#5B6776">청소 · 감속 · 라우팅</text><rect x="1184" y="20" width="247" height="112" rx="6" fill="#fff" stroke="#0B2545" stroke-width="1.5"/><text x="1308" y="70" font-size="23" font-weight="700" fill="#0B2545">규제 비용</text><text x="1308" y="104" font-size="18" fill="#5B6776">CII · EUA · FuelEU</text></g>
+  </svg>
+  <div class="g3" style="margin-top:10px">
+    <div class="case"><div class="ch"><span class="tag">사례</span>거리 오류</div><div class="cb"><p>대수거리 혼입 → 곡선 흔들림 → 기준선 제외</p></div></div>
+    <div class="case"><div class="ch"><span class="tag">사례</span>BDN 중복 첨부</div><div class="cb"><p>소비 과대 → SFOC 악화 착시 → 정비 오판</p></div></div>
+    <div class="case"><div class="ch"><span class="tag">사례</span>청소 일자 누락</div><div class="cb"><p>청소 미기록 → 효과 측정·다음 시점 판단 불가</p></div></div>
+  </div>
+  <aside class="notes">
+    <p>성능 분석을 한 장으로 묶었습니다. 위쪽 흐름을 왼쪽부터 읽겠습니다.</p>
+    <p>검증된 보고로 속력–연료 기준선을 만듭니다. 추세에서 오손인지, 엔진인지, 운항인지 원인을 찾습니다. 청소, 감속, 라우팅 같은 조치를 합니다. 그 결과가 CII, 배출권, FuelEU 비용으로 나옵니다. 그리고 조치 효과는 다음 달의 검증된 데이터로 다시 잽니다.</p>
+    <p>아래 사례 세 개는 데이터가 틀렸을 때 분석이 어떻게 틀어지는지입니다. 대수거리가 섞이면 곡선이 흔들려서 그 구간을 기준선에서 빼야 합니다. BDN 중복 첨부로 소비가 부풀면 연료소비율이 나빠진 것처럼 보입니다. 멀쩡한 엔진을 정비하게 됩니다. 청소 일자를 기록하지 않으면 청소 효과도, 다음 청소 시점도 알 수 없습니다.</p>
+    <p>앞의 두 가지는 오늘 검증 사례로 본 오류입니다. 배 상태는 여기까지이고, 다음은 운항 방법 가운데 속력입니다. 문제 하나로 시작하겠습니다.</p>
+  </aside>
+</section>
+<section class="slide quiz" data-time="17:09" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#4">
+  <style>section.quiz .ct .opts{margin-top:28px;gap:20px} section.quiz .ct .opt{font-size:28px;padding:30px 26px;align-items:center} section.quiz .ct .q{font-size:32px} section.quiz .ct .steps{margin-top:26px;font-size:19px}</style>
+  <div class="kicker">퀴즈 · 감속</div>
+  <h2>1 kn 감속 시 연료 절감률</h2>
+  <div class="ct">
+    <div class="q">14 kn으로 다니던 배가 13 kn으로 1 kn 낮춥니다. 같은 거리를 갈 때 주기관 연료 절감률은?</div>
+    <div class="opts">
+      <div class="opt"><b class="k">A</b><span>약 7%</span></div>
+      <div class="opt right"><b class="k">B</b><span>약 14%</span></div>
+      <div class="opt"><b class="k">C</b><span>약 20%</span></div>
+      <div class="opt"><b class="k">D</b><span>약 30%</span></div>
+    </div>
+    <div class="why callout"><b>정답 B · 약 14%</b>
+<ul class="sol"><li><b>관계</b>: 주기관 출력은 속력의 세제곱에 비례 → 시간당 연료 ∝ 속력³</li><li><b>같은 거리</b>: 느리게 가면 항해 시간이 늘어남 (∝ 1/속력) → 거리당 연료 ∝ 속력²</li><li><b>계산</b>: (13 ÷ 14)² = 0.862 → <b>약 14% 절감</b></li><li><b>오답 이유</b>: A는 속력 감소율(7%)만 본 값 · C는 세제곱(시간당 절감률 20%)을 그대로 쓴 값 · 발전기 연료는 줄지 않아 선박 전체로는 약 12%</li></ul></div>
+  </div>
+  <aside class="notes">
+    <p>14노트로 다니던 배가 13노트로 1노트를 낮춥니다. 같은 거리를 갈 때 주기관 연료는 얼마나 줄까요. 보기는 약 7%, 14%, 20%, 30%입니다. 잠깐 생각해 보십시오.</p>
+    <p>[5초 · R키]</p>
+    <p>정답은 B, 약 14%입니다. 주기관 출력은 속력의 세제곱에 비례합니다. 그래서 시간당 연료는 세제곱으로 줄어듭니다. 대신 천천히 가면 항해 시간이 늘어납니다. 둘을 합치면 같은 거리에서는 연료가 속력의 제곱에 비례합니다. 13 나누기 14를 제곱하면 0.862, 약 14% 절감입니다.</p>
+    <p>오답도 보겠습니다. A는 속력이 줄어든 비율 7%만 본 값입니다. C는 세제곱을 그대로 쓴 값으로, 시간당 절감률입니다. 발전기 연료는 줄지 않기 때문에 선박 전체로는 약 12%입니다. 이 14%는 뒤의 속력 실습에서 다시 나옵니다.</p>
+  </aside>
+</section>
+<section class="slide p3-s" data-time="17:12" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#7">
   <div class="kicker">운항 최적화</div>
   <h2>운항 최적화 2가지: 웨더 라우팅, 적시 도착(JIT) · 설명용 예시(금액은 원화)</h2>
   <div class="row" style="gap:28px;align-items:stretch">
@@ -5786,7 +5810,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[시간이 밀렸으면 이 장은 건너뜀]</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:12" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3b_performance.html#8">
+<section class="slide p3-s" data-time="17:13" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#8">
   <div class="kicker">최적 속력</div>
   <h2>탄소비용과 최적 속력</h2>
   <div class="row" style="gap:28px;align-items:start">
@@ -5829,10 +5853,87 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>선이 세 개 있습니다. 남색 직선은 운임 수익입니다. 빨리 갈수록 늘어납니다. 회색 곡선은 연료비이고, 속력이 오를수록 가파르게 늘어납니다. 수익에서 비용을 뺀 값이 가장 큰 속력이 최적 속력입니다. 회색 세로 점선이 그 자리입니다.</p>
     <p>청록색 곡선은 연료비에 탄소비용을 더한 것입니다. 비용이 더 가파르게 늘기 때문에 최적 속력이 왼쪽, 느린 쪽으로 옮겨 갑니다.</p>
     <p>오른쪽 위는 탄소비용이 붙는 경로 네 가지입니다. EU ETS, FuelEU 벌금, UK ETS, 그리고 CII 등급 하락에 따른 용선 시장 평가입니다. 그 아래 사례처럼 EU 비중이 큰 항차일수록 최적 속력이 낮습니다. 이 계산에는 2교시에 본 항차별 EU 범위 데이터가 들어갑니다.</p>
-    <p>속력 실습은 두 장 뒤에 있습니다. 그 전에 감속이 CII 등급을 어떻게 바꾸는지 보겠습니다.</p>
+    <p>다음 장에서 이 계산을 속력별 표로 펼쳐 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:13" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3c_checklist.html#1">
+<section class="slide p3-s dg" data-time="17:14" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p_diag.html#8">
+  <div class="kicker">컴플라이언스 시뮬레이션 · 최적 조건</div>
+  <h2>속력별 연료 · 탄소비용 · 시간비용: 합계가 가장 작은 속력</h2>
+  <table class="opt">
+    <thead><tr><th>속력</th><th>항해일수</th><th>연료 t</th><th>연료비</th><th>탄소비용 (EU ETS)</th><th>시간비용</th><th>합계 (천 유로)</th></tr></thead>
+    <tbody>
+      <tr><td>11.0 kn</td><td>41.7일</td><td>1,016</td><td>569</td><td>128</td><td>1,333</td><td>2,031</td></tr>
+      <tr class="hl"><td>11.8 kn · 최적</td><td>38.8일</td><td>1,132</td><td>634</td><td>143</td><td>1,243</td><td><b>2,020</b></td></tr>
+      <tr><td>13.0 kn</td><td>35.3일</td><td>1,327</td><td>743</td><td>168</td><td>1,128</td><td>2,039</td></tr>
+      <tr><td>14.0 kn · 현행</td><td>32.7일</td><td>1,506</td><td>843</td><td>191</td><td>1,048</td><td>2,081</td></tr>
+      <tr><td>15.0 kn</td><td>30.6일</td><td>1,701</td><td>952</td><td>215</td><td>978</td><td>2,145</td></tr>
+    </tbody>
+  </table>
+  <div class="g3" style="margin-top:14px">
+    <div class="card"><h3>느리게 가면</h3><p>연료비와 탄소비용 감소 · 항해일수가 늘어 <b>시간비용 증가</b></p></div>
+    <div class="card"><h3>최적 속력</h3><p>탄소비용 제외 12.6 kn → 포함 <b>11.8 kn</b> · 탄소비용이 붙으면 최적 속력이 내려감</p></div>
+    <div class="card"><h3>14.0 → 11.8 kn</h3><p>연료 −374 t · CO₂e −1,182 t · 비용 −6만 1천 유로 · 6.1일 지연</p></div>
+  </div>
+  <p class="dg-n">설명용 조건 · 거리 11,000 nm · 14 kn에서 주기관 42 t/일(속력의 세제곱 비례) · 보조기관 4 t/일 · 연료 €560/t · 배출권 €80 · EU↔비EU 50% · 시간비용 €32,000/일</p>
+  <aside class="notes">
+    <p>앞 장의 개념을 숫자로 펼쳤습니다. 한 항차를 속력만 바꿔 가며 다섯 번 계산한 것입니다. 금액 단위는 천 유로입니다.</p>
+    <p>현행 줄부터 보십시오. 14노트로 가면 32.7일, 연료 1,506톤입니다. 연료비 84만 3천, 탄소비용 19만 1천, 시간비용 104만 8천, 합계 208만 1천 유로입니다.</p>
+    <p>위로 올라가면 속력이 느려집니다. 연료비와 탄소비용은 줄고 시간비용은 늘어납니다. 시간비용은 용선료처럼 하루 늦을 때마다 드는 돈입니다. 합계가 가장 작은 줄이 11.8노트, 202만 유로입니다. 11노트까지 내리면 다시 올라갑니다.</p>
+    <p>가운데 카드를 보십시오. 탄소비용을 빼고 계산하면 최적 속력은 12.6노트입니다. 탄소비용을 넣으면 11.8노트로 내려갑니다. 배출권 가격이 오를수록 더 내려갑니다.</p>
+    <p>오른쪽 카드가 결론입니다. 14노트에서 11.8노트로 줄이면 연료 374톤, 배출 1,182톤이 줄고 비용은 6만 1천 유로가 줄어듭니다. 대신 6일 늦게 도착합니다. 조건은 설명용이고, 다음 장에서 값을 직접 바꿔 보겠습니다.</p>
+  </aside>
+</section>
+<section class="slide labslide" data-time="17:16" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="lab3b.html#1">
+  <style>
+    #S1 .kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:8px}
+    #S1 .kpi .out{padding:12px 16px}
+    #S1 .kpi .small{font-size:17px;white-space:nowrap}
+    #S1 .kpi .v{font-size:28px;font-weight:800;color:var(--navy);line-height:1.25;white-space:nowrap;font-variant-numeric:tabular-nums}
+    #S1 .kpi .v.two{font-size:20px;line-height:1.35}
+    #S1 label{font-size:17px}
+    #S1 #s_v{-webkit-appearance:none;appearance:none;height:6px;background:var(--line);border-radius:3px;margin-top:10px}
+    #S1 #s_v::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;background:var(--teal)}
+  </style>
+  <div class="kicker">3교시 · 속력 최적화</div>
+  <h2 style="margin-bottom:12px">속력 최적화 시뮬레이터</h2>
+  <p style="font-size:18px;font-weight:700;color:var(--navy);margin:0 0 8px">강사가 화면에서 조작합니다</p>
+  <div class="lab row" id="S1" style="gap:24px">
+    <div class="col" style="flex:.8">
+      <div class="card" style="padding:14px 18px">
+        <div class="g2" style="gap:0 14px">
+          <div><label>항차 거리 (nm)</label><input id="s_d" type="number" value="11000"></div>
+          <div><label>기준 속력 (kn)</label><input id="s_v0" type="number" value="14" step="0.1"></div>
+          <div><label>기준 속력 주기관 소비 (t/일)</label><input id="s_f0" type="number" value="42" step="any"></div>
+          <div><label>보조기관 소비 (t/일)</label><input id="s_aux" type="number" value="4" step="any"></div>
+          <div><label>연료 단가 (€/t)</label><input id="s_p" type="number" value="560"></div>
+          <div><label>EUA (€/t)</label><input id="s_eua" type="number" value="80"></div>
+          <div><label>ETS 지역계수</label><select id="s_sc"><option value="0">0% (비EU)</option><option value="0.5" selected>50% (EU↔비EU)</option><option value="1">100% (EU 내)</option></select></div>
+          <div><label>시간 비용 (€/일, 용선료 등)</label><input id="s_t" type="number" value="32000"></div>
+        </div>
+        <label style="margin-top:10px">선택 속력 <b id="s_vv" style="font-size:22px">13.0 kn</b></label>
+        <input id="s_v" type="range" min="9" max="16" step="0.1" value="13">
+      </div>
+    </div>
+    <div class="col" style="flex:1.2">
+      <svg id="s_svg" viewBox="0 0 760 350" width="100%" height="350"></svg>
+      <div class="kpi">
+        <div class="out"><div class="small">항해일수</div><div class="v" id="s_days">-</div></div>
+        <div class="out"><div class="small">연료 · CO₂e</div><div class="v two" id="s_fuel">-</div></div>
+        <div class="out"><div class="small">항차 총비용</div><div class="v" style="font-size:24px;line-height:1.45" id="s_tot">-</div></div>
+        <div class="out"><div class="small">CII 분자 변화 (nm당)</div><div class="v" id="s_cii">-</div></div>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>[화면 전환] 속력 실습입니다. 속력을 바꾸면 항차 비용이 어떻게 달라지는지 봅니다. 제가 조작하겠습니다.</p>
+    <p>왼쪽이 입력 칸입니다. 항차 거리 11,000해리, 기준 속력 14노트, 그 속력에서 주기관 소비가 하루 42톤, 보조기관이 4톤입니다. 연료 단가는 560유로, 배출권은 80유로, 지역계수는 50%입니다. 시간 비용은 하루 32,000유로이고, 용선료라고 보시면 됩니다. 설명용 벌크선 값입니다.</p>
+    <p>오른쪽 그래프를 보십시오. 회색 점선은 연료비와 시간 비용만 더한 총비용입니다. 진한 실선은 여기에 ETS 비용을 더한 것입니다. 연료 소비는 속력의 세제곱에 비례한다는 일반적인 관계를 썼습니다. 곡선의 바닥이 최적 속력입니다. 탄소비용을 빼면 12.6노트, 넣으면 11.8노트로 내려갑니다.</p>
+    <p>[지역계수 100% · EUA 120 입력] 지역계수를 100%로, 배출권을 120유로로 올리면 최적 속력이 더 내려갑니다. 반대로 시간 비용을 크게 올리면 빨리 가는 쪽이 유리해집니다.</p>
+    <p>[슬라이더 13.0] 오른쪽 아래 "CII 분자 변화"는 같은 거리에서 주기관 연료가 얼마나 줄어드는지입니다. 13노트에 놓으면 −13.8%가 나옵니다. 감속 문제의 약 14%와 같은 값입니다.</p>
+    <p>이 계산은 기준 속력의 소비량이 정확해야 맞습니다. 날씨를 보정한, 검증된 데이터로 만든 속력–연료 곡선이 있어야 합니다. 실무에서는 시운전 곡선과 운항 데이터를 흘수별로 보간해서 만듭니다. 속력은 여기까지입니다. 다음 장에서 감속이 CII 등급을 어떻게 바꾸는지 보겠습니다.</p>
+  </aside>
+</section>
+<section class="slide p3-s" data-time="17:20" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3c_checklist.html#1">
   <style>
     /* p3a_validation.html과 같은 규칙 (단독 미리보기용 중복) */
     svg.p3-flow{max-width:100%;height:auto;display:block}
@@ -5891,34 +5992,10 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>올해 C등급인 배가 내년에도 C일까요. 벌크선 예시로 미리 계산해 보겠습니다. 오른쪽 표를 한 줄씩 읽겠습니다.</p>
     <p>첫 줄, 2026년 현재입니다. Attained가 4.10이고 요구값이 3.90이라 비율이 1.051, C등급입니다. 둘째 줄, 2027년에 운항을 그대로 유지한 경우입니다. 감축률이 11%에서 13.625%로 올라 요구값이 3.785로 내려갑니다. Attained는 그대로 4.10인데 비율이 1.083이 되고 D등급입니다. 운항은 같은데 등급이 내려갑니다.</p>
     <p>셋째 줄은 14노트를 13노트로 낮춘 경우입니다. 거리당 주기관 연료가 13.8% 줄고, 보조기관까지 넣으면 약 12% 줄어든다고 가정했습니다. Attained가 3.61, 비율이 0.954로 C등급을 지킵니다.</p>
-    <p>오른쪽 아래 줄을 보십시오. D가 3년 연속이거나 E가 한 번이면 시정조치계획을 내야 합니다. 실제로는 늘어나는 항해일수와 용선 조건을 함께 봅니다. 그리고 검증된 연간 데이터로 해야 합니다. 거리가 틀린 데이터로 계산하면 결정도 틀립니다.</p>
+    <p>오른쪽 아래 줄을 보십시오. D가 3년 연속이거나 E가 한 번이면 시정조치계획을 내야 합니다. 실제로는 늘어나는 항해일수와 용선 조건을 함께 봅니다. 그리고 검증된 연간 데이터로 해야 합니다. 거리가 틀린 데이터로 계산하면 결정도 틀립니다. 다음 장에서 감속, 청소, 연료 전환을 한 표에서 비교하겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:14" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3c_checklist.html#2">
-  <div class="kicker">성능 분석 정리</div>
-  <h2>성능 분석과 데이터 품질</h2>
-  <svg class="p3-flow" viewBox="0 0 1432 290" width="100%">
-    <defs><marker id="p3c1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5B6776"/></marker></defs>
-    <g fill="none" stroke="#5B6776" stroke-width="2" marker-end="url(#p3c1)"><line x1="252" y1="76" x2="292" y2="76"/><line x1="548" y1="76" x2="588" y2="76"/><line x1="844" y1="76" x2="884" y2="76"/><line x1="1140" y1="76" x2="1180" y2="76"/>
-      <path stroke-dasharray="6 5" d="M1308,132 L1308,234 L124,234 L124,138"/>
-    </g>
-    <rect x="480" y="220" width="472" height="28" fill="#fff"/>
-    <text x="716" y="241" text-anchor="middle" font-size="19" fill="#5B6776" font-weight="600">조치 효과는 다음 달 검증된 데이터로 재측정</text>
-    <g text-anchor="middle"><rect x="1" y="20" width="247" height="112" rx="6" fill="#EEF6F8" stroke="#0FA3B1" stroke-width="2"/><text x="124" y="70" font-size="23" font-weight="700" fill="#0B2545">검증된 보고</text><text x="124" y="104" font-size="18" fill="#5B6776">증빙과 일치한 데이터</text><rect x="296" y="20" width="248" height="112" rx="6" fill="#fff" stroke="#0B2545" stroke-width="1.5"/><text x="420" y="70" font-size="23" font-weight="700" fill="#0B2545">기준선</text><text x="420" y="104" font-size="18" fill="#5B6776">속력–연료 · SFOC</text><rect x="592" y="20" width="248" height="112" rx="6" fill="#fff" stroke="#0B2545" stroke-width="1.5"/><text x="716" y="70" font-size="23" font-weight="700" fill="#0B2545">추세·원인</text><text x="716" y="104" font-size="18" fill="#5B6776">오손 · 엔진 · 운항</text><rect x="888" y="20" width="248" height="112" rx="6" fill="#fff" stroke="#0B2545" stroke-width="1.5"/><text x="1012" y="70" font-size="23" font-weight="700" fill="#0B2545">개선 조치</text><text x="1012" y="104" font-size="18" fill="#5B6776">청소 · 감속 · 라우팅</text><rect x="1184" y="20" width="247" height="112" rx="6" fill="#fff" stroke="#0B2545" stroke-width="1.5"/><text x="1308" y="70" font-size="23" font-weight="700" fill="#0B2545">규제 비용</text><text x="1308" y="104" font-size="18" fill="#5B6776">CII · EUA · FuelEU</text></g>
-  </svg>
-  <div class="g3" style="margin-top:10px">
-    <div class="case"><div class="ch"><span class="tag">사례</span>거리 오류</div><div class="cb"><p>대수거리 혼입 → 곡선 흔들림 → 기준선 제외</p></div></div>
-    <div class="case"><div class="ch"><span class="tag">사례</span>BDN 중복 첨부</div><div class="cb"><p>소비 과대 → SFOC 악화 착시 → 정비 오판</p></div></div>
-    <div class="case"><div class="ch"><span class="tag">사례</span>청소 일자 누락</div><div class="cb"><p>청소 미기록 → 효과 측정·다음 시점 판단 불가</p></div></div>
-  </div>
-  <aside class="notes">
-    <p>성능 분석을 한 장으로 묶었습니다. 위쪽 흐름을 왼쪽부터 읽겠습니다.</p>
-    <p>검증된 보고로 속력–연료 기준선을 만듭니다. 추세에서 오손인지, 엔진인지, 운항인지 원인을 찾습니다. 청소, 감속, 라우팅 같은 조치를 합니다. 그 결과가 CII, 배출권, FuelEU 비용으로 나옵니다. 그리고 조치 효과는 다음 달의 검증된 데이터로 다시 잽니다.</p>
-    <p>아래 사례 세 개는 데이터가 틀렸을 때 분석이 어떻게 틀어지는지입니다. 대수거리가 섞이면 곡선이 흔들려서 그 구간을 기준선에서 빼야 합니다. BDN 중복 첨부로 소비가 부풀면 연료소비율이 나빠진 것처럼 보입니다. 멀쩡한 엔진을 정비하게 됩니다. 청소 일자를 기록하지 않으면 청소 효과도, 다음 청소 시점도 알 수 없습니다.</p>
-    <p>앞의 두 가지는 오늘 검증 사례로 본 오류입니다. 다음 장에서 이 데이터로 선택지를 비교하는 시뮬레이션을 보겠습니다.</p>
-  </aside>
-</section>
-<section class="slide p3-s dg" data-time="17:15" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p_diag.html#5">
+<section class="slide p3-s dg" data-time="17:22" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p_diag.html#5">
   <div class="kicker">성능 분석 · 의사결정 2</div>
   <h2>컴플라이언스 시뮬레이션: 남은 기간의 선택지 비교</h2>
   <div class="sim">
@@ -5941,91 +6018,14 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
   </div>
   <p class="dg-n">설명용 지수 · 감속 (11/12)² ≈ 0.84 · 청소 100 ÷ 1.08 ≈ 93</p>
   <aside class="notes">
-    <p>두 번째 쓰임이 컴플라이언스 시뮬레이션입니다. 연말까지 석 달 남았을 때 무엇을 할지 고르는 표입니다.</p>
+    <p>컴플라이언스 시뮬레이션입니다. 연말까지 석 달 남았을 때 무엇을 할지 고르는 표입니다.</p>
     <p>왼쪽이 넣는 값입니다. 9월까지의 실적, 남은 항차 계획, 그리고 속력별 연료 곡선입니다. 오른쪽 표가 결과입니다.</p>
     <p>첫 줄, 이대로 가면 연말 CII가 D이고 FuelEU는 적자입니다. 둘째 줄, 1노트 줄이면 연료가 84로 내려가서 CII는 C가 되고 ETS 비용도 84가 됩니다. 그런데 FuelEU 칸을 보십시오. 여전히 적자입니다. 감속은 연료의 양을 줄일 뿐 연료의 종류를 바꾸지 않기 때문입니다. 셋째 줄 선체 청소도 같습니다.</p>
     <p>넷째 줄 바이오 혼합유만 FuelEU가 흑자로 바뀝니다. 대신 연료값이 더 듭니다.</p>
-    <p>아래 세 칸이 정리입니다. 감속과 청소는 CII와 ETS에, 연료 전환은 FuelEU에 듣습니다. 그래서 하나만 고르지 않고 조합합니다. 지수는 설명용입니다. 다음 장에서 이 계산을 속력별 표로 펼쳐 보겠습니다.</p>
+    <p>아래 세 칸이 정리입니다. 감속과 청소는 CII와 ETS에, 연료 전환은 FuelEU에 듣습니다. 그래서 하나만 고르지 않고 조합합니다. 지수는 설명용입니다. 성능 개선은 여기까지입니다. 다음 장에서 오늘 본 오류를 한 번에 찾아보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s dg" data-time="17:16" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p_diag.html#8">
-  <div class="kicker">컴플라이언스 시뮬레이션 · 최적 조건</div>
-  <h2>속력별 연료 · 탄소비용 · 시간비용: 합계가 가장 작은 속력</h2>
-  <table class="opt">
-    <thead><tr><th>속력</th><th>항해일수</th><th>연료 t</th><th>연료비</th><th>탄소비용 (EU ETS)</th><th>시간비용</th><th>합계 (천 유로)</th></tr></thead>
-    <tbody>
-      <tr><td>11.0 kn</td><td>41.7일</td><td>1,016</td><td>569</td><td>128</td><td>1,333</td><td>2,031</td></tr>
-      <tr class="hl"><td>11.8 kn · 최적</td><td>38.8일</td><td>1,132</td><td>634</td><td>143</td><td>1,243</td><td><b>2,020</b></td></tr>
-      <tr><td>13.0 kn</td><td>35.3일</td><td>1,327</td><td>743</td><td>168</td><td>1,128</td><td>2,039</td></tr>
-      <tr><td>14.0 kn · 현행</td><td>32.7일</td><td>1,506</td><td>843</td><td>191</td><td>1,048</td><td>2,081</td></tr>
-      <tr><td>15.0 kn</td><td>30.6일</td><td>1,701</td><td>952</td><td>215</td><td>978</td><td>2,145</td></tr>
-    </tbody>
-  </table>
-  <div class="g3" style="margin-top:14px">
-    <div class="card"><h3>느리게 가면</h3><p>연료비와 탄소비용 감소 · 항해일수가 늘어 <b>시간비용 증가</b></p></div>
-    <div class="card"><h3>최적 속력</h3><p>탄소비용 제외 12.6 kn → 포함 <b>11.8 kn</b> · 탄소비용이 붙으면 최적 속력이 내려감</p></div>
-    <div class="card"><h3>14.0 → 11.8 kn</h3><p>연료 −374 t · CO₂e −1,182 t · 비용 −6만 1천 유로 · 6.1일 지연</p></div>
-  </div>
-  <p class="dg-n">설명용 조건 · 거리 11,000 nm · 14 kn에서 주기관 42 t/일(속력의 세제곱 비례) · 보조기관 4 t/일 · 연료 €560/t · 배출권 €80 · EU↔비EU 50% · 시간비용 €32,000/일</p>
-  <aside class="notes">
-    <p>시뮬레이션이 실제로 계산하는 내용을 표로 펼쳤습니다. 한 항차를 속력만 바꿔 가며 다섯 번 계산한 것입니다. 금액 단위는 천 유로입니다.</p>
-    <p>현행 줄부터 보십시오. 14노트로 가면 32.7일, 연료 1,506톤입니다. 연료비 84만 3천, 탄소비용 19만 1천, 시간비용 104만 8천, 합계 208만 1천 유로입니다.</p>
-    <p>위로 올라가면 속력이 느려집니다. 연료비와 탄소비용은 줄고 시간비용은 늘어납니다. 시간비용은 용선료처럼 하루 늦을 때마다 드는 돈입니다. 합계가 가장 작은 줄이 11.8노트, 202만 유로입니다. 11노트까지 내리면 다시 올라갑니다.</p>
-    <p>가운데 카드를 보십시오. 탄소비용을 빼고 계산하면 최적 속력은 12.6노트입니다. 탄소비용을 넣으면 11.8노트로 내려갑니다. 배출권 가격이 오를수록 더 내려갑니다.</p>
-    <p>오른쪽 카드가 결론입니다. 14노트에서 11.8노트로 줄이면 연료 374톤, 배출 1,182톤이 줄고 비용은 6만 1천 유로가 줄어듭니다. 대신 6일 늦게 도착합니다. 조건은 설명용이고, 다음 장에서 값을 직접 바꿔 보겠습니다.</p>
-  </aside>
-</section>
-<section class="slide labslide" data-time="17:18" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="lab3b.html#1">
-  <style>
-    #S1 .kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:8px}
-    #S1 .kpi .out{padding:12px 16px}
-    #S1 .kpi .small{font-size:17px;white-space:nowrap}
-    #S1 .kpi .v{font-size:28px;font-weight:800;color:var(--navy);line-height:1.25;white-space:nowrap;font-variant-numeric:tabular-nums}
-    #S1 .kpi .v.two{font-size:20px;line-height:1.35}
-    #S1 label{font-size:17px}
-    #S1 #s_v{-webkit-appearance:none;appearance:none;height:6px;background:var(--line);border-radius:3px;margin-top:10px}
-    #S1 #s_v::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;background:var(--teal)}
-  </style>
-  <div class="kicker">3교시 · 속력 최적화</div>
-  <h2 style="margin-bottom:12px">속력 최적화 시뮬레이터</h2>
-  <p style="font-size:18px;font-weight:700;color:var(--navy);margin:0 0 8px">강사가 화면에서 조작합니다</p>
-  <div class="lab row" id="S1" style="gap:24px">
-    <div class="col" style="flex:.8">
-      <div class="card" style="padding:14px 18px">
-        <div class="g2" style="gap:0 14px">
-          <div><label>항차 거리 (nm)</label><input id="s_d" type="number" value="11000"></div>
-          <div><label>기준 속력 (kn)</label><input id="s_v0" type="number" value="14" step="0.1"></div>
-          <div><label>기준 속력 주기관 소비 (t/일)</label><input id="s_f0" type="number" value="42" step="any"></div>
-          <div><label>보조기관 소비 (t/일)</label><input id="s_aux" type="number" value="4" step="any"></div>
-          <div><label>연료 단가 (€/t)</label><input id="s_p" type="number" value="560"></div>
-          <div><label>EUA (€/t)</label><input id="s_eua" type="number" value="80"></div>
-          <div><label>ETS 지역계수</label><select id="s_sc"><option value="0">0% (비EU)</option><option value="0.5" selected>50% (EU↔비EU)</option><option value="1">100% (EU 내)</option></select></div>
-          <div><label>시간 비용 (€/일, 용선료 등)</label><input id="s_t" type="number" value="32000"></div>
-        </div>
-        <label style="margin-top:10px">선택 속력 <b id="s_vv" style="font-size:22px">13.0 kn</b></label>
-        <input id="s_v" type="range" min="9" max="16" step="0.1" value="13">
-      </div>
-    </div>
-    <div class="col" style="flex:1.2">
-      <svg id="s_svg" viewBox="0 0 760 350" width="100%" height="350"></svg>
-      <div class="kpi">
-        <div class="out"><div class="small">항해일수</div><div class="v" id="s_days">-</div></div>
-        <div class="out"><div class="small">연료 · CO₂e</div><div class="v two" id="s_fuel">-</div></div>
-        <div class="out"><div class="small">항차 총비용</div><div class="v" style="font-size:24px;line-height:1.45" id="s_tot">-</div></div>
-        <div class="out"><div class="small">CII 분자 변화 (nm당)</div><div class="v" id="s_cii">-</div></div>
-      </div>
-    </div>
-  </div>
-  <aside class="notes">
-    <p>[화면 전환] 마지막 실습입니다. 속력을 바꾸면 항차 비용이 어떻게 달라지는지 봅니다. 제가 조작하겠습니다.</p>
-    <p>왼쪽이 입력 칸입니다. 항차 거리 11,000해리, 기준 속력 14노트, 그 속력에서 주기관 소비가 하루 42톤, 보조기관이 4톤입니다. 연료 단가는 560유로, 배출권은 80유로, 지역계수는 50%입니다. 시간 비용은 하루 32,000유로이고, 용선료라고 보시면 됩니다. 설명용 벌크선 값입니다.</p>
-    <p>오른쪽 그래프를 보십시오. 회색 점선은 연료비와 시간 비용만 더한 총비용입니다. 진한 실선은 여기에 ETS 비용을 더한 것입니다. 연료 소비는 속력의 세제곱에 비례한다는 일반적인 관계를 썼습니다. 곡선의 바닥이 최적 속력입니다. 탄소비용을 빼면 12.6노트, 넣으면 11.8노트로 내려갑니다.</p>
-    <p>[지역계수 100% · EUA 120 입력] 지역계수를 100%로, 배출권을 120유로로 올리면 최적 속력이 더 내려갑니다. 반대로 시간 비용을 크게 올리면 빨리 가는 쪽이 유리해집니다.</p>
-    <p>[슬라이더 13.0] 오른쪽 아래 "CII 분자 변화"는 같은 거리에서 주기관 연료가 얼마나 줄어드는지입니다. 13노트에 놓으면 −13.8%가 나옵니다. 감속 문제의 약 14%와 같은 값입니다.</p>
-    <p>이 계산은 기준 속력의 소비량이 정확해야 맞습니다. 날씨를 보정한, 검증된 데이터로 만든 속력–연료 곡선이 있어야 합니다. 실무에서는 시운전 곡선과 운항 데이터를 흘수별로 보간해서 만듭니다. 성능은 여기까지입니다. 다음 장에서 오늘 본 오류를 한 번에 찾아보겠습니다.</p>
-  </aside>
-</section>
-<section class="slide" data-time="17:22" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.6 종합 실습과 점검 :: 항차 기록 오류 찾기 → 실무 점검 항목" data-stage="6" data-src="p3c_checklist.html#4">
+<section class="slide" data-time="17:23" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.6 종합 실습과 점검 :: 항차 기록 오류 찾기 → 실무 점검 항목" data-stage="6" data-src="p3c_checklist.html#4">
   <style>
     #bh table.t td{font-size:21px;padding:12px 16px}
     #bh .bug{display:none}
@@ -6054,7 +6054,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>넷째, 1월 1일 로그북이 엑셀 파일입니다. 다섯째, HFO 소비가 12.4톤인데 측심 보정이 18톤입니다. 마이너스 FOC입니다. 마지막 줄 대지거리는 맞게 적은 것입니다. 이 다섯 가지를 막는 점검 항목이 다음 장입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:25" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.6 종합 실습과 점검 :: 항차 기록 오류 찾기 → 실무 점검 항목" data-stage="6" data-src="p3c_checklist.html#3">
+<section class="slide p3-s" data-time="17:26" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.6 종합 실습과 점검 :: 항차 기록 오류 찾기 → 실무 점검 항목" data-stage="6" data-src="p3c_checklist.html#3">
   <div class="kicker">3교시 정리</div>
   <h2>실무 점검 항목</h2>
   <div class="g2" style="gap:24px 40px">
@@ -6080,7 +6080,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[16:43까지 여기 도착]</p>
   </aside>
 </section>
-<section class="slide" data-time="17:26" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_chain.html#1">
+<section class="slide" data-time="17:27" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_chain.html#1">
   <style>
     .rc{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:1fr auto;gap:14px;aspect-ratio:1432/520}
     .rc .c{background:#fff;border:1.5px solid var(--navy);border-radius:8px;padding:22px 18px 20px}
@@ -6134,7 +6134,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>맨 아래 줄은 내년 일정입니다. 2027년에는 ETS 100% 첫 정산, FuelEU 두 번째 주기, UK ETS 첫 보고가 겹칩니다. 기준 데이터는 지금 배에서 입력하고 있는 2026년 보고분입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="17:29" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#2">
+<section class="slide" data-time="17:30" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#2">
   <div class="kicker">인용 규정 · 자료</div>
   <h2>참고 자료</h2>
   <style>
@@ -6189,7 +6189,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[시간이 밀렸으면 이 장은 건너뜀]</p>
   </aside>
 </section>
-<section class="slide cover" data-time="17:30" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#3">
+<section class="slide cover" data-time="17:31" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#3">
   <div class="in">
     <div class="kicker">Q &amp; A</div>
     <h1>질의응답</h1>
