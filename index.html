@@ -2983,7 +2983,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
   <div class="cf">
     <div class="lhs">Attained<br>CII =</div>
     <div class="fr">
-      <div class="side">분자: CO₂ 배출량 = 배출계수 × ( 연료 소비량 − 보정으로 빼는 연료 )</div>
+      <div class="side">분자: CO₂ 배출량 = 배출계수 × (연료 소비량 − 보정으로 빼는 연료)</div>
       <div class="ln">
         <div class="bx base"><b>총 연료 소비량</b><u>FC</u><p>유종별 연간 소비량 × 배출계수 C<sub>F</sub></p></div><span class="op">−</span>
         <div class="bx m"><b>항차조정 구간 연료</b><u>FC<sub>voyage</sub></u><p>선박 안전·인명 구조(Reg.3.1), 내빙등급선의 빙해 항해<br><em>입력: 구간 시작·종료 + 사유</em></p></div><span class="op">−</span>
@@ -2997,7 +2997,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
         <div class="bx base"><b>총 항해 거리</b><u>D<sub>t</sub></u><p>연간 대지거리</p></div><span class="op">−</span>
         <div class="bx m"><b>항차조정 구간 거리</b><u>D<sub>x</sub></u><p>연료를 뺀 구간은 거리도 함께 제외</p></div>
       </div>
-      <div class="side">분모: 수송작업 = 용량 × ( 거리 − 보정으로 빼는 거리 )</div>
+      <div class="side">분모: 수송작업 = 용량 × (거리 − 보정으로 빼는 거리)</div>
     </div>
   </div>
   <div class="cfo">
@@ -4402,10 +4402,33 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>실제 연료 공급서입니다. 선박명과 항구, 직인은 가렸습니다. 앞 장에서 본 항목을 이 서류에서 찾아보겠습니다.</p>
     <p>유종은 LSFO입니다. 황 함량은 0.441%이고 오른쪽 공급자 선언에서 0.50% 이하 칸에 표시돼 있습니다. 점도는 199.9입니다. 50도와 40도 가운데 50도에 체크가 있습니다. 50은 측정 온도이지 점도 값이 아닙니다. 밀도는 15도에서 세제곱미터당 967.8킬로그램입니다.</p>
     <p>수량은 세 줄을 거쳐 나옵니다. 바지에서 잰 부피가 1,208.820세제곱미터입니다. 여기에 부피 보정계수 0.9824를 곱하면 15도 기준 표준 부피 1,187.545가 됩니다. 다시 무게 환산계수 0.9667을 곱하면 1,148톤입니다. 서류에 적힌 값끼리 곱해 보면 맞습니다.</p>
-    <p>보고에 넣는 수급량은 맨 아래 Invoice Quantity 1,148톤입니다. 위의 두 값은 세제곱미터입니다. 이 값을 톤으로 적으면 39톤에서 61톤이 더 들어간 것으로 보고됩니다. 다음은 잔량의 증빙인 기관 로그북입니다.</p>
+    <p>보고에 넣는 수급량은 맨 아래 Invoice Quantity 1,148톤입니다. 위의 두 값은 세제곱미터입니다. 이 값을 톤으로 적으면 39톤에서 61톤이 더 들어간 것으로 보고됩니다. 다음은 양식이 다른 공급서 한 장입니다.</p>
   </aside>
 </section>
-<section class="slide p3" data-time="16:15" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="0" data-src="p3e_evidence.html#3">
+<section class="slide p3-s" data-time="16:15" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3e_evidence.html#7">
+  <div class="kicker">증빙 대조 · 연료 공급서 실물 2</div>
+  <h2>양식이 다른 BDN: 리터 · 배럴 · 톤과 비중</h2>
+  <div class="rd" style="grid-template-columns:1fr 1fr">
+    <figure><figcaption>연료 공급서(BDN) · 국내 항만 공급 · 인쇄 양식</figcaption><img src="img/doc_bdn2.png" alt="연료 공급서 2" style="height:480px;width:auto;margin:0 auto;display:block"></figure>
+    <div class="rs">
+      <div><i>1</i><p><b>유종</b> · VLSFO · 황 0.485% · 인화점 90℃ · 수분 0.05%</p></div>
+      <div><i>2</i><p><b>점도</b> · 324.000 cSt @50℃ · 앞 장과 같이 50은 측정 온도</p></div>
+      <div><i>3</i><p><b>수량 3줄</b> · 182,286 L · 1,146.58 배럴 · <b>170.00 t</b> → 보고 수급량은 Metric Ton 줄</p></div>
+      <div class="ok"><i>4</i><p><b>비중</b> · S.G @15/4℃ 0.9337 · 밀도 칸이 아니라 비중으로 적힌 양식 · 0.9337 t/m³로 입력</p></div>
+      <div class="ok"><i>5</i><p><b>검산</b> · 182.286 m³ × 0.9337 = 170.2 t · 공기 중 무게 보정(−0.0011) 적용 시 182.286 × 0.9326 = <b>170.0 t</b></p></div>
+      <div class="ng"><i>!</i><p><b>읽는 칸 주의</b> · 182,286(L)이나 1,146.58(배럴)을 수급량 칸에 넣는 오류 · 단위 칸이 서류마다 다름</p></div>
+    </div>
+  </div>
+  <p class="small" style="margin-top:8px">예시 선박의 실제 서류 · 선박명 · IMO 번호 · 기국 · 항구 · 공급선 · 봉인 번호는 가림 · 서명란은 잘라냄</p>
+  <aside class="notes">
+    <p>공급서 양식은 공급사마다 다릅니다. 이번에는 국내 항만에서 받은 인쇄 양식입니다. 앞 장과 같은 순서로 읽습니다.</p>
+    <p>유종은 VLSFO, 황 함량 0.485%입니다. 점도는 50도에서 324입니다. 인화점 90도, 수분 0.05%까지 적혀 있습니다.</p>
+    <p>수량은 세 줄입니다. 리터 182,286, 배럴 1,146.58, 톤 170.00입니다. 보고에 넣는 값은 Metric Ton 줄의 170톤입니다. 앞 장 서류는 세제곱미터였고 이 서류는 리터와 배럴입니다. 단위 칸을 먼저 확인해야 하는 이유입니다.</p>
+    <p>이 양식에는 밀도 칸이 없고 비중으로 적혀 있습니다. 15도 기준 0.9337입니다. 검산해 보겠습니다. 182.286세제곱미터에 0.9337을 곱하면 170.2톤으로 서류보다 0.2톤 많습니다. 공급서의 톤은 공기 중 무게여서 밀도에서 0.0011을 뺀 0.9326을 곱합니다. 그러면 170.0톤으로 서류와 맞습니다. 검산이 0.1% 정도 어긋날 때는 이 보정을 먼저 떠올리시면 됩니다.</p>
+    <p>다음은 잔량의 증빙인 기관 로그북입니다.</p>
+  </aside>
+</section>
+<section class="slide p3" data-time="16:16" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="0" data-src="p3e_evidence.html#3">
   <div class="kicker">증빙 서류 · 로그북</div>
   <h2>기관 로그북에서 잔량(ROB)을 읽는 곳</h2>
   <div class="row" style="gap:28px;align-items:flex-start">
@@ -4445,7 +4468,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오른쪽 표 아래 첫 줄을 꼭 보십시오. 로그북의 검산이 맞지 않아도 계산값으로 바꾸지 않습니다. 적힌 값을 그대로 쓰고 불일치로 기록합니다. 소비량이나 기기별 값을 잔량으로 읽는 일도 자주 나옵니다. 다음 장은 실제 로그북의 연료 칸입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:16" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3e_evidence.html#6">
+<section class="slide p3-s" data-time="16:17" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3e_evidence.html#6">
   <div class="kicker">증빙 대조 · 기관 로그북 실물</div>
   <h2>실제 기관 로그북의 연료 칸: 이월 · 수급 · 소비 · 잔량</h2>
   <div class="rd" style="grid-template-columns:1.05fr .95fr">
@@ -4465,10 +4488,33 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>둘째 줄 수급 칸을 보십시오. 숫자가 있지만 벙커링이 아닙니다. 손으로 BUNKER CORRECTION이라고 적었습니다. 측심해 보니 차이가 있어서 LSFO 0.165톤, LSMGO 2.538톤을 더한 것입니다. 이 칸의 숫자를 수급량으로 읽으면 안 됩니다. 보고에서는 수급이 아니라 측심 보정으로 들어와야 합니다.</p>
     <p>합계는 맞습니다. 804.2에 0.165를 더해 804.365, 132.1에 2.538을 더해 134.638입니다.</p>
     <p>소비는 LSMGO만 적혀 있습니다. 정박 중 발전기 1.178, 보일러 0.3이고, 입출항 조종 중 주기관 1.1, 발전기 0.46입니다. 더하면 3.038톤입니다.</p>
-    <p>맨 아래 잔량 칸은 비어 있습니다. 계산하면 131.6톤이지만 그 값은 육상이 만든 숫자이지 증빙이 아닙니다. 선박에 기재를 요청합니다. 이렇게 읽은 서류를 보고와 대조한 결과가 다음 장입니다.</p>
+    <p>맨 아래 잔량 칸은 비어 있습니다. 계산하면 131.6톤이지만 그 값은 육상이 만든 숫자이지 증빙이 아닙니다. 선박에 기재를 요청합니다. 다른 선박의 로그북을 한 장 더 봅니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:17" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#2">
+<section class="slide p3-s" data-time="16:18" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3e_evidence.html#8">
+  <div class="kicker">증빙 대조 · 기관 로그북 실물 2</div>
+  <h2>다른 선박의 로그북: 항해 중 하루의 검산</h2>
+  <div class="rd" style="grid-template-columns:1.05fr .95fr">
+    <figure><figcaption>기관 로그북 하루치 · 탱커 · 항해 중 · 연료 칸 (단위 t)</figcaption><img src="img/doc_englog2.png" alt="기관 로그북 연료 칸 2" style="height:440px;width:auto;margin:0 auto;display:block"></figure>
+    <div class="rs">
+      <div><i>1</i><p><b>이월(Carry Over)</b> · HSFO 2,701.6 · LSMGO 728.6 · LSFO 칸은 공란(적재 없음)</p></div>
+      <div><i>2</i><p><b>수급 · 합계</b> · 공란 → 이날 벙커링 없음</p></div>
+      <div class="ok"><i>3</i><p><b>소비</b> · 항해(Pilot to Pilot) 줄 · HSFO 주기관 68.5 + 발전기 6.8 = <b>75.3</b></p></div>
+      <div class="ng"><i>4</i><p><b>잔량(Balance) 검산</b> · 2,701.6 − 75.3 = 2,626.3 · 기재값 2,626.2 → 0.1 t 차이</p></div>
+      <div class="ok"><i>5</i><p><b>LSMGO</b> · 소비 없음 · 이월 728.6 = 잔량 728.6</p></div>
+      <div><i>!</i><p><b>판단</b> · 0.1 t는 허용오차 안 · 기재값 2,626.2를 그대로 사용 · 다음 날 이월과 이어지는지 확인</p></div>
+    </div>
+  </div>
+  <p class="small" style="margin-top:8px">예시 선박의 실제 서류 · 날짜 · 항차 번호 · 출항지는 잘라냄</p>
+  <aside class="notes">
+    <p>다른 선박의 기관 로그북입니다. 탱커가 항해 중인 날입니다. 칸 구성은 앞 장과 같습니다.</p>
+    <p>이월은 HSFO 2,701.6톤, LSMGO 728.6톤입니다. 이 배는 스크러버가 있어 고유황유를 씁니다. LSFO 칸은 비어 있습니다. 수급과 합계 칸도 비어 있으니 이날은 벙커링이 없었습니다.</p>
+    <p>소비는 항해 줄에만 있습니다. 주기관 68.5, 발전기 6.8, 합계 75.3톤입니다. 더해 보면 맞습니다.</p>
+    <p>잔량을 검산합니다. 2,701.6에서 75.3을 빼면 2,626.3입니다. 적힌 값은 2,626.2로 0.1톤 차이입니다. 소수 둘째 자리 반올림에서 생기는 정도이고 허용오차 안입니다. 이럴 때는 계산값으로 고치지 않고 적힌 2,626.2를 씁니다. 대신 다음 날 이월이 2,626.2로 시작하는지를 봅니다.</p>
+    <p>LSMGO는 소비가 없어 이월과 잔량이 같습니다. 이렇게 읽은 서류를 보고와 대조한 결과가 다음 장입니다.</p>
+  </aside>
+</section>
+<section class="slide p3-s" data-time="16:20" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#2">
   <div class="kicker">증빙 대조 · 벙커링 1건</div>
   <h2>벙커링 1건 대조: 보고 · BDN · 기관 로그북</h2>
   <div class="xb">
@@ -4519,7 +4565,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>2톤을 그냥 두면 그날 이후 잔량이 계속 2톤씩 높게 나옵니다. 연말 연간 대조에서 2톤이 모자란 채로 드러납니다. 그래서 벙커링 보고는 들어온 날 바로 대조합니다. 연료 서류는 여기까지이고, 다음은 화물 서류입니다.</p>
   </aside>
 </section>
-<section class="slide p3" data-time="16:18" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="0" data-src="p3e_evidence.html#2">
+<section class="slide p3" data-time="16:21" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="0" data-src="p3e_evidence.html#2">
   <div class="kicker">증빙 서류 · 화물</div>
   <h2>화물 서류별 수량 기재 위치</h2>
   <table class="t compact">
@@ -4542,7 +4588,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>표 아래에 자주 나오는 오독 세 가지를 적었습니다. 화물창 용적 합계, 배수량이나 재화중량, 흘수를 화물량으로 읽는 경우입니다. 서류에 없는 값은 계산해서 넣지 않습니다. 다음 장부터 실제 화물 서류를 선종별로 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:19" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#4">
+<section class="slide p3-s" data-time="16:21" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#4">
   <div class="kicker">증빙 대조 · 자동차선 화물</div>
   <h2>자동차선 화물 대조: 서류 2장의 합계와 보고값</h2>
   <div class="rd" style="grid-template-columns:.95fr 1.05fr">
@@ -4567,7 +4613,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>보고에 적을 값은 3,054와 5,598.60톤입니다. 자동차선의 화물량은 차량 대수가 아니라 실은 화물 전체입니다. 차량만 세어 3,046으로 보고한 건이 자주 나옵니다. 왼쪽의 OTHERS TOTAL 8,409톤은 평형수와 연료라서 화물이 아닙니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:20" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#6">
+<section class="slide p3-s" data-time="16:23" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#6">
   <div class="kicker">증빙 대조 · 자동차선 하역 기록</div>
   <h2>자동차선 하역 기록지: 작업 시각과 적재 누계</h2>
   <div class="rd" style="grid-template-columns:1.05fr .95fr">
@@ -4590,7 +4636,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>한 가지 조심할 칸이 있습니다. 맨 아래 줄의 왼쪽 WEIGHT 칸에는 2,260.40이 적혀 있습니다. 직전 값이 그대로 남은 것입니다. 이 칸을 읽으면 무게가 1,753톤 모자라게 보고됩니다. 합계는 오른쪽 TTL WT 칸에서 읽습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:22" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#7">
+<section class="slide p3-s" data-time="16:24" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#7">
   <div class="kicker">증빙 대조 · 자동차선 적하 요약서</div>
   <h2>적하 요약서 한 장 전체: 화물 합계, 재화중량 검산, 서명</h2>
   <div class="rd" style="grid-template-columns:auto 1fr">
@@ -4613,7 +4659,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>그 아래 흘수 9.303미터는 출항보고의 흘수와 맞춰 봅니다. 맨 아래 가린 자리에는 작성일, 일등항해사 서명, 선장 확인, 선박 직인이 있습니다. 서명과 직인이 없는 서류는 증빙으로 인정하지 않습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:23" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#5">
+<section class="slide p3-s" data-time="16:25" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#5">
   <div class="kicker">증빙 대조 · 컨테이너선 화물</div>
   <h2>컨테이너선 화물 대조: Cargo Recapitulation에서 읽는 줄</h2>
   <div class="rd" style="grid-template-columns:1.05fr .95fr">
@@ -4636,7 +4682,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>맨 아래 GRAND TOTAL의 무게 11,956톤이 출항할 때 배에 실려 있는 화물 전체입니다. 보고의 화물 총중량에는 이 값을 적습니다. 이번 항구에서 실은 4,176톤을 적는 오류가 자주 나옵니다. 수송작업은 배에 실린 전체 무게로 계산하기 때문입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:24" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#8">
+<section class="slide p3-s" data-time="16:26" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#8">
   <div class="kicker">증빙 대조 · 컨테이너선 Bay Plan</div>
   <h2>컨테이너선 Bay Plan: 요약표의 개수, TEU, 무게</h2>
   <div class="rd" style="grid-template-columns:1.1fr .9fr">
@@ -4659,7 +4705,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>범위를 조심해야 합니다. 이 표는 이번 항구에서 실은 것만 담고 있습니다. 배에 실린 전체 무게는 앞 장에서 본 화물 집계표의 GRAND TOTAL에서 읽습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:25" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3a_validation.html#17">
+<section class="slide p3-s" data-time="16:27" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3a_validation.html#17">
   <div class="kicker">화물 검증 · 예시 기준 · 규정값 아님</div>
   <h2>선종별 화물 검증 기준</h2>
   <div class="row" style="gap:26px;align-items:center">
@@ -4698,7 +4744,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오타 하나를 불일치로 잡는 이유는 사례 맨 아래 줄에 있습니다. 리퍼 개수는 CII에서 전력 보정을 받는 근거입니다. LNG선의 조성은 다음 장에서 따로 봅니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:26" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3a_validation.html#18">
+<section class="slide p3-s" data-time="16:29" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3a_validation.html#18">
   <div class="kicker">LNG선 화물</div>
   <h2>LNG선 COQ 조성과 N₂ 차감</h2>
   <div class="row" style="gap:30px;align-items:center">
@@ -4743,7 +4789,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오른쪽 사례는 조성 미입력입니다. COQ에는 조성이 있는데 보고 칸은 비어 있었습니다. 그냥 넘어가기 쉬운 항목인데 불일치로 잡습니다. 조성이 비면 질소 차감이 0이 되고 CII 분자가 늘어납니다. 받을 수 있는 차감을 못 받는 것입니다. 이렇게 서류를 대조해 나온 결과가 다음 장입니다.</p>
   </aside>
 </section>
-<section class="slide p3" data-time="16:27" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="0" data-src="p3e_evidence.html#4">
+<section class="slide p3" data-time="16:30" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="0" data-src="p3e_evidence.html#4">
   <div class="kicker">증빙 서류 · 대조 결과</div>
   <h2>증빙 대조에서 확인된 오류 유형</h2>
   <div class="row" style="gap:24px;align-items:flex-start">
@@ -4775,7 +4821,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>맨 아래 줄을 보십시오. 불일치로 나온 건은 서류가 맞고 보고가 틀린 경우였습니다. 보고값에 맞춰 서류를 다시 해석하지 않습니다. 서류에 적힌 값으로 보고를 고칩니다. 여기부터는 실제로 걸린 사례를 하나씩 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:29" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#9">
+<section class="slide p3-s" data-time="16:31" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#9">
   <div class="kicker">사례 1 · 거리</div>
   <h2>거리 기준 혼용: 대지거리 · 대수거리 · 계획 거리</h2>
   <div class="row" style="gap:30px;align-items:start">
@@ -4815,7 +4861,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>거리는 CII의 분모입니다. 거리가 5% 틀리면 CII 값도 5% 틀립니다. 오른쪽 아래 줄도 보십시오. IMO DCS 양식에 거리를 항해와 비항해로 나눠 적는 행이 추가됐습니다. 적용 연도는 기국이나 RO에 확인하셔야 합니다. 다음은 등급이 통째로 달라진 사례입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:30" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#10">
+<section class="slide p3-s" data-time="16:32" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#10">
   <div class="kicker">보충 사례 · CII 등급</div>
   <h2>LNG선 CII 등급: 저장값 D·E, 재계산 A</h2>
   <div class="row" style="gap:30px;align-items:center">
@@ -4864,7 +4910,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>왼쪽 아래 목록처럼 LNG선은 설정이 세 가지 더 있습니다. 증발가스 소비를 LNG에 합쳤는지, 화물 속 질소를 뺐는지, 용량 하한 6만 5천을 적용했는지입니다. 그래서 연말에 SoC를 받기 전에 독립적으로 한 번 재계산해 보시길 권합니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:31" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#11">
+<section class="slide p3-s" data-time="16:34" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#11">
   <div class="kicker">사례 2 · 마이너스 FOC</div>
   <h2>보정량이 소비량보다 큰 구간</h2>
   <div class="row" style="gap:30px;align-items:center">
@@ -4906,7 +4952,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오른쪽 아래 줄을 보십시오. 이 보정이 EU 항차에 들어가느냐 비EU 항차에 들어가느냐에 따라 ETS 제출량이 달라집니다. 그래서 마이너스 소비가 나온 레그는 항상 확인 필요로 둡니다. 육상 담당자가 보정을 차이가 실제로 생긴 레그로 옮겨 달라고 선박에 메일을 보냅니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:32" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#12">
+<section class="slide p3-s" data-time="16:35" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#12">
   <div class="kicker">사례 3 · 투묘와 접안</div>
   <h2>투묘 72시간 초과와 투묘·양묘 순서 오류</h2>
   <svg class="p3-flow" viewBox="0 0 1432 296" width="100%">
@@ -4946,7 +4992,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>선박에는 한 줄만 안내하시면 됩니다. "투묘를 넣었으면 양묘도 넣는다"입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:34" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#13">
+<section class="slide p3-s" data-time="16:36" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#13">
   <div class="kicker">사례 4 · BDN 중복 첨부</div>
   <h2>BDN 중복 첨부: 수급량 이중 집계</h2>
   <div class="row" style="gap:30px;align-items:center">
@@ -4994,7 +5040,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>그 아래 선박 작업 원칙 세 줄은 그대로 선박에 전달하시면 됩니다. BDN 한 장에 벙커링 보고 한 건, 수정은 기존 보고의 개정본으로, 나눠 받았으면 BDN도 분할 번호로 붙입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:35" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#14">
+<section class="slide p3-s" data-time="16:37" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#14">
   <div class="kicker">사례 5 · 보고 누락</div>
   <h2>보고 누락: 윤활유 수급 보고의 BDN에 MGO 기재</h2>
   <div class="row" style="gap:30px;align-items:center">
@@ -5028,7 +5074,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>이 사례에서 고칠 것은 오른쪽의 검증 제외 기준입니다. 보고값이 0이라는 이유만으로 검증에서 빼면 이 8건은 잡히지 않습니다. 증빙에도 연료가 없다는 것을 확인했을 때만 제외합니다. 확인하지 못한 항목은 정상으로 보지 않는다는 판정 원칙 그대로입니다. 빠진 MGO 85톤은 CO₂로 약 273톤입니다. 그만큼이 ETS와 FuelEU 계산에서 빠집니다. 다음은 증빙 파일 형식입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:36" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#16">
+<section class="slide p3-s" data-time="16:38" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#16">
   <div class="kicker">사례 6 · 증빙 형식</div>
   <h2>증빙 파일 형식 기준</h2>
   <div class="row" style="gap:30px;align-items:start">
@@ -5062,7 +5108,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>배에서는 번거로워합니다. 그래도 검증기관 심사 때 같은 요청을 다시 받는 것보다 낫습니다. 선박 지침에 "로그북은 사진으로" 한 줄을 넣어 두십시오. 사례는 여기까지이고, 다음은 연말에 하는 연간 연료 대조입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s dg" data-time="16:37" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p_diag.html#3">
+<section class="slide p3-s dg" data-time="16:39" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p_diag.html#3">
   <div class="kicker">그림 · 연간 연료 대조</div>
   <h2>연간 연료 대조: 쓴 양을 두 가지 방법으로 구해 비교</h2>
   <svg viewBox="0 0 1400 440" role="img" aria-label="탱크 기준과 소비 기준 비교">
@@ -5092,7 +5138,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>두 숫자가 같으면 일 년 치 보고가 맞는 겁니다. 다르면 보고가 빠졌거나, 수급을 두 번 셌거나, 잔량을 잘못 적은 겁니다. 다음 장에서 판정 기준을 보고, 그다음 장에서 이 계산을 한 줄씩 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:38" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#19">
+<section class="slide p3-s" data-time="16:40" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#19">
   <div class="kicker">연간 연료 대조</div>
   <h2>연간 연료 대조: 소비 기준과 탱크 기준</h2>
   <div class="row" style="gap:30px;align-items:start">
@@ -5135,7 +5181,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오른쪽 사례 표를 보십시오. B의 출발점은 1월 1일 정오 잔량입니다. VLSFO는 보고 1,204.6과 로그북 1,204.3으로 1톤 안입니다. MGO는 186.2와 168.2, 18톤 차이라 불일치입니다. 연초 잔량이 틀리면 B 전체가 틀립니다. 그래서 1월 1일과 7월 1일 정오에는 측심하고 로그북을 남기라고 선박에 미리 알려 두십시오. 다음 장에서 숫자를 넣어 계산해 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p2" data-time="16:39" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p2_bonus.html#8">
+<section class="slide p2" data-time="16:41" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p2_bonus.html#8">
   <div class="kicker">처리 보충 · 연간 연료 대조</div>
   <h2>연간 연료 대조 계산 예</h2>
   <div class="row" style="gap:24px;align-items:stretch">
@@ -5179,7 +5225,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>아래 사례처럼 탱크 기준이 412톤 크다면, BDN은 있는데 소비가 덜 기록됐거나 수급이 중복된 겁니다. 실제로 같은 BDN이 두 번 첨부돼서 수급이 이중으로 잡힌 사례가 있었습니다.</p>
   </aside>
 </section>
-<section class="slide labslide" data-time="16:40" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="lab3a.html#2">
+<section class="slide labslide" data-time="16:43" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="lab3a.html#2">
   <div class="kicker">3교시 · 연간 연료 대조</div>
   <h2 style="margin-bottom:14px">연간 연료 대조 실습</h2>
   <div class="lab row" id="V2" style="gap:26px;align-items:center">
@@ -5213,7 +5259,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>BDN 방식으로 배출량을 산정하는 회사라면 B가 그대로 보고 숫자가 됩니다. 디벙커링, 재분류, 측심 보정은 드물게 생겨서 빠뜨리기 쉽습니다. 하나만 빠져도 연간 배출량이 틀어집니다. 증발가스처럼 잔량이 없는 연료는 이 비교에서 뺍니다. 이렇게 찾은 차이를 선박과 어떻게 고치는지가 다음 장입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:44" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#20">
+<section class="slide p3-s" data-time="16:47" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#20">
   <div class="kicker">선박 피드백</div>
   <h2>선박 피드백과 데이터 수정</h2>
   <div class="row" style="gap:30px;align-items:center">
@@ -5255,7 +5301,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>표 아래 Lock Date는 데이터 동결일입니다. 검증기관에 낼 데이터를 확정하면 그 날짜 이전 보고는 선박이 고칠 수 없게 잠급니다. 제출한 숫자와 사내 숫자가 달라지는 일을 막기 위해서입니다. 이 절차를 벙커링 보고 한 건으로 직접 해 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide labslide" data-time="16:46" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="lab3a.html#1">
+<section class="slide labslide" data-time="16:48" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="lab3a.html#1">
   <div class="kicker">3교시 · 증빙 대조 실습</div>
   <h2 style="margin-bottom:12px">벙커링 보고 검증 실습</h2>
   <div class="lab" id="V1">
@@ -5278,7 +5324,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[종합 판정 보기 · 클릭] 불일치가 점도, 일자, 밀도 세 건입니다. 하나라도 있으면 보고 전체가 "확인 필요"입니다. 선박에 수정 요청 메일을 보내고, 개정본이 올라오면 다시 판독하고, 사람이 최종 확인합니다. 방금 본 피드백 절차 그대로입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:50" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p3b_performance.html#1">
+<section class="slide p3-s" data-time="16:53" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p3b_performance.html#1">
   <style>
     /* p3a_validation.html과 같은 규칙 (단독 미리보기용 중복) */
     svg.p3-flow{max-width:100%;height:auto;display:block}
@@ -5316,7 +5362,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>마지막 줄이 공통 항목입니다. 수정 가능한 파일, BDN 중복 첨부, 잔량 연속성입니다. 여기가 틀리면 위의 모든 규제 보고가 함께 틀립니다. 여기까지가 사내 점검 항목이고, 검증기관이 지적하는 항목은 다음 장에 있습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:52" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p3a_validation.html#21">
+<section class="slide p3-s" data-time="16:54" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p3a_validation.html#21">
   <div class="kicker">검증기관 관점</div>
   <h2>검증기관 주요 지적 사항</h2>
   <table class="t">
@@ -5335,7 +5381,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>다섯 가지 대부분은 프로그램이 아니라 회사 절차에서 생깁니다. 모니터링 계획에 미리 정의해 두시길 권합니다. 언제까지 무엇을 내야 하는지는 다음 장 달력에 있습니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="16:53" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p1_visual.html#2">
+<section class="slide" data-time="16:55" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p1_visual.html#2">
   <div class="kicker">보고·정산 · 2026년 데이터 기준</div>
   <h2>2026년 데이터의 보고·정산 마감 (2027년)</h2>
   <div class="cal">
@@ -5366,7 +5412,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>앞에서 본 매달 검증이 이 석 달을 넘기기 위한 것입니다. 재무팀은 9월 30일만 보시면 안 됩니다. 3월 31일 검증이 끝나야 제출 수량이 확정되니, 그 전에는 월별 항차 집계로 배출권 수량을 잡아 두셔야 합니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="16:55" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="4" data-src="p3d_web.html#2">
+<section class="slide" data-time="16:57" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="4" data-src="p3d_web.html#2">
   <div class="kicker">검증 실적</div>
   <h2>검증 처리 현황 (24,758건)</h2>
   <div class="row" style="gap:36px;align-items:stretch">
@@ -5399,7 +5445,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>4건이면 적어 보입니다. 하지만 연말에 모아서 고치려 하면 1월에서 3월 검증 기간에 한꺼번에 몰립니다. 그때는 그 항차를 탔던 기관장이 이미 하선한 뒤입니다. 그래서 보고가 들어온 그 주에 확인해 두는 편이 낫습니다. 이제 검증이 끝난 데이터를 어떻게 모아 보는지로 넘어가겠습니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="16:56" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p3d_web.html#3">
+<section class="slide" data-time="16:58" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p3d_web.html#3">
   <div class="kicker">웹 화면 예시</div>
   <h2>선대 CII 현황에서 확인할 항목</h2>
   <div class="crop c3"><img src="img/app/cii_fleet_performance.png" alt="선대 CII 화면: 등급 분포, 선종별 등급, 연도별 추이"></div>
@@ -5418,7 +5464,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>이 현황을 3월 제출 직전에 처음 보면 할 수 있는 일이 없습니다. 분기마다 보면 감속할 배와 선체 청소할 배를 고를 시간이 있습니다. 실제 화면을 잠깐 열어 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide demo" data-demo-url="" data-time="16:57" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="demo3.html#1">
+<section class="slide demo" data-demo-url="" data-time="16:59" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="demo3.html#1">
   <style>
     .d3row{display:grid;grid-template-columns:1.45fr 1fr;gap:22px;align-items:stretch}
     .d3crop{position:relative;border:1.5px solid var(--line);border-radius:6px;overflow:hidden;background:#fff;aspect-ratio:606/362}
@@ -5452,7 +5498,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
   <p class="small" style="margin-top:8px;font-size:21px">데모 계정의 앱 화면(막대 색은 앱 원본) · 선박명은 가명 · 시연 약 3분</p>
   <aside class="notes"><p>선대 현황을 실제 화면에서 두 가지만 열어 보겠습니다. FuelEU 잔액과 CII입니다. 마지막 시연입니다.</p><p>[앱 전환] 선박별 FuelEU 잔액입니다. 초록 막대가 흑자 선박, 빨간 막대가 적자 선박입니다. 이 예는 흑자가 세 척, 적자가 두 척입니다. 선대 GHG 집약도는 83.67로 목표 89.34보다 낮습니다. 그런데도 적자 선박 두 척의 벌금 합계가 약 7만 2천 유로입니다. 1교시에 본 풀링에서 누구와 누구를 묶을지를 이 화면을 보고 정합니다.</p><p>[CII 선대 화면 열기] 방금 캡처로 본 화면입니다. 등급 분포와 선박별 달성값, 요구값이 나옵니다. [슬라이드로 복귀] 이 숫자를 보고 돈을 움직이려면 검증이 먼저 끝나 있어야 합니다. 이 데이터를 회사 안에서 누가 쓰는지 보겠습니다.</p><p>[네트워크·로그인 문제 시: 앱을 열지 말고 이 캡처로 설명. 고객사·선박명이 보이지 않는 데모 계정만 사용]</p><p>[시간이 밀렸으면 앱을 열지 않고 캡처로 30초]</p></aside>
 </section>
-<section class="slide" data-time="17:00" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="6" data-src="p3d_web.html#4">
+<section class="slide" data-time="17:02" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="6" data-src="p3d_web.html#4">
   <div class="kicker">데이터 활용</div>
   <h2>부서별 활용 방법</h2>
   <table class="t">
@@ -5472,7 +5518,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>맨 아래 줄은 도구와 상관없는 원칙 네 가지입니다. 원천 데이터는 한 벌로 둡니다. 숫자에 증빙이 연결돼 있어야 합니다. 고친 이력이 남아야 합니다. 여러 부서가 같은 자료를 봐야 합니다. 엑셀로 하실 때 시트를 어떻게 나누는지는 다음 장에 있습니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="17:01" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="6" data-src="p3d_web.html#5">
+<section class="slide" data-time="17:04" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="6" data-src="p3d_web.html#5">
   <style>
     .xl{display:grid;grid-template-columns:1fr 330px;gap:26px;align-items:start}
     .xl table.t{font-size:21px}
@@ -5509,7 +5555,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[월 점검 순서] 한 달에 한 번은 이 순서로 보십시오. 이벤트의 짝과 순서, 벙커 대장과 BDN, EU 범위 판정, 잔량 등식, 마지막으로 증빙 파일이 붙어 있는지입니다. 관리 이야기는 여기까지입니다. 다음 장은 시트의 항목 이름과 단위를 맞추는 기준인 데이터 표준입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="17:02" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p_diag.html#18">
+<section class="slide" data-time="17:04" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p_diag.html#18">
   <div class="kicker">데이터 관리 · 데이터 표준</div>
   <h2>데이터 표준: 같은 항목을 같은 이름 · 단위 · 코드로</h2>
   <table class="t" style="font-size:20px">
@@ -5529,7 +5575,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>회사 안에서 먼저 할 일은 항목 사전 한 벌입니다. 이름, 단위, 자릿수, 시간대, 코드를 적은 표입니다. 선박 양식과 엑셀과 시스템이 같은 사전을 쓰면 옮길 때 값이 바뀌지 않습니다. 다음 장은 이 시트를 매달 누가 언제 닫는지입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="17:04" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p_diag.html#15">
+<section class="slide" data-time="17:06" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p_diag.html#15">
   <div class="kicker">데이터 관리 · 월 마감</div>
   <h2>월 마감 절차: 담당 · 기한 · 산출물</h2>
   <table class="t" style="font-size:21px">
@@ -5550,7 +5596,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>정할 것은 세 가지입니다. 누가, 언제까지, 무엇을 남기는지입니다. 이것이 없으면 1월에 1년 치를 한꺼번에 맞추게 됩니다. 다음 장은 바뀌는 것을 어떻게 관리하는지입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="17:05" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p_diag.html#16">
+<section class="slide" data-time="17:07" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p_diag.html#16">
   <div class="kicker">데이터 관리 · 변경 관리</div>
   <h2>변경 관리: 모니터링 계획과 데이터 수정 이력</h2>
   <div class="row" style="gap:18px;align-items:stretch">
@@ -5582,7 +5628,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>원본은 지우지 않습니다. 개정본으로 남깁니다. 이미 제출이 끝난 연도의 숫자를 고쳐야 하면 검증기관에 먼저 알립니다. 다음 장은 이 데이터를 용선자와 정산할 때 쓰는 방법입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="17:06" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p_diag.html#17">
+<section class="slide" data-time="17:08" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p_diag.html#17">
   <div class="kicker">데이터 관리 · 용선 정산</div>
   <h2>용선자와의 ETS 비용 정산에 필요한 데이터</h2>
   <div class="row" style="gap:18px;align-items:stretch">
@@ -5608,7 +5654,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>월 마감이 늦으면 청구도 늦어집니다. 그리고 월 청구 합계와 연말 검증값은 조금 다를 수 있습니다. 그 차이를 어떻게 정산할지도 계약에 적어 둡니다. 다음 장은 이 과정을 자동화한 구성 사례입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s dg" data-time="17:07" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="6" data-src="p_diag.html#9">
+<section class="slide p3-s dg" data-time="17:09" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="6" data-src="p_diag.html#9">
   <div class="kicker">자동화 사례 · 보고에서 모니터링까지</div>
   <h2>전 과정 자동화 구성 사례: 보고 · 처리 · 문서 검증 · 모니터링</h2>
   <div class="flw au">
@@ -5631,7 +5677,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>아래 줄을 보십시오. 자동화한 것은 반복 계산과 서류 판독, 대조입니다. 판정과 결정은 사람이 합니다. 엑셀로 관리하셔도 순서는 같습니다. 입력을 점검하고, 계산하고, 증빙과 맞추고, 현황표를 만듭니다. 이제 이 데이터로 연료를 줄이는 쪽으로 넘어갑니다.</p>
   </aside>
 </section>
-<section class="slide p3-s dg" data-time="17:09" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p_diag.html#6">
+<section class="slide p3-s dg" data-time="17:11" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p_diag.html#6">
   <div class="kicker">성능 개선 · 전체 흐름</div>
   <h2>탄소 모니터링에서 원인 분석까지: 데이터 활용의 다섯 단계</h2>
   <div class="flw"><div class="fl"><div class="fh"><i>1</i><b>탄소 모니터링</b></div><div class="fq">지금 어디에 있는가</div><p>누적 CII 비율 · EU ETS 대상량 · FuelEU 잔액을 매달 확인</p><div class="fe">예: 9월 말 CII 비율 1.07 → D 구간</div></div><div class="fa">→</div><div class="fl"><div class="fh"><i>2</i><b>시뮬레이션</b></div><div class="fq">이대로 가면 연말에 어떻게 되는가</div><p>남은 항차 계획을 넣어 선택지별 결과 계산</p><div class="fe">예: 현행 유지 D · 1 kn 감속 C</div></div><div class="fa">→</div><div class="fl"><div class="fh"><i>3</i><b>의사결정</b></div><div class="fq">무엇을 할 것인가</div><p>비용 합계와 일정 영향을 비교해 조합 선택</p><div class="fe">예: 감속 + 다음 정박 때 선체 청소</div></div><div class="fa">→</div><div class="fl"><div class="fh"><i>4</i><b>성능 분석</b></div><div class="fq">실행한 효과가 나왔는가</div><p>날씨를 보정한 속력–연료 곡선으로 전후 비교</p><div class="fe">예: 청소 후 같은 속력에서 연료 −8%</div></div><div class="fa">→</div><div class="fl"><div class="fh"><i>5</i><b>원인 분석</b></div><div class="fq">기대와 다르면 왜 그런가</div><p>오손 · 기상 · 흘수 · 기관 상태 · 보고 오류로 나눠 확인</p><div class="fe">예: 연료 증가분 가운데 보고 오류분 분리</div></div></div>
@@ -5644,7 +5690,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>아래 화살표처럼 원인을 고치면 다시 첫 단계로 돌아갑니다. 다섯 단계가 모두 선박이 보낸 같은 동정보고로 돌아갑니다. 다음 장부터 성능 분석을 먼저 보고, 뒤에서 시뮬레이션으로 돌아오겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:10" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#3">
+<section class="slide p3-s" data-time="17:12" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#3">
   <div class="kicker">성능 분석</div>
   <h2>선박 성능의 정의: 날씨 보정 후 추진 연비</h2>
   <svg class="p3-flow" viewBox="0 0 1432 136" width="100%">
@@ -5685,7 +5731,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>왼쪽 목록이 이 분석에 필요한 데이터입니다. 속력, 흘수와 트림, 풍향·풍속과 파고, 기준 곡선, 그리고 선체 청소 같은 이벤트 일자입니다. 앞에서 검증한 보고가 맞아야 이 분석도 맞습니다. 다음 장에서 성능을 재는 원리를 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s dg" data-time="17:11" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="0" data-src="p_diag.html#7">
+<section class="slide p3-s dg" data-time="17:13" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="0" data-src="p_diag.html#7">
   <div class="kicker">성능 분석 · 원리</div>
   <h2>성능 분석의 원리(ISO 19030): 같은 출력에서 줄어든 속력</h2>
   <div class="row" style="gap:26px;align-items:start">
@@ -5710,7 +5756,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>표준의 기본 방법은 센서 자동 수집입니다. 정오보고로도 할 수 있지만 하루에 한 점이라 정확도가 낮습니다. 그래서 비교 기간을 길게 잡습니다. 숫자는 설명용입니다. 다음 장에서 이 차이를 연료로 바꿔 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:12" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#5">
+<section class="slide p3-s" data-time="17:14" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#5">
   <div class="kicker">속력–연료 곡선</div>
   <h2>속력–연료 기준 곡선과 현재 곡선</h2>
   <div class="row" style="gap:28px;align-items:center">
@@ -5757,7 +5803,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>성능 관리는 이 간격을 매달 추적하는 일입니다. 간격이 벌어지는 가장 흔한 원인이 다음 장입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:13" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#6">
+<section class="slide p3-s" data-time="17:15" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#6">
   <div class="kicker">선체·프로펠러 오손</div>
   <h2>선체·프로펠러 오손과 청소 효과</h2>
   <div class="row" style="gap:28px;align-items:center">
@@ -5792,7 +5838,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오른쪽 아래 사례는 원인을 가르는 방법입니다. 속력에 비해 축마력이 늘었으면 선체나 프로펠러 쪽입니다. 축마력에 비해 연료가 늘었으면 엔진, 곧 연료소비율 쪽입니다. 그래서 축마력 데이터와 연료 데이터를 함께 봅니다. 다음 장에서 청소 시점을 정하는 계산을 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s dg" data-time="17:14" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p_diag.html#4">
+<section class="slide p3-s dg" data-time="17:16" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p_diag.html#4">
   <div class="kicker">성능 분석 · 의사결정 1</div>
   <h2>선체 청소 시점 결정: 늘어난 연료비와 청소비 비교</h2>
   <div class="row" style="gap:26px;align-items:start">
@@ -5818,7 +5864,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>이 판단은 정오보고의 속력과 연료가 맞아야 할 수 있습니다. 숫자는 설명용입니다. 다음 장에서 성능 분석과 데이터 품질의 관계를 정리하겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:15" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3c_checklist.html#2">
+<section class="slide p3-s" data-time="17:18" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3c_checklist.html#2">
   <div class="kicker">성능 분석 정리</div>
   <h2>성능 분석과 데이터 품질</h2>
   <svg class="p3-flow" viewBox="0 0 1432 290" width="100%">
@@ -5842,7 +5888,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>앞의 두 가지는 오늘 검증 사례로 본 오류입니다. 배 상태는 여기까지이고, 다음은 운항 방법 가운데 속력입니다. 문제 하나로 시작하겠습니다.</p>
   </aside>
 </section>
-<section class="slide quiz" data-time="17:16" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#4">
+<section class="slide quiz" data-time="17:19" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#4">
   <style>section.quiz .ct .opts{margin-top:28px;gap:20px} section.quiz .ct .opt{font-size:28px;padding:30px 26px;align-items:center} section.quiz .ct .q{font-size:32px} section.quiz .ct .steps{margin-top:26px;font-size:19px}</style>
   <div class="kicker">퀴즈 · 감속</div>
   <h2>1 kn 감속 시 연료 절감률</h2>
@@ -5864,7 +5910,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오답도 보겠습니다. A는 속력이 줄어든 비율 7%만 본 값입니다. C는 세제곱을 그대로 쓴 값으로, 시간당 절감률입니다. 발전기 연료는 줄지 않기 때문에 선박 전체로는 약 12%입니다. 이 14%는 뒤의 속력 실습에서 다시 나옵니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:19" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#7">
+<section class="slide p3-s" data-time="17:22" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#7">
   <div class="kicker">운항 최적화</div>
   <h2>운항 최적화 2가지: 웨더 라우팅, 적시 도착(JIT)</h2>
   <div class="row" style="gap:28px;align-items:stretch">
@@ -5895,13 +5941,13 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>그래도 선박 A는 서둘러 가서 14일을 기다렸습니다. 어차피 기다릴 시간이라면 그만큼 천천히 가면 됩니다. 이것이 적시 도착, JIT입니다. 실제로 적용할 때는 용선 계약 조건을 함께 봐야 합니다. 다음 장에서 항로 최적화 사례를 하나 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="17:21" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p1_bg.html#19">
+<section class="slide" data-time="17:23" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p1_bg.html#19">
   <div class="kicker">성능 개선 · 운항 최적화</div>
   <h2>항로 최적화 사례</h2>
   <figure class="fg" style=""><figcaption>직선 항로(DIRECT)와 최적 항로(OPTIMIZED) 비교</figcaption><img src="img/seminar/43dbc55191c8_1942.jpg" alt="" style="max-height:540px"></figure>
   <aside class="notes"><p>웨더 라우팅의 사례입니다. 수에즈에서 몰타를 지나 탕헤르까지 가는 구간입니다. 위 지도가 직선 항로, 아래가 최적화한 항로입니다. 속력은 둘 다 12.5노트로 같고 항로만 다릅니다.</p><p>오른쪽 숫자를 보십시오. 빨리 가는 조건에서는 도착이 6.5시간 빨라지고 연료가 4.2% 줄었습니다. 정시 도착 조건에서는 연료 9%, CII 11% 개선입니다. 항로 다음은 속력입니다. 얼마나 늦추는 것이 맞는지가 다음 장입니다.</p></aside>
 </section>
-<section class="slide p3-s" data-time="17:21" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#8">
+<section class="slide p3-s" data-time="17:23" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#8">
   <div class="kicker">최적 속력</div>
   <h2>탄소비용과 최적 속력</h2>
   <div class="row" style="gap:28px;align-items:start">
@@ -5947,7 +5993,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>다음 장에서 이 계산을 속력별 표로 펼쳐 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s dg" data-time="17:22" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p_diag.html#8">
+<section class="slide p3-s dg" data-time="17:24" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p_diag.html#8">
   <div class="kicker">컴플라이언스 시뮬레이션 · 최적 조건</div>
   <h2>속력별 연료 · 탄소비용 · 시간비용: 합계가 가장 작은 속력</h2>
   <table class="opt">
@@ -5974,7 +6020,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오른쪽 카드가 결론입니다. 14노트에서 11.8노트로 줄이면 연료 374톤, 배출 1,182톤이 줄고 비용은 6만 1천 유로가 줄어듭니다. 대신 6일 늦게 도착합니다. 조건은 설명용이고, 다음 장에서 값을 직접 바꿔 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide labslide" data-time="17:23" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="lab3b.html#1">
+<section class="slide labslide" data-time="17:26" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="lab3b.html#1">
   <style>
     #S1 .kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:8px}
     #S1 .kpi .out{padding:12px 16px}
@@ -6024,7 +6070,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>이 계산은 기준 속력의 소비량이 정확해야 맞습니다. 날씨를 보정한, 검증된 데이터로 만든 속력–연료 곡선이 있어야 합니다. 실무에서는 시운전 곡선과 운항 데이터를 흘수별로 보간해서 만듭니다. 속력은 여기까지입니다. 다음 장에서 감속이 CII 등급을 어떻게 바꾸는지 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:28" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3c_checklist.html#1">
+<section class="slide p3-s" data-time="17:30" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3c_checklist.html#1">
   <style>
     /* p3a_validation.html과 같은 규칙 (단독 미리보기용 중복) */
     svg.p3-flow{max-width:100%;height:auto;display:block}
@@ -6086,7 +6132,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오른쪽 아래 줄을 보십시오. D가 3년 연속이거나 E가 한 번이면 시정조치계획을 내야 합니다. 실제로는 늘어나는 항해일수와 용선 조건을 함께 봅니다. 그리고 검증된 연간 데이터로 해야 합니다. 거리가 틀린 데이터로 계산하면 결정도 틀립니다. 다음 장에서 감속, 청소, 연료 전환을 한 표에서 비교하겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s dg" data-time="17:29" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p_diag.html#5">
+<section class="slide p3-s dg" data-time="17:32" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p_diag.html#5">
   <div class="kicker">성능 분석 · 의사결정 2</div>
   <h2>컴플라이언스 시뮬레이션: 남은 기간의 선택지 비교</h2>
   <div class="sim">
@@ -6116,7 +6162,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>아래 세 칸이 정리입니다. 감속과 청소는 CII와 ETS에, 연료 전환은 FuelEU에 듣습니다. 그래서 하나만 고르지 않고 조합합니다. 지수는 설명용입니다. 다음 장에서 같은 비교를 웹 화면 예시로 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide demo" data-demo-url="" data-time="17:31" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="1" data-src="demo1.html#1">
+<section class="slide demo" data-demo-url="" data-time="17:33" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="1" data-src="demo1.html#1">
   <style>
     .d1{display:grid;grid-template-columns:940px 1fr;gap:20px;align-items:stretch}
     .d1-cap{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:8px;aspect-ratio:2220/1175}
@@ -6160,7 +6206,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[캡처로 설명할 때] 오른쪽 숫자 세 개만 보시면 됩니다. 이 배는 감속 10%에 B30을 쓰는 플랜 A가 7만 9,210유로로 나왔습니다. 아래는 남은 기간 연료를 바꿨을 때의 비용입니다. 지금 쓰는 혼합이 24만 3,968유로이고, 연료별로 몇천 유로씩 차이가 납니다. 이 화면의 배출권 가격은 70유로입니다. 오늘 본문 예시는 80유로이니 숫자를 섞어 보시면 안 됩니다. 항구 이름은 가렸습니다. 성능 개선은 여기까지입니다. 다음 장에서 오늘 본 오류를 한 번에 찾아보겠습니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="17:34" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.6 종합 실습과 점검 :: 항차 기록 오류 찾기 → 실무 점검 항목" data-stage="6" data-src="p3c_checklist.html#4">
+<section class="slide" data-time="17:36" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.6 종합 실습과 점검 :: 항차 기록 오류 찾기 → 실무 점검 항목" data-stage="6" data-src="p3c_checklist.html#4">
   <style>
     #bh table.t td{font-size:21px;padding:12px 16px}
     #bh .bug{display:none}
@@ -6189,7 +6235,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>넷째, 1월 1일 로그북이 엑셀 파일입니다. 다섯째, HFO 소비가 12.4톤인데 측심 보정이 18톤입니다. 마이너스 FOC입니다. 마지막 줄 대지거리는 맞게 적은 것입니다. 이 다섯 가지를 막는 점검 항목이 다음 장입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:37" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.6 종합 실습과 점검 :: 항차 기록 오류 찾기 → 실무 점검 항목" data-stage="6" data-src="p3c_checklist.html#3">
+<section class="slide p3-s" data-time="17:39" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.6 종합 실습과 점검 :: 항차 기록 오류 찾기 → 실무 점검 항목" data-stage="6" data-src="p3c_checklist.html#3">
   <div class="kicker">3교시 정리</div>
   <h2>실무 점검 항목</h2>
   <div class="g2" style="gap:24px 40px">
@@ -6215,7 +6261,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[16:43까지 여기 도착]</p>
   </aside>
 </section>
-<section class="slide" data-time="17:38" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_chain.html#1">
+<section class="slide" data-time="17:40" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_chain.html#1">
   <style>
     .rc{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:1fr auto;gap:14px;aspect-ratio:1432/520}
     .rc .c{background:#fff;border:1.5px solid var(--navy);border-radius:8px;padding:22px 18px 20px}
@@ -6244,7 +6290,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>회사에서 문제가 생기면 다섯 단계 중 어디서 틀어졌는지부터 짚어 보십시오. 단계가 정해지면 물어볼 사람이 정해집니다. 입력이면 배입니다. 처리면 육상에서 계산을 맡은 담당자나 프로그램 공급사입니다. 검증이면 검증 담당자, 정산이면 재무, 개선이면 운항팀입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="17:40" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#1">
+<section class="slide" data-time="17:42" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#1">
   <div class="kicker">전체 정리</div>
   <h2>부서별 후속 조치와 2027년 일정</h2>
   <table class="t" style="font-size:24px">
@@ -6259,7 +6305,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>맨 아래 줄은 내년 일정입니다. 2027년에는 ETS 100% 첫 정산, FuelEU 두 번째 주기, UK ETS 첫 보고가 겹칩니다. 기준 데이터는 지금 배에서 입력하고 있는 2026년 보고분입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="17:40" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#2">
+<section class="slide" data-time="17:43" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#2">
   <div class="kicker">인용 규정 · 자료</div>
   <h2>참고 자료</h2>
   <style>
@@ -6314,7 +6360,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[시간이 밀렸으면 이 장은 건너뜀]</p>
   </aside>
 </section>
-<section class="slide cover" data-time="17:41" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#3">
+<section class="slide cover" data-time="17:43" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#3">
   <div class="in">
     <div class="kicker">Q &amp; A</div>
     <h1>질의응답</h1>
@@ -7580,6 +7626,10 @@ table.cnt{margin-top:12px;font-size:14.5px} table.cnt td,table.cnt th{padding:6p
 .pit li i{font-style:normal;width:24px;height:24px;border-radius:50%;background:#D64545;color:#fff;font-size:14px;font-weight:800;text-align:center;line-height:24px;margin-top:2px}
 .docnote{font-size:15px;color:#5B6776;margin-top:6px}
 </style>
+
+
+
+
 
 
 
