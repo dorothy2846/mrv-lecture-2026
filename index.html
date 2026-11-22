@@ -7044,7 +7044,7 @@ table.cnt{margin-top:12px;font-size:14.5px} table.cnt td,table.cnt th{padding:6p
     else if((e.code==='KeyF'||e.key==='f'||e.key==='F')){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}
     else if((e.code==='KeyG'||e.key==='g'||e.key==='G')){const v=prompt('이동할 슬라이드 번호');if(v)show(parseInt(v,10)-1)}
   });
-  addEventListener('click',e=>{if(e.target.closest('#notes,#toc,.mapbody,.lab,.calcin,.calcbar,.ct,.demo-btn,input,select,button,label,textarea,a'))return; if(e.clientX>innerWidth*0.5)next();else prev()});
+  addEventListener('click',e=>{if(e.target.closest('#notes,#toc,.mapbody,.lab,.calcin,.calcbar,.ct,.demo-btn,#lv_body,#lv_pick,tr[data-i],table.g,input,select,button,label,textarea,a'))return; if(e.clientX>innerWidth*0.5)next();else prev()});
   show(parseInt((location.hash||'#1').slice(1),10)-1||0);
 })();
 </script>
