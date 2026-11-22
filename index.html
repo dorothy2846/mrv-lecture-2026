@@ -1115,7 +1115,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
       <div class="cs"><i>2</i><span class="lb">지역계수 적용</span><span class="ex" id="et_e2">5,364 × 1.0 + 737 × 0.5</span><span class="rs" id="et_r2">= 5,732 t</span><small>EU 항구 간·항내 100% · EU↔비EU 50%</small></div>
       <div class="cs"><i>3</i><span class="lb">CH₄·N₂O 가산</span><span class="ex" id="et_e3">(1,673 + 562 + (230 + 37) × 0.5) × 0.049</span><span class="rs" id="et_r3">= +116 tCO₂e</span><small>바이오분 포함 · 연료 1 t당 0.049 · 2026년분부터</small></div>
       <div class="cs"><i>4</i><span class="lb">2026년분 제출량</span><span class="ex" id="et_e4">(5,732 + 116) × 100%</span><span class="rs" id="et_r4">= 5,849 EUA</span><small>도입 비율 2024년분 40% → 2025년분 70% → 2026년분 100%</small></div>
-      <div class="cs"><i>5</i><span class="lb">2026년분 비용</span><span class="ex" id="et_e5">5,849 × €80</span><span class="rs" id="et_r5">= €467,900</span></div>
+      <div class="cs"><i>5</i><span class="lb">2026년분 비용</span><span class="ex" id="et_e5">5,849 × €80</span><span class="rs" id="et_r5">= €467,920</span></div>
       <div class="cs"><i>6</i><span class="lb">2025년분 규칙이면</span><span class="ex" id="et_e6">5,732 × 70% × €80</span><span class="rs" id="et_r6">= €321,000</span><small>2025년분은 CO₂만 70% · 같은 운항 기준 비교</small></div>
       <div class="cs"><i>7</i><span class="lb">미제출 시 벌금</span><span class="ex" id="et_e7">5,849 × €100</span><span class="rs red" id="et_r7">= €584,900</span><small>벌금 납부 후에도 제출 의무 유지</small></div>
       </div>
@@ -1134,7 +1134,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
   </div>
   <aside class="notes">
     <p>답은 약 45%입니다. 예시 선박으로 계산해 보겠습니다. 바이오 혼합유를 쓰는 재화중량 1만 7천 톤급 케미컬 탱커 A입니다. 2026년 1월 1일부터 11월 21일까지 EU MRV 모니터링에 집계된 연료량입니다. 이 배는 대부분 EU 항구 사이를 다닙니다. EU 역내에서 MGO 1,673톤과 바이오디젤 562톤을 썼습니다. EU와 비EU 사이 항차에서는 MGO 230톤과 바이오디젤 37톤입니다.</p>
-    <p>[→ 키로 한 줄씩] 1번, MGO에 배출계수 3.206을 곱하면 역내 5,364톤, EU와 비EU 사이 737톤입니다. 바이오디젤은 지속가능성 증명이 인정되면 CO₂를 0으로 처리합니다. 2번, 역내는 100%, EU와 비EU 사이는 50%를 적용해 5,732톤입니다. 3번, 메탄과 아산화질소 116톤을 더합니다. 4번, 2026년분은 100% 제출이라 5,849 EUA입니다. 5번, 배출권 80유로면 46만 7,900유로입니다. 6번, 같은 운항을 2025년분 규칙으로 계산하면 32만 1천 유로입니다. 46% 늘었습니다. 7번, 제출하지 않으면 벌금이 58만 4,900유로이고 제출 의무는 그대로입니다.</p>
+    <p>[→ 키로 한 줄씩] 1번, MGO에 배출계수 3.206을 곱하면 역내 5,364톤, EU와 비EU 사이 737톤입니다. 바이오디젤은 지속가능성 증명이 인정되면 CO₂를 0으로 처리합니다. 2번, 역내는 100%, EU와 비EU 사이는 50%를 적용해 5,732톤입니다. 3번, 메탄과 아산화질소 116톤을 더합니다. 4번, 2026년분은 100% 제출이라 5,849 EUA입니다. 5번, 배출권 80유로면 46만 7,920유로입니다. 6번, 같은 운항을 2025년분 규칙으로 계산하면 32만 1천 유로입니다. 46% 늘었습니다. 7번, 제출하지 않으면 벌금이 58만 4,900유로이고 제출 의무는 그대로입니다.</p>
     <p>이제 데이터 하나가 틀렸다고 해 보겠습니다. EU 항구 간 항차가 EU와 비EU 사이로 잘못 분류되면 계수가 50%로 바뀝니다. 바이오디젤의 증명서가 빠지면 599톤에 배출계수가 붙습니다. 배출권 가격이 오르면 같은 오류의 비용도 커집니다. 위쪽 가정 칸의 숫자를 바꾸면 모든 단계가 다시 계산됩니다.</p>
   </aside>
 </section>
@@ -6267,10 +6267,10 @@ table.cnt{margin-top:12px;font-size:14.5px} table.cnt td,table.cnt th{padding:6p
     const mx=Math.max(...SH.map(q=>q.a+q.b*.5)); $('sc_cmp').innerHTML=SH.map((q,j)=>'<div class="r'+(j==k?' on':'')+'"><b>'+q.n.split(' · ')[0]+'</b><span><i style="width:'+(100*(q.a+q.b*.5)/mx).toFixed(1)+'%"></i></span><span>'+N(q.a+q.b*.5)+'</span></div>').join(''); sc(); }
   function sc(){ if(!$('sc_in'))return; const h=SH[si],a=+$('sc_in').value||0,b=+$('sc_x').value||0,eua=+$('sc_eua').value||0,tot=a+b*.5;
     let fu=0; h.f.forEach(r=>fu+=r[1]+r[2]);
-    set('sc_e1',N(a,1)); set('sc_r1','= '+N(a)+' t');
-    set('sc_e2',N(b,1)+' × 0.5'); set('sc_r2','= '+N(b*.5)+' t');
-    set('sc_e3',N(a)+' + '+N(b*.5)); set('sc_r3','= '+N(tot)+' EUA');
-    set('sc_e4',N(tot)+' × €'+N(eua)); set('sc_r4','= '+eur(tot*eua));
+    set('sc_e1',N(a,1)); set('sc_r1','= '+N(a,1)+' t');
+    set('sc_e2',N(b,1)+' × 0.5'); set('sc_r2','= '+N(b*.5,1)+' t');
+    set('sc_e3',N(a,1)+' + '+N(b*.5,1)+' = '+N(tot,1)); set('sc_r3','= '+N(tot)+' EUA');
+    set('sc_e4',N(Math.round(tot))+' × €'+N(eua)); set('sc_r4','= €'+N(Math.round(tot)*eua));
     set('sc_e5','('+N(a)+' + '+N(b)+') ÷ '+N(fu)+' t'); set('sc_r5','= '+N((a+b)/fu,2)+' tCO₂e/t'); set('sc_s5',h.note);
   }
   if($('sc_sel')){ SH.forEach((h,k)=>{const b=document.createElement('button');b.textContent=h.n;b.onclick=e=>{e.stopPropagation();scSel(k)};$('sc_sel').appendChild(b)});
