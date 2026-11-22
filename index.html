@@ -281,6 +281,10 @@ section.slide.pp>h2.ppt{display:none}
 .case .calc{gap:5px} .case .calc .cs{font-size:17.5px;padding:5px 11px;column-gap:10px} .case .calc .cs small{font-size:13.5px} .case .calc .cs>i{width:24px;height:24px;font-size:13px}
 .calc,.calc .cs,.calc .cs>*{min-width:0} .col:has(.calc),.col:has(.calcin){min-width:0}
 .calc .cs.two small{grid-column:2/6;grid-row:2;text-align:left} .case .calcbar span:last-child{display:none}
+
+/* judge fixes: wrapping */
+section.slide h2,section.slide h3,section.slide .card p,section.slide li,section.slide td{text-wrap:pretty}
+section.slide h2{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -950,11 +954,11 @@ section.slide.pp>h2.ppt{display:none}
 </section>
 <section class="slide p1-lg" data-time="14:20" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|IMO: DCS 보고 → CII 등급" data-stage="1" data-src="p1_regulation.html#10">
   <div class="kicker">사례 · CII 계산</div>
-  <h2>LNG선 A: 정오보고 1건의 CII 산정</h2>
+  <h2>LNG선 A: 정오보고 1건의 CII 산정 5단계</h2>
   <div class="row" style="align-items:stretch">
     <div class="col">
       <div class="case">
-        <div class="ch"><span class="tag">사례</span>LNG선 A · 항해 중 정오보고 1건 (실데이터, 익명)</div>
+        <div class="ch"><span class="tag">사례</span>예시 선박 · LNG선 A · 항해 중 정오보고 1건</div>
         <div class="cb">
           <table class="t compact">
             <tr><th>입력 항목</th><th>값</th></tr>
@@ -963,7 +967,6 @@ section.slide.pp>h2.ppt{display:none}
             <tr><td>발전기 연료</td><td>BOG + ULSMGO</td></tr>
             <tr><td>자연 증발가스(BOG)</td><td>88.31 t</td></tr>
           </table>
-          <p style="margin-top:12px">→ 당일 CII: <b>Attained 6.132</b> vs <b>Required 6.50</b> → 비율 0.94 → <b>C 등급</b></p>
         </div>
       </div>
       <svg viewBox="0 0 700 124" width="100%" role="img" aria-label="LNG선 A 일별 CII 등급 위치" style="display:block;margin-top:18px">
@@ -977,18 +980,25 @@ section.slide.pp>h2.ppt{display:none}
 </svg>
       <p class="small" style="margin-top:8px;font-size:18px">LNG선 등급 경계 · 100,000 DWT 미만: 0.78·0.92·1.10·1.37 / 100,000 DWT 이상: 0.89·0.98·1.06·1.13</p>
     </div>
-    <div class="col" style="display:flex;flex-direction:column;gap:18px">
-      <div class="card" style="flex:1"><h3>LNG선의 데이터 포인트</h3><ul class="b"><li>CII에서는 <b>LNG + BOG 합산</b> (C<sub>F</sub> 2.750)</li><li>기준선 계산 시 Capacity 하한 적용(소형 LNG선)</li><li>화물 N₂ 차감은 COQ(화물 품질 증명서) 조성 데이터가 있어야 가능</li></ul></div>
-      <div class="callout warn"><b>일별 CII ≠ 연간 CII</b><br>일별: 보정·항차조정 없음, 접안·투묘 중 연료 제외</div>
+    <div class="col" style="flex:1.15">
+      <div class="calc">
+      <div class="cs"><i>1</i><span class="lb">연료 → CO₂</span><span class="ex">Σ (유종별 소비량 × 배출계수)</span><span class="rs">BOG 88.31 × 2.750 = 242.9 t</span><small style="grid-column:2 / -1;grid-row:2;text-align:left;font-size:15px;margin-top:-2px">LNG와 BOG는 합산해 계수 2.750 · LSFO 3.151 · ULSMGO 3.206 소비분을 더해 그날 CO₂ 합계</small></div>
+      <div class="cs"><i>2</i><span class="lb">수송작업</span><span class="ex">재화중량(DWT) × 항해거리</span><span class="rs">DWT × 427 nm</span><small style="grid-column:2 / -1;grid-row:2;text-align:left;font-size:15px;margin-top:-2px">화물 실적이 아닌 선박 제원 DWT 사용 · 거리는 대지거리</small></div>
+      <div class="cs"><i>3</i><span class="lb">달성값 (Attained)</span><span class="ex">① CO₂(g) ÷ ② 수송작업(t·nm)</span><span class="rs">= 6.132</span><small style="grid-column:2 / -1;grid-row:2;text-align:left;font-size:15px;margin-top:-2px">1톤을 1해리 옮기는 데 낸 CO₂ 그램 수</small></div>
+      <div class="cs"><i>4</i><span class="lb">요구값 (Required)</span><span class="ex">선종·DWT별 기준선 × (1 − 그해 감축률)</span><span class="rs">= 6.50</span><small style="grid-column:2 / -1;grid-row:2;text-align:left;font-size:15px;margin-top:-2px">기준선은 2019년 실적 · 소형 LNG선은 기준선 계산에 Capacity 하한 적용</small></div>
+      <div class="cs"><i>5</i><span class="lb">비율 → 등급</span><span class="ex">6.132 ÷ 6.50</span><span class="rs">= 0.94 → C 등급</span><small style="grid-column:2 / -1;grid-row:2;text-align:left;font-size:15px;margin-top:-2px">0.92 초과 1.10 이하가 C · 왼쪽 등급 띠의 위치</small></div>
+      </div>
+      <div class="callout warn" style="margin-top:12px"><b>일별 CII ≠ 연간 CII</b> · 일별: 보정·항차조정 없음, 접안·투묘 중 연료 제외 · 화물 N₂ 차감은 COQ(화물 품질 증명서) 조성 데이터가 있어야 가능</div>
     </div>
   </div>
   <aside class="notes">
-    <p>실제 LNG선 한 척의 정오보고입니다. 24시간에 427해리를 갔고, 주기관 두 대는 증발가스와 저유황유, 발전기는 증발가스와 초저유황 경유를 썼습니다. 그날 자연 증발가스가 88톤입니다.</p>
-    <p>이 한 장으로 당일 CII를 계산하면 달성값 6.132, 요구값 6.50, 비율 0.94로 C등급입니다. 아래 등급 경계는 재화중량 10만 톤 미만 LNG선 기준이고, 10만 톤 이상이면 경계가 더 촘촘합니다. LNG선은 LNG와 증발가스를 합산하고, 소형선은 기준선을 계산할 때 용량 하한이 적용되고, 화물 속 질소를 차감하려면 화물 품질 증명서, COQ의 조성 데이터가 있어야 합니다.</p>
+    <p>LNG선 한 척의 정오보고입니다. 24시간에 427해리를 갔고, 주기관 두 대는 증발가스와 저유황유, 발전기는 증발가스와 초저유황 경유를 썼습니다. 그날 자연 증발가스가 88톤입니다.</p>
+    <p>오른쪽에서 계산을 한 단계씩 보겠습니다. 화살표 키로 넘깁니다. [1] 먼저 연료를 CO₂로 바꿉니다. 유종마다 소비량에 배출계수를 곱해서 더합니다. 증발가스 88.31톤에 2.750을 곱하면 약 243톤이고, 여기에 저유황유와 경유분을 더합니다. [2] 다음은 수송작업입니다. 재화중량톤에 그날 거리 427해리를 곱합니다. 실제 실은 화물이 아니라 선박 제원의 재화중량을 씁니다. [3] CO₂를 수송작업으로 나누면 달성값입니다. 1톤을 1해리 옮기는 데 CO₂ 몇 그램을 냈는지입니다. 이 배는 6.132입니다. [4] 요구값은 선종과 크기로 정해진 기준선에 그해 감축률을 반영한 값입니다. 6.50입니다. [5] 달성값을 요구값으로 나누면 0.94이고, 0.92에서 1.10 사이라서 C등급입니다.</p>
+    <p>아래 등급 경계는 재화중량 10만 톤 미만 LNG선 기준이고, 10만 톤 이상이면 경계가 더 촘촘합니다. LNG선은 LNG와 증발가스를 합산하고, 소형선은 기준선을 계산할 때 용량 하한이 적용되고, 화물 속 질소를 차감하려면 화물 품질 증명서, COQ의 조성 데이터가 있어야 합니다.</p>
     <p>이 C등급 하루치를 365일 모으면 연간 등급이 될 것 같지만, 그렇게 계산하면 틀립니다. 일별 값에는 보정계수가 없고 하루치 거리만 분모로 씁니다. 연간 값에는 접안과 투묘 중 연료가 다 들어가고 보정도 적용됩니다. 제가 검증하면서도 일별과 연간을 직접 비교하는 점검을 써 봤다가 그만뒀습니다. 연간 예측은 누적 데이터로 따로 하셔야 합니다.</p>
   </aside>
 </section>
-<section class="slide labslide" data-time="14:21" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|IMO: DCS 보고 → CII 등급" data-stage="1" data-src="lab1.html#2">
+<section class="slide labslide" data-time="14:22" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|IMO: DCS 보고 → CII 등급" data-stage="1" data-src="lab1.html#2">
   <div class="kicker">1교시 · CII 시뮬레이터</div>
   <h2 style="margin-bottom:16px">연도별 CII 등급 변화</h2>
   <div class="lab row" id="L2" style="gap:24px">
@@ -1032,7 +1042,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>마지막으로 '보정 차감 CO₂'에 숫자를 넣어 보겠습니다. 리퍼 전력이나 항차조정 같은 보정을 증빙과 함께 인정받으면 분자가 줄어서, 등급 경계에 있는 배는 등급이 바뀔 수 있습니다. 다만 리퍼 전력이나 화물 가열 같은 FC 보정은 쓴 연료가 다 빠지는 게 아닙니다. 올해 2026년 기준으로 0.66배만 빠지니, 이 칸에는 그 비율을 곱한 값을 넣어야 합니다. 증빙이 없으면 이 칸은 0입니다. 컨테이너선 예시는 처음부터 D 근처에 있으니 한번 눌러 보십시오. 계수는 MEPC 지침 값이고, 실제 등급은 기국과 검증기관의 연간 확정치를 따릅니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="14:26" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_why.html#3">
+<section class="slide p1-lg" data-time="14:27" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_why.html#3">
   <div class="kicker">EU · 보고 제도와 규제 조치</div>
   <h2>EU: MRV(보고 제도)와 ETS(규제 조치)</h2>
   <div class="why">
@@ -1048,7 +1058,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>실무에서 중요한 것은 지역계수입니다. 같은 연료라도 EU 항구 사이면 100%, EU와 비EU 사이면 50%입니다. 이 판정이 항차 기록에서 나옵니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg ezs" data-time="14:27" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_easy.html#2">
+<section class="slide p1-lg ezs" data-time="14:28" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_easy.html#2">
   <div class="kicker">EU ETS · 적용 범위</div>
   <h2>EU ETS 적용 범위: 항차 종류별 산입 비율</h2>
   <div class="lanehd"><span>항차 종류 <button type="button" class="rp" data-rp style="position:static;margin-left:8px">↻ 다시 재생</button></span><span class="z"><span>비EU 해역</span><span>EU/EEA 해역</span></span><span>배출량 중 산입 비율</span></div>
@@ -1118,7 +1128,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>아래 문장을 보십시오. 검증기관은 연료를 아꼈는지는 보지 않고, 보고한 숫자가 증빙과 같은지만 봅니다. 3교시 검증이 이 기준으로 진행됩니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="14:29" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_regulation.html#11">
+<section class="slide p1-lg" data-time="14:30" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_regulation.html#11">
   <div class="kicker">EU MRV · Reg. 2015/757 (2023/957 개정)</div>
   <h2>EU MRV: 항차 단위 모니터링 · 연간 보고</h2>
   <div class="row" style="align-items:stretch">
@@ -1156,7 +1166,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>가장 중요한 단어는 왼쪽 아래 '기항'입니다. EU MRV에서 항차는 기항과 기항 사이이고, 기항은 화물이나 여객을 싣고 내리기 위한 정박만 인정됩니다. 벙커링만 한 항구, 선원만 바꾼 항구는 기항이 아닙니다. 이 정의에 따라 50%짜리 항차가 100%도 되고 0%도 됩니다. 판정 방법은 2교시에 사례로 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="14:30" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_regulation.html#14">
+<section class="slide" data-time="14:31" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_regulation.html#14">
   <div class="kicker">EU ETS 해운</div>
   <h2>EU ETS 해운: 제출량 산식과 도입 비율</h2>
   <div class="formula" style="font-size:24px">제출량 = Σ (CO₂ + CH₄×28 + N₂O×265) × 지역계수(EU 내·항내 1.0 / EU↔비EU 0.5) × 도입 비율</div>
@@ -1227,7 +1237,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>이제 데이터 하나가 틀렸다고 생각해 보십시오. EU 항구 간 항차가 EU와 비EU 사이로 잘못 분류되면 계수가 50%로 바뀝니다. 바이오디젤의 증명서가 빠지면 599톤에 배출계수가 붙습니다. 배출권 가격이 오르면 같은 오류의 비용도 커집니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="14:33" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="0" data-src="p1_why.html#8">
+<section class="slide p1-lg" data-time="14:34" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="0" data-src="p1_why.html#8">
   <div class="kicker">EU ETS · 연료별 비교</div>
   <h2>EU ETS 제출량 비교: 연료가 다른 선박 3척</h2>
   <div class="shipsel" id="sc_sel"></div>
@@ -1258,7 +1268,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>셋째는 LNG 운반선 C입니다. LNG는 1톤당 CO₂가 2.750톤으로 낮지만, 2026년분부터 타지 않고 빠져나간 메탄이 더해집니다. 그래서 이 배의 연료 1톤당 평균 배출량은 약 3.3톤으로 나옵니다. 연료 사용량이 많아 제출량도 세 척 가운데 가장 큽니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="14:34" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_why.html#4">
+<section class="slide p1-lg" data-time="14:35" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_why.html#4">
   <div class="kicker">FuelEU Maritime · 목적</div>
   <h2>FuelEU Maritime의 목적과 구조</h2>
   <div class="row" style="gap:20px;align-items:stretch">
@@ -1291,7 +1301,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>오른쪽 표의 셋째 줄을 보십시오. 연료를 덜 태워도 1메가줄당 집약도는 그대로입니다. 중유의 집약도는 91.7, 저유황 중유는 91.4로 이미 한도 89.34보다 높습니다. 화석연료만 쓰는 배는 속력을 줄여도 해마다 적자입니다. 적자를 없애려면 집약도가 낮은 연료를 섞어야 합니다. 벌금 계산을 본 뒤 바이오연료로 계산해 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="14:35" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="0" data-src="p1_why.html#7">
+<section class="slide p1-lg" data-time="14:36" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="0" data-src="p1_why.html#7">
   <div class="kicker">FuelEU Maritime · 작동 순서</div>
   <h2>FuelEU Maritime 작동 순서: 연료의 연간 평균 집약도를 한도와 비교</h2>
   <div class="fm">
@@ -1353,7 +1363,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>이 적자를 메우는 방법은 셋입니다. 흑자 선박과 묶는 풀링, 흑자를 이월하는 뱅킹, 다음 해에서 당겨 쓰는 차입입니다. 풀링은 회사 간에도 할 수 있어서 이미 흑자를 사고파는 시장이 생겼습니다. 그런데 풀링 상대가 되려면 내 배의 잔액이 검증된 숫자여야 합니다. 검증 안 된 흑자는 아무도 사 주지 않습니다. 풀링은 시간이 되면 조금 뒤 실습에서 직접 해 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="14:38" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_why.html#5">
+<section class="slide p1-lg" data-time="14:39" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_why.html#5">
   <div class="kicker">FuelEU Maritime · 바이오연료</div>
   <h2>FuelEU에서 바이오연료의 효과</h2>
   <div class="row" style="align-items:flex-start;gap:24px">
@@ -1392,7 +1402,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>집약도 차이가 76으로 크기 때문에 조금만 섞어도 평균이 내려갑니다. 한도보다 더 낮추면 흑자가 생기고, 흑자는 다음 해로 넘기거나 다른 배의 적자와 합칠 수 있습니다. 위쪽 막대를 움직여 비율을 바꿔 보겠습니다. 바이오연료 가격은 시기와 지역에 따라 다르므로 실제 판단은 견적으로 하셔야 합니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="14:40" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_core.html#4">
+<section class="slide" data-time="14:41" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_core.html#4">
   <div class="kicker">FuelEU · 요건 요약</div>
   <h2>FuelEU: 요건과 대응 데이터</h2>
   <div class="imu-key"><div><b>대상</b>5,000GT 초과 화물·여객선</div><div><b>범위</b>ETS와 동일 (100 / 50%)</div><div><b>지표</b>GHG 집약도 gCO₂e/MJ (WtW)</div><div><b>기한 · 결과</b>1/31 검증기관 → 4/30 풀링 → 6/30 DoC · 적자 시 벌금</div></div>
@@ -1409,7 +1419,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>[활용] 잔액가 나오면 선택지가 생깁니다. 적자인 배를 흑자인 배와 묶을지, 내년으로 넘길지, 바이오를 더 살지, 그냥 벌금을 낼지. 실습에서 직접 해 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide quiz" data-time="14:41" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_regulation.html#24">
+<section class="slide quiz" data-time="14:42" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_regulation.html#24">
   <div class="kicker">퀴즈 · FuelEU 대응 수단</div>
   <h2>FuelEU 준수 잔액 부족 시 대응 수단</h2>
   <div class="ct"><div class="q">케미컬 탱커 A · MGO만 사용 · 집약도 <b>90.77</b> &gt; 2026년 한도 <b>89.34</b> (gCO₂e/MJ)<br>부족분을 해소하는 수단이 <b>아닌</b> 것은?</div>
@@ -1421,7 +1431,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>[5초 · R키] 답은 D입니다. 배출권은 EU ETS에서 쓰는 수단입니다. FuelEU는 별도 제도라서 배출권을 더 내도 준수 잔액은 그대로입니다. A, B, C는 모두 FuelEU가 인정하는 수단입니다. 연료를 바꿔 평균을 낮추거나, 남는 선박과 묶거나, 다음 해 것을 당겨 씁니다. 차입은 다음 해에 1.1배로 갚아야 하고 2년 연속으로는 못 합니다. 아무 수단도 쓰지 않으면 벌금을 냅니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="14:44" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_why.html#6">
+<section class="slide p1-lg" data-time="14:45" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_why.html#6">
   <div class="kicker">UK ETS · 목적</div>
   <h2>UK ETS 해운의 목적과 구조</h2>
   <div class="why">
@@ -1453,7 +1463,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>활용 쪽에서는, 유럽 순환 항로처럼 EU 항구와 영국 항구를 같이 도는 배가 어느 구간에서 어느 배출권을 내는지 나눠 보는 데 씁니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="14:45" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_regulation.html#18">
+<section class="slide p1-lg" data-time="14:46" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_regulation.html#18">
   <div class="kicker">UK ETS 해운</div>
   <h2>UK ETS 해운: 2026.7.1 시행</h2>
   <div class="row" style="align-items:stretch">
@@ -1491,7 +1501,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>EU와의 비교, 제외·감면, 2028년 변경은 다음 넉 장에서 표로 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide" data-noabbr data-time="14:46" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_visual.html#1">
+<section class="slide" data-noabbr data-time="14:47" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_visual.html#1">
   <div class="kicker">UK ETS 해운 · 적용 범위</div>
   <h2>UK ETS 적용 범위: 항차 종류별 EU ETS와의 비교</h2>
   <div class="ukl">
@@ -1530,7 +1540,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>다음 두 장의 표는 같은 내용을 항목별로 정리한 것입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="14:48" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_uk.html#2">
+<section class="slide" data-time="14:49" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_uk.html#2">
   <div class="kicker">EU와 영국 비교 · 범위</div>
   <h2>EU MRV·ETS와 UK ETS 비교: 대상과 범위</h2>
   <table class="uk">
@@ -1552,7 +1562,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>[단계적 도입] 영국은 첫해부터 100%입니다. 나머지 줄은 자료로 보십시오.</p>
   </aside>
 </section>
-<section class="slide" data-time="14:48" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_uk.html#3">
+<section class="slide" data-time="14:49" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_uk.html#3">
   <div class="kicker">EU와 영국 비교 · 의무와 기한</div>
   <h2>EU MRV·ETS와 UK ETS 비교: 의무와 기한</h2>
   <table class="uk">
@@ -1575,7 +1585,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>보고서는 둘 다 3월 31일이고, 제출 시스템만 EU는 THETIS, 영국은 METS로 다릅니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="14:49" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_uk.html#1">
+<section class="slide" data-time="14:50" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_uk.html#1">
   <style>
     table.uk{width:100%;border-collapse:collapse;font-size:18px;line-height:1.4;background:#fff;border:1.5px solid var(--navy)}
     table.uk th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-size:17px;white-space:nowrap}
@@ -1642,7 +1652,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>[오른쪽 아래] 영국에 기항하는 배가 지금 할 일은 이 세 가지입니다.</p>
   </aside>
 </section>
-<section class="slide" data-noabbr data-time="14:50" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|중국 MSA" data-stage="1" data-src="p1_visual.html#6">
+<section class="slide" data-noabbr data-time="14:51" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|중국 MSA" data-stage="1" data-src="p1_visual.html#6">
   <div class="kicker">중국 · 해사국(MSA) 보고 제도</div>
   <h2>중국 MSA 선박 에너지소비 데이터 보고</h2>
   <div class="cnw" style="zoom:1.32">
@@ -1677,7 +1687,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>올해 4월에 해사국이 방향을 발표했습니다. 2030년까지 해운 탄소배출 MRV 제도를 갖추고, 국제항해선의 탄소집약도를 2025년보다 15% 이상 낮추겠다는 내용입니다. 외국적 선박에 무엇이 추가되는지는 이 문서에 없습니다. 중국에 자주 기항하는 회사는 해사국 후속 고시를 보셔야 합니다.</p>
   </aside>
 </section>
-<section class="slide" data-noabbr data-time="14:52" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|IMO NZF" data-stage="1" data-src="p1_visual.html#8">
+<section class="slide" data-noabbr data-time="14:53" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|IMO NZF" data-stage="1" data-src="p1_visual.html#8">
   <div class="kicker">IMO 중기 조치 · NZF의 위치</div>
   <h2>IMO 중기 조치의 의미와 넷제로 프레임워크(NZF)</h2>
   <div class="mt3">
@@ -1778,7 +1788,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>실무에서는 결과를 기다릴 필요가 없습니다. NZF가 요구하는 데이터는 IMO DCS 연료 데이터에 연료 전주기 계수와 연료 인증을 더한 것이고, FuelEU에서 이미 관리하는 것과 같습니다.</p>
   </aside>
 </section>
-<section class="slide" data-loss="158" data-time="14:56" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="p0_opening.html#5">
+<section class="slide" data-loss="158" data-time="14:57" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="p0_opening.html#5">
   <div class="kicker">사례</div>
   <h2>연료 1톤의 규제별 산정값</h2>
   <div class="row" style="align-items:flex-start;gap:26px">
@@ -1810,7 +1820,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>참고로 EUA 가격은 설명용 가정치이고, WtW 91.7은 FuelEU 부속서 II 기본값으로 계산한 값입니다.</p>
   </aside>
 </section>
-<section class="slide labslide" data-time="14:58" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="lab1.html#1">
+<section class="slide labslide" data-time="14:59" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="lab1.html#1">
   <div class="kicker">1교시 · 규제 비용 계산기</div>
   <h2 style="margin-bottom:18px">규제별 비용 계산기</h2>
   <div class="lab row" id="L1" style="gap:26px">
@@ -1857,7 +1867,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>[계수 근거, 질문이 나오면: FuelEU WtW는 GWP 25/298 기준으로 HFO 91.7, VLSFO 91.4, MGO 90.8, LNG 76.1 또는 89.2. EU ETS GWP 28/265. 한도 89.3368, 2030년 85.6904. 벌금 VLSFO 환산 톤당 2,400유로. 인증 바이오의 IMO 배출계수는 WtW 집약도 × LCV, MEPC.1/Circ.905]</p>
   </aside>
 </section>
-<section class="slide labslide" data-time="15:03" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="lab1.html#3">
+<section class="slide labslide" data-time="15:04" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="lab1.html#3">
   <div class="kicker">1교시 · FuelEU 풀링 시뮬레이터</div>
   <h2 style="margin-bottom:14px">FuelEU 풀링·뱅킹·차입 시뮬레이터</h2>
   <div class="lab" id="L3">
@@ -1881,7 +1891,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>1교시는 여기까지입니다. 2교시부터는 아까 본 규제별 데이터 흐름 표의 세로줄을 하나씩 내려갑니다. 2교시는 입력과 처리, 3교시는 검증, 보고·정산, 개선입니다. 10분 쉬고 3시 정각에, 정오보고가 배 안에서 어떻게 만들어지는지부터 보겠습니다. 수고하셨습니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="15:08" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="p1_regulation.html#22">
+<section class="slide p1-lg" data-time="15:09" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="p1_regulation.html#22">
   <div class="kicker">규제 간 경계 비교</div>
   <h2>규제 간 경계 차이 7가지</h2>
   <table class="t compact" style="font-size:18px">
@@ -1902,7 +1912,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>이 일곱 가지 경계를 사람이 규제별 엑셀로 매번 나누면 어긋납니다. 원천은 이벤트 단위로 한 벌만 남기고, 경계는 계산할 때 규칙으로 적용하는 편이 안전합니다. 엑셀을 쓰셔도 같습니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="15:10" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="p1_regulation.html#30">
+<section class="slide p1-lg" data-time="15:11" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="p1_regulation.html#30">
   <div class="kicker">O / X</div>
   <h2>규제 관련 오해 3가지</h2>
   <style>.ox td.ans>span{visibility:hidden}.ox.revealed td.ans>span{visibility:visible}.ox td.ans>span.x{font-weight:800;color:var(--red);font-size:24px}</style>
@@ -1917,7 +1927,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>세 개 다 X입니다. 첫째, 일별 CII에는 보정계수가 없고 하루치 거리만 분모로 쓰니, 모아도 연간 등급이 되지 않습니다. 둘째, 기항은 화물이나 여객 작업을 한 정박만 인정됩니다. 셋째, ETS는 올해 배출분부터 메탄과 아산화질소까지 제출합니다.</p>
   </aside>
 </section>
-<section class="slide demo" data-demo-url="" data-time="15:10" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="demo1.html#1">
+<section class="slide demo" data-demo-url="" data-time="15:11" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="demo1.html#1">
   <style>
     .d1{display:grid;grid-template-columns:940px 1fr;gap:20px;align-items:stretch}
     .d1-cap{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:8px;aspect-ratio:2220/1175}
@@ -1961,7 +1971,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>[캡처로 설명할 때] 오른쪽 숫자 세 개만 보시면 됩니다. 이 배는 감속 10%에 B30을 쓰는 플랜 A가 7만 9,210유로로 나왔습니다. 아래는 남은 기간 연료를 바꿨을 때의 비용입니다. 지금 쓰는 혼합이 24만 3,968유로이고, 연료별로 몇천 유로씩 차이가 납니다. 이 화면의 배출권 가격은 70유로로 설정돼 있습니다. 오늘 본문 예시는 80유로이니 숫자를 섞어 보시면 안 됩니다. 항구 이름은 가렸습니다.</p>
   </aside>
 </section>
-<section class="slide pp" data-pp="53" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="15:14" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_seminar.html#53">
+<section class="slide pp" data-pp="53" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="15:15" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_seminar.html#53">
 <h2 class="ppt">탈탄소 3가지 옵션</h2>
 <div class="e" data-k="1" style="left:492.5px;top:67.0px;width:614.9px;height:101.0px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:73.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">탈탄소</span><span style="font-size:73.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;"> </span><span style="font-size:73.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">3</span><span style="font-size:73.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">가지 옵션</span></div></div></div>
 <div class="e" data-k="2" style="left:104.8px;top:257.0px;width:310.3px;height:92.9px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">Reduce</span></div></div></div>
@@ -1978,7 +1988,7 @@ section.slide.pp>h2.ppt{display:none}
 <div class="e" data-k="13" style="left:1133.6px;top:590.8px;width:358.3px;height:249.3px;overflow:hidden"><img src="img/seminar/47967a8b2cb5_716.jpg" style="position:absolute;left:-0.0px;top:-0.0px;width:358.3px;height:378.7px" alt=""></div>
 <aside class="notes"><p>탈탄소 방법은 세 가지입니다. 줄이기, 안 내기, 없애기입니다. 줄이기는 에너지 절감 장치, 효율 운항, 저탄소 연료입니다. 안 내기는 무탄소 연료, 없애기는 탄소 포집입니다.</p></aside>
 </section>
-<section class="slide pp" data-pp="54" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="15:14" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_seminar.html#54">
+<section class="slide pp" data-pp="54" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="15:15" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_seminar.html#54">
 <h2 class="ppt">감축 수단별 잠재량 (IMO)</h2>
 <img class="e" data-k="1" src="img/seminar/44f7c821fe19_1629.jpg" style="left:231.7px;top:153.3px;width:1136.7px;height:710.3px;" alt="">
 <div class="e" data-k="2" style="left:1433.3px;top:863.6px;width:166.7px;height:36.4px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;">자료 출처 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;">:</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;"> </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;">IMO</span></div></div></div>
@@ -1989,7 +1999,7 @@ section.slide.pp>h2.ppt{display:none}
 <div class="e" data-k="7" style="left:685.2px;top:669.5px;width:159.8px;height:166.4px;border:10.00px solid rgba(255,0,0,0.70);border-radius:50%;"></div>
 <aside class="notes"><p>IMO 자료입니다. 운항 최적화는 1~10%, 선체와 추진 개선은 수 %에서 20% 안팎인데 수소와 합성연료는 80~100%입니다. 큰 폭의 감축은 연료에서 나옵니다.</p></aside>
 </section>
-<section class="slide p1-lg ezs" data-time="15:14" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_easy.html#4">
+<section class="slide p1-lg ezs" data-time="15:15" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_easy.html#4">
   <div class="kicker">대체 연료 · 물성 비교</div>
   <h2>대체 연료별 물성과 선박 적용 조건</h2>
   <table class="ft">
@@ -2049,7 +2059,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>결론은 같은 LNG선이라도 엔진 종류에 따라 ETS 비용과 FuelEU 값이 크게 달라진다는 것입니다. 엔진 종류를 잘못 입력하면 이 차이가 그대로 오류가 됩니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg ezs" data-time="15:17" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_easy.html#6">
+<section class="slide p1-lg ezs" data-time="15:18" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_easy.html#6">
   <div class="kicker">대체 연료 · 전주기 비교</div>
   <h2>연료별 전주기 온실가스 집약도와 FuelEU 한도</h2>
   <div class="yrs" id="lim_y"></div>
@@ -2064,13 +2074,13 @@ section.slide.pp>h2.ppt{display:none}
     <p>맨 아래 인증 바이오디젤은 2050년 한도보다도 낮습니다. 그래서 화석 연료에 조금만 섞어도 평균이 한도 아래로 내려갑니다. 정리하면 화석 LNG는 2030년대까지의 수단이고, 그 이후는 바이오·합성 연료의 비율이 결정합니다.</p>
   </aside>
 </section>
-<section class="slide pp" data-pp="62" style="background:#F2F2F2" data-time="15:18" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_seminar.html#62">
+<section class="slide pp" data-pp="62" style="background:#F2F2F2" data-time="15:19" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_seminar.html#62">
 <h2 class="ppt">암모니아 연료의 과제</h2>
 <table class="e tb" data-k="1" style="left:76.2px;top:151.8px;width:1447.6px;height:708.0px"><colgroup><col style="width:221.4px"><col style="width:602.9px"><col style="width:623.3px"></colgroup><tr style="height:30.1px"><td style="background:#1B6AA3;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div style="text-align:left;line-height:1.20;"><span style="font-size:20.0px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">항목</span></div></td><td style="background:#1B6AA3;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div style="text-align:left;line-height:1.20;"><span style="font-size:20.0px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">고려 사항</span></div></td><td style="background:#1B6AA3;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div style="text-align:left;line-height:1.20;"><span style="font-size:20.0px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">대안</span></div></td></tr><tr style="height:65.9px"><td style="background:#8DB5D1;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div style="text-align:left;line-height:1.20;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">에너지 밀도 및 볼륨</span></div></td><td style="background:#8DB5D1;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">동일한 에너지 함량에 대해 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">VLSFO</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">에 비해 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">3.6</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">배의 부피와 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">2.2</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">배의 무게가 필요</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">.</span></div><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">독립 탱크와 단열재가 필요해 부피와 무게가 더욱 증가</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">.</span></div></td><td style="background:#8DB5D1;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">속도 및 주행 거리 요건을 최적화하고</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">, </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">벙커링을 더 자주 수행하거나</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">, </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">화물 용량 손실을 수용합니다</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">.</span></div></td></tr><tr style="height:84.8px"><td style="background:#CCD4E0;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div style="text-align:left;line-height:1.20;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">연료공급 및 보관</span></div></td><td style="background:#CCD4E0;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">필요한 양과 선박 유형에 따라 암모니아는 상온에서 완전 가압 또는 반</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">-</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">완전 냉장 상태로 저장 필요</span></div><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">습기가 있으면 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">부식성</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">, </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">알칼리성 환원제</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">, </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">산</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">, </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">할로겐 및 산화제와 반응</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">.</span></div></td><td style="background:#CCD4E0;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">암모니아가 사용되는 탱크</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">, </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">파이프 및 구조 부품에 대한 신중한 재료 선택</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">(</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">철</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">, </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">강철 및 특정 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">비철</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"> 합금</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">)</span></div></td></tr><tr style="height:122.5px"><td style="background:#E7EBF0;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div style="text-align:left;line-height:1.20;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">안전</span></div></td><td style="background:#E7EBF0;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">독성</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">(</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">낮은 농도</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">)</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">은 기내 인원을 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">중독시킬</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"> 수 있음</span></div><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">벙커링</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"> 시 방출 위험이 증가</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">.</span></div><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">암모니아 유출은 환경 피해를 유발하거나 인간과 해양 생물 위험</span></div><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">암모니아를 적절히 취급하기 위해 선원 인식 및 숙련도 향상 필요</span></div><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">특정 지역에서는 안전 문제로 인해 암모니아 벙커링을 거부</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">. </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">벙커링과 화물 운항을 동시에 허용하지 않을 수 있습니다</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">.</span></div></td><td style="background:#E7EBF0;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">건강 위험이 있는 농도 이전에 냄새를 감지할 수 있습니다</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">. </span></div><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">비료</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">, </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">화학 및 산업 냉각 산업의 경험 공유</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">(</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">교육 프로그램</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">, </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">유지보수</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">, </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">검사 및 환기 절차</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">)</span></div><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">절차 참조로 사용할 최신 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">LNG </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">및 메탄올 연료 선박 개발</span></div><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">승무원 교육 및 안전 관리 시스템 표준</span></div></td></tr><tr style="height:103.6px"><td style="background:#CCD4E0;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div style="text-align:left;line-height:1.20;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">배출량</span></div></td><td style="background:#CCD4E0;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">CO2 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">배출량이 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">HFO </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">티어</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"> </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">II</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">에 비해 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">85% </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">이상 감소</span></div><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">황산화물 및 입자상 물질 배출량 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">90~100% </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">감소</span></div><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">잠재적인 암모니아 슬립 또는 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">N2O </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">배출량 감소로 인한 총 온실가스 배출량 감소 효과 </span></div><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">N2O</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">는 지구 온난화 잠재력이 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">CO2</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">의 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">300</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">배 이상</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">.</span></div></td><td style="background:#CCD4E0;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">엔진 연소 최적화 프로세스의 일부로 고려합니다</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">.</span></div><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">배출을 최소화하기 위한 후처리 기술 개발(질소산화물(NOx)과 아산화질소(N2O) 저감에 필요한 SCR)</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"></span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"></span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"></span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"></span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"></span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"></span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"></span></div></td></tr><tr style="height:65.9px"><td style="background:#E7EBF0;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div style="text-align:left;line-height:1.20;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">규정</span></div></td><td style="background:#E7EBF0;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">IGC </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">코드에서는 독성 때문에 암모니아 화물을 연료로 사용하는 것을 허용하지 않습니다</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">.</span></div><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">IGF </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">코드에서는 플래그가 승인한 대체 설계가 필요합니다</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">.</span></div></td><td style="background:#E7EBF0;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">해상 연료로서 암모니아에 대한 규범적 규칙이 개발될 예정입니다</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">.</span></div><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">선급 협회</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">, </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">암모니아 연료 선박에 대한 지침 발표</span></div></td></tr><tr style="height:84.8px"><td style="background:#E7EBF0;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div style="text-align:left;line-height:1.20;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">에너지 변환</span></div></td><td style="background:#E7EBF0;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">선박용 엔진은 현재 존재하지 않으며 현재 개발 중입니다</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">.</span></div><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">열악한 연소 특성</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">, </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">다량의 파일럿 연료 필요</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">(2</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">행정 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">5-15%, 4</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">행정 최대 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">30%)</span></div><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">연료 전지 기술은 상업적으로 이용 가능하고 경쟁력이 없음</span></div></td><td style="background:#E7EBF0;vertical-align:top;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">2</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">행정 및 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">4</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">행정 엔진 개발 진행 중</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">, 2025</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">년 최초 상용화를 목표</span></div><div class="bu" style="text-align:left;line-height:1.20;padding-left:22.5px;text-indent:-22.5px;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;display:inline-block;width:22.5px;text-indent:0">•</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">연료 전지 기술 개발 및 실증 프로젝트</span></div></td></tr></table>
 <div class="e" data-k="2" style="left:471.0px;top:67.0px;width:658.1px;height:84.8px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:60.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">다양한 이슈 해결이 필요</span></div></div></div>
 <aside class="notes"><p>암모니아를 예로 들면 풀어야 할 문제가 이만큼입니다. 부피가 크고, 독성이 있고, 아산화질소가 나옵니다.</p><p>표의 엔진 개발 일정은 작성 당시 기준입니다. 지금은 첫 암모니아 추진선이 인도되기 시작한 단계입니다.</p></aside>
 </section>
-<section class="slide pp" data-pp="65" style="background:#F2F2F2" data-time="15:18" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|하드웨어 :: 하드웨어 → 소프트웨어 → 데이터 관리 (2·3교시 개요)" data-stage="0" data-src="p1_seminar.html#65">
+<section class="slide pp" data-pp="65" style="background:#F2F2F2" data-time="15:19" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|하드웨어 :: 하드웨어 → 소프트웨어 → 데이터 관리 (2·3교시 개요)" data-stage="0" data-src="p1_seminar.html#65">
 <h2 class="ppt">주요 하드웨어 기반 탄소 저감 기술</h2>
 <div class="e" data-k="1" style="left:386.3px;top:67.0px;width:827.4px;height:68.7px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:46.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">주요 하드웨어 기반 탄소 저감 기술 내용</span></div></div></div>
 <table class="e tb" data-k="2" style="left:92.6px;top:178.2px;width:1390.8px;height:640.2px"><colgroup><col style="width:245.3px"><col style="width:1145.5px"></colgroup><tr style="height:100.0px"><td style="background:#B0DEF4;vertical-align:middle;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;border-left:1.7px solid #5C5C5C;border-right:1.7px solid #5C5C5C;border-top:1.7px solid #5C5C5C;border-bottom:1.7px solid #5C5C5C;"><div style="text-align:center;line-height:1.20;"><span style="font-size:26.7px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">탄소 저감 기술</span></div></td><td style="background:#B0DEF4;vertical-align:middle;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;border-left:1.7px solid #5C5C5C;border-right:1.7px solid #5C5C5C;border-top:1.7px solid #5C5C5C;border-bottom:1.7px solid #5C5C5C;"><div style="text-align:center;line-height:1.20;"><span style="font-size:33.3px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">목표치</span></div></td></tr><tr style="height:95.2px"><td style="background:#FCEDBF;vertical-align:middle;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;border-left:1.7px solid #5C5C5C;border-right:1.7px solid #5C5C5C;border-top:1.7px solid #5C5C5C;border-bottom:1.7px solid #5C5C5C;"><div style="text-align:center;line-height:1.20;"><span style="font-size:23.3px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">Rotor Sail</span></div></td><td style="background:#FFFFFF;vertical-align:middle;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;border-left:1.7px solid #5C5C5C;border-right:1.7px solid #5C5C5C;border-top:1.7px solid #5C5C5C;border-bottom:1.7px solid #5C5C5C;"><div style="text-align:left;line-height:1.20;"><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">로터</span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"> 선박은 추진을 위해 </span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">매그너스</span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"> 효과를 사용하도록 설계된 선박이다</span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">.</span><br><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">이 배는 부분적으로 </span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">로터</span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"> 세일이라고 하는 대형 동력 수직 </span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">로터에</span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"> 의해 추진된다</span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">.</span></div></td></tr><tr style="height:134.4px"><td style="background:#FCEDBF;vertical-align:middle;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;border-left:1.7px solid #5C5C5C;border-right:1.7px solid #5C5C5C;border-top:1.7px solid #5C5C5C;border-bottom:1.7px solid #5C5C5C;"><div style="text-align:center;line-height:1.20;"><span style="font-size:23.3px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">Air</span><span style="font-size:23.3px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"> </span><span style="font-size:23.3px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">Lubrication</span><span style="font-size:23.3px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"> </span><span style="font-size:23.3px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">System</span></div></td><td style="background:#FFFFFF;vertical-align:middle;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;border-left:1.7px solid #5C5C5C;border-right:1.7px solid #5C5C5C;border-top:1.7px solid #5C5C5C;border-bottom:1.7px solid #5C5C5C;"><div style="text-align:left;line-height:1.20;"><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">선박 공기 </span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">유활</span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"> 시스템</span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">(Air Lubrication System, ALS)</span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">은 선박의 연료 소비량을 줄이기 위한 기술 중 하나로 선박의 </span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">바닥면</span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"> 아래로 공기를 공급함으로써 공기의 거품이나 버블 층을 형성하여 선박과 물 사이의 마찰력을 줄이는 기술	</span></div></td></tr><tr style="height:95.2px"><td style="background:#FCEDBF;vertical-align:middle;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;border-left:1.7px solid #5C5C5C;border-right:1.7px solid #5C5C5C;border-top:1.7px solid #5C5C5C;border-bottom:1.7px solid #5C5C5C;"><div style="text-align:center;line-height:1.20;"><span style="font-size:23.3px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">PBCF</span></div></td><td style="background:#FFFFFF;vertical-align:middle;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;border-left:1.7px solid #5C5C5C;border-right:1.7px solid #5C5C5C;border-top:1.7px solid #5C5C5C;border-bottom:1.7px solid #5C5C5C;"><div style="text-align:left;line-height:1.20;"><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">프로펠러 뒤쪽의 소용돌이 현상을 줄이기 위해 설계된 장치로</span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">, </span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">프로펠러 추진 성능 향상을 통한 연료 절감 효과가 있음	</span></div></td></tr><tr style="height:95.2px"><td style="background:#FCEDBF;vertical-align:middle;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;border-left:1.7px solid #5C5C5C;border-right:1.7px solid #5C5C5C;border-top:1.7px solid #5C5C5C;border-bottom:1.7px solid #5C5C5C;"><div style="text-align:center;line-height:1.20;"><span style="font-size:23.3px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">Hull</span><span style="font-size:23.3px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"> </span><span style="font-size:23.3px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">Cleaning</span></div></td><td style="background:#FFFFFF;vertical-align:middle;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;border-left:1.7px solid #5C5C5C;border-right:1.7px solid #5C5C5C;border-top:1.7px solid #5C5C5C;border-bottom:1.7px solid #5C5C5C;"><div style="text-align:left;line-height:1.20;"><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">선박의 선체는 해양 부착생물에 의해 연료 효율성이 저하됨</span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">. </span></div><div style="text-align:left;line-height:1.20;"><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">주기적인 선체의 소제와 저항 감소를 방지하는 </span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">저마찰</span><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"> 도료를 적용함으로 에너지 효율 저하를 막을 수 있음	</span></div></td></tr><tr style="height:95.2px"><td style="background:#FCEDBF;vertical-align:middle;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;border-left:1.7px solid #5C5C5C;border-right:1.7px solid #5C5C5C;border-top:1.7px solid #5C5C5C;border-bottom:1.7px solid #5C5C5C;"><div style="text-align:center;line-height:1.20;"><span style="font-size:23.3px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">Waste</span><span style="font-size:23.3px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"> </span><span style="font-size:23.3px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">Heat</span><span style="font-size:23.3px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"> </span><span style="font-size:23.3px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">Recovery</span></div></td><td style="background:#FFFFFF;vertical-align:middle;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;border-left:1.7px solid #5C5C5C;border-right:1.7px solid #5C5C5C;border-top:1.7px solid #5C5C5C;border-bottom:1.7px solid #5C5C5C;"><div style="text-align:left;line-height:1.20;"><span style="font-size:30.0px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">선박의 배기에서 발생하는 낭비열을 회수하여 전력으로 변환하는 시스템	</span></div></td></tr></table>
@@ -2082,14 +2092,14 @@ section.slide.pp>h2.ppt{display:none}
 <img class="e" data-k="2" src="img/seminar/a264def94443_1890.png" style="left:43.9px;top:168.8px;width:1512.1px;height:720.1px;" alt="">
 <aside class="notes"><p>왼쪽이 규제 대응 업무입니다. 데이터를 모으고, 전달하고, 검증해서 규제별로 보고합니다. 오른쪽은 줄이는 일입니다. 최적 운항, 절감 장치, 대체연료, 배출권 거래입니다.</p><p>2·3교시는 왼쪽을 자세히 보고, 오른쪽은 3교시 끝에 다룹니다.</p></aside>
 </section>
-<section class="slide pp" data-pp="74" style="background:#F2F2F2" data-time="15:19" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|소프트웨어" data-stage="0" data-src="p1_seminar.html#74">
+<section class="slide pp" data-pp="74" style="background:#F2F2F2" data-time="15:20" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|소프트웨어" data-stage="0" data-src="p1_seminar.html#74">
 <h2 class="ppt">탄소 배출 보고에 필요한 데이터</h2>
 <img class="e" data-k="1" src="img/seminar/ca5c38b9c3e5_1868.png" style="left:54.8px;top:195.5px;width:1493.4px;height:195.9px;" alt="">
 <img class="e" data-k="2" src="img/seminar/a70a67ca1086_1873.png" style="left:51.8px;top:416.1px;width:1496.3px;height:406.9px;" alt="">
 <div class="e" data-k="3" style="left:441.2px;top:102.6px;width:709.6px;height:68.7px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:46.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">“</span><span style="font-size:46.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">탄소 배출</span><span style="font-size:46.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;"> </span><span style="font-size:46.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">2</span><span style="font-size:46.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">종 전자 보고 시스템</span><span style="font-size:46.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">”</span></div></div></div>
 <aside class="notes"><p>EU MRV와 IMO DCS가 요구하는 데이터는 운항시간, 거리, 연료소모량, 화물량입니다. 증빙은 항차보고서, 로그북, BDN입니다.</p><p>수집 방식은 세 가지입니다. 매일 보고, 항차 보고, 검증기관 보고서입니다. 매일 보고는 손이 많이 가지만 검증과 활용이 쉽습니다. 어느 방식을 택하든 2교시에서 보는 입력 항목은 같습니다.</p></aside>
 </section>
-<section class="slide pp" data-pp="76" style="background:#F2F2F2" data-time="15:19" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|소프트웨어" data-stage="0" data-src="p1_seminar.html#76">
+<section class="slide pp" data-pp="76" style="background:#F2F2F2" data-time="15:20" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|소프트웨어" data-stage="0" data-src="p1_seminar.html#76">
 <h2 class="ppt">항로 최적화 사례</h2>
 <div class="e" data-k="1" style="left:28.7px;top:188.0px;width:1542.7px;height:657.2px;overflow:hidden"><img src="img/seminar/43dbc55191c8_1942.jpg" style="position:absolute;left:-57.3px;top:-157.0px;width:1600.0px;height:885.7px" alt=""></div>
 <aside class="notes"><p>같은 구간을 직선으로 간 경우와 최적화한 경우입니다. 빨리 가는 조건에서는 도착이 6.5시간 빨라지고 연료가 4.2% 줄었습니다. 정시 도착 조건에서는 연료 9%, CII 11% 개선으로 나온 사례입니다.</p></aside>
@@ -2113,7 +2123,7 @@ section.slide.pp>h2.ppt{display:none}
 <div class="e" data-k="15" style="left:354.1px;top:71.6px;width:891.8px;height:68.7px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div style="text-align:center;line-height:1.20;"><span style="font-size:46.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">Weather Routing : 2~4% + More</span></div></div></div>
 <aside class="notes"><p>속력을 올리면 항차를 더 돌려 수익이 늘지만 연료비와 탄소비용은 더 가파르게 늘어납니다. 두 곡선의 차이가 가장 큰 속력이 최적입니다.</p><p>3교시 마지막 실습에서 숫자를 넣어 직접 찾아봅니다.</p></aside>
 </section>
-<section class="slide quiz" data-time="15:20" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="0" data-src="p0_opening.html#2">
+<section class="slide quiz" data-time="15:21" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="0" data-src="p0_opening.html#2">
   <div class="kicker">퀴즈 · 정오보고 연료 1톤</div>
   <h2>정오보고에서 연료 1톤이 빠진 경우</h2>
   <div class="ct"><div class="q">기관장이 정오보고 연료를 <b>매일 1톤씩 적게</b> 적었습니다.<br>EU↔비EU 항차(50%) 1년, EUA €80. <b>장부에서 빠진 탄소비용</b>은?</div>
@@ -2126,7 +2136,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>덜 적으면 이득 아니냐고 생각하실 수 있는데 그렇지 않습니다. 연말에 BDN과 탱크 잔량으로 맞춰 보면 365톤이 비고, 검증기관이 거기서 멈춥니다. 제출 의무는 그대로이고, 제때 못 내면 톤당 100유로 벌금이 따로 붙습니다. 하루 1톤 차이가 1년이면 이만큼입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="15:23" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="0" data-src="p0_thread.html#1">
+<section class="slide" data-time="15:24" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="0" data-src="p0_thread.html#1">
   <style>
     .th-def{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border:1.5px solid var(--navy);border-radius:8px;overflow:hidden;background:#fff}
     .th-def>div{padding:18px 16px 18px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
@@ -2162,7 +2172,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>화면 위쪽 머리말에 이 다섯 단계가 작게 표시됩니다. 지금 어느 단계 이야기인지 헷갈리시면 화면 위를 보시면 됩니다. 남색으로 칠해진 칸이 지금 단계입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="15:25" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="0" data-src="p0_thread.html#2">
+<section class="slide" data-time="15:26" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="0" data-src="p0_thread.html#2">
   <style>
     .th-flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:22px}
     .th-flow .c{background:#fff;border:1.5px solid var(--navy);border-radius:8px;padding:14px 12px 12px;display:flex;flex-direction:column;gap:10px;position:relative}
@@ -2199,7 +2209,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>[아래 '오류 예' 줄을 가리키며] 단계마다 틀리는 방식이 다릅니다. 오늘 사례 대부분이 이 줄 가운데 하나입니다. 사례를 보실 때 어느 단계에서 틀린 사례인지만 짚어 보시면 됩니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="15:27" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="1" data-src="p1_chain.html#1">
+<section class="slide" data-time="15:28" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="1" data-src="p1_chain.html#1">
   <style>
     table.ch5{width:100%;border-collapse:separate;border-spacing:0;font-size:19px;line-height:1.45;background:#fff;border:1.5px solid var(--navy);border-radius:8px;overflow:hidden}
     table.ch5 th{background:var(--navy);color:#fff;font-size:19px;padding:10px 14px;text-align:left;font-weight:700}
@@ -2227,7 +2237,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>영국 줄은 앞에서 본 그대로입니다. 데이터에서는 영국 항구를 따로 골라내는 것이 출발입니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="15:28" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="2" data-src="p1_regulation.html#23">
+<section class="slide p1-lg" data-time="15:29" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="2" data-src="p1_regulation.html#23">
   <div class="kicker">규제별 입력 항목</div>
   <h2>규제별 선박 입력 항목</h2>
   <table class="t compact p1-dotm p1-b18">
@@ -2250,7 +2260,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>아래 세 줄, 바이오연료 증빙, 육상전원 증빙, 내빙등급과 보정 근거는 대부분 감면 데이터입니다. 안 적어도 보고서는 만들어집니다. 감면만 적용되지 않습니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="15:29" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="1" data-src="p1_regulation.html#29">
+<section class="slide p1-lg" data-time="15:30" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="1" data-src="p1_regulation.html#29">
   <div class="kicker">1교시</div>
   <h2>1교시 정리</h2>
   <div class="p1-kf">
@@ -6629,6 +6639,12 @@ table.cnt{margin-top:12px;font-size:14.5px} table.cnt td,table.cnt th{padding:6p
     if(hAt(top)*top<=H*0.96)z=top;
     else{let lo=0.72,hi=top;for(let k=0;k<8;k++){const m=(lo+hi)/2;if(hAt(m)*m<=H*0.96)lo=m;else hi=m;}z=lo;}
     let h=hAt(z);if(h>=1e9){fit.style.width=(W/z)+'px';h=fit.offsetHeight;}
+    const ab=fit.querySelector(':scope>.abbr');
+    if(ab&&!ab.dataset.fx){ab.dataset.fx=1;const z0=z;ab.style.fontSize=(15/z0).toFixed(2)+'px';
+      let lo=0.72,hi=top,ok=false;if(hAt(top)*top<=H*0.96){z=top;ok=true;}else{if(hAt(lo)*lo<=H*0.96){ok=true;for(let k=0;k<8;k++){const m=(lo+hi)/2;if(hAt(m)*m<=H*0.96)lo=m;else hi=m;}z=lo;}}
+      if(!ok){ab.style.fontSize=(13/0.72).toFixed(2)+'px';if(hAt(0.72)*0.72>H*0.96)ab.style.fontSize='';z=0.72;}
+      else ab.style.fontSize=(15/z).toFixed(2)+'px';
+      h=hAt(z);if(h>=1e9){fit.style.width=(W/z)+'px';h=fit.offsetHeight;}}
     fit.style.transform='scale('+z+')';fit.style.top=Math.max(0,(H-h*z)/2)+'px';
     if(!was)s.classList.remove('active');
   }
