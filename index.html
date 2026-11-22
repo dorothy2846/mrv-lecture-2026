@@ -7,6 +7,11 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css">
 <style>
+@font-face{font-family:PArrow;font-weight:100 500;src:url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-Regular.woff2) format("woff2");unicode-range:U+2190-21FF,U+2794}
+@font-face{font-family:PArrow;font-weight:600;src:url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-SemiBold.woff2) format("woff2");unicode-range:U+2190-21FF,U+2794}
+@font-face{font-family:PArrow;font-weight:700 900;src:url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/static/woff2/Pretendard-Bold.woff2) format("woff2");unicode-range:U+2190-21FF,U+2794}
+</style>
+<style>
 :root{
   --navy:#0B2545; --navy2:#13315C; --teal:#0FA3B1; --teal2:#B5E9EE; --sky:#EEF6F8;
   --ink:#1B2430; --muted:#5B6776; --line:#D8E0E8; --bg:#F6F8FA; --card:#FFFFFF;
@@ -15,7 +20,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;background:#0d1117;overflow:hidden}
-body{font-family:SUIT,Pretendard,"Malgun Gothic","Apple SD Gothic Neo",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere}
+body{font-family:PArrow,SUIT,Pretendard,"Malgun Gothic","Apple SD Gothic Neo",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere}
 #stage{position:fixed;left:0;top:0;width:1600px;height:900px;transform-origin:0 0}
 section.slide{position:absolute;inset:0;background:var(--bg);display:none;padding:64px 84px 56px;overflow:hidden}
 section.slide.active{display:flex;flex-direction:column}
@@ -141,7 +146,7 @@ section.labslide .kicker::before{content:"실습 · ";color:var(--amber)}
 .lab .msg{border-radius:8px;padding:7px 12px;margin:5px 0;font-size:17px}
 .lab .msg.block{background:var(--red2);color:#a52b2b} .lab .msg.confirm{background:var(--amber2);color:#8a5a00} .lab .msg.warn{background:#FFF8E6;color:#8a6a00} .lab .msg.ok{background:var(--green2);color:#16764f}
 /* svg defaults */
-svg text{font-family:SUIT,Pretendard,"Malgun Gothic",sans-serif}
+svg text{font-family:PArrow,SUIT,Pretendard,"Malgun Gothic",sans-serif}
 /* notes */
 aside.notes{display:none}
 #notes{position:fixed;top:0;right:0;bottom:0;width:var(--nw);overflow:auto;background:#0f1722;color:#e6edf3;font-size:18px;line-height:1.75;padding:18px 22px 28px;display:none;z-index:10;border-left:3px solid var(--teal);box-sizing:border-box}
@@ -189,7 +194,7 @@ table.t{border-radius:6px}
 .chip{border-radius:4px}
 /* palette + type cleanup (design audit) */
 :root{--green:#0B7F8A;--green2:#EEF6F8}
-.formula{font-family:SUIT,Pretendard,"Malgun Gothic",sans-serif;font-weight:600;font-size:27px;border-left:none;border:1.5px solid var(--line);border-radius:6px}
+.formula{font-family:PArrow,SUIT,Pretendard,"Malgun Gothic",sans-serif;font-weight:600;font-size:27px;border-left:none;border:1.5px solid var(--line);border-radius:6px}
 .mono{font-family:Consolas,Pretendard,"Malgun Gothic",sans-serif}
 .chip.imo,.chip.eu,.chip.uk,.chip.fe,.chip.info{background:#fff;color:var(--navy);border:1px solid var(--navy)}
 .chip{white-space:nowrap}
@@ -219,7 +224,7 @@ section.slide.divider{background:var(--navy)}
 @font-face{font-family:GmarketSans;font-weight:300;src:local("Gmarket Sans Light"),local("GmarketSansLight"),local("Gmarket Sans TTF Light"),url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff) format("woff");font-display:swap}
 @font-face{font-family:GmarketSans;font-weight:500;src:local("Gmarket Sans Medium"),local("GmarketSansMedium"),local("Gmarket Sans TTF Medium"),url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff) format("woff");font-display:swap}
 @font-face{font-family:GmarketSans;font-weight:700;src:local("Gmarket Sans Bold"),local("GmarketSansBold"),local("Gmarket Sans TTF Bold"),url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff) format("woff");font-display:swap}
-section.slide.pp{padding:0;font-family:SUIT,Pretendard,"Malgun Gothic",sans-serif;word-break:normal;overflow-wrap:normal}
+section.slide.pp{padding:0;font-family:PArrow,SUIT,Pretendard,"Malgun Gothic",sans-serif;word-break:normal;overflow-wrap:normal}
 section.slide.pp.active{display:block}
 section.slide.pp>h2.ppt{display:none}
 .pp .e{position:absolute;margin:0}
@@ -271,7 +276,7 @@ section.slide.pp>h2.ppt{display:none}
 .mapbody .mc li small{color:var(--muted);font-size:14px;margin-left:6px}
 .mapbody.all .mc{cursor:default;padding:18px 22px} .mapbody.all .mc h3{font-size:25px} .mapbody.all .mc li{cursor:pointer;font-size:19px;line-height:1.7}
 .maphelp{font-size:15px;color:var(--muted);margin-top:12px}
-#toc{position:fixed;inset:0;z-index:60;background:rgba(11,37,69,.55);display:none;font-family:SUIT,Pretendard,'Malgun Gothic',sans-serif}
+#toc{position:fixed;inset:0;z-index:60;background:rgba(11,37,69,.55);display:none;font-family:PArrow,SUIT,Pretendard,'Malgun Gothic',sans-serif}
 #toc.on{display:flex;align-items:center;justify-content:center}
 #toc .tw{background:#fff;border-radius:12px;width:min(1180px,94vw);height:min(720px,90vh);display:grid;grid-template-columns:210px 300px 1fr;grid-template-rows:auto 1fr;overflow:hidden}
 #toc .th{grid-column:1/4;padding:12px 20px;border-bottom:1px solid #d5dbe3;display:flex;justify-content:space-between;font-size:15px;color:#5b6776} #toc .th b{color:#0B2545;font-size:17px}
@@ -289,7 +294,7 @@ section.slide h2{text-wrap:balance}
 
 /* seminar slides: align with deck palette (lecturer profile data-pp=2 untouched) */
 section.slide.pp:not([data-pp="2"]){background:#fff !important}
-section.slide.pp:not([data-pp="2"]) [style*="GmarketSans"]{font-family:SUIT,Pretendard,"Malgun Gothic","Apple SD Gothic Neo",sans-serif !important;letter-spacing:-.01em}
+section.slide.pp:not([data-pp="2"]) [style*="GmarketSans"]{font-family:PArrow,SUIT,Pretendard,"Malgun Gothic","Apple SD Gothic Neo",sans-serif !important;letter-spacing:-.01em}
 section.slide.pp:not([data-pp="2"]) [style*="color:#5C5C5C" i],section.slide.pp:not([data-pp="2"]) [style*="color:#3F3F3F" i],section.slide.pp:not([data-pp="2"]) [style*="color:#202020" i],section.slide.pp:not([data-pp="2"]) [style*="color:#000000" i],section.slide.pp:not([data-pp="2"]) [style*="color:#0070C0" i],section.slide.pp:not([data-pp="2"]) [style*="color:#1B6AA3" i],section.slide.pp:not([data-pp="2"]) [style*="color:#2DA7E1" i]{color:#0B2545 !important}
 section.slide.pp:not([data-pp="2"]) [style*="color:#FF0000" i],section.slide.pp:not([data-pp="2"]) [style*="color:#EE2914" i],section.slide.pp:not([data-pp="2"]) [style*="color:#F47264" i]{color:#C0392B !important}
 section.slide.pp:not([data-pp="2"]) [style*="background:#FCEDBF" i],section.slide.pp:not([data-pp="2"]) [style*="background:#B0DEF4" i],section.slide.pp:not([data-pp="2"]) [style*="background:#E7EBF0" i]{background:#EEF6F8 !important}
