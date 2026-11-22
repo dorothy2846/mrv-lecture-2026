@@ -2926,7 +2926,139 @@ section.slide.pp>h2.ppt{display:none}
     <p>[ROB 행] 로그북 잔량은 1톤 미만입니다. 연간 연료 비교는 뒤에서 따로 보겠습니다. [첨부 형식 행] 그리고 첨부는 PDF나 이미지만 인정하도록 정해 두십시오. 엑셀이나 한글 파일은 누구나 고칠 수 있어서 증빙으로 보지 않습니다. 선박에 꼭 전달해 주십시오. 뒤에 사례로 다시 나옵니다. 나머지 줄은 자료를 참고하십시오.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:09" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#9">
+<section class="slide p3" data-time="16:09" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 연료 공급서(BDN) → 화물 서류 → 기관 로그북 → 대조에서 확인된 오류 유형" data-stage="0" data-src="p3e_evidence.html#1">
+  <div class="kicker">증빙 서류 · BDN</div>
+  <h2>연료 공급서(BDN)에서 읽는 항목과 오독하기 쉬운 곳</h2>
+  <div class="row" style="gap:28px;align-items:flex-start">
+    <div class="col" style="flex:1">
+      <div class="doc">
+        <div class="dh"><span>BUNKER DELIVERY NOTE</span><span>No. <span class="mk">00000000</span></span></div>
+        <div class="dr"><span>Vessel / IMO No.</span><b><span class="mk">VESSEL NAME</span> / <span class="mk">0000000</span></b></div>
+        <div class="dr"><span>Port of Delivery</span><b>ROTTERDAM<span class="no">1</span></b></div>
+        <div class="dr"><span>Date of Delivery</span><b>28-JUN-2026<span class="no">2</span></b></div>
+        <div class="dr"><span>Product</span><b>VLSFO (RMG 380, max 0.50%S)</b></div>
+        <div class="dr"><span>Quantity Delivered</span><b>250.120 M/T · 254.50 m³<span class="no">3</span></b></div>
+        <div class="dr"><span>Density @15°C</span><b>982.8 kg/m³<span class="no">4</span></b></div>
+        <div class="dr"><span>Viscosity @50°C</span><b>103.1 cSt<span class="no">5</span></b></div>
+        <div class="dr"><span>Sulphur Content (ISO 8754)</span><b>0.47 % m/m</b></div>
+        <div class="dr"><span>Flash Point</span><b>92 °C</b></div>
+        <div class="dr" style="border:0"><span>Supplier / Barge</span><b><span class="mk">SUPPLIER NAME</span> / <span class="mk">BARGE</span></b></div>
+      </div>
+      <p class="docnote">설명용으로 다시 만든 서식 · 수치는 예시 · 선박명·공급자는 가림</p>
+    </div>
+    <div class="col" style="flex:1">
+      <ul class="pit">
+        <li><i>1</i><span><b>항구</b>: 선석·터미널명이 아니라 항구 이름으로 입력 · 바지선 이름 칸과 혼동 주의</span></li>
+        <li><i>2</i><span><b>일자</b>: 공급을 마친 날 · BDN 번호나 인보이스 일자가 아님</span></li>
+        <li><i>3</i><span><b>수량</b>: Delivered의 톤(M/T) 값 · m³·배럴·리터만 있으면 임의로 환산하지 않음</span></li>
+        <li><i>4</i><span><b>밀도</b>: kg/m³로 적힌 경우가 많음 → 982.8은 0.9828 g/cm³ · 50°C 밀도가 아니라 15°C 값</span></li>
+        <li><i>5</i><span><b>점도</b>: "@50°C"의 50은 측정 온도 · 값은 그 옆 숫자 (MGO 약 3, VLSFO 수십~수백, HFO 약 380)</span></li>
+      </ul>
+      <div class="callout" style="margin-top:6px;font-size:18.5px">BDN과 품질성적서(COQ)가 함께 있으면 BDN 값 우선 · BDN에 없는 성상만 COQ로 보충 · 분할 공급은 BDN 장마다 따로 입력</div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>증빙 서류를 어떻게 읽는지 서류별로 보겠습니다. 먼저 연료 공급서, BDN입니다. 왼쪽은 설명용으로 다시 만든 서식이고 수치는 예시입니다.</p>
+    <p>번호 순서대로 보겠습니다. 항구는 선석이나 터미널 이름이 아니라 항구 이름입니다. 일자는 공급을 마친 날입니다. 수량은 Delivered 칸의 톤 값을 씁니다. 세제곱미터나 배럴만 적혀 있으면 임의로 환산하지 않고 공급자에게 톤 값을 받아야 합니다.</p>
+    <p>밀도와 점도에서 오류가 가장 많습니다. 밀도는 kg/m³로 적힌 경우가 많아서 982.8을 그대로 넣으면 안 되고 0.9828로 넣어야 합니다. 점도는 50도에서 잰 값이라는 뜻의 50을 값으로 잘못 읽는 일이 있습니다.</p>
+    <p>BDN과 품질성적서가 같이 있으면 BDN 값을 우선합니다. 바지선이 두 번 공급했으면 BDN이 두 장이고, 장마다 따로 입력합니다.</p>
+  </aside>
+</section>
+<section class="slide p3" data-time="16:10" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 연료 공급서(BDN) → 화물 서류 → 기관 로그북 → 대조에서 확인된 오류 유형" data-stage="0" data-src="p3e_evidence.html#2">
+  <div class="kicker">증빙 서류 · 화물</div>
+  <h2>화물 서류별 수량 기재 위치</h2>
+  <table class="t compact">
+    <tr><th style="width:21%">서류</th><th style="width:44%">수량이 적힌 곳</th><th>주의</th></tr>
+    <tr><td><b>SOF</b> (작업 시간 기록)</td><td>머리말의 화물·수량 또는 하단 수량표 (선박 측 수치 우선)</td><td>제목의 LOADING / DISCHARGING이 방향</td></tr>
+    <tr><td><b>일일 작업 보고</b></td><td>TOTALS의 누계(TO DATE) 행</td><td>당일분(THIS SHIFT) 행은 작업 전체량이 아님</td></tr>
+    <tr><td><b>얼리지·양하 보고서</b></td><td>화물 구분(parcel)별 합계 톤을 모두 더한 값</td><td>일부 구분만 더하는 누락 · 배럴만 있으면 밀도와 함께 기재</td></tr>
+    <tr><td><b>LNG 화물 계산서</b> (CTMS)</td><td>선박 측 수량 · 작업 전·후 값 구분</td><td>LNG는 m³ 기준</td></tr>
+    <tr><td><b>적부도·적화 컴퓨터 출력</b></td><td>작업 후 선내 총량</td><td>이번 작업량이 아님</td></tr>
+    <tr><td><b>NOR · 세관 서류 · 항의서</b></td><td>수량 없음</td><td>수량 증빙으로 쓸 수 없음</td></tr>
+  </table>
+  <div class="row" style="gap:16px;margin-top:14px">
+    <div class="col"><div class="callout warn" style="font-size:18.5px"><b>자주 나오는 오독</b> · 화물창 용적(m³) 합계를 화물량으로 · 배수량·재화중량을 화물량으로 · 흘수(m)를 화물량으로</div></div>
+    <div class="col"><div class="callout" style="font-size:18.5px"><b>단위</b> · 톤(MT) 값이 있으면 톤으로 · 배럴·m³·TEU는 단위를 함께 기재 · 서류에 없는 값은 계산해서 넣지 않음</div></div>
+  </div>
+  <aside class="notes">
+    <p>화물량은 CII와 EU MRV의 분모입니다. 화물 서류는 종류가 많고 서류마다 수량이 적힌 자리가 다릅니다.</p>
+    <p>SOF는 머리말이나 하단 수량표를 봅니다. 일일 작업 보고는 누계 행을 봐야 하고 당일분 행을 쓰면 안 됩니다. 탱커의 얼리지 보고서는 화물 구분별 합계를 모두 더합니다. 적부도나 적화 컴퓨터 출력에 나오는 값은 이번 작업량이 아니라 작업 후 선내 총량입니다. 도착통지서나 세관 서류에는 수량이 없습니다.</p>
+    <p>자주 나오는 오독은 세 가지입니다. 화물창 용적 합계, 배수량이나 재화중량, 흘수를 화물량으로 읽는 경우입니다.</p>
+  </aside>
+</section>
+<section class="slide p3" data-time="16:10" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 연료 공급서(BDN) → 화물 서류 → 기관 로그북 → 대조에서 확인된 오류 유형" data-stage="0" data-src="p3e_evidence.html#3">
+  <div class="kicker">증빙 서류 · 로그북</div>
+  <h2>기관 로그북에서 잔량(ROB)을 읽는 곳</h2>
+  <div class="row" style="gap:28px;align-items:flex-start">
+    <div class="col" style="flex:.95">
+      <div class="doc">
+        <div class="dh"><span>ENGINE LOG BOOK · FUEL OIL</span><span>01-JUL-2026</span></div>
+        <table class="t compact" style="font-size:16.5px;margin:0">
+          <tr><th></th><th>VLSFO</th><th>LSMGO</th></tr>
+          <tr><td>Carry Over</td><td>452.8</td><td>215.1</td></tr>
+          <tr><td>Received</td><td>0</td><td>0</td></tr>
+          <tr><td>Consumption</td><td>29.2</td><td>1.5</td></tr>
+          <tr><td><b>Balance</b><span class="no">1</span></td><td><b>423.6</b></td><td><b>213.6</b></td></tr>
+        </table>
+        <div class="dr" style="border:0;margin-top:8px;grid-template-columns:110px 1fr"><span>REMARKS</span><b class="hw">S/B 0600 · ROB: VLSFO-423.6 LSMGO-213.6<span class="no">2</span></b></div>
+      </div>
+      <p class="docnote">설명용으로 다시 만든 서식 · 수치는 예시</p>
+    </div>
+    <div class="col" style="flex:1.05">
+      <table class="t compact">
+        <tr><th style="width:38%">잔량이 적히는 곳</th><th>설명</th></tr>
+        <tr><td><b>Balance · REMAINING 행</b></td><td>이월 → 수급 → 소비 → 잔량 표의 마지막 행</td></tr>
+        <tr><td><b>비고(REMARKS) 수기</b></td><td>출항 준비(S/B) 시각과 함께 적은 ROB</td></tr>
+        <tr><td><b>ADJUSTED ROB</b></td><td>벙커 서베이로 보정한 뒤의 값 · 보정이 있으면 이 값이 기준</td></tr>
+        <tr><td><b>ON HAND</b></td><td>잔량 칸이 빈 페이지에서 차선으로 사용 (하루 시작 잔량)</td></tr>
+      </table>
+      <ul class="b" style="margin-top:12px;font-size:19px">
+        <li>적힌 값을 그대로 사용 · 검산이 맞지 않아도 계산값으로 바꾸지 않고 불일치로 기록</li>
+        <li>소비량·수급량·이월량, 기기별(주기관·발전기·보일러) 값은 잔량이 아님</li>
+        <li>여러 날짜가 섞여 있으면 가장 최근 날짜 페이지 기준</li>
+        <li>Bunker C = 잔사유, Bunker A = 증류유 (국내 선대의 관용 표기)</li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>잔량, ROB의 증빙은 기관 로그북입니다. 로그북은 회사마다 양식이 달라서 잔량이 적히는 자리도 여러 곳입니다.</p>
+    <p>가장 흔한 곳은 이월, 수급, 소비, 잔량 순서로 된 표의 마지막 행입니다. 비고란에 손으로 적은 ROB도 많습니다. 출항 준비 시각과 함께 적혀 있으면 출항 보고의 잔량과 바로 대조할 수 있습니다. 벙커 서베이로 잔량을 보정했다면 보정 후 값이 기준입니다.</p>
+    <p>주의할 점입니다. 로그북에 적힌 값과 계산이 맞지 않을 때가 있습니다. 이때 계산값으로 바꾸지 않습니다. 적힌 값을 그대로 쓰고, 맞지 않는다는 사실을 기록합니다. 소비량이나 기기별 값을 잔량으로 읽는 일도 자주 있습니다.</p>
+  </aside>
+</section>
+<section class="slide p3" data-time="16:11" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 연료 공급서(BDN) → 화물 서류 → 기관 로그북 → 대조에서 확인된 오류 유형" data-stage="0" data-src="p3e_evidence.html#4">
+  <div class="kicker">증빙 서류 · 대조 결과</div>
+  <h2>증빙 대조에서 확인된 오류 유형</h2>
+  <div class="row" style="gap:24px;align-items:flex-start">
+    <div class="col">
+      <table class="t compact">
+        <tr><th style="width:27%">보고 입력 오류</th><th>서류</th><th>보고</th></tr>
+        <tr><td><b>칸 밀림</b></td><td>밀도 0.9568</td><td>점도 칸에 0.9568</td></tr>
+        <tr><td><b>자릿수 오류</b></td><td>점도 3.433</td><td>0.3433</td></tr>
+        <tr><td><b>불가능한 값</b></td><td>(밀도 범위 0.7~1.2)</td><td>밀도 1.5</td></tr>
+        <tr><td><b>수량 차이</b></td><td>117.99 t</td><td>119.99 t</td></tr>
+      </table>
+      <p class="docnote">벙커링 보고 12건을 서류와 대조한 결과의 유형 · 선박 정보는 제외</p>
+    </div>
+    <div class="col">
+      <table class="t compact">
+        <tr><th style="width:36%">첨부 서류 오류</th><th>내용</th></tr>
+        <tr><td><b>잔량 증명서 첨부</b></td><td>반선·인수 시점의 잔량표(on board 수량)는 수급 증빙이 아님</td></tr>
+        <tr><td><b>윤활유 인수증 첨부</b></td><td>연료가 아니므로 연료 수급 증빙으로 쓸 수 없음</td></tr>
+        <tr><td><b>합본 파일의 다른 유종</b></td><td>11쪽 합본의 첫 장이 다른 유종의 BDN (LSMGO 24.994 t)</td></tr>
+        <tr><td><b>판독 불가 사진</b></td><td>회전·저해상 사진이 전체의 약 15% → 재촬영 요청</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="callout" style="margin-top:14px;font-size:19px">불일치로 나온 건은 서류가 맞고 보고가 틀린 경우였음 · 보고값에 맞춰 서류를 다시 해석하지 않고, 서류에 적힌 값을 기준으로 보고를 수정</div>
+  <aside class="notes">
+    <p>실제로 보고와 서류를 대조했을 때 나온 오류 유형입니다. 선박 정보는 뺐습니다.</p>
+    <p>왼쪽은 입력 오류입니다. 밀도 값을 점도 칸에 넣은 경우, 점도 3.433을 0.3433으로 넣은 경우, 밀도를 1.5로 넣은 경우, 수량이 2톤 다른 경우입니다. 대조에서 불일치로 나온 건은 모두 서류가 맞고 보고가 틀린 경우였습니다.</p>
+    <p>오른쪽은 첨부 오류입니다. 반선이나 인수 때 작성하는 잔량 증명서를 수급 증빙으로 올린 경우가 있습니다. 이 서류의 수량은 받은 양이 아니라 배에 남아 있는 양입니다. 윤활유 인수증만 올린 경우, 여러 서류를 합친 파일의 첫 장에 다른 유종의 BDN이 들어 있던 경우도 있었습니다. 사진이 돌아가 있거나 흐려서 읽을 수 없는 경우는 전체의 15% 정도였습니다.</p>
+    <p>원칙은 하나입니다. 보고값에 맞춰 서류를 다시 읽지 않습니다. 서류에 적힌 값이 기준입니다.</p>
+  </aside>
+</section>
+<section class="slide p3-s" data-time="16:12" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#9">
   <div class="kicker">사례 1 · 거리</div>
   <h2>거리 기준 혼용: 대지거리 · 대수거리 · 계획 거리</h2>
   <div class="row" style="gap:30px;align-items:start">
@@ -2966,7 +3098,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>거리는 CII의 분모입니다. 거리가 5% 틀리면 CII도 5% 틀립니다. 등급 한 칸이 바뀔 수 있는 크기입니다. 그리고 올해 5월 IMO DCS 양식에 거리를 항해와 비항해로 나눠 적는 행이 추가됐습니다. 적용 연도는 결의문에 적혀 있지 않으니 기국이나 RO에 확인하셔야 합니다. 이 문제는 앞으로 더 커집니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:10" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#11">
+<section class="slide p3-s" data-time="16:13" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#11">
   <div class="kicker">사례 2 · 마이너스 FOC</div>
   <h2>보정량이 소비량보다 큰 구간</h2>
   <div class="row" style="gap:30px;align-items:center">
@@ -3008,7 +3140,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>이 레그가 EU 항차였다면 ETS 제출량이 줄어든 것처럼 보이고, 반대로 다른 EU 항차에 몰았다면 늘어납니다. 그래서 보정은 차이가 실제로 생긴 구간에 넣어야 합니다. 마이너스 소비가 나온 레그는 무조건 확인 필요로 보고, 육상 담당자가 보정을 차이가 실제로 생긴 시점으로 옮겨 달라고 선박에 요청합니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:11" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#12">
+<section class="slide p3-s" data-time="16:15" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#12">
   <div class="kicker">사례 3 · 투묘와 접안</div>
   <h2>투묘 72시간 초과와 투묘·양묘 순서 오류</h2>
   <svg class="p3-flow" viewBox="0 0 1432 296" width="100%">
@@ -3048,7 +3180,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>선박에는 "투묘를 넣었으면 양묘도 넣는다"고 안내해 주십시오.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:12" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#13">
+<section class="slide p3-s" data-time="16:16" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#13">
   <div class="kicker">사례 4 · BDN 중복 첨부</div>
   <h2>BDN 중복 첨부: 수급량 이중 집계</h2>
   <div class="row" style="gap:30px;align-items:center">
@@ -3095,7 +3227,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>그래서 선박에는 단순한 원칙을 드립니다. BDN 한 장은 보고 한 건, 수정은 기존 보고의 개정본으로 합니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:13" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#14">
+<section class="slide p3-s" data-time="16:17" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#14">
   <div class="kicker">사례 5 · 보고 누락</div>
   <h2>보고 누락: 윤활유 수급 보고의 BDN에 MGO 기재</h2>
   <div class="row" style="gap:30px;align-items:center">
@@ -3129,7 +3261,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>문제는 검증 규칙입니다. 보고값만 보고 검증 대상에서 빼면 이 8건은 아무도 모르게 지나갑니다. 그래서 증빙을 읽어서 증빙에도 연료가 없다는 게 확인될 때만 제외하도록 규칙을 정해 두는 편이 안전합니다. 확인하지 못한 항목은 정상으로 보지 않는다는 판정 원칙이 여기에도 적용됩니다. 예시 수치로 MGO 85톤이면 CO₂ 약 273톤입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:14" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#15">
+<section class="slide p3-s" data-time="16:18" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#15">
   <div class="kicker">사례 6 · 바이오연료</div>
   <h2>바이오연료: PoS 유무에 따른 처리</h2>
   <div class="p3-pos">
@@ -3153,7 +3285,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>[시간이 밀렸으면 위 표만]</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:15" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#16">
+<section class="slide p3-s" data-time="16:19" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#16">
   <div class="kicker">사례 7 · 증빙 형식</div>
   <h2>증빙 파일 형식 기준</h2>
   <div class="row" style="gap:30px;align-items:start">
@@ -3187,7 +3319,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>선박 입장에서는 번거롭지만, 검증기관 심사에서 시간을 아끼는 가장 쉬운 방법입니다. 선박 지침에 "로그북은 사진으로" 한 줄만 넣어 두십시오.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:16" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#19">
+<section class="slide p3-s" data-time="16:19" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#19">
   <div class="kicker">연간 연료 대조</div>
   <h2>연간 연료 대조: 소비 기준과 탱크 기준</h2>
   <div class="row" style="gap:30px;align-items:start">
@@ -3229,7 +3361,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>B 계산의 출발점은 1월 1일 정오 잔량입니다. 그래서 1월 1일과 7월 1일 로그북을 따로 받아 보고 잔량과 1톤 미만으로 맞춥니다. 사례처럼 MGO가 18톤 다르면 연간 계산 전체가 틀어집니다. 연말연시에 선박에 꼭 한마디 해 주십시오. "새해 첫 정오에는 떡국보다 측심."</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:17" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#20">
+<section class="slide p3-s" data-time="16:21" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3a_validation.html#20">
   <div class="kicker">선박 피드백</div>
   <h2>선박 피드백과 데이터 수정</h2>
   <div class="row" style="gap:30px;align-items:center">
@@ -3271,7 +3403,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>마지막으로 Lock Date, 데이터 동결일을 두시길 권합니다. 검증기관에 낼 데이터를 확정하면 그 날짜 이전 보고는 선박이 더 이상 고칠 수 없게 잠급니다. 제출한 숫자와 사내 데이터의 숫자가 달라지는 사고를 막기 위해서입니다.</p>
   </aside>
 </section>
-<section class="slide labslide" data-time="16:18" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="lab3a.html#1">
+<section class="slide labslide" data-time="16:22" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="lab3a.html#1">
   <div class="kicker">3교시 · 증빙 대조 실습</div>
   <h2 style="margin-bottom:12px">벙커링 보고 검증 실습</h2>
   <div class="lab" id="V1">
@@ -3294,7 +3426,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>[종합 판정 보기 · 클릭] 불일치가 하나라도 있으면 그 보고 전체가 "확인 필요"가 되고, 육상 담당자가 선박에 수정 요청 메일을 보냅니다. 선박이 개정본을 올리면 증빙을 다시 판독하고, 사람이 최종 확인합니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="16:23" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3d_web.html#1">
+<section class="slide" data-time="16:26" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 7건 → 연간 연료 대조 → 선박 피드백 → 실습" data-stage="4" data-src="p3d_web.html#1">
   <style>
     .wf{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;position:relative}
     .wf .n{background:#fff;border:1.5px solid var(--navy);border-radius:8px;padding:18px 20px 20px;position:relative}
@@ -3335,7 +3467,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>활용은 운항, 재무, 경영이 합니다. 중요한 건 마지막 칸의 "같은 숫자"입니다. 배, 육상, 검증기관이 같은 숫자를 봅니다. 메일로 엑셀을 주고받으면 누가 가진 파일이 최신인지부터 확인해야 하는데, 그 단계가 없어집니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:24" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 보고·정산과 활용 :: 규제별 점검 → 감면 증빙 → 마감 일정 → 부서별 활용" data-stage="5" data-src="p3b_performance.html#1">
+<section class="slide p3-s" data-time="16:28" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 감면 증빙 → 마감 일정 → 부서별 활용" data-stage="5" data-src="p3b_performance.html#1">
   <style>
     /* p3a_validation.html과 같은 규칙 (단독 미리보기용 중복) */
     svg.p3-flow{max-width:100%;height:auto;display:block}
@@ -3372,7 +3504,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>마지막 줄이 공통 증빙입니다. BDN, 잔량 연속성, 로그북입니다. 공통 증빙이 틀리면 모든 규제 보고가 함께 틀립니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:25" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 보고·정산과 활용 :: 규제별 점검 → 감면 증빙 → 마감 일정 → 부서별 활용" data-stage="5" data-src="p3b_performance.html#2">
+<section class="slide p3-s" data-time="16:29" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 감면 증빙 → 마감 일정 → 부서별 활용" data-stage="5" data-src="p3b_performance.html#2">
   <div class="kicker">감면 증빙</div>
   <h2>감면 증빙 체크리스트 (2교시 요약)</h2>
   <table class="t compact p3b-tight">
@@ -3395,7 +3527,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>[시간이 밀렸으면 항차조정과 바이오연료 두 행만]</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:27" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 보고·정산과 활용 :: 규제별 점검 → 감면 증빙 → 마감 일정 → 부서별 활용" data-stage="5" data-src="p3a_validation.html#21">
+<section class="slide p3-s" data-time="16:30" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 감면 증빙 → 마감 일정 → 부서별 활용" data-stage="5" data-src="p3a_validation.html#21">
   <div class="kicker">검증기관 관점</div>
   <h2>검증기관 주요 지적 사항</h2>
   <table class="t">
@@ -3415,7 +3547,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>언제까지 무엇을 내야 하는지는 다음 장 달력으로 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="16:28" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 보고·정산과 활용 :: 규제별 점검 → 감면 증빙 → 마감 일정 → 부서별 활용" data-stage="5" data-src="p1_regulation.html#6">
+<section class="slide p1-lg" data-time="16:31" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 감면 증빙 → 마감 일정 → 부서별 활용" data-stage="5" data-src="p1_regulation.html#6">
   <style>
     table.p1-cal td{vertical-align:middle} table.p1-cal td:nth-child(1){font-weight:700;color:var(--navy);white-space:nowrap}
     table.p1-cal td:nth-child(2){white-space:nowrap;color:var(--navy)} table.p1-cal tr.k td{background:var(--sky)}
@@ -3441,7 +3573,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>앞에서 본 매달 검증이 이 석 달을 넘기기 위한 것입니다. 재무팀은 9월 30일만 보시면 안 됩니다. 3월 31일 검증이 끝나야 제출 수량이 확정되니, 그 전에는 월별 항차 집계로 배출권 수량을 잡아 두셔야 합니다.</p>
   </aside>
 </section>
-<section class="slide demo" data-demo-url="" data-time="16:29" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 보고·정산과 활용 :: 규제별 점검 → 감면 증빙 → 마감 일정 → 부서별 활용" data-stage="5" data-src="demo3.html#1">
+<section class="slide demo" data-demo-url="" data-time="16:33" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 감면 증빙 → 마감 일정 → 부서별 활용" data-stage="5" data-src="demo3.html#1">
   <style>
     .d3row{display:grid;grid-template-columns:1.45fr 1fr;gap:22px;align-items:stretch}
     .d3crop{position:relative;border:1.5px solid var(--line);border-radius:6px;overflow:hidden;background:#fff;aspect-ratio:606/362}
@@ -3475,7 +3607,7 @@ section.slide.pp>h2.ppt{display:none}
   <p class="small" style="margin-top:8px;font-size:21px">데모 계정의 앱 화면(막대 색은 앱 원본) · 선박명은 가명 · 시연 약 3분</p>
   <aside class="notes"><p>이 마감들을 선대 단위로 관리하는 웹 화면 예시입니다. 마지막 시연이고, 두 가지만 보겠습니다. FuelEU 잔액와 CII입니다.</p><p>[앱 전환] 선박별 FuelEU 잔액입니다. 초록 막대가 흑자, 빨간 막대가 적자 선박입니다. 이 예에서는 흑자가 세 척, 적자가 두 척이고, 적자 두 척의 벌금이 약 7만 2천 유로입니다. 1교시 실습에서 해 본 풀링, 누구를 묶을지를 이 표를 보고 정합니다. 엑셀이라면 선박별 잔액와 벌금을 한 시트에 모아 두시면 같은 판단을 할 수 있습니다.</p><p>[CII 선대 화면 열기] 선대 CII 등급 분포와 선박별 달성값, 요구값이 나옵니다. [슬라이드로 복귀] 이 숫자를 믿고 돈을 움직이려면 검증이 먼저 끝나 있어야 합니다.</p><p>[네트워크·로그인 문제 시: 앱을 열지 말고 이 캡처로 설명. 고객사·선박명이 보이지 않는 데모 계정만 사용]</p><p>[시간이 밀렸으면 앱을 열지 않고 캡처로 30초]</p></aside>
 </section>
-<section class="slide" data-time="16:32" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 보고·정산과 활용 :: 규제별 점검 → 감면 증빙 → 마감 일정 → 부서별 활용" data-stage="6" data-src="p3d_web.html#4">
+<section class="slide" data-time="16:36" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 감면 증빙 → 마감 일정 → 부서별 활용" data-stage="6" data-src="p3d_web.html#4">
   <div class="kicker">데이터 활용</div>
   <h2>부서별 활용 방법</h2>
   <table class="t">
@@ -3495,7 +3627,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>꼭 웹 화면이 있어야 하는 건 아닙니다. 엑셀로 하시더라도 아래 네 가지는 같습니다. 원천 데이터는 한 벌, 숫자마다 증빙이 연결돼 있을 것, 고친 이력이 남을 것, 여러 부서가 같은 파일을 볼 것. 엑셀이라면 시트를 어떻게 나누면 되는지 다음 장에 정리했습니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="16:34" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 보고·정산과 활용 :: 규제별 점검 → 감면 증빙 → 마감 일정 → 부서별 활용" data-stage="6" data-src="p3d_web.html#5">
+<section class="slide" data-time="16:37" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 감면 증빙 → 마감 일정 → 부서별 활용" data-stage="6" data-src="p3d_web.html#5">
   <style>
     .xl{display:grid;grid-template-columns:1fr 330px;gap:26px;align-items:start}
     .xl table.t{font-size:21px}
@@ -3532,7 +3664,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>[월 점검 순서] 한 달에 한 번은 오른쪽 순서로 보십시오. 이벤트의 짝과 순서, 벙커 대장과 BDN, EU 범위 판정, ROB 등식, 마지막으로 증빙 파일이 붙어 있는지입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:34" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 성능 개선 :: 성능 정의 → 속력–연료 곡선 → 운항 최적화 → 실습 → 점검 항목" data-stage="6" data-src="p3b_performance.html#3">
+<section class="slide p3-s" data-time="16:37" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 성능 정의 → 속력–연료 곡선 → 운항 최적화 → 실습 → 점검 항목" data-stage="6" data-src="p3b_performance.html#3">
   <div class="kicker">성능 분석</div>
   <h2>선박 성능의 정의: 날씨 보정 후 추진 연비</h2>
   <svg class="p3-flow" viewBox="0 0 1432 136" width="100%">
@@ -3573,7 +3705,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>이런 분석을 하려면 속력, 흘수, 날씨, 기준 곡선이 다 필요합니다. 앞에서 검증한 보고 데이터가 맞아야 이 분석도 믿을 수 있습니다.</p>
   </aside>
 </section>
-<section class="slide quiz" data-time="16:35" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 성능 개선 :: 성능 정의 → 속력–연료 곡선 → 운항 최적화 → 실습 → 점검 항목" data-stage="6" data-src="p3b_performance.html#4">
+<section class="slide quiz" data-time="16:38" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 성능 정의 → 속력–연료 곡선 → 운항 최적화 → 실습 → 점검 항목" data-stage="6" data-src="p3b_performance.html#4">
   <style>section.quiz .ct .opts{margin-top:28px;gap:20px} section.quiz .ct .opt{font-size:28px;padding:30px 26px;align-items:center} section.quiz .ct .q{font-size:32px} section.quiz .ct .steps{margin-top:26px;font-size:19px}</style>
   <div class="kicker">퀴즈 · 감속</div>
   <h2>1 kn 감속 시 연료 절감률</h2>
@@ -3593,7 +3725,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>정답은 B, 약 14%입니다. 하루 연료는 속력의 세제곱에 비례하지만, 천천히 가면 항해시간이 늘어납니다. 그래서 같은 거리를 기준으로 하면 제곱에 비례합니다. 13 나누기 14를 제곱하면 0.86, 약 14% 감소입니다. A는 속력에 정비례한다고 본 경우이고, C는 세제곱을 그대로 쓴 경우입니다. 하루 기준으로는 맞는데, 배는 그만큼 더 오래 가야 합니다. 보조기관까지 넣으면 절감률은 조금 줄어듭니다. 뒤에 속력 실습에서는 주기관 기준 약 14%로 다시 나옵니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:38" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 성능 개선 :: 성능 정의 → 속력–연료 곡선 → 운항 최적화 → 실습 → 점검 항목" data-stage="6" data-src="p3b_performance.html#5">
+<section class="slide p3-s" data-time="16:41" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 성능 정의 → 속력–연료 곡선 → 운항 최적화 → 실습 → 점검 항목" data-stage="6" data-src="p3b_performance.html#5">
   <div class="kicker">속력–연료 곡선</div>
   <h2>속력–연료 기준 곡선과 현재 곡선</h2>
   <div class="row" style="gap:28px;align-items:center">
@@ -3640,7 +3772,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>성능 관리에서는 이 간격을 매달 추적합니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:39" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 성능 개선 :: 성능 정의 → 속력–연료 곡선 → 운항 최적화 → 실습 → 점검 항목" data-stage="6" data-src="p3b_performance.html#7">
+<section class="slide p3-s" data-time="16:42" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 성능 정의 → 속력–연료 곡선 → 운항 최적화 → 실습 → 점검 항목" data-stage="6" data-src="p3b_performance.html#7">
   <div class="kicker">운항 최적화</div>
   <h2>웨더 라우팅과 적시 도착(JIT) · 설명용 예시(금액은 원화)</h2>
   <div class="row" style="gap:28px;align-items:stretch">
@@ -3672,7 +3804,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>[시간이 밀렸으면 이 장은 건너뜀]</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:40" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 성능 개선 :: 성능 정의 → 속력–연료 곡선 → 운항 최적화 → 실습 → 점검 항목" data-stage="6" data-src="p3b_performance.html#8">
+<section class="slide p3-s" data-time="16:43" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 성능 정의 → 속력–연료 곡선 → 운항 최적화 → 실습 → 점검 항목" data-stage="6" data-src="p3b_performance.html#8">
   <div class="kicker">최적 속력</div>
   <h2>탄소비용과 최적 속력</h2>
   <div class="row" style="gap:28px;align-items:start">
@@ -3716,7 +3848,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>오른쪽 사례를 보시면, 탄소비용은 항차가 EU 항차인지, 50%인지 100%인지에 따라 달라집니다. 그래서 2교시에 본 항차별 EU 범위 데이터가 속력 결정에 쓰입니다. 실습으로 직접 확인해 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide labslide" data-time="16:41" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 성능 개선 :: 성능 정의 → 속력–연료 곡선 → 운항 최적화 → 실습 → 점검 항목" data-stage="6" data-src="lab3b.html#1">
+<section class="slide labslide" data-time="16:44" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 성능 정의 → 속력–연료 곡선 → 운항 최적화 → 실습 → 점검 항목" data-stage="6" data-src="lab3b.html#1">
   <style>
     #S1 .kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:8px}
     #S1 .kpi .out{padding:12px 16px}
@@ -3766,7 +3898,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>이 계산이 의미가 있으려면 기준 속력에서의 소비량, 곧 속력–연료 곡선이 정확해야 합니다. 날씨 보정이 된, 검증된 데이터로 만든 곡선이어야 합니다. 실무에서는 시운전 곡선과 운항 데이터를 흘수별로 보간해서 이 곡선을 만듭니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:45" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 성능 개선 :: 성능 정의 → 속력–연료 곡선 → 운항 최적화 → 실습 → 점검 항목" data-stage="6" data-src="p3c_checklist.html#3">
+<section class="slide p3-s" data-time="16:49" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 성능 정의 → 속력–연료 곡선 → 운항 최적화 → 실습 → 점검 항목" data-stage="6" data-src="p3c_checklist.html#3">
   <div class="kicker">3교시 정리</div>
   <h2>실무 점검 항목</h2>
   <div class="g2" style="gap:24px 40px">
@@ -3792,7 +3924,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>[16:43까지 여기 도착]</p>
   </aside>
 </section>
-<section class="slide" data-time="16:46" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_chain.html#1">
+<section class="slide" data-time="16:50" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_chain.html#1">
   <style>
     .rc{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:1fr auto;gap:14px;aspect-ratio:1432/520}
     .rc .c{background:#fff;border:1.5px solid var(--navy);border-radius:8px;padding:22px 18px 20px}
@@ -3820,7 +3952,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>회사에 돌아가셔서 문제가 하나 생기면, 다섯 단계 중 어디서 틀어진 건지부터 짚어 보십시오. 단계를 알면 누구에게 물어야 할지가 정해집니다. 입력이면 배, 처리면 육상에서 계산을 맡은 담당자나 프로그램 공급사, 검증이면 검증 담당자, 정산이면 재무, 개선이면 운항팀입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="16:48" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#1">
+<section class="slide" data-time="16:51" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#1">
   <div class="kicker">전체 정리</div>
   <h2>요약과 후속 조치</h2>
   <table class="t" style="font-size:22px">
@@ -3846,7 +3978,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>마지막으로 일정 하나만 말씀드립니다. 2027년은 ETS 100% 첫 정산, FuelEU 두 번째 주기, UK ETS 첫 보고가 겹치는 해입니다. 그 숫자는 지금 배에서 입력되고 있는 2026년 데이터로 정해집니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="16:50" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#2">
+<section class="slide" data-time="16:53" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#2">
   <div class="kicker">인용 규정 · 자료</div>
   <h2>참고 자료</h2>
   <style>
@@ -3901,7 +4033,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>[시간이 밀렸으면 이 장은 건너뜀]</p>
   </aside>
 </section>
-<section class="slide cover" data-time="16:50" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#3">
+<section class="slide cover" data-time="16:54" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#3">
   <div class="in">
     <div class="kicker">Q &amp; A</div>
     <h1>질의응답</h1>
@@ -3919,7 +4051,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>[Q&amp;A가 끝나면] 세 시간 동안 고맙습니다. 개별 질문은 끝나고 앞에서 받겠습니다.</p>
   </aside>
 </section>
-<section class="slide bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="0" data-src="p0_opening.html#3">
+<section class="slide bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="0" data-src="p0_opening.html#3">
   <div class="kicker">강사 소개</div>
   <h2>이상봉 · (주)랩오투원 대표</h2>
   <div class="g2" style="margin-top:10px">
@@ -3949,7 +4081,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>오늘 사례는 대부분 이 400척을 검증하면서 실제로 걸린 것들입니다. 다만 오늘은 특정 프로그램 사용법이 아니라, 어떤 도구를 쓰시든 선사가 무엇을 모으고 확인해야 하는지를 말씀드리겠습니다.</p>
   </aside>
 </section>
-<section class="slide divider bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="p1_regulation.html#1">
+<section class="slide divider bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="p1_regulation.html#1">
   <style>
     .p1-dotm td{text-align:center;font-size:24px;line-height:1}
     .p1-dotm td:first-child{text-align:left;font-size:18px;line-height:1.35}
@@ -3985,7 +4117,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>규제마다 보고서를 따로 만들면 숫자가 어긋납니다. 엑셀이 규제 수만큼 생기고 담당자도 나뉘고, 파일 버전은 그보다 훨씬 많아집니다. 그래서 규제별 요구를 데이터 항목으로 바꿔서 한 번에 보려고 합니다.</p>
   </aside>
 </section>
-<section class="slide bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="p1_regulation.html#2">
+<section class="slide bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="p1_regulation.html#2">
   <div class="kicker">규제의 두 축</div>
   <h2>규제 분류: 총량·집약도, 설계·운항</h2>
   <div class="row" style="align-items:stretch">
@@ -4017,7 +4149,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>집약도 규제는 분모도 맞아야 합니다. CII는 거리와 재화중량, FuelEU는 에너지가 분모입니다. 연료를 정확히 적어도 거리를 틀리면 등급이 바뀝니다. 거리가 5% 틀리면 CII도 5% 틀립니다. 3교시에 다시 봅니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="p1_regulation.html#3">
+<section class="slide p1-lg bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="p1_regulation.html#3">
   <div class="kicker">MRV 메커니즘</div>
   <h2>MRV 절차: 모니터링 → 보고 → 검증 → 정산</h2>
   <div>
@@ -4038,7 +4170,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>아래 문장을 보십시오. 검증기관은 연료를 아꼈는지는 보지 않고, 보고한 숫자가 증빙과 같은지만 봅니다. 3교시 검증이 이 기준으로 진행됩니다.</p>
   </aside>
 </section>
-<section class="slide bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="p1_regulation.html#5">
+<section class="slide bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="p1_regulation.html#5">
   <div class="kicker">타임라인</div>
   <h2>규제 도입 연표 2018~2050</h2>
   <svg viewBox="0 0 1430 416" width="1430" height="416" role="img" aria-label="환경규제 연표 2018~2050" style="margin-top:4px">
@@ -4121,7 +4253,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>올해 데이터부터 ETS 100%가 적용됩니다. 올해 정오보고에 틀린 숫자가 있다면 지금 고쳐야 합니다. 마감 달력은 3교시 보고·정산에서 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="p1_regulation.html#8">
+<section class="slide p1-lg bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="p1_regulation.html#8">
   <div class="kicker">IMO DCS · MEPC.385(81)</div>
   <h2>IMO DCS: 2026년 데이터부터 기기별·항해/비항해별 보고</h2>
   <p style="font-size:19px;color:var(--ink);margin:-6px 0 12px">적용 시점은 기국 안내 기준 · 2025.8.1 이후 인도 신조선은 인도일부터</p>
@@ -4158,7 +4290,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>아직 정오보고에서 주기관 칸 하나에 다 몰아 적는 배가 있을 겁니다. 예전에는 연간 총량이 BDN과 맞으니 문제가 없었습니다. 이제는 발전기가 몇 톤 썼느냐고 물으면 답할 데이터가 없습니다. 양식 자체를 바꿔야 하는 문제라, 연초에 정비하지 않으면 1년치를 전부 추정해야 합니다. 2교시에 사례로 다시 봅니다.</p>
   </aside>
 </section>
-<section class="slide bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="p1_regulation.html#9">
+<section class="slide bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="p1_regulation.html#9">
   <div class="kicker">IMO CII</div>
   <h2>IMO CII: 산식과 연도별 감축률(Z)</h2>
   <table class="t" style="white-space:nowrap;text-align:center">
@@ -4193,7 +4325,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>데이터 쪽에서 중요한 건 분모입니다. 거리 1% 차이가 그대로 CII 1% 차이가 됩니다. 등급 경계 근처에 있는 배라면 거리 하나로 C와 D가 갈립니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="p1_regulation.html#11">
+<section class="slide p1-lg bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="p1_regulation.html#11">
   <div class="kicker">EU MRV · Reg. 2015/757 (2023/957 개정)</div>
   <h2>EU MRV: 항차 단위 모니터링 · 연간 보고</h2>
   <div class="row" style="align-items:stretch">
@@ -4231,7 +4363,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>가장 중요한 단어는 왼쪽 아래 '기항'입니다. EU MRV에서 항차는 기항과 기항 사이이고, 기항은 화물이나 여객을 싣고 내리기 위한 정박만 인정됩니다. 벙커링만 한 항구, 선원만 바꾼 항구는 기항이 아닙니다. 이 정의에 따라 50%짜리 항차가 100%도 되고 0%도 됩니다. 판정 방법은 2교시에 사례로 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="p1_regulation.html#22">
+<section class="slide p1-lg bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="p1_regulation.html#22">
   <div class="kicker">규제 간 경계 비교</div>
   <h2>규제 간 경계 차이 7가지</h2>
   <table class="t compact" style="font-size:18px">
@@ -4252,7 +4384,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>이 일곱 가지 경계를 사람이 규제별 엑셀로 매번 나누면 어긋납니다. 원천은 이벤트 단위로 한 벌만 남기고, 경계는 계산할 때 규칙으로 적용하는 편이 안전합니다. 엑셀을 쓰셔도 같습니다.</p>
   </aside>
 </section>
-<section class="slide bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="p1_chain.html#1">
+<section class="slide bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="p1_chain.html#1">
   <style>
     table.ch5{width:100%;border-collapse:separate;border-spacing:0;font-size:19px;line-height:1.45;background:#fff;border:1.5px solid var(--navy);border-radius:8px;overflow:hidden}
     table.ch5 th{background:var(--navy);color:#fff;font-size:19px;padding:10px 14px;text-align:left;font-weight:700}
@@ -4280,7 +4412,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>영국 줄은 앞에서 본 그대로입니다. 데이터에서는 영국 항구를 따로 골라내는 것이 출발입니다.</p>
   </aside>
 </section>
-<section class="slide demo bonus" data-demo-url="" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="demo1.html#1">
+<section class="slide demo bonus" data-demo-url="" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 상세" data-stage="1" data-src="demo1.html#1">
   <style>
     .d1{display:grid;grid-template-columns:940px 1fr;gap:20px;align-items:stretch}
     .d1-cap{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:8px;aspect-ratio:2220/1175}
@@ -4324,7 +4456,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>[캡처로 설명할 때] 오른쪽 숫자 세 개만 보시면 됩니다. 이 배는 감속 10%에 B30을 쓰는 플랜 A가 7만 9,210유로로 나왔습니다. 아래는 남은 기간 연료를 바꿨을 때의 비용입니다. 지금 쓰는 혼합이 24만 3,968유로이고, 연료별로 몇천 유로씩 차이가 납니다. 이 화면의 배출권 가격은 70유로로 설정돼 있습니다. 오늘 본문 예시는 80유로이니 숫자를 섞어 보시면 안 됩니다. 항구 이름은 가렸습니다.</p>
   </aside>
 </section>
-<section class="slide bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="1" data-src="p1_regulation.html#4">
+<section class="slide bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="1" data-src="p1_regulation.html#4">
   <div class="kicker">규제 지도</div>
   <h2>선박 한 척에 적용되는 규제 관할</h2>
   <div class="row">
@@ -4370,7 +4502,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>오른쪽 사례처럼 유럽 정기선 한 척이면 같은 항해일지에서 집계가 적어도 네 개 나옵니다. 같은 원천 데이터를 규제별로 네 번 나눠 집계하는 것입니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="1" data-src="p1_regulation.html#10">
+<section class="slide p1-lg bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="1" data-src="p1_regulation.html#10">
   <div class="kicker">사례 · CII 계산</div>
   <h2>LNG선 A: 정오보고 1건의 CII 산정</h2>
   <div class="row" style="align-items:stretch">
@@ -4410,7 +4542,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>이 C등급 하루치를 365일 모으면 연간 등급이 될 것 같지만, 그렇게 계산하면 틀립니다. 일별 값에는 보정계수가 없고 하루치 거리만 분모로 씁니다. 연간 값에는 접안과 투묘 중 연료가 다 들어가고 보정도 적용됩니다. 제가 검증하면서도 일별과 연간을 직접 비교하는 점검을 써 봤다가 그만뒀습니다. 연간 예측은 누적 데이터로 따로 하셔야 합니다.</p>
   </aside>
 </section>
-<section class="slide labslide bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="1" data-src="lab1.html#2">
+<section class="slide labslide bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="1" data-src="lab1.html#2">
   <div class="kicker">1교시 · CII 시뮬레이터</div>
   <h2 style="margin-bottom:16px">연도별 CII 등급 변화</h2>
   <div class="lab row" id="L2" style="gap:24px">
@@ -4454,7 +4586,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>마지막으로 '보정 차감 CO₂'에 숫자를 넣어 보겠습니다. 리퍼 전력이나 항차조정 같은 보정을 증빙과 함께 인정받으면 분자가 줄어서, 등급 경계에 있는 배는 등급이 바뀔 수 있습니다. 다만 리퍼 전력이나 화물 가열 같은 FC 보정은 쓴 연료가 다 빠지는 게 아닙니다. 올해 2026년 기준으로 0.66배만 빠지니, 이 칸에는 그 비율을 곱한 값을 넣어야 합니다. 증빙이 없으면 이 칸은 0입니다. 컨테이너선 예시는 처음부터 D 근처에 있으니 한번 눌러 보십시오. 계수는 MEPC 지침 값이고, 실제 등급은 기국과 검증기관의 연간 확정치를 따릅니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="1" data-src="p1_regulation.html#23">
+<section class="slide p1-lg bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="1" data-src="p1_regulation.html#23">
   <div class="kicker">규제별 입력 항목</div>
   <h2>규제별 선박 입력 항목</h2>
   <table class="t compact p1-dotm p1-b18">
@@ -4477,7 +4609,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>아래 세 줄, 바이오연료 증빙, 육상전원 증빙, 내빙등급과 보정 근거는 대부분 감면 데이터입니다. 안 적어도 보고서는 만들어집니다. 감면만 적용되지 않습니다.</p>
   </aside>
 </section>
-<section class="slide bonus p1-lg" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="1" data-src="p1_regulation.html#7">
+<section class="slide bonus p1-lg" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="1" data-src="p1_regulation.html#7">
   <div class="kicker">검증기관 질문</div>
   <h2>검증기관 주요 지적 항목 (1~3월)</h2>
   <table class="t" style="margin-top:8px">
@@ -4495,7 +4627,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>다섯 개 모두 오늘 본 내용입니다. 검증기관 미팅 전에 한 번 훑어보시면 됩니다.</p>
   </aside>
 </section>
-<section class="slide bonus p1-lg" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="1" data-src="p1_regulation.html#20">
+<section class="slide bonus p1-lg" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="1" data-src="p1_regulation.html#20">
   <div class="kicker">숫자로 보는 규제</div>
   <h2>규제 관련 주요 수치</h2>
   <div class="p1-kf">
@@ -4511,7 +4643,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>91.16은 FuelEU의 기준값입니다. 기존 중유는 이미 이보다 높습니다. 그리고 100유로는 ETS를 제출하지 못했을 때 톤당 벌금입니다. 내고 나서도 제출 의무는 그대로입니다.</p>
   </aside>
 </section>
-<section class="slide bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="1" data-src="p1_regulation.html#21">
+<section class="slide bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="1" data-src="p1_regulation.html#21">
   <div class="kicker">EU 2026.7 개정 제안 · COM(2026) 616/620 (미채택)</div>
   <h2>EU 개정 제안: 모니터링 계획·보고서 통합</h2>
   <div>
@@ -4534,7 +4666,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>지금 규제마다 엑셀을 따로 만드시는 회사가 많을 겁니다. 이 변화가 오기 전에 데이터 구조부터 바꾸셔야 합니다.</p>
   </aside>
 </section>
-<section class="slide bonus p1-lg" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="1" data-src="p1_regulation.html#30">
+<section class="slide bonus p1-lg" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="1" data-src="p1_regulation.html#30">
   <div class="kicker">O / X</div>
   <h2>규제 관련 오해 3가지</h2>
   <style>.ox td.ans>span{visibility:hidden}.ox.revealed td.ans>span{visibility:visible}.ox td.ans>span.x{font-weight:800;color:var(--red);font-size:24px}</style>
@@ -4549,7 +4681,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>세 개 다 X입니다. 첫째, 일별 CII에는 보정계수가 없고 하루치 거리만 분모로 쓰니, 모아도 연간 등급이 되지 않습니다. 둘째, 기항은 화물이나 여객 작업을 한 정박만 인정됩니다. 셋째, ETS는 올해 배출분부터 메탄과 아산화질소까지 제출합니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="1" data-src="p1_regulation.html#25">
+<section class="slide p1-lg bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="1" data-src="p1_regulation.html#25">
   <div class="kicker">감면 · 보정 · 원칙</div>
   <h2>감면 원칙: 원천값과 증빙</h2>
   <div class="callout">감면 = <b>원천값 + 증빙</b> · 없으면 <b>불리한 기본값</b></div>
@@ -4570,7 +4702,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>제가 검증하면서 본 사례로는 증빙 첨부가 빠진 건이 전부 구형 입력 양식에서 나왔습니다. 회사 보고 양식이 바이오연료를 선택하면 PoS 번호, 혼합비, 발열량, 첨부를 필수로 받는지 확인하십시오. 감면은 선원이 서류를 챙기기 전에, 입력 양식이 서류를 요구하느냐에서 먼저 갈립니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="2" data-src="p1_regulation.html#26">
+<section class="slide p1-lg bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="2" data-src="p1_regulation.html#26">
   <div class="kicker">감면 · IMO CII 보정계수 (MEPC.355(78))</div>
   <h2>CII 보정계수별 선박 입력과 증빙</h2>
   <div>
@@ -4595,7 +4727,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>검증 쪽에서는 보정량이 실제 기기 소비량보다 크면 바로 오류로 잡습니다. 보일러로 100톤을 썼는데 화물 가열로 120톤을 빼 달라고 하면 보일러가 연료를 만들어 냈다는 얘기가 됩니다. 그리고 보정은 연간 DCS 단계에서만 들어갑니다. 일별 CII에는 반영되지 않습니다. 하나 더 알아 두십시오. 질소 차감은 이 보정 지침이 아니라 SEEMP 지침에 있고, 용량 상한과 하한은 기준선 지침에 있습니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="2" data-src="p1_regulation.html#27">
+<section class="slide p1-lg bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="2" data-src="p1_regulation.html#27">
   <div class="kicker">사례 · 감면 데이터</div>
   <h2>항차조정·STS·N₂ 차감 입력 사례</h2>
   <div class="g3">
@@ -4630,7 +4762,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>세 사례 모두 입력이 빠져도 경고가 없습니다. 체크박스 하나, 이벤트 하나가 빠지면 감면만 조용히 빠집니다.</p>
   </aside>
 </section>
-<section class="slide p2 bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="2" data-src="p2b_ship_input.html#6">
+<section class="slide p2 bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="규제 보충" data-stage="2" data-src="p2b_ship_input.html#6">
   <div class="kicker">감면 보충 · EU ETS·FuelEU</div>
   <h2>EU ETS·FuelEU 감면: 근거 데이터와 확인 방법</h2>
   <div class="row" style="gap:22px;align-items:stretch">
@@ -4662,7 +4794,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>빙해 5% 감면은 2030년까지만 적용되니, 보고 프로그램이나 계산 시트에 적용 연도가 맞게 들어가 있는지 확인해 두셔야 합니다.</p>
   </aside>
 </section>
-<section class="slide p2 bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="p2_input.html#13">
+<section class="slide p2 bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="p2_input.html#13">
   <div class="kicker">선종별 입력 · 컨테이너선</div>
   <h2>컨테이너선: 12칸 입력과 리퍼</h2>
   <div class="row" style="align-items:stretch">
@@ -4692,7 +4824,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>그런데 바쁜 항구에서는 리퍼를 만재 칸에 합쳐 넣는 경우가 있습니다. 그러면 보정 근거가 사라지고 그만큼 CII가 나빠집니다. 검증에서 적부도와 이 12칸을 대조하는 이유입니다.</p>
   </aside>
 </section>
-<section class="slide p2 bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="p2_input.html#14">
+<section class="slide p2 bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="p2_input.html#14">
   <div class="kicker">선종별 입력 · 탱커·케미컬</div>
   <h2>탱커: STS 표시와 발전기 전력 입력</h2>
   <div class="row" style="align-items:stretch">
@@ -4726,7 +4858,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>다만 이 계산값은 발전기 전체 전력이라 참고용입니다. CII 전기 보정은 하역펌프나 화물냉각처럼 화물에 쓴 전력을 킬로와트시 계량기로 재고, 거기에 SFOC를 곱하는 게 원칙입니다. SFOC 기본값은 킬로와트시당 175그램 또는 200그램입니다. 계량기가 없어서 발전기 전력에서 계산해 쓰려면 기국 승인이 필요합니다. 어떤 전력까지 인정되는지도 해석이 갈리는 부분이 있습니다. 모니터링 계획에 적어 두고 검증기관과 미리 기준을 맞춰 두시길 권합니다.</p>
   </aside>
 </section>
-<section class="slide p2 bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="p2b_ship_input.html#9">
+<section class="slide p2 bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="p2b_ship_input.html#9">
   <div class="kicker">바이오연료 · 배치 입력</div>
   <h2>B30 배치 입력 항목</h2>
   <div class="row" style="gap:24px;align-items:stretch">
@@ -4761,7 +4893,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>오른쪽 아래 식이 매일 계산되는 배치 잔량입니다. 직전 잔량에서 기기별 소비를 빼고, 보정·벙커링·반출을 반영합니다. 일반 유종과 같은 식인데, 배치마다 따로 계산한다는 것만 다릅니다.</p>
   </aside>
 </section>
-<section class="slide p2 bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="p2_bonus.html#1">
+<section class="slide p2 bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="p2_bonus.html#1">
   <div class="kicker">입력 · 보고 양식</div>
   <h2>보고 양식별 EU 데이터 포함 여부</h2>
   <table class="t">
@@ -4788,7 +4920,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>양식은 그 배가 받는 규제를 기준으로 고르셔야 합니다. 선박별로 EU·UK 기항 가능성, 5,000GT 여부, 선종을 보고, 양식에 EU 항구·BDN·바이오·육상전원 필드가 필수로 들어 있는지 확인하고, 규제가 바뀌거나 항로가 바뀌면 1년에 한 번은 다시 점검하시길 권합니다.</p>
   </aside>
 </section>
-<section class="slide p2 bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="p2_bonus.html#2">
+<section class="slide p2 bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="p2_bonus.html#2">
   <div class="kicker">선종별 입력 · 개요</div>
   <h2>선종별 화물 입력과 Capacity</h2>
   <table class="t compact">
@@ -4809,7 +4941,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>참고로 제가 검증하는 선대는 자동차선이 가장 많고 벌크, 케미컬, 가스, 컨테이너 순입니다.</p>
   </aside>
 </section>
-<section class="slide p2 bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="p2_bonus.html#3">
+<section class="slide p2 bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="p2_bonus.html#3">
   <div class="kicker">선종별 입력 · LNG선 정오보고</div>
   <h2>LNG선 A 정오보고 항목</h2>
   <div class="row" style="align-items:stretch">
@@ -4845,7 +4977,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>단, 이건 하루치 참고값입니다. 공식 등급은 연간 총량과 보정을 반영해서 나옵니다. 쪽지시험 한 번으로 학년 성적을 말할 수 없는 것과 같습니다. 일별 CII를 연간 등급처럼 보고하는 일은 없도록 해 주십시오.</p>
   </aside>
 </section>
-<section class="slide p2 bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="p2_bonus.html#4">
+<section class="slide p2 bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="p2_bonus.html#4">
   <div class="kicker">선종별 입력 · LNG선 화물·BOG</div>
   <h2>LNG선: 화물 LNG와 BOG 입력</h2>
   <div class="row" style="align-items:stretch">
@@ -4890,7 +5022,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>오른쪽이 실무에서 자주 놓치는 부분입니다. LNG 화물에는 질소가 섞여 있는데, 질소는 타지 않으면서 연료 질량에는 들어갑니다. 그래서 질소만큼 빼 주는 N₂ 차감이 있습니다. 이 차감을 받으려면 화물작업 때 조성표의 밀도와 분자량을 입력해야 합니다. 입력이 없으면 차감 칸이 빈칸으로 남고, 그만큼 배출량이 많게 잡힙니다.</p>
   </aside>
 </section>
-<section class="slide p2 bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="p2_bonus.html#5">
+<section class="slide p2 bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="p2_bonus.html#5">
   <div class="kicker">선종별 입력 · 자동차선·일반화물·여객</div>
   <h2>자동차선·일반화물선·여객선 화물량 산정</h2>
   <div class="g3" style="align-items:stretch">
@@ -4930,7 +5062,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>세 선종 모두 추정식으로 만든 숫자입니다. 추정식으로 만든 숫자일수록 근거 문서를 꼭 같이 남기셔야 합니다.</p>
   </aside>
 </section>
-<section class="slide p2 bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="lab2.html#3">
+<section class="slide p2 bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="lab2.html#3">
   <div class="kicker">보충 · 익명 사례</div>
   <h2 style="margin-bottom:22px">정오보고 오류 사례</h2>
   <div class="g3" style="gap:16px">
@@ -4949,7 +5081,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>회사에서 보신 비슷한 사례가 있으면 한두 분만 말씀해 주십시오.</p>
   </aside>
 </section>
-<section class="slide p2 bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="lab2.html#4">
+<section class="slide p2 bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="lab2.html#4">
   <div class="kicker">선종별 입력 · 유의사항</div>
   <h2>선종별 입력 유의사항</h2>
   <table class="t compact">
@@ -4968,7 +5100,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>해당하는 줄이 두 개 이상이면, 그 줄을 선박에 보낼 안내 메일의 제목으로 쓰시면 됩니다.</p>
   </aside>
 </section>
-<section class="slide p2 bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="lab2.html#5">
+<section class="slide p2 bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="입력 보충" data-stage="2" data-src="lab2.html#5">
   <div class="kicker">Q&amp;A</div>
   <h2>자주 묻는 질문</h2>
   <div class="g2" style="gap:14px 22px">
@@ -4986,7 +5118,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>이 여섯 개 말고 궁금하신 것이 있으면 지금 받겠습니다.</p>
   </aside>
 </section>
-<section class="slide p2 bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="처리 보충" data-stage="3" data-src="p2_bonus.html#6">
+<section class="slide p2 bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="처리 보충" data-stage="3" data-src="p2_bonus.html#6">
   <div class="kicker">처리 보충 · 연도 경계</div>
   <h2>연도 경계: 현지시각 정오와 UTC 자정</h2>
   <svg viewBox="0 0 1430 216" width="1430" height="216" role="img" aria-label="UTC 자정과 현지시각 정오 사이 구간">
@@ -5018,7 +5150,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>대응은 세 가지입니다. 기준을 모니터링 계획에 적어 두고, 그 시점 로그북 잔량을 첨부하고, 검증기관과 미리 합의하는 것입니다. 1월에 가서 맞추려면 늦습니다.</p>
   </aside>
 </section>
-<section class="slide p2 bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="처리 보충" data-stage="3" data-src="p2_bonus.html#8">
+<section class="slide p2 bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="처리 보충" data-stage="3" data-src="p2_bonus.html#8">
   <div class="kicker">처리 보충 · 연간 연료 대조</div>
   <h2>연간 연료 대조 계산 예</h2>
   <div class="g2">
@@ -5056,7 +5188,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>아래 사례처럼 탱크 기준이 412톤 크다면, BDN은 있는데 소비가 덜 기록됐거나 수급이 중복된 겁니다. 실제로 같은 BDN이 두 번 첨부돼서 수급이 이중으로 잡힌 사례가 있었습니다.</p>
   </aside>
 </section>
-<section class="slide p2 bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="처리 보충" data-stage="3" data-src="p2_bonus.html#9">
+<section class="slide p2 bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="처리 보충" data-stage="3" data-src="p2_bonus.html#9">
   <div class="kicker">처리 보충 · 유종 분류</div>
   <h2>BDN 등급·점도·밀도에 따른 유종 분류</h2>
   <div class="row" style="align-items:stretch">
@@ -5099,7 +5231,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>그래서 BDN에 적힌 등급으로 판정하고, 그 판정 방법을 모니터링 계획에 적어 두시면 됩니다. 저유황이라는 이름만 보고 전부 LFO로 넣으면 검증에서 지적받을 수 있습니다.</p>
   </aside>
 </section>
-<section class="slide p2 bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="처리 보충" data-stage="3" data-src="p2_bonus.html#10">
+<section class="slide p2 bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="처리 보충" data-stage="3" data-src="p2_bonus.html#10">
   <div class="kicker">처리 보충 · 원천과 산출물</div>
   <h2>레그 데이터와 규제별 산출물</h2>
   <div class="row" style="align-items:stretch">
@@ -5136,7 +5268,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>마침 EU도 올해 7월에 MRV, ETS, FuelEU를 하나의 모니터링 계획, 하나의 보고서로 합치자는 개정안을 냈습니다. 아직 제안 단계지만 방향은 분명합니다. 원천 데이터를 하나로 정확하게 만들고, 산출은 자동으로 뽑는 쪽입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="검증 보충" data-stage="4" data-src="p3a_validation.html#8">
+<section class="slide p3-s bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="검증 보충" data-stage="4" data-src="p3a_validation.html#8">
   <div class="kicker">허용오차 보충 · 예시 기준 · 규정값 아님</div>
   <h2>항구 대조 방법</h2>
   <div class="row" style="gap:30px;align-items:center">
@@ -5180,7 +5312,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>항구가 중요한 이유는 2교시에 보신 대로입니다. EU 항구냐 아니냐에 따라 ETS와 FuelEU 범위가 바뀝니다.</p>
   </aside>
 </section>
-<section class="slide p3-s bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="검증 보충" data-stage="4" data-src="p3a_validation.html#10">
+<section class="slide p3-s bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="검증 보충" data-stage="4" data-src="p3a_validation.html#10">
   <div class="kicker">보충 사례 · CII 등급</div>
   <h2>LNG선 CII 등급: 저장값 D·E, 재계산 A</h2>
   <div class="row" style="gap:30px;align-items:center">
@@ -5229,7 +5361,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>연말에 SoC를 받기 전에 한 번 독립적으로 재계산해 보시길 권합니다.</p>
   </aside>
 </section>
-<section class="slide p3-s bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="검증 보충" data-stage="4" data-src="p3a_validation.html#17">
+<section class="slide p3-s bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="검증 보충" data-stage="4" data-src="p3a_validation.html#17">
   <div class="kicker">화물 검증 · 예시 기준 · 규정값 아님</div>
   <h2>선종별 화물 검증 기준</h2>
   <div class="row" style="gap:26px;align-items:center">
@@ -5268,7 +5400,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>이 오타가 중요한 이유는 리퍼 개수가 CII에서 리퍼 전력 소비를 보정받는 근거이기 때문입니다. 화물 숫자 하나가 감면과 연결됩니다.</p>
   </aside>
 </section>
-<section class="slide p3-s bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="검증 보충" data-stage="4" data-src="p3a_validation.html#18">
+<section class="slide p3-s bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="검증 보충" data-stage="4" data-src="p3a_validation.html#18">
   <div class="kicker">LNG선 화물</div>
   <h2>LNG선 COQ 조성과 N₂ 차감</h2>
   <div class="row" style="gap:30px;align-items:center">
@@ -5312,7 +5444,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>사례를 보시면 COQ에는 조성이 있는데 보고에는 빈칸이었습니다. 그냥 넘어가기 쉬운 항목인데, 보고 누락으로 잡는 편이 안전합니다. 조성이 비면 차감이 빠지고 CII가 나빠지기 때문입니다. 화물 계량 정보가 등록되지 않아 차감 요약이 비어 있는 LNG선도 실제로 있었습니다. 받을 수 있는 차감을 안 받고 있었습니다.</p>
   </aside>
 </section>
-<section class="slide labslide bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="검증 보충" data-stage="4" data-src="lab3a.html#2">
+<section class="slide labslide bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="검증 보충" data-stage="4" data-src="lab3a.html#2">
   <div class="kicker">3교시 · 연간 연료 대조</div>
   <h2 style="margin-bottom:14px">연간 연료 대조 실습</h2>
   <div class="lab row" id="V2" style="gap:26px;align-items:center">
@@ -5345,7 +5477,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>검증기관은 이 두 방법 중 어느 쪽이든 쓸 수 있습니다. BDN 방식을 쓰는 회사라면 B가 곧 보고 숫자가 됩니다. 그래서 디벙커링, 재분류, 측심 보정처럼 드물게 생기는 이벤트를 빠뜨리면 연간 배출량이 틀어집니다. 참고로 BOG처럼 잔량 개념이 없는 연료는 이 비교에서 뺍니다.</p>
   </aside>
 </section>
-<section class="slide p3-s bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="개선 보충" data-stage="6" data-src="p3b_performance.html#6">
+<section class="slide p3-s bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="개선 보충" data-stage="6" data-src="p3b_performance.html#6">
   <div class="kicker">선체·프로펠러 오손</div>
   <h2>선체·프로펠러 오손과 청소 효과</h2>
   <div class="row" style="gap:28px;align-items:center">
@@ -5380,7 +5512,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>오른쪽 사례는 원인을 가르는 방법입니다. 속력 대비 축마력이 늘었다면 선체나 프로펠러 쪽이고, 축마력 대비 연료가 늘었다면 엔진, 즉 연료소비율 쪽입니다. 그래서 축마력계 데이터와 연료 데이터를 함께 봐야 합니다.</p>
   </aside>
 </section>
-<section class="slide bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="개선 보충" data-stage="4" data-src="p3d_web.html#2">
+<section class="slide bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="개선 보충" data-stage="4" data-src="p3d_web.html#2">
   <div class="kicker">검증 실적</div>
   <h2>검증 처리 현황 (24,758건)</h2>
   <div class="row" style="gap:36px;align-items:stretch">
@@ -5412,7 +5544,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>오른쪽 표에서 상태를 보면 94%는 검증이 끝났고, 3.6%, 9백여 건이 배에 수정 요청이 나가 있습니다. 100건 중 4건꼴입니다. 적어 보이지만 이걸 연말까지 두면 1월에서 3월 검증 기간에 한꺼번에 몰립니다. 그때는 그 항차를 탔던 기관장이 이미 하선한 뒤입니다. 그래서 육상 담당자가 보고가 들어온 그 주에 확인하는 절차가 필요합니다.</p>
   </aside>
 </section>
-<section class="slide bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="개선 보충" data-stage="5" data-src="p3d_web.html#3">
+<section class="slide bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="개선 보충" data-stage="5" data-src="p3d_web.html#3">
   <div class="kicker">웹 화면 예시</div>
   <h2>선대 CII 현황에서 확인할 항목</h2>
   <div class="crop c3"><img src="img/app/cii_fleet_performance.png" alt="선대 CII 화면: 등급 분포, 선종별 등급, 연도별 추이"></div>
@@ -5431,7 +5563,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>이 현황을 3월 제출 직전에 처음 보면 할 수 있는 게 없습니다. 분기마다 보면 감속할 배, 선체 청소할 배를 고를 시간이 있습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="개선 보충" data-stage="6" data-src="p3c_checklist.html#1">
+<section class="slide p3-s bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="개선 보충" data-stage="6" data-src="p3c_checklist.html#1">
   <style>
     /* p3a_validation.html과 같은 규칙 (단독 미리보기용 중복) */
     svg.p3-flow{max-width:100%;height:auto;display:block}
@@ -5493,7 +5625,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>이것은 설명용 단순 계산이고, 실제로는 항해일수 증가와 용선 조건을 함께 봐야 합니다. 그리고 이 계산은 검증된 연간 데이터로 해야 의미가 있습니다. 거리가 어긋난 데이터로 계산하면 결정도 어긋납니다.</p>
   </aside>
 </section>
-<section class="slide p3-s bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="개선 보충" data-stage="6" data-src="p3c_checklist.html#2">
+<section class="slide p3-s bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="개선 보충" data-stage="6" data-src="p3c_checklist.html#2">
   <div class="kicker">성능 분석 정리</div>
   <h2>성능 분석과 데이터 품질</h2>
   <svg class="p3-flow" viewBox="0 0 1432 290" width="100%">
@@ -5516,7 +5648,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>그래서 오늘 강의 순서가 입력, 처리, 검증, 그리고 성능이었습니다.</p>
   </aside>
 </section>
-<section class="slide bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="개선 보충" data-stage="6" data-src="p3c_checklist.html#4">
+<section class="slide bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="개선 보충" data-stage="6" data-src="p3c_checklist.html#4">
   <style>
     #bh table.t td{font-size:21px;padding:12px 16px}
     #bh .bug{display:none}
@@ -5545,7 +5677,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>다섯 개를 다 찾으셨으면 검증기관보다 먼저 틀린 숫자를 찾으신 겁니다. 마지막 줄 대지거리는 맞게 쓴 겁니다.</p>
   </aside>
 </section>
-<section class="slide bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="개선 보충" data-stage="6" data-src="p3c_checklist.html#5">
+<section class="slide bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="개선 보충" data-stage="6" data-src="p3c_checklist.html#5">
   <style>
     #bq .row{display:grid;grid-template-columns:56px 1.15fr 1fr;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px 20px;margin-bottom:12px;font-size:21px}
     #bq .row b.n{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;font-size:19px}
@@ -5569,7 +5701,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>다섯 개를 다 맞히셨으면 내일부터 선박 질문 담당을 맡으셔도 됩니다.</p>
   </aside>
 </section>
-<section class="slide quiz bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="퀴즈 예비" data-stage="0" data-src="p0_opening.html#2">
+<section class="slide quiz bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="퀴즈 예비" data-stage="0" data-src="p0_opening.html#2">
   <div class="kicker">퀴즈 · 정오보고 연료 1톤</div>
   <h2>정오보고에서 연료 1톤이 빠진 경우</h2>
   <div class="ct"><div class="q">기관장이 정오보고 연료를 <b>매일 1톤씩 적게</b> 적었습니다.<br>EU↔비EU 항차(50%) 1년, EUA €80. <b>장부에서 빠진 탄소비용</b>은?</div>
@@ -5581,7 +5713,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>덜 적으면 이득 아니냐고 생각하실 수 있는데 그렇지 않습니다. 연말에 BDN과 탱크 잔량으로 맞춰 보면 365톤이 비고, 검증기관이 거기서 멈춥니다. 제출 의무는 그대로이고, 제때 못 내면 톤당 100유로 벌금이 따로 붙습니다. 하루 1톤 차이가 1년이면 이만큼입니다.</p>
   </aside>
 </section>
-<section class="slide quiz bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="퀴즈 예비" data-stage="1" data-src="p1_regulation.html#12">
+<section class="slide quiz bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="퀴즈 예비" data-stage="1" data-src="p1_regulation.html#12">
   <div class="kicker">퀴즈 · 기항 판정</div>
   <h2>벙커링 경유 항해의 EU ETS 산입 비율</h2>
   <div class="ct"><div class="q">로테르담 출항 → 스페인 남부 항구에서 <b>벙커링만</b> → 싱가포르 입항</div>
@@ -5592,7 +5724,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>[5초 · R키] 답은 B, 50%입니다. 벙커링만 한 항구는 기항이 아니라서 항차가 로테르담에서 싱가포르까지 하나로 이어지고, EU 출항 항차라 50%입니다. C를 고르신 분도 많을 겁니다. C는 항차를 자를 때 실제로 가장 자주 나오는 오류입니다. 프로그램이든 엑셀이든 벙커링 항구에서 항차를 나누면 앞 구간이 EU 내 항해 100%로 계산됩니다.</p>
   </aside>
 </section>
-<section class="slide quiz bonus" data-time="16:51" data-sec="부록|보충 자료" data-grp="퀴즈 예비" data-stage="1" data-src="p1_regulation.html#24">
+<section class="slide quiz bonus" data-time="16:54" data-sec="부록|보충 자료" data-grp="퀴즈 예비" data-stage="1" data-src="p1_regulation.html#24">
   <div class="kicker">퀴즈 · PoS 누락</div>
   <h2>PoS 없는 바이오 혼합유의 FuelEU 산정</h2>
   <div class="ct"><div class="q">바이오 혼합유 수급 · <b>BDN만</b> 첨부 (PoS 없음)<br>FuelEU에서 이 연료의 계산 방식은?</div>
@@ -5603,7 +5735,7 @@ section.slide.pp>h2.ppt{display:none}
     <p>[5초 · R키] 답은 B입니다. 해당 유종의 화석연료 경로 가운데 가장 불리한 값으로 계산됩니다. 바이오연료 값을 치르고 샀는데 계산은 화석연료로 됩니다. 세상에서 제일 비싼 중유를 산 셈입니다. ETS에서 바이오 CO₂를 0으로 보는 것도 적용받지 못합니다.</p>
   </aside>
 </section>
-<section class="slide p2 bonus quiz" data-time="16:51" data-sec="부록|보충 자료" data-grp="퀴즈 예비" data-stage="2" data-src="p2_bonus.html#11">
+<section class="slide p2 bonus quiz" data-time="16:54" data-sec="부록|보충 자료" data-grp="퀴즈 예비" data-stage="2" data-src="p2_bonus.html#11">
   <div class="kicker">보충 · 2교시</div>
   <h2>2교시 정리</h2>
   <div class="row" style="align-items:stretch">
@@ -5633,19 +5765,19 @@ section.slide.pp>h2.ppt{display:none}
     <p>이 다섯 줄은 이어지는 실습에서 직접 확인하겠습니다.</p>
   </aside>
 </section>
-<section class="slide pp bonus" data-pp="3" style="background:linear-gradient(180deg,#BDC4C7 0%,#5A6A69 50%,#254540 100%)" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#2">
+<section class="slide pp bonus" data-pp="3" style="background:linear-gradient(180deg,#BDC4C7 0%,#5A6A69 50%,#254540 100%)" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#2">
 <h2 class="ppt">컨테이너선 배기 사진</h2>
 <img class="e" data-k="1" src="img/seminar/66456978a9df_750.jpg" style="left:0.0px;top:0.0px;width:1600.0px;height:900.0px;" alt="">
 <aside class="notes"><p>컨테이너선 굴뚝입니다. 오늘 세 시간은 저 연기를 숫자로 세는 이야기입니다. 얼마나 나왔는지, 누가 확인하는지, 그래서 얼마를 내는지입니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="4" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#3">
+<section class="slide pp bonus" data-pp="4" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#3">
 <h2 class="ppt">목차</h2>
 <div class="e" data-k="1" style="left:381.3px;top:0.0px;width:1218.7px;height:900.0px;background:#0070C0;"></div>
 <div class="e" data-k="2" style="left:118.8px;top:177.3px;width:238.0px;height:145.4px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:110.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">목차</span></div></div></div>
 <div class="e" data-k="3" style="left:427.8px;top:158.6px;width:1082.4px;height:607.9px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:flex-start;"><div class="bu" style="text-align:left;line-height:1.80;padding-left:120.0px;text-indent:-120.0px;"><span style="font-size:66.7px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;display:inline-block;width:120.0px;text-indent:0">1.</span><span style="font-size:66.7px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">환경 규제 배경</span></div><div class="bu" style="text-align:left;line-height:1.80;padding-left:120.0px;text-indent:-120.0px;"><span style="font-size:66.7px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;display:inline-block;width:120.0px;text-indent:0">2.</span><span style="font-size:66.7px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">대체 연료 솔루션</span></div><div class="bu" style="text-align:left;line-height:1.80;padding-left:120.0px;text-indent:-120.0px;"><span style="font-size:66.7px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;display:inline-block;width:120.0px;text-indent:0">3.</span><span style="font-size:66.7px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">하드웨어 탄소 관리 솔루션</span></div><div class="bu" style="text-align:left;line-height:1.80;padding-left:120.0px;text-indent:-120.0px;"><span style="font-size:66.7px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;display:inline-block;width:120.0px;text-indent:0">4.</span><span style="font-size:66.7px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">소프트웨어 탄소 저감 솔루션</span></div><div class="bu" style="text-align:left;line-height:1.80;padding-left:120.0px;text-indent:-120.0px;"><span style="font-size:66.7px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;display:inline-block;width:120.0px;text-indent:0">5.</span><span style="font-size:66.7px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">데이터 기반 환경 규제 대응 실무</span></div></div></div>
 <aside class="notes"><p>1교시 순서입니다. 먼저 이런 규제가 왜 생겼는지 배경을 보고, 줄이는 방법을 대체연료, 하드웨어, 소프트웨어 순으로 봅니다.</p><p>다섯 번째 데이터 기반 실무가 오늘의 본론입니다. 1교시 끝에서 시작해 2·3교시까지 이어집니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="5" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#4">
+<section class="slide pp bonus" data-pp="5" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#4">
 <h2 class="ppt">1. 환경 규제 배경</h2>
 <div class="e" data-k="1" style="left:381.3px;top:0.0px;width:1218.7px;height:900.0px;background:#0070C0;"></div>
 <div class="e" data-k="2" style="left:479.2px;top:98.0px;width:450.9px;height:123.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:flex-start;"><div style="text-align:left;line-height:1.80;"><span style="font-size:66.7px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">환경 규제 배경</span></div></div></div>
@@ -5653,7 +5785,7 @@ section.slide.pp>h2.ppt{display:none}
 <div class="e" data-k="4" style="left:232.8px;top:55.1px;width:116.2px;height:244.4px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:191.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">1</span></div></div></div>
 <aside class="notes"><p>환경 규제 배경입니다. 규제가 생기면 그 주변에 산업이 생깁니다. 앞으로 30년 동안 해운이 어디에 돈을 쓰게 되는지 본다는 생각으로 들어 주십시오.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="6" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#5">
+<section class="slide pp bonus" data-pp="6" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#5">
 <h2 class="ppt">기후 위기론과 회의론</h2>
 <div class="e" data-k="1" style="left:808.0px;top:0.0px;width:792.0px;height:900.0px;background:#FBC7C1;"></div>
 <img class="e" data-k="2" src="img/seminar/6600410e763a_1346.jpg" style="left:79.6px;top:264.9px;width:673.2px;height:370.3px;" alt="">
@@ -5662,7 +5794,7 @@ section.slide.pp>h2.ppt{display:none}
 <img class="e" data-k="5" src="img/seminar/e7ca2a6fc142_1280.jpg" style="left:864.5px;top:264.9px;width:658.2px;height:370.3px;" alt="">
 <aside class="notes"><p>기후 이야기는 늘 둘로 갈립니다. 곧 망한다는 쪽과 거짓말이라는 쪽입니다. 누가 맞는지 따지기보다, 지금의 규제가 어떤 근거로 만들어졌는지를 보겠습니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="8" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#7">
+<section class="slide pp bonus" data-pp="8" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#7">
 <h2 class="ppt">온난화 대응 필요론</h2>
 <img class="e" data-k="1" src="img/seminar/457399b38443_458.jpg" style="left:127.1px;top:216.9px;width:459.6px;height:590.0px;" alt="">
 <img class="e" data-k="2" src="img/seminar/cd1e15c0bfdd_560.jpg" style="left:1178.7px;top:216.9px;width:315.6px;height:210.2px;" alt="">
@@ -5672,52 +5804,52 @@ section.slide.pp>h2.ppt{display:none}
 <div class="e" data-k="6" style="left:1190.2px;top:446.1px;width:313.7px;height:141.4px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:26.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">온난화 사실이야</span><span style="font-size:26.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">.</span></div><div style="text-align:center;line-height:1.20;"><span style="font-size:26.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">하지만</span></div><div style="text-align:center;line-height:1.20;"><span style="font-size:26.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">우리는 더 발전해야 된다</span><span style="font-size:26.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">.</span></div><div style="text-align:center;line-height:1.20;"><span style="font-size:26.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">기술로 대처할 수 있어</span><span style="font-size:26.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">.</span></div></div></div>
 <aside class="notes"><p>대처해야 한다는 쪽도 결이 다릅니다. 앨 고어는 위험한 수준이라고 경고했습니다. 빌 게이츠는 온난화는 사실이지만 성장을 멈출 수는 없으니 기술로 풀자고 합니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="9" style="background:#595959" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#8">
+<section class="slide pp bonus" data-pp="9" style="background:#595959" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#8">
 <h2 class="ppt">미국의 파리협정 탈퇴</h2>
 <img class="e" data-k="1" src="img/seminar/ac0d805d3b16_1280.jpg" style="left:0.0px;top:0.0px;width:1600.0px;height:900.0px;" alt="">
 <div class="e" data-k="2" style="left:210.9px;top:696.2px;width:1178.1px;height:101.0px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:73.3px;color:#FEFEFD;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;-webkit-text-stroke:2.5px #1B6AA3;paint-order:stroke fill;">미국 불이익 </span><span style="font-size:73.3px;color:#FEFEFD;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;-webkit-text-stroke:2.5px #1B6AA3;paint-order:stroke fill;">→</span><span style="font-size:73.3px;color:#FEFEFD;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;-webkit-text-stroke:2.5px #1B6AA3;paint-order:stroke fill;">파리 기후 협약 탈퇴</span></div></div></div>
 <aside class="notes"><p>반대편의 대표가 트럼프 대통령입니다. 미국에 불리하다며 첫 임기에 파리협정 탈퇴를 선언했습니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="10" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#9">
+<section class="slide pp bonus" data-pp="10" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#9">
 <h2 class="ppt">파리협정 복귀와 사과</h2>
 <img class="e" data-k="1" src="img/seminar/e8cbb2ce21bb_800.jpg" style="left:128.4px;top:67.2px;width:1343.1px;height:765.6px;" alt="">
 <div class="e" data-k="2" style="left:383.8px;top:719.6px;width:832.5px;height:101.0px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:73.3px;color:#FEFEFD;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;-webkit-text-stroke:2.5px #1B6AA3;paint-order:stroke fill;">파리 기후 협약 탈퇴 사과</span></div></div></div>
 <img class="e" data-k="3" src="img/seminar/37ed2106365b_752.jpg" style="left:1095.5px;top:67.2px;width:376.1px;height:179.5px;" alt="">
 <aside class="notes"><p>바이든 대통령은 취임하면서 협정에 복귀했고 기후총회에서 탈퇴를 사과했습니다. 그런데 2025년 1월 트럼프 2기가 시작되면서 미국은 다시 탈퇴를 통보했습니다. 이 장은 그 전에 만든 것이라 사과에서 끝나 있습니다. 정권에 따라 방향이 바뀐다는 점만 기억해 두십시오.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="11" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#10">
+<section class="slide pp bonus" data-pp="11" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#10">
 <h2 class="ppt">과학적 판단</h2>
 <div class="e" data-k="1" style="left:550.4px;top:110.4px;width:499.2px;height:121.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:90.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">과학적 판단</span></div></div></div>
 <img class="e" data-k="2" src="img/seminar/1114eceac372_640.jpg" style="left:400.0px;top:253.1px;width:800.0px;height:393.8px;" alt="">
 <div class="e" data-k="3" style="left:258.6px;top:704.7px;width:1082.8px;height:84.8px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:60.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">“</span><span style="font-size:60.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">오류를 인정하고 받아들여 진보하는 것</span><span style="font-size:60.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">”</span></div></div></div>
 <aside class="notes"><p>그래서 과학과 정치를 나눠서 보겠습니다. 먼저 과학입니다. 과학은 틀린 것을 인정하고 고쳐 가는 과정입니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="17" style="background:linear-gradient(180deg,#6E5026 0%,#835130 50%,#0A0A26 100%)" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#16">
+<section class="slide pp bonus" data-pp="17" style="background:linear-gradient(180deg,#6E5026 0%,#835130 50%,#0A0A26 100%)" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#16">
 <h2 class="ppt">호주 산불 뉴스 영상</h2>
 <div class="e" data-k="1" style="left:0.0px;top:0.0px;width:1600.0px;height:900.0px;"><a href="https://www.youtube.com/watch?v=JhtpsrBvq3Y" target="_blank" rel="noopener" style="position:absolute;inset:0;display:block"><img src="img/seminar/ca19c6cffa65_200.jpg" style="width:100%;height:100%;object-fit:cover" alt=""><span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.72);color:#fff;font:700 40px Pretendard,sans-serif;padding:24px 44px;border-radius:10px">▶ 뉴스 영상 열기 (새 창 · 인터넷 필요)</span></a></div>
 <aside class="notes"><p>[가운데 버튼 클릭 · 인터넷 필요] 2019~2020년 호주 산불 뉴스입니다. 시간이 부족하면 넘어갑니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="18" style="background:#AADAFF" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#17">
+<section class="slide pp bonus" data-pp="18" style="background:#AADAFF" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#17">
 <h2 class="ppt">호주 산불: 남한 면적 2.4배</h2>
 <img class="e" data-k="1" src="img/seminar/46eae39e3a8e_800.jpg" style="left:0.0px;top:1.0px;width:1600.0px;height:897.7px;" alt="">
 <div class="e" data-k="2" style="left:163.9px;top:672.1px;width:1272.1px;height:206.0px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:80.0px;color:#FEFEFD;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;-webkit-text-stroke:2.5px #1B6AA3;paint-order:stroke fill;">남한 면적 </span><span style="font-size:80.0px;color:#FEFEFD;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;-webkit-text-stroke:2.5px #1B6AA3;paint-order:stroke fill;">2.4</span><span style="font-size:80.0px;color:#FEFEFD;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;-webkit-text-stroke:2.5px #1B6AA3;paint-order:stroke fill;">배 화재</span><span style="font-size:80.0px;color:#FEFEFD;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;-webkit-text-stroke:2.5px #1B6AA3;paint-order:stroke fill;">, 110</span><span style="font-size:80.0px;color:#FEFEFD;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;-webkit-text-stroke:2.5px #1B6AA3;paint-order:stroke fill;">조 피해</span></div><div style="text-align:center;line-height:1.20;"><span style="font-size:80.0px;color:#FEFEFD;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;-webkit-text-stroke:2.5px #1B6AA3;paint-order:stroke fill;">첫 기후난민 발생</span></div></div></div>
 <aside class="notes"><p>남한 면적의 2.4배가 탔고 피해액은 110조 원으로 추산됐습니다. 기후난민이라는 말이 이때 나왔습니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="19" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#18">
+<section class="slide pp bonus" data-pp="19" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#18">
 <h2 class="ppt">화재로 인한 상승기류와 우박</h2>
 <img class="e" data-k="1" src="img/seminar/f6ea27d73472_560.jpg" style="left:123.3px;top:215.5px;width:700.0px;height:525.0px;" alt="">
 <img class="e" data-k="2" src="img/seminar/343335a230c1_1024.jpg" style="left:732.0px;top:245.0px;width:788.0px;height:591.0px;" alt="">
 <div class="e" data-k="3" style="left:106.5px;top:64.0px;width:1379.0px;height:121.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:90.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">화재로 인한 상승기류와 재로 우박</span></div></div></div>
 <aside class="notes"><p>화재가 만든 상승기류와 재가 우박으로 이어졌습니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="20" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#19">
+<section class="slide pp bonus" data-pp="20" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#19">
 <h2 class="ppt">2020 아프리카 홍수</h2>
 <img class="e" data-k="1" src="img/seminar/4d8d7a5b4d00_750.jpg" style="left:61.9px;top:240.9px;width:937.5px;height:527.5px;" alt="">
 <div class="e" data-k="2" style="left:387.4px;top:64.0px;width:849.3px;height:121.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:90.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">2020 </span><span style="font-size:90.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">아프리카 홍수</span></div></div></div>
 <img class="e" data-k="3" src="img/seminar/8cfd0f0218c1_500.jpg" style="left:863.5px;top:445.3px;width:625.0px;height:416.2px;" alt="">
 <aside class="notes"><p>같은 해 아프리카에서는 홍수가 났습니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="21" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#20">
+<section class="slide pp bonus" data-pp="21" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#20">
 <h2 class="ppt">북극 동토층의 탄소</h2>
 <div class="e" data-k="1" style="left:91.6px;top:70.7px;width:1427.4px;height:189.8px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:80.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">온난화 시한폭탄 북극</span><span style="font-size:80.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">, </span><span style="font-size:80.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">동토층</span><span style="font-size:80.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;"> 탄소 창고</span></div><div style="text-align:center;line-height:1.20;"><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">1</span><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">조</span><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">6</span><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">천억톤</span><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;"> 탄소 저장</span></div></div></div>
 <img class="e" data-k="2" src="img/seminar/e1a91f927c14_1280.jpg" style="left:758.2px;top:464.5px;width:763.3px;height:429.3px;" alt="">
@@ -5725,7 +5857,7 @@ section.slide.pp>h2.ppt{display:none}
 <img class="e" data-k="4" src="img/seminar/4ab4f51cf02c_512.jpg" style="left:1076.0px;top:296.0px;width:476.0px;height:408.1px;" alt="">
 <aside class="notes"><p>북극 동토층에는 탄소 1조 6천억 톤이 묻혀 있습니다. 땅이 녹으면 이 탄소가 나오고 온난화가 스스로 빨라집니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="22" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#21">
+<section class="slide pp bonus" data-pp="22" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#21">
 <h2 class="ppt">수온 상승과 강한 태풍</h2>
 <div class="e" data-k="1" style="left:129.7px;top:70.7px;width:1351.2px;height:121.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:90.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">수온 상승으로 강력한 태풍의 증가</span></div></div></div>
 <img class="e" data-k="2" src="img/seminar/134332a0d1f0_620.jpg" style="left:83.5px;top:247.2px;width:846.4px;height:562.5px;" alt="">
@@ -5733,88 +5865,88 @@ section.slide.pp>h2.ppt{display:none}
 <img class="e" data-k="4" src="img/seminar/d55ef307efc6_707.jpg" style="left:961.5px;top:247.2px;width:617.3px;height:347.5px;" alt="">
 <aside class="notes"><p>수온이 오르면 태풍이 강해집니다. 최근 10년 태풍의 절반 이상이 강한 태풍이었고 초강력 등급이 새로 생겼습니다. 운항하시는 분들이 먼저 체감하실 부분입니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="23" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#22">
+<section class="slide pp bonus" data-pp="23" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#22">
 <h2 class="ppt">해수면 상승: 베네치아</h2>
 <div class="e" data-k="1" style="left:204.5px;top:70.7px;width:1201.7px;height:121.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:90.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">남극 빙하 소실로 해수면 상승 </span></div></div></div>
 <img class="e" data-k="2" src="img/seminar/98920419f517_500.jpg" style="left:68.8px;top:306.3px;width:699.2px;height:461.4px;" alt="">
 <img class="e" data-k="3" src="img/seminar/d081e13ed7e1_500.jpg" style="left:822.7px;top:306.3px;width:692.9px;height:461.4px;" alt="">
 <aside class="notes"><p>남극 빙하가 녹아 해수면이 오릅니다. 베네치아 침수 사진입니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="24" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#24">
+<section class="slide pp bonus" data-pp="24" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#24">
 <h2 class="ppt">남극 빙하 소실과 해수면 상승 (2)</h2>
 <div class="e" data-k="1" style="left:204.5px;top:70.7px;width:1201.7px;height:121.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:90.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">남극 빙하 소실로 해수면 상승 </span></div></div></div>
 <img class="e" data-k="2" src="img/seminar/97d9e1320c4e.gif" style="left:40.2px;top:232.8px;width:864.8px;height:525.9px;" alt="">
 <div class="e" data-k="4" style="left:927.1px;top:232.7px;width:650.3px;height:525.9px;overflow:hidden"><img src="img/seminar/33118bfbdfc9_1063.jpg" style="position:absolute;left:-0.0px;top:-0.0px;width:741.3px;height:525.9px" alt=""></div>
 <aside class="notes"><p>해수면이 올랐을 때를 가정한 지도입니다. 파랗게 칠한 곳이 잠기는 지역입니다. 항만과 배후 단지가 먼저 영향을 받습니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="25" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#25">
+<section class="slide pp bonus" data-pp="25" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#25">
 <h2 class="ppt">정치적 판단</h2>
 <div class="e" data-k="1" style="left:556.4px;top:110.4px;width:487.3px;height:121.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:90.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">정치적 판단</span></div></div></div>
 <div class="e" data-k="2" style="left:250.1px;top:704.7px;width:1099.8px;height:84.8px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:60.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">“</span><span style="font-size:60.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">제한된 자원을 올바르게 쓰기 위한 합의</span><span style="font-size:60.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">”</span></div></div></div>
 <img class="e" data-k="3" src="img/seminar/ca9cd4248dc8_626.jpg" style="left:474.4px;top:231.6px;width:651.2px;height:433.8px;" alt="">
 <aside class="notes"><p>과학이 위험하다는 데까지 말했다면, 누가 얼마를 낼지는 정치가 정합니다. 제한된 자원을 어디에 쓸지 합의하는 일입니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="29" style="background:#595959" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#29">
+<section class="slide pp bonus" data-pp="29" style="background:#595959" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#29">
 <h2 class="ppt">불리하면 탈퇴</h2>
 <img class="e" data-k="1" src="img/seminar/ac0d805d3b16_1280.jpg" style="left:0.0px;top:0.0px;width:1600.0px;height:900.0px;" alt="">
 <div class="e" data-k="2" style="left:210.9px;top:696.2px;width:1178.1px;height:101.0px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:73.3px;color:#FEFEFD;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;-webkit-text-stroke:2.5px #1B6AA3;paint-order:stroke fill;">미국 불이익 </span><span style="font-size:73.3px;color:#FEFEFD;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;-webkit-text-stroke:2.5px #1B6AA3;paint-order:stroke fill;">→</span><span style="font-size:73.3px;color:#FEFEFD;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;-webkit-text-stroke:2.5px #1B6AA3;paint-order:stroke fill;">파리 기후 협약 탈퇴</span></div></div></div>
 <aside class="notes"><p>그래서 불리하다고 판단하면 탈퇴하는 나라가 나옵니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="32" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#32">
+<section class="slide pp bonus" data-pp="32" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#32">
 <h2 class="ppt">탄소 배출을 새로운 시장으로</h2>
 <div class="e" data-k="1" style="left:197.9px;top:184.2px;width:1204.2px;height:121.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:90.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">탄소 배출을 새로운 시장으로</span><span style="font-size:90.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">..</span></div></div></div>
 <div class="e" data-k="2" style="left:512.6px;top:328.8px;width:574.8px;height:121.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:90.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">산업계의 과제</span></div></div></div>
 <img class="e" data-k="3" src="img/seminar/b63346aa0aaf_160.png" style="left:700.0px;top:494.3px;width:200.0px;height:200.0px;" alt="">
 <aside class="notes"><p>탄소 배출에 값이 붙고 시장이 됩니다. 산업계에는 숙제입니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="33" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#33">
+<section class="slide pp bonus" data-pp="33" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#33">
 <h2 class="ppt">국가별 자율 목표 설정과 이행</h2>
 <div class="e" data-k="1" style="left:211.9px;top:81.6px;width:1176.2px;height:121.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:90.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">국가별 자율 </span><span style="font-size:90.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">목표 설정과 이행</span></div></div></div>
 <img class="e" data-k="2" src="img/seminar/4a0530c08a68_970.jpg" style="left:193.8px;top:241.7px;width:1212.5px;height:276.2px;" alt="">
 <div class="e" data-k="3" style="left:193.7px;top:550.5px;width:1212.5px;height:163.1px;overflow:hidden"><img src="img/seminar/bfcfd96b29f2_643.jpg" style="position:absolute;left:-77.8px;top:-765.0px;width:1356.2px;height:1898.3px" alt=""></div>
 <aside class="notes"><p>나라마다 목표를 정하고 수송, 발전 같은 부문으로 나눠 이행합니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="34" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#34">
+<section class="slide pp bonus" data-pp="34" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#34">
 <h2 class="ppt">국제 운송은 누가 관리하나</h2>
 <img class="e" data-k="1" src="img/seminar/f9f2109d51b0_655.png" style="left:331.9px;top:387.5px;width:409.4px;height:200.0px;" alt="">
 <img class="e" data-k="2" src="img/seminar/244d0a2f532a_820.png" style="left:858.7px;top:312.5px;width:512.5px;height:275.0px;" alt="">
 <div class="e" data-k="3" style="left:207.1px;top:155.0px;width:1185.8px;height:157.5px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:flex-start;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div style="text-align:center;line-height:1.20;"><span style="font-size:60.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">국가별로 이행하는 체계에서</span><span style="font-size:60.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"></span><span style="font-size:60.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"></span></div><div style="text-align:center;line-height:1.20;"><span style="font-size:60.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">국제 해운·항공의 배출은 누가 관리하는가</span><span style="font-size:60.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;"></span></div></div></div>
 <aside class="notes"><p>그런데 배와 비행기는 한 나라에 속하지 않습니다. 국가별로 이행한다면 세계를 다니는 배는 누가 관리합니까.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="39" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#39">
+<section class="slide pp bonus" data-pp="39" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#39">
 <h2 class="ppt">선박 설계 규제</h2>
 <div class="e" data-k="1" style="left:499.9px;top:389.4px;width:600.2px;height:121.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:90.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">선박 설계 규제</span></div></div></div>
 <div class="e" data-k="2" style="left:408.9px;top:509.3px;width:782.2px;height:68.7px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:46.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">선박 제원 정보로 규제 통과 여부 확인</span></div></div></div>
 <aside class="notes"><p>IMO 규제는 설계와 운항으로 나뉩니다. 먼저 설계 규제입니다. 배의 제원만으로 통과 여부가 정해집니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="41" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#41">
+<section class="slide pp bonus" data-pp="41" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#41">
 <h2 class="ppt">EEDI 계산식</h2>
 <div class="e" data-k="1" style="left:23.8px;top:24.7px;width:357.0px;height:52.5px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:33.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">IMO – EEDI (신조선)</span><span style="font-size:33.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;"></span><span style="font-size:33.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;"></span></div></div></div>
 <div class="e" data-k="2" style="left:1426.5px;top:863.6px;width:180.3px;height:36.4px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;">자료 출처 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;">:</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;"> </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;">I</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;">CCT</span></div></div></div>
 <div class="e" data-k="3" style="left:222.7px;top:152.2px;width:1215.0px;height:729.6px;overflow:hidden"><img src="img/seminar/94fa2c46f3e4_900.jpg" style="position:absolute;left:-0.0px;top:-192.8px;width:1215.0px;height:922.4px" alt=""></div>
 <aside class="notes"><p>식은 복잡해 보이지만 뜻은 단순합니다. 엔진 출력에 연료소모율과 탄소계수를 곱한 배출량을 재화중량과 속력으로 나눈 값입니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="44" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#44">
+<section class="slide pp bonus" data-pp="44" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#44">
 <h2 class="ppt">선박 운항 규제</h2>
 <div class="e" data-k="1" style="left:499.9px;top:119.5px;width:600.2px;height:121.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:90.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">선박 운항 규제</span></div></div></div>
 <div class="e" data-k="2" style="left:408.9px;top:239.4px;width:782.2px;height:125.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:46.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">선박 운항 정보로 규제 통과 여부 확인</span></div><div style="text-align:center;line-height:1.20;"><span style="font-size:46.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">매년 제출 필요</span></div></div></div>
 <img class="e" data-k="3" src="img/seminar/e2d4ab86bf2f_592.jpg" style="left:430.0px;top:408.7px;width:740.0px;height:410.0px;" alt="">
 <aside class="notes"><p>다음은 운항 규제입니다. 실제 운항 데이터로 판정하고 매년 제출합니다. 오늘 본론이 여기서 나옵니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="46" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#46">
+<section class="slide pp bonus" data-pp="46" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#46">
 <h2 class="ppt">환경 규제 메커니즘 (MRV)</h2>
 <div class="e" data-k="1" style="left:30.3px;top:24.7px;width:427.9px;height:52.5px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:flex-start;"><div style="text-align:left;line-height:1.20;"><span style="font-size:33.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">환경 규제 메커니즘 </span><span style="font-size:33.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">(</span><span style="font-size:33.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">MRV</span><span style="font-size:33.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">)</span></div></div></div>
 <img class="e" data-k="2" src="img/seminar/2c296e623fb9_1280.jpg" style="left:114.7px;top:77.2px;width:1393.3px;height:783.8px;" alt="">
 <aside class="notes"><p>EU MRV의 항차 구분입니다. EU 항구 사이, EU와 역외 사이, 항내 정박을 나눠서 기록합니다. 이 구분이 틀리면 뒤의 계산이 전부 틀립니다. 2교시에 자세히 봅니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="47" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#47">
+<section class="slide pp bonus" data-pp="47" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#47">
 <h2 class="ppt">IMO CII (탄소집약도)</h2>
 <div class="e" data-k="1" style="left:30.3px;top:24.7px;width:385.0px;height:52.5px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:33.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">IMO – CII (</span><span style="font-size:33.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">탄소집약도</span><span style="font-size:33.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">)</span></div></div></div>
 <img class="e" data-k="2" src="img/seminar/0e951aaa7ea7_1277.jpg" style="left:91.3px;top:89.0px;width:1417.3px;height:774.7px;" alt="">
 <div class="e" data-k="3" style="left:1433.3px;top:863.6px;width:166.7px;height:36.4px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;">자료 출처 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;">:</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;"> </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;">IMO</span></div></div></div>
 <aside class="notes"><p>CII는 한 해 운항 실적으로 A부터 E까지 등급을 매깁니다. 총톤수 5,000톤 이상 선박이 대상이고 2023년부터 적용됐습니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="52" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#52">
+<section class="slide pp bonus" data-pp="52" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#52">
 <h2 class="ppt">2. 대체 연료</h2>
 <div class="e" data-k="1" style="left:381.3px;top:0.0px;width:1218.7px;height:900.0px;background:#0070C0;"></div>
 <div class="e" data-k="2" style="left:479.2px;top:98.0px;width:302.3px;height:123.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:flex-start;"><div style="text-align:left;line-height:1.80;"><span style="font-size:66.7px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">대체 연료</span></div></div></div>
@@ -5822,13 +5954,13 @@ section.slide.pp>h2.ppt{display:none}
 <div class="e" data-k="4" style="left:214.2px;top:55.1px;width:153.4px;height:244.4px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:191.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">2</span></div></div></div>
 <aside class="notes"><p>두 번째, 대체연료입니다. 넷제로의 최종 답은 연료를 바꾸는 것입니다. 다만 지금은 기존 연료를 그대로 대신할 연료가 없습니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="56" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#56">
+<section class="slide pp bonus" data-pp="56" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#56">
 <h2 class="ppt">전주기 관점: 수소 생산 방식</h2>
 <div class="e" data-k="1" style="left:276.7px;top:42.7px;width:1046.6px;height:76.7px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:53.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">전주기</span><span style="font-size:53.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;"> 관점에서 연료 탄소 배출량 산정 필요</span></div></div></div>
 <div class="e" data-k="2" style="left:99.4px;top:256.3px;width:1401.1px;height:572.7px;overflow:hidden"><img src="img/seminar/e73cdddc9420_1900.jpg" style="position:absolute;left:-0.0px;top:-0.0px;width:1401.1px;height:663.7px" alt=""></div>
 <aside class="notes"><p>연료를 만드는 과정까지 봐야 합니다. 같은 수소라도 천연가스로 만들면 그레이, 나온 탄소를 포집하면 블루, 재생전력으로 만들면 그린입니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="57" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#57">
+<section class="slide pp bonus" data-pp="57" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#57">
 <h2 class="ppt">전주기 관점: 연료 생산 경로</h2>
 <img class="e" data-k="1" src="img/seminar/d1ca1fffaa35_1053.jpg" style="left:143.3px;top:100.6px;width:1313.4px;height:737.2px;" alt="">
 <div class="e" data-k="2" style="left:276.7px;top:42.7px;width:1046.6px;height:76.7px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:53.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">전주기</span><span style="font-size:53.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;"> 관점에서 연료 탄소 배출량 산정 필요</span></div></div></div>
@@ -5836,13 +5968,13 @@ section.slide.pp>h2.ppt{display:none}
 <div class="e" data-k="4" style="left:224.9px;top:573.1px;width:68.0px;height:52.5px;background:#E5F4FB;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:33.3px;color:#5C5C5C;font-weight:400;">Bio</span></div></div></div>
 <aside class="notes"><p>원료와 공정에 따라 연료 이름 앞에 e, 블루, 바이오가 붙습니다. e-연료는 재생전력으로 만든 수소에 포집한 CO₂를 합성한 것입니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="60" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#60">
+<section class="slide pp bonus" data-pp="60" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#60">
 <h2 class="ppt">대체 연료 전환</h2>
 <img class="e" data-k="1" src="img/seminar/c4b3d16b0ee9_960.jpg" style="left:200.0px;top:197.2px;width:1200.0px;height:630.0px;" alt="">
 <div class="e" data-k="2" style="left:505.8px;top:72.8px;width:588.4px;height:101.0px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:73.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">대체 연료 전환 사례</span><span style="font-size:73.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;"></span></div></div></div>
 <aside class="notes"><p>그래도 전환은 시작됐습니다. 메탄올 추진 컨테이너선입니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="63" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#63">
+<section class="slide pp bonus" data-pp="63" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#63">
 <h2 class="ppt">3. 하드웨어 탄소 저감 솔루션</h2>
 <div class="e" data-k="1" style="left:381.3px;top:0.0px;width:1218.7px;height:900.0px;background:#0070C0;"></div>
 <div class="e" data-k="2" style="left:479.2px;top:98.0px;width:793.8px;height:123.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:flex-start;"><div style="text-align:left;line-height:1.80;"><span style="font-size:66.7px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">하드웨어 탄소 저감 솔루션</span></div></div></div>
@@ -5850,7 +5982,7 @@ section.slide.pp>h2.ppt{display:none}
 <div class="e" data-k="4" style="left:212.2px;top:55.1px;width:157.4px;height:244.4px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:191.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">3</span></div></div></div>
 <aside class="notes"><p>세 번째, 하드웨어입니다. 대체연료는 비쌉니다. 에너지 절감 장치는 그 비싼 연료를 덜 쓰게 해 주고 지금 운항 중인 배에도 달 수 있습니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="67" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#67">
+<section class="slide pp bonus" data-pp="67" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#67">
 <h2 class="ppt">Rotor Sail: 마그누스 효과</h2>
 <div class="e" data-k="1" style="left:435.2px;top:61.7px;width:729.6px;height:92.9px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">Rotor Sail : 10~30%</span></div></div></div>
 <img class="e" data-k="2" src="img/seminar/c39d2dd198cd_456.jpg" style="left:73.2px;top:239.6px;width:527.1px;height:598.7px;" alt="">
@@ -5859,13 +5991,13 @@ section.slide.pp>h2.ppt{display:none}
 <img class="e" data-k="5" src="img/seminar/e2aa17ab5fd7_690.jpg" style="left:29.9px;top:87.0px;width:345.1px;height:194.1px;" alt="">
 <aside class="notes"><p>원리는 마그누스 효과입니다. 회전하는 물체가 흐름과 직각 방향으로 힘을 받습니다. 야구의 커브볼과 같습니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="70" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#70">
+<section class="slide pp bonus" data-pp="70" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#70">
 <h2 class="ppt">Hull Cleaning: 오손의 진행</h2>
 <div class="e" data-k="1" style="left:390.6px;top:67.0px;width:818.8px;height:92.9px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">Hull Cleaning : 5</span><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">~15%</span></div></div></div>
 <img class="e" data-k="2" src="img/seminar/c6699f8dcf0e_489.jpg" style="left:367.9px;top:189.8px;width:925.6px;height:658.7px;" alt="">
 <aside class="notes"><p>오손은 미생물막에서 시작해 큰 생물로 진행됩니다. 오손이 연료와 CII에 주는 영향은 3교시에 데이터로 봅니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="71" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#71">
+<section class="slide pp bonus" data-pp="71" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#71">
 <h2 class="ppt">4. 소프트웨어 탄소 관리 솔루션</h2>
 <div class="e" data-k="1" style="left:381.3px;top:0.0px;width:1218.7px;height:900.0px;background:#0070C0;"></div>
 <div class="e" data-k="2" style="left:479.2px;top:98.0px;width:858.6px;height:123.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:flex-start;"><div style="text-align:left;line-height:1.80;"><span style="font-size:66.7px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">소프트웨어 탄소 관리 솔루션</span></div></div></div>
@@ -5873,26 +6005,26 @@ section.slide.pp>h2.ppt{display:none}
 <div class="e" data-k="4" style="left:212.2px;top:55.1px;width:157.4px;height:244.4px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:191.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">4</span></div></div></div>
 <aside class="notes"><p>네 번째, 소프트웨어입니다. 배출량을 재고, 목표를 관리하고, 운항을 최적화하려면 선박 데이터가 디지털로 모여야 합니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="72" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#72">
+<section class="slide pp bonus" data-pp="72" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#72">
 <h2 class="ppt">규제 대응 VS 에너지 저감</h2>
 <div class="e" data-k="1" style="left:269.7px;top:389.4px;width:1060.5px;height:121.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:90.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">규제 대응 </span><span style="font-size:90.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">VS</span><span style="font-size:90.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;"> 에너지 저감</span></div></div></div>
 <aside class="notes"><p>소프트웨어가 하는 일은 두 가지입니다. 규제 대응과 에너지 절감입니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="75" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#75">
+<section class="slide pp bonus" data-pp="75" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#75">
 <h2 class="ppt">Weather Routing: 2~4%</h2>
 <div class="e" data-k="1" style="left:134.6px;top:145.0px;width:1327.8px;height:610.0px;overflow:hidden"><img src="img/seminar/5d7b43d39b85.gif" style="position:absolute;left:-243.6px;top:-35.4px;width:1571.4px;height:844.3px" alt=""></div>
 <div class="e" data-k="2" style="left:143.1px;top:784.8px;width:1322.3px;height:80.8px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:8.0px 16.0px 8.0px 16.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:53.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">외부환경</span><span style="font-size:53.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">(</span><span style="font-size:53.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">바람</span><span style="font-size:53.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">,</span><span style="font-size:53.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">파도</span><span style="font-size:53.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">,</span><span style="font-size:53.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">조류</span><span style="font-size:53.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">)</span><span style="font-size:53.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">를 고려한 최적 항로 탐색 필요</span></div></div></div>
 <div class="e" data-k="3" style="left:396.2px;top:46.6px;width:807.5px;height:68.7px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre-wrap;"><div style="text-align:center;line-height:1.20;"><span style="font-size:46.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">Weather Routing : 2~4%</span></div></div></div>
 <aside class="notes"><p>기상 최적 항로입니다. 바람, 파도, 조류를 고려해 항로를 고르면 2~4% 절감됩니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="80" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#81">
+<section class="slide pp bonus" data-pp="80" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#81">
 <h2 class="ppt">5. 데이터 기반 환경 규제 실무</h2>
 <div class="e" data-k="1" style="left:381.3px;top:0.0px;width:1218.7px;height:900.0px;background:#0070C0;"></div>
 <div class="e" data-k="2" style="left:479.2px;top:98.0px;width:812.7px;height:123.2px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:flex-start;"><div style="text-align:left;line-height:1.80;"><span style="font-size:66.7px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">데이터 기반 환경 규제 실무</span></div></div></div>
 <div class="e" data-k="3" style="left:214.2px;top:55.1px;width:153.4px;height:244.4px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:191.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">5</span></div></div></div>
 <aside class="notes"><p>다섯 번째, 데이터 기반 환경 규제 실무입니다. 여기부터가 오늘의 본론입니다.</p><p>지금까지 본 규제, 연료, 장치, 소프트웨어는 모두 같은 데이터 위에서 돌아갑니다. 배에서 적는 연료 소모량 한 줄입니다. 그 한 줄을 어떻게 입력하고 처리하고 검증하는지를 지금부터 2·3교시까지 이어서 보겠습니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="64" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#64">
+<section class="slide pp bonus" data-pp="64" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#64">
 <h2 class="ppt">현재 적용 가능한 중간 솔루션</h2>
 <img class="e" data-k="1" src="img/seminar/44f7c821fe19_1629.jpg" style="left:231.7px;top:153.3px;width:1136.7px;height:710.3px;" alt="">
 <div class="e" data-k="2" style="left:110.7px;top:67.0px;width:1378.6px;height:68.7px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:46.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">현재 적용 가능한 </span><span style="font-size:46.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">이행 중간 솔루션이며</span><span style="font-size:46.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">,</span><span style="font-size:46.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;"> </span><span style="font-size:46.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">개선을 위해 지속 개발 필요</span></div></div></div>
@@ -5901,19 +6033,19 @@ section.slide.pp>h2.ppt{display:none}
 <div class="e" data-k="5" style="left:1031.5px;top:667.1px;width:147.5px;height:147.1px;border:10.00px solid rgba(255,0,0,0.70);border-radius:50%;"></div>
 <aside class="notes"><p>같은 IMO 그림에서 이번에는 선체와 추진 쪽을 봅니다. 지금 적용할 수 있는 중간 해법입니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="66" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#66">
+<section class="slide pp bonus" data-pp="66" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#66">
 <h2 class="ppt">Rotor Sail: 10~30%</h2>
 <div class="e" data-k="1" style="left:435.2px;top:61.7px;width:729.6px;height:92.9px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">Rotor Sail : 10~30%</span></div></div></div>
 <img class="e" data-k="2" src="img/seminar/e2aa17ab5fd7_1920.jpg" style="left:227.1px;top:182.6px;width:1145.7px;height:644.5px;" alt="">
 <aside class="notes"><p>로터 세일입니다. 절감 효과는 10~30%로 소개됩니다. 항로와 바람 조건에 따라 편차가 큽니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="68" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#68">
+<section class="slide pp bonus" data-pp="68" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#68">
 <h2 class="ppt">Air Lubricator: 15%</h2>
 <div class="e" data-k="1" style="left:421.5px;top:61.7px;width:756.9px;height:92.9px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">Air Lubricator : 15%</span></div></div></div>
 <img class="e" data-k="2" src="img/seminar/c0438adc1962_1920.jpg" style="left:274.2px;top:220.2px;width:1051.7px;height:591.6px;" alt="">
 <aside class="notes"><p>공기윤활입니다. 선저에 공기층을 만들어 물과의 마찰을 줄입니다.</p></aside>
 </section>
-<section class="slide pp bonus" data-pp="69" style="background:#F2F2F2" data-time="16:51" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#69">
+<section class="slide pp bonus" data-pp="69" style="background:#F2F2F2" data-time="16:54" data-sec="부록|보충 자료" data-grp="세미나 자료 보충" data-stage="0" data-src="p1_seminar.html#69">
 <h2 class="ppt">Hull Cleaning: 5~15%</h2>
 <div class="e" data-k="1" style="left:391.7px;top:61.7px;width:816.7px;height:92.9px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">Hull Cleaning : 5</span><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">~15%</span></div></div></div>
 <img class="e" data-k="2" src="img/seminar/73a3023a21d8_768.jpg" style="left:97.9px;top:217.3px;width:620.4px;height:465.3px;" alt="">
@@ -6259,6 +6391,28 @@ section.slide.pp>h2.ppt{display:none}
   $('q_reset').onclick=qRender; qRender();
 })();
 </script>
+
+<!-- extras: p3e_evidence.html -->
+<style>
+.doc{border:1.5px solid #8a94a3;background:#fdfdfb;border-radius:4px;padding:14px 18px;font-size:16.5px;line-height:1.5;color:#1d2733;position:relative}
+.doc .dh{display:flex;justify-content:space-between;border-bottom:2px solid #1d2733;padding-bottom:6px;margin-bottom:8px;font-weight:800;font-size:18px;letter-spacing:.02em}
+.doc .dr{display:grid;grid-template-columns:230px 1fr;border-bottom:1px dotted #b9c1cc;padding:3px 0}
+.doc .dr span:first-child{color:#5B6776} .doc .dr b{font-weight:700}
+.doc .mk{background:#d7dde5;color:#d7dde5 !important;-webkit-text-fill-color:#d7dde5;border-radius:2px;user-select:none}
+.doc .no{display:inline-block;width:22px;height:22px;border-radius:50%;background:#D64545;color:#fff !important;-webkit-text-fill-color:#fff;font-size:13px;font-weight:800;text-align:center;line-height:22px;margin-left:8px;vertical-align:1px}
+.doc .hw{font-style:italic;color:#1b3f8a}
+.pit{list-style:none;padding:0;margin:0} .pit li{display:grid;grid-template-columns:30px 1fr;gap:6px;font-size:18.5px;line-height:1.42;margin-bottom:9px}
+.pit li i{font-style:normal;width:24px;height:24px;border-radius:50%;background:#D64545;color:#fff;font-size:14px;font-weight:800;text-align:center;line-height:24px;margin-top:2px}
+.docnote{font-size:15px;color:#5B6776;margin-top:6px}
+</style>
+
+
+
+
+
+
+
+
 
 <!-- extras: lab3a.html -->
 
