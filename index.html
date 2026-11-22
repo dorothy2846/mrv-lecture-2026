@@ -1757,7 +1757,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
   </div>
   <aside class="notes">
     <p>[시간이 밀렸으면 이 실습은 건너뛰고 마지막 문단만 말함]</p>
-    <p>FuelEU 풀링 실습입니다. 제가 화면에서 값을 바꿔 보겠습니다. FuelEU는 선박 한 척 단위로 계산합니다. 그런데 여러 척의 잔액을 묶는 풀링을 허용합니다. 이 화면은 FuelEU의 잔액과 벌금 산식으로 풀링, 뱅킹, 차입을 계산해 보는 교육용 표입니다. 같은 표를 엑셀로 만들어 두셔도 됩니다.</p>
+    <p>FuelEU 풀링 실습입니다. 제가 화면에서 값을 바꿔 보겠습니다. FuelEU는 선박 한 척 단위로 계산합니다. 그런데 여러 척의 잔액을 묶는 풀링을 허용합니다. 이 화면은 FuelEU의 잔액과 벌금 산식으로 풀링, 뱅킹, 차입을 계산해 보는 교육용 표입니다.</p>
     <p>표를 보십시오. VLSFO와 HFO를 쓰는 컨테이너선과 벌크선은 적자입니다. LNG를 쓰는 선박과 바이오연료를 섞는 케미컬선은 흑자입니다. 풀이 없으면 적자 두 척이 각각 벌금을 냅니다. 아래 왼쪽 칸 금액입니다.</p>
     <p>네 척을 모두 풀에 넣겠습니다. 순잔액이 플러스라 풀 전체 벌금이 0이 됩니다. 이번에는 LNG선을 빼 보겠습니다. 순잔액이 마이너스로 바뀌면서 풀이 무효가 됩니다. 오른쪽에는 적자가 작은 선박부터 넣으라는 부분 풀 제안이 뜹니다. 흑자가 큰 배 한 척이 빠지면 풀 전체가 깨집니다.</p>
     <p>연도를 2030, 2035로 바꾸면 한도가 내려가면서 LNG선의 여유도 줄어듭니다. 남은 흑자는 다음 해로 뱅킹할 수 있습니다. 적자 선박은 목표 곱하기 에너지의 2%까지 차입할 수 있지만 다음 해에 1.1배로 갚아야 합니다.</p>
@@ -1830,7 +1830,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>1번, 집계 단위입니다. IMO는 연간·선박 단위입니다. EU는 항차와 항구, 그리고 회사 단위까지 봅니다. 2번, 지리 범위는 앞에서 본 대로입니다. 3번, 항해의 경계입니다. IMO는 FAOP부터 EOSP까지를 항해로 봅니다. EU는 기항과 기항 사이를 봅니다. 그래서 투묘 대기 중 연료가 IMO에서는 비항해, EU에서는 항차 안에 들어갑니다. 다만 EU 보고 항목 가운데 항해시간은 투묘 시간을 빼고 셉니다. 영국은 기항지의 마지막 선석에서 다음 기항지의 첫 선석까지입니다.</p>
     <p>4번, 기항 정의입니다. EU는 화물·여객 작업을 한 정박만 기항입니다. 영국 법문은 선원 승하선도 넣지만, 선원교대만 하려고 들른 정박은 EU처럼 뺍니다. 해양작업선만 예외입니다. 영국은 유엔 항구코드가 있는 해상설비도 항구로 봅니다.</p>
     <p>5번부터는 계산 방식입니다. IMO는 연소 단계 CO₂, FuelEU는 전주기 집약도입니다. 6번, 메탄의 온난화지수가 ETS는 28, FuelEU는 25입니다. 7번, 바이오연료 인정 방식입니다. EU ETS는 지속가능성이 인정되면 CO₂가 0입니다. 영국은 적격연료 감축 청구를 따로 해야 0이 됩니다.</p>
-    <p>이 일곱 가지를 사람이 규제별 엑셀로 매번 나누면 어긋납니다. 원천은 이벤트 단위로 한 벌만 남기십시오. 경계는 계산할 때 규칙으로 적용하는 편이 안전합니다. 엑셀을 쓰셔도 같습니다. 여기까지를 세 문장으로 확인하겠습니다.</p>
+    <p>이 일곱 가지를 사람이 규제별 엑셀로 매번 나누면 어긋납니다. 원천은 이벤트 단위로 한 벌만 남기십시오. 경계는 계산할 때 규칙으로 적용하는 편이 안전합니다. 여기까지를 세 문장으로 확인하겠습니다.</p>
   </aside>
 </section>
 <section class="slide p1-lg" data-time="15:15" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="p1_regulation.html#30">
@@ -1876,7 +1876,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
 <div class="e" data-k="13" style="left:1133.6px;top:590.8px;width:358.3px;height:249.3px;overflow:hidden"><img src="img/seminar/47967a8b2cb5_716.jpg" style="position:absolute;left:-0.0px;top:-0.0px;width:358.3px;height:378.7px" alt=""></div>
 <aside class="notes"><p>규제 비용을 줄이려면 배출을 줄여야 합니다. 방법은 화면의 세 가지입니다. 줄이기, 안 내기, 없애기입니다. 줄이기는 에너지 절감 장치, 효율 운항, 저탄소 연료입니다. 안 내기는 무탄소 연료입니다. 없애기는 탄소 포집과 탄소 제거 프로젝트입니다. 어느 수단이 얼마나 줄이는지가 다음 장입니다.</p></aside>
 </section>
-<section class="slide pp" data-pp="54" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="15:17" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_seminar.html#54">
+<section class="slide pp" data-pp="54" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="15:16" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_seminar.html#54">
 <h2 class="ppt">감축 수단별 잠재량 (IMO)</h2>
 <img class="e" data-k="1" src="img/seminar/44f7c821fe19_1629.jpg" style="left:231.7px;top:153.3px;width:1136.7px;height:710.3px;" alt="">
 <div class="e" data-k="2" style="left:1433.3px;top:863.6px;width:166.7px;height:36.4px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;">자료 출처 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;">:</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;"> </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;">IMO</span></div></div></div>
@@ -1962,7 +1962,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>맨 아래 인증 바이오디젤은 2050년 한도보다도 낮습니다. 그래서 화석 연료에 조금만 섞어도 평균이 한도 아래로 내려갑니다. 화석 LNG는 2030년대까지의 수단입니다. 그 뒤는 바이오와 합성 연료의 비율이 결정합니다. 다음 장에서 연료별로 규제가 어떻게 계산하는지 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide dg" data-time="15:22" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p_diag.html#10">
+<section class="slide dg" data-time="15:21" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p_diag.html#10">
   <div class="kicker">대체 연료 · 규제별 계산</div>
   <h2>메탄올 · 암모니아 · 수소 · 바이오 · e-연료: 규제가 계산하는 방식</h2>
   <table class="opt lf">
@@ -2070,7 +2070,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>덜 적었으니 이득일까요. 그렇지 않습니다. 연말에 BDN과 탱크 잔량으로 맞춰 보면 365톤이 빕니다. 검증기관이 거기서 멈춥니다. 빠진 배출권은 모두 제출해야 합니다. 기한을 넘긴 양에는 톤당 100유로 벌금이 따로 붙습니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="15:30" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="0" data-src="p0_thread.html#1">
+<section class="slide" data-time="15:29" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="0" data-src="p0_thread.html#1">
   <style>
     .th-def{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border:1.5px solid var(--navy);border-radius:8px;overflow:hidden;background:#fff}
     .th-def>div{padding:18px 16px 18px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
@@ -2106,7 +2106,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>화면 위쪽 머리말에 이 다섯 단계가 작게 표시됩니다. 남색으로 칠해진 칸이 지금 이야기하는 단계입니다. 다음 장에서 배 한 척을 이 다섯 단계에 올려 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="15:32" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="0" data-src="p0_thread.html#2">
+<section class="slide" data-time="15:31" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="0" data-src="p0_thread.html#2">
   <style>
     .th-flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:22px}
     .th-flow .c{background:#fff;border:1.5px solid var(--navy);border-radius:8px;padding:14px 12px 12px;display:flex;flex-direction:column;gap:10px;position:relative}
@@ -2136,7 +2136,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>앞에서 ETS와 FuelEU를 계산한 케미컬 탱커 A입니다. 2교시와 3교시에도 이 배가 계속 나옵니다. 숫자는 2026년 1월 1일부터 11월 21일까지 EU MRV 모니터링에 집계된 값입니다. 표의 여섯 칸을 왼쪽부터 보겠습니다.</p>
     <p>[규제 요구] 이 배는 대부분 EU 항구 사이를 다닙니다. EU 항구 간 항차와 항내는 100%, EU와 비EU 사이 항차는 50%입니다. 2026년분부터는 100% 제출에 메탄과 아산화질소가 들어갑니다. 1교시에 본 내용입니다.</p>
     <p>[입력] 선박은 출항 보고와 매일 정오보고를 넣고, BDN과 지속가능성 증명서를 첨부합니다. 이 기간에 EU 관련 구간에서 MGO 1,903톤과 바이오디젤 599톤을 썼습니다. 2교시 앞부분입니다.</p>
-    <p>[처리] 육상에서는 이 보고를 받아 레그를 자르고, 기항인지 판정하고, 지역계수를 곱합니다. 프로그램으로 하든 엑셀로 하든 순서는 같습니다. 역내 5,364톤에 1.0, EU와 비EU 사이 737톤에 0.5를 곱해 더하면 5,732톤입니다. 메탄과 아산화질소 116톤을 더해 5,849톤입니다. 2교시 뒷부분입니다.</p>
+    <p>[처리] 육상에서는 이 보고를 받아 레그를 자르고, 기항인지 판정하고, 지역계수를 곱합니다. 역내 5,364톤에 1.0, EU와 비EU 사이 737톤에 0.5를 곱해 더하면 5,732톤입니다. 메탄과 아산화질소 116톤을 더해 5,849톤입니다. 2교시 뒷부분입니다.</p>
     <p>[검증] BDN이 벙커 보고와 맞는지, 잔량이 이어지는지, 바이오디젤의 증명서가 있는지 봅니다. 여기서는 숫자를 새로 만들지 않습니다. 처리에서 나온 5,849톤이 증빙과 맞는지 봅니다. 3교시 앞부분입니다.</p>
     <p>[보고·정산] 3월 31일 MRV 보고서, 9월 30일 배출권 제출입니다. 5,849 EUA에 80유로면 약 46만 8천 유로입니다. 제출하지 않으면 톤당 100유로 벌금으로 약 58만 5천 유로이고, 제출 의무는 그대로 남습니다.</p>
     <p>[개선] 이 비용을 줄이는 단계입니다. 이 배는 바이오디젤 덕분에 FuelEU 잔액이 약 1,495톤 흑자입니다. 이월하거나 다른 배와 합칠 수 있습니다.</p>
@@ -3875,7 +3875,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <div class="card" style="padding:12px 16px"><p style="font-size:18px"><b>3.</b> 같은 레그의 총배출량과 ETS 대상량 비교</p></div>
     <div class="card" style="padding:12px 16px"><p style="font-size:18px"><b>4.</b> 연료 증빙: 바이오 PoS·LCV 첨부 현황</p></div>
   </div>
-  <aside class="notes"><p>조금 전 로테르담 문제에서 본 50%가 실제 화면에서는 어떻게 보이는지 확인하겠습니다. [앱 전환] 한 줄이 레그 하나입니다. 줄마다 오른쪽에 적용 구분이 붙어 있습니다. EU 항내, EU 항구 간, EU 출항 세 가지입니다. 화면에는 영어로 WITHIN, BETWEEN, DEPARTED FROM EU라고 나옵니다. [청록 테두리 줄] EU에서 출항해 비EU에 도착한 줄을 보십시오. 총배출량이 252.82톤인데 ETS 대상은 126.41톤, 절반입니다. 문제의 정답과 같은 비율입니다. 그 아래 EU 항구 간과 EU 항내 줄은 두 숫자가 같습니다. 100%입니다. [연료 증빙 메뉴(Fuel Manager) 열기] 바이오연료는 이 메뉴에서 PoS와 LCV 첨부 현황을 봅니다. [복귀] 엑셀로 관리하셔도 레그 한 줄에 세 칸은 두십시오. 적용 구분, 총배출량, ETS 대상량입니다. 육상 담당자가 매달 한 번 훑어보시길 권합니다. 이 판정은 배에서 넣은 항구와 출항보고로 정해집니다. 그 값이 틀렸을 때 어디서 잡는지는 3교시에 보겠습니다. 다음 화면에서는 같은 운항 데이터를 세 가지 규제 값으로 바꿔 봅니다.</p><p>[네트워크·로그인 문제 시: 앱을 열지 말고 이 화면으로 설명. 라이브 시연은 고객사·선박명이 보이지 않는 데모 계정만 사용하고, 항구명·항차 번호·시각이 드러나는 목록은 오래 띄우지 않음. 목록 맨 윗줄 NOT FIXED 행은 100%로 표시돼 50% 설명과 어긋나 보이므로 짚지 않음]</p></aside>
+  <aside class="notes"><p>조금 전 로테르담 문제에서 본 50%가 실제 화면에서는 어떻게 보이는지 확인하겠습니다. [앱 전환] 한 줄이 레그 하나입니다. 줄마다 오른쪽에 적용 구분이 붙어 있습니다. EU 항내, EU 항구 간, EU 출항 세 가지입니다. 화면에는 영어로 WITHIN, BETWEEN, DEPARTED FROM EU라고 나옵니다. [청록 테두리 줄] EU에서 출항해 비EU에 도착한 줄을 보십시오. 총배출량이 252.82톤인데 ETS 대상은 126.41톤, 절반입니다. 문제의 정답과 같은 비율입니다. 그 아래 EU 항구 간과 EU 항내 줄은 두 숫자가 같습니다. 100%입니다. [연료 증빙 메뉴(Fuel Manager) 열기] 바이오연료는 이 메뉴에서 PoS와 LCV 첨부 현황을 봅니다. [복귀] 레그 한 줄에 세 칸은 두십시오. 적용 구분, 총배출량, ETS 대상량입니다. 육상 담당자가 매달 한 번 훑어보시길 권합니다. 이 판정은 배에서 넣은 항구와 출항보고로 정해집니다. 그 값이 틀렸을 때 어디서 잡는지는 3교시에 보겠습니다. 다음 화면에서는 같은 운항 데이터를 세 가지 규제 값으로 바꿔 봅니다.</p><p>[네트워크·로그인 문제 시: 앱을 열지 말고 이 화면으로 설명. 라이브 시연은 고객사·선박명이 보이지 않는 데모 계정만 사용하고, 항구명·항차 번호·시각이 드러나는 목록은 오래 띄우지 않음. 목록 맨 윗줄 NOT FIXED 행은 100%로 표시돼 50% 설명과 어긋나 보이므로 짚지 않음]</p></aside>
 </section>
 <section data-noabbr class="slide p1-lg" data-time="16:07" data-sec="2교시|선박 보고와 육상 처리" data-grp="2.5 시연과 실습 :: 웹 화면 예시 → 보고 점검 → EU 범위 판정" data-stage="3" data-src="demo_live.html#1">
   <div class="kicker">웹 시연 · 예시 선박</div>
@@ -5166,7 +5166,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
   <aside class="notes">
     <p>1년 동안 쓴 연료를 두 가지 방법으로 계산해서 맞춰 보는 검증입니다. 왼쪽 위 상자 두 개가 그 두 방법입니다.</p>
     <p>A는 소비 기준입니다. 매일 보고한 소비량을 더하고 보정을 뺍니다. B는 탱크 기준입니다. 연초 잔량에서 연말 잔량을 빼고, 수급을 더하고, 반출을 뺍니다. 예시에서는 둘 다 4,812.36톤입니다. 판정 기준은 A와 B가 유종별로 1킬로그램 안에서 같은 것입니다.</p>
-    <p>1킬로그램이면 너무 빡빡해 보입니다. 이유는 그 아래 줄에 있습니다. 측심 차이를 보정 이벤트로 넣기 때문에 A와 B는 둘 다 계산값입니다. 계산값끼리는 맞아야 합니다. 엑셀로 하신다면 차이를 따로 적고 원인을 기록해 두십시오.</p>
+    <p>1킬로그램이면 너무 빡빡해 보입니다. 이유는 그 아래 줄에 있습니다. 측심 차이를 보정 이벤트로 넣기 때문에 A와 B는 둘 다 계산값입니다. 계산값끼리는 맞아야 합니다. 차이는 따로 적고 원인을 기록해 두십시오.</p>
     <p>비교하기 전에 손보는 것이 세 가지 있습니다. 유종 이름만 바뀐 재분류, 나눠 받은 바이오연료 배치, 잔량이 없는 증발가스입니다.</p>
     <p>오른쪽 사례 표를 보십시오. B의 출발점은 1월 1일 정오 잔량입니다. VLSFO는 보고 1,204.6과 로그북 1,204.3으로 1톤 안입니다. MGO는 186.2와 168.2, 18톤 차이라 불일치입니다. 연초 잔량이 틀리면 B 전체가 틀립니다. 그래서 1월 1일과 7월 1일 정오에는 측심하고 로그북을 남기라고 선박에 미리 알려 두십시오. 다음 장에서 숫자를 넣어 계산해 보겠습니다.</p>
   </aside>
@@ -5314,7 +5314,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[종합 판정 보기 · 클릭] 불일치가 점도, 일자, 밀도 세 건입니다. 하나라도 있으면 보고 전체가 "확인 필요"입니다. 선박에 수정 요청 메일을 보내고, 개정본이 올라오면 다시 판독하고, 사람이 최종 확인합니다. 방금 본 피드백 절차 그대로입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:51" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p3b_performance.html#1">
+<section class="slide p3-s" data-time="16:50" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p3b_performance.html#1">
   <style>
     /* p3a_validation.html과 같은 규칙 (단독 미리보기용 중복) */
     svg.p3-flow{max-width:100%;height:auto;display:block}
@@ -5450,7 +5450,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
   <aside class="notes">
     <p>검증이 끝난 데이터는 선대 단위로 모아서 봅니다. 화면은 웹으로 관리하는 예시입니다. 도구가 무엇이든 그림 아래에 적은 다섯 항목은 보여야 합니다.</p>
     <p>캡처 왼쪽 도넛이 등급 분포입니다. 이 예는 여섯 척 중 A가 50%, B와 C가 17%씩이고, E가 한 척 있습니다. 가운데는 선종별 등급이라 어느 선종이 낮은지 보입니다. 오른쪽은 연도별 추이입니다. 감축률이 올라가면서 등급이 어떻게 옮겨 가는지 보입니다.</p>
-    <p>나머지 두 항목은 캡처에서 잘린 아래쪽에 있습니다. 보정 적용 전과 후의 등급 비교, 그리고 선박별 표입니다. 선박별 표에는 Attained를 Required로 나눈 비율과 회사 목표와의 차이가 나옵니다. 엑셀이라면 선박별 표 한 장과 등급 집계로 같은 내용을 만들 수 있습니다.</p>
+    <p>나머지 두 항목은 캡처에서 잘린 아래쪽에 있습니다. 보정 적용 전과 후의 등급 비교, 그리고 선박별 표입니다. 선박별 표에는 Attained를 Required로 나눈 비율과 회사 목표와의 차이가 나옵니다.</p>
     <p>이 현황을 3월 제출 직전에 처음 보면 할 수 있는 일이 없습니다. 분기마다 보면 감속할 배와 선체 청소할 배를 고를 시간이 있습니다. 실제 화면을 잠깐 열어 보겠습니다.</p>
   </aside>
 </section>
@@ -5486,7 +5486,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <div><b>시연 2</b>CII · 선대 등급 분포와 선박별 달성값·요구값</div>
   </div>
   <p class="small" style="margin-top:8px;font-size:21px">데모 계정의 앱 화면(막대 색은 앱 원본) · 선박명은 가명 · 시연 약 3분</p>
-  <aside class="notes"><p>선대 현황을 실제 화면에서 두 가지만 열어 보겠습니다. FuelEU 잔액과 CII입니다. 마지막 시연입니다.</p><p>[앱 전환] 선박별 FuelEU 잔액입니다. 초록 막대가 흑자 선박, 빨간 막대가 적자 선박입니다. 이 예는 흑자가 세 척, 적자가 두 척입니다. 선대 GHG 집약도는 83.67로 목표 89.34보다 낮습니다. 그런데도 적자 선박 두 척의 벌금 합계가 약 7만 2천 유로입니다. 1교시에 본 풀링에서 누구와 누구를 묶을지를 이 화면을 보고 정합니다. 엑셀이라면 선박별 잔액과 벌금을 한 시트에 모아 두시면 같은 판단을 할 수 있습니다.</p><p>[CII 선대 화면 열기] 방금 캡처로 본 화면입니다. 등급 분포와 선박별 달성값, 요구값이 나옵니다. [슬라이드로 복귀] 이 숫자를 보고 돈을 움직이려면 검증이 먼저 끝나 있어야 합니다. 이 데이터를 회사 안에서 누가 쓰는지 보겠습니다.</p><p>[네트워크·로그인 문제 시: 앱을 열지 말고 이 캡처로 설명. 고객사·선박명이 보이지 않는 데모 계정만 사용]</p><p>[시간이 밀렸으면 앱을 열지 않고 캡처로 30초]</p></aside>
+  <aside class="notes"><p>선대 현황을 실제 화면에서 두 가지만 열어 보겠습니다. FuelEU 잔액과 CII입니다. 마지막 시연입니다.</p><p>[앱 전환] 선박별 FuelEU 잔액입니다. 초록 막대가 흑자 선박, 빨간 막대가 적자 선박입니다. 이 예는 흑자가 세 척, 적자가 두 척입니다. 선대 GHG 집약도는 83.67로 목표 89.34보다 낮습니다. 그런데도 적자 선박 두 척의 벌금 합계가 약 7만 2천 유로입니다. 1교시에 본 풀링에서 누구와 누구를 묶을지를 이 화면을 보고 정합니다.</p><p>[CII 선대 화면 열기] 방금 캡처로 본 화면입니다. 등급 분포와 선박별 달성값, 요구값이 나옵니다. [슬라이드로 복귀] 이 숫자를 보고 돈을 움직이려면 검증이 먼저 끝나 있어야 합니다. 이 데이터를 회사 안에서 누가 쓰는지 보겠습니다.</p><p>[네트워크·로그인 문제 시: 앱을 열지 말고 이 캡처로 설명. 고객사·선박명이 보이지 않는 데모 계정만 사용]</p><p>[시간이 밀렸으면 앱을 열지 않고 캡처로 30초]</p></aside>
 </section>
 <section class="slide" data-time="17:00" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="6" data-src="p3d_web.html#4">
   <div class="kicker">데이터 활용</div>
@@ -5854,7 +5854,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>이 판단은 정오보고의 속력과 연료가 맞아야 할 수 있습니다. 숫자는 설명용입니다. 다음 장에서 성능 분석과 데이터 품질의 관계를 정리하겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:16" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3c_checklist.html#2">
+<section class="slide p3-s" data-time="17:15" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3c_checklist.html#2">
   <div class="kicker">성능 분석 정리</div>
   <h2>성능 분석과 데이터 품질</h2>
   <svg class="p3-flow" viewBox="0 0 1432 290" width="100%">
@@ -5878,7 +5878,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>앞의 두 가지는 오늘 검증 사례로 본 오류입니다. 배 상태는 여기까지이고, 다음은 운항 방법 가운데 속력입니다. 문제 하나로 시작하겠습니다.</p>
   </aside>
 </section>
-<section class="slide quiz" data-time="17:17" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#4">
+<section class="slide quiz" data-time="17:16" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#4">
   <style>section.quiz .ct .opts{margin-top:28px;gap:20px} section.quiz .ct .opt{font-size:28px;padding:30px 26px;align-items:center} section.quiz .ct .q{font-size:32px} section.quiz .ct .steps{margin-top:26px;font-size:19px}</style>
   <div class="kicker">퀴즈 · 감속</div>
   <h2>1 kn 감속 시 연료 절감률</h2>
@@ -5900,7 +5900,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오답도 보겠습니다. A는 속력이 줄어든 비율 7%만 본 값입니다. C는 세제곱을 그대로 쓴 값으로, 시간당 절감률입니다. 발전기 연료는 줄지 않기 때문에 선박 전체로는 약 12%입니다. 이 14%는 뒤의 속력 실습에서 다시 나옵니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:20" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#7">
+<section class="slide p3-s" data-time="17:19" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p3b_performance.html#7">
   <div class="kicker">운항 최적화</div>
   <h2>운항 최적화 2가지: 웨더 라우팅, 적시 도착(JIT)</h2>
   <div class="row" style="gap:28px;align-items:stretch">
@@ -6009,7 +6009,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오른쪽 카드가 결론입니다. 14노트에서 11.8노트로 줄이면 연료 374톤, 배출 1,182톤이 줄고 비용은 6만 1천 유로가 줄어듭니다. 대신 6일 늦게 도착합니다. 조건은 설명용이고, 다음 장에서 값을 직접 바꿔 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide labslide" data-time="17:24" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="lab3b.html#1">
+<section class="slide labslide" data-time="17:23" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="lab3b.html#1">
   <style>
     #S1 .kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:8px}
     #S1 .kpi .out{padding:12px 16px}
@@ -6121,7 +6121,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오른쪽 아래 줄을 보십시오. D가 3년 연속이거나 E가 한 번이면 시정조치계획을 내야 합니다. 실제로는 늘어나는 항해일수와 용선 조건을 함께 봅니다. 그리고 검증된 연간 데이터로 해야 합니다. 거리가 틀린 데이터로 계산하면 결정도 틀립니다. 다음 장에서 감속, 청소, 연료 전환을 한 표에서 비교하겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s dg" data-time="17:30" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p_diag.html#5">
+<section class="slide p3-s dg" data-time="17:29" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 선체 성능(정의 · 원리 · 오손 · 청소) → 속력(감속 · 최적 속력 · 실습) → CII 예측과 컴플라이언스 시뮬레이션" data-stage="6" data-src="p_diag.html#5">
   <div class="kicker">성능 분석 · 의사결정 2</div>
   <h2>컴플라이언스 시뮬레이션: 남은 기간의 선택지 비교</h2>
   <div class="sim">
@@ -6190,7 +6190,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <div><b>4</b>&nbsp; EUA 가격 입력 → 결과 즉시 변경</div>
   </div>
   <aside class="notes">
-    <p>같은 비교를 웹 화면 예시로 3분만 보겠습니다. [앱 전환] 남은 기간 비용을 미리 계산해 보는 화면입니다. 올해 실제 운항이 위에 깔려 있습니다. 남은 기간을 어떻게 갈지 플랜을 고르면 CII 등급과 비용이 같이 나옵니다. 아래쪽은 남은 기간 연료를 바꾸면 얼마인지입니다. HFO부터 B30까지 비교합니다. [EUA 칸 바꿔 보기] 배출권 가격 하나를 바꾸면 순서가 바뀝니다. [복귀] 도구는 무엇이든 괜찮습니다. 운항과 재무가 남은 기간 속력과 연료를 정하려면 세 가지가 한 화면이나 엑셀 한 시트에 같이 있어야 합니다. 올해 실적 연료, 남은 기간 계획, 배출권 가격 가정입니다. 여기에 들어가는 값도 정오보고 한 줄입니다. 규제는 여기까지입니다. 다음은 비용을 줄이는 수단, 대체 연료입니다.</p>
+    <p>같은 비교를 웹 화면 예시로 3분만 보겠습니다. [앱 전환] 남은 기간 비용을 미리 계산해 보는 화면입니다. 올해 실제 운항이 위에 깔려 있습니다. 남은 기간을 어떻게 갈지 플랜을 고르면 CII 등급과 비용이 같이 나옵니다. 아래쪽은 남은 기간 연료를 바꾸면 얼마인지입니다. HFO부터 B30까지 비교합니다. [EUA 칸 바꿔 보기] 배출권 가격 하나를 바꾸면 순서가 바뀝니다. [복귀] 도구는 무엇이든 괜찮습니다. 운항과 재무가 남은 기간 속력과 연료를 정하려면 세 가지가 한 화면에 같이 있어야 합니다. 올해 실적 연료, 남은 기간 계획, 배출권 가격 가정입니다. 여기에 들어가는 값도 정오보고 한 줄입니다. 규제는 여기까지입니다. 다음은 비용을 줄이는 수단, 대체 연료입니다.</p>
     <p>[네트워크·로그인 문제 시: 앱을 열지 말고 이 캡처로 설명. 고객사·선박명이 보이지 않는 데모 계정만 사용]</p>
     <p>[캡처로 설명할 때] 오른쪽 숫자 세 개만 보시면 됩니다. 이 배는 감속 10%에 B30을 쓰는 플랜 A가 7만 9,210유로로 나왔습니다. 아래는 남은 기간 연료를 바꿨을 때의 비용입니다. 지금 쓰는 혼합이 24만 3,968유로이고, 연료별로 몇천 유로씩 차이가 납니다. 이 화면의 배출권 가격은 70유로입니다. 오늘 본문 예시는 80유로이니 숫자를 섞어 보시면 안 됩니다. 항구 이름은 가렸습니다. 성능 개선은 여기까지입니다. 다음 장에서 오늘 본 오류를 한 번에 찾아보겠습니다.</p>
   </aside>
@@ -6294,7 +6294,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>맨 아래 줄은 내년 일정입니다. 2027년에는 ETS 100% 첫 정산, FuelEU 두 번째 주기, UK ETS 첫 보고가 겹칩니다. 기준 데이터는 지금 배에서 입력하고 있는 2026년 보고분입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="17:41" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#2">
+<section class="slide" data-time="17:40" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#2">
   <div class="kicker">인용 규정 · 자료</div>
   <h2>참고 자료</h2>
   <style>
