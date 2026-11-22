@@ -5367,7 +5367,30 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[월 점검 순서] 한 달에 한 번은 이 순서로 보십시오. 이벤트의 짝과 순서, 벙커 대장과 BDN, EU 범위 판정, 잔량 등식, 마지막으로 증빙 파일이 붙어 있는지입니다. 관리 이야기는 여기까지입니다. 이제 이 데이터로 연료를 줄이는 쪽으로 넘어갑니다.</p>
   </aside>
 </section>
-<section class="slide p3-s dg" data-time="16:56" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p_diag.html#6">
+<section class="slide p3-s dg" data-time="16:56" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용" data-stage="6" data-src="p_diag.html#9">
+  <div class="kicker">자동화 사례 · 보고에서 모니터링까지</div>
+  <h2>전 과정 자동화 구성 사례: 보고 · 처리 · 문서 검증 · 모니터링</h2>
+  <div class="flw au">
+    <div class="fl"><div class="fh"><i>1</i><b>동정보고 입력</b></div><div class="fq">선박</div><p>정오 · 출항 · 도착 · 벙커링 보고를 양식에 입력 · 입력 즉시 규칙 점검(차단 · 사유 입력 · 경고)</p><div class="fe">자동: 앞 보고의 잔량 이어받기 · 등식 검사</div></div><div class="fa">→</div>
+    <div class="fl"><div class="fh"><i>2</i><b>데이터 처리</b></div><div class="fq">육상 · 자동 계산</div><p>레그 분할 · EU 범위 판정 · 유종 분류 · 규제별 계산(DCS · CII · EU MRV · ETS · FuelEU · UK ETS)</p><div class="fe">자동: 보고 1건이 들어오면 전 규제 재계산</div></div><div class="fa">→</div>
+    <div class="fl"><div class="fh"><i>3</i><b>AI 문서 검증</b></div><div class="fq">육상 · 증빙 대조</div><p>BDN · 로그북 · 화물 서류 · PoS를 AI가 읽어 보고값과 대조 · 허용오차 적용</p><div class="fe">사람: 불일치 건만 확인하고 선박에 수정 요청</div></div><div class="fa">→</div>
+    <div class="fl"><div class="fh"><i>4</i><b>웹 대시보드</b></div><div class="fq">육상 · 모니터링</div><p>선대 CII 등급 · EU ETS 대상량 · FuelEU 잔액을 보고가 들어올 때마다 갱신 · 시뮬레이션</p><div class="fe">사람: 감속 · 청소 · 연료 전환 결정</div></div>
+  </div>
+  <div class="g3" style="margin-top:14px">
+    <div class="card"><h3>자동화한 일</h3><p>반복 계산 · 서류 판독 · 수치 대조 · 화면 갱신</p></div>
+    <div class="card"><h3>사람이 하는 일</h3><p>불일치 판정 · 선박 피드백 · 의사결정</p></div>
+    <div class="card"><h3>엑셀로 할 때도 같은 순서</h3><p>입력 점검 → 계산 → 증빙 대조 → 현황표 · 2~3교시 내용이 이 네 단계</p></div>
+  </div>
+  <aside class="notes">
+    <p>지금까지 본 일을 제가 일하는 회사에서는 어떻게 자동화했는지 한 장으로 보여 드립니다. 네 단계입니다.</p>
+    <p>첫째, 선박의 동정보고 입력입니다. 선원이 양식에 값을 넣으면 그 자리에서 규칙으로 점검합니다. 2교시에 본 차단, 사유 입력, 경고입니다. 앞 보고의 잔량은 자동으로 이어받습니다.</p>
+    <p>둘째, 데이터 처리입니다. 보고가 들어오면 레그를 나누고, EU 범위를 판정하고, 규제별 숫자를 다시 계산합니다. 사람이 손대지 않습니다.</p>
+    <p>셋째, 문서 검증입니다. BDN, 로그북, 화물 서류, PoS를 AI가 읽어서 보고값과 맞춰 봅니다. 3교시에 본 허용오차를 그대로 적용합니다. 담당자는 불일치로 나온 건만 보고 선박에 수정을 요청합니다.</p>
+    <p>넷째, 웹 대시보드입니다. 선대 CII 등급, 배출권 대상량, FuelEU 잔액이 보고가 들어올 때마다 바뀝니다. 여기서 시뮬레이션을 돌려 감속이나 청소를 결정합니다.</p>
+    <p>아래 줄을 보십시오. 자동화한 것은 반복 계산과 서류 판독, 대조입니다. 판정과 결정은 사람이 합니다. 엑셀로 관리하셔도 순서는 같습니다. 입력을 점검하고, 계산하고, 증빙과 맞추고, 현황표를 만듭니다.</p>
+  </aside>
+</section>
+<section class="slide p3-s dg" data-time="16:57" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p_diag.html#6">
   <div class="kicker">성능 개선 · 전체 흐름</div>
   <h2>탄소 모니터링에서 원인 분석까지: 데이터 활용의 다섯 단계</h2>
   <div class="flw"><div class="fl"><div class="fh"><i>1</i><b>탄소 모니터링</b></div><div class="fq">지금 어디에 있는가</div><p>누적 CII 비율 · EU ETS 대상량 · FuelEU 잔액을 매달 확인</p><div class="fe">예: 9월 말 CII 비율 1.07 → D 구간</div></div><div class="fa">→</div><div class="fl"><div class="fh"><i>2</i><b>시뮬레이션</b></div><div class="fq">이대로 가면 연말에 어떻게 되는가</div><p>남은 항차 계획을 넣어 선택지별 결과 계산</p><div class="fe">예: 현행 유지 D · 1 kn 감속 C</div></div><div class="fa">→</div><div class="fl"><div class="fh"><i>3</i><b>의사결정</b></div><div class="fq">무엇을 할 것인가</div><p>비용 합계와 일정 영향을 비교해 조합 선택</p><div class="fe">예: 감속 + 다음 정박 때 선체 청소</div></div><div class="fa">→</div><div class="fl"><div class="fh"><i>4</i><b>성능 분석</b></div><div class="fq">실행한 효과가 나왔는가</div><p>날씨를 보정한 속력–연료 곡선으로 전후 비교</p><div class="fe">예: 청소 후 같은 속력에서 연료 −8%</div></div><div class="fa">→</div><div class="fl"><div class="fh"><i>5</i><b>원인 분석</b></div><div class="fq">기대와 다르면 왜 그런가</div><p>오손 · 기상 · 흘수 · 기관 상태 · 보고 오류로 나눠 확인</p><div class="fe">예: 연료 증가분 가운데 보고 오류분 분리</div></div></div>
@@ -5380,7 +5403,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>아래 화살표처럼 원인을 고치면 다시 첫 단계로 돌아갑니다. 다섯 단계가 모두 선박이 보낸 같은 동정보고로 돌아갑니다. 다음 장부터 성능 분석을 먼저 보고, 뒤에서 시뮬레이션으로 돌아오겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:57" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3b_performance.html#3">
+<section class="slide p3-s" data-time="16:59" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3b_performance.html#3">
   <div class="kicker">성능 분석</div>
   <h2>선박 성능의 정의: 날씨 보정 후 추진 연비</h2>
   <svg class="p3-flow" viewBox="0 0 1432 136" width="100%">
@@ -5421,7 +5444,32 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>왼쪽 목록이 이 분석에 필요한 데이터입니다. 속력, 흘수와 트림, 풍향·풍속과 파고, 기준 곡선, 그리고 선체 청소 같은 이벤트 일자입니다. 앞에서 검증한 보고가 맞아야 이 분석도 맞습니다. 속력과 연료의 관계는 문제 하나로 시작하겠습니다.</p>
   </aside>
 </section>
-<section class="slide quiz" data-time="16:58" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3b_performance.html#4">
+<section class="slide p3-s dg" data-time="17:00" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="0" data-src="p_diag.html#7">
+  <div class="kicker">성능 분석 · 원리</div>
+  <h2>성능 분석의 원리(ISO 19030): 같은 출력에서 줄어든 속력</h2>
+  <div class="row" style="gap:26px;align-items:start">
+    <div class="col" style="flex:.9"><svg viewBox="0 0 620 360" role="img" aria-label="기준 속력–출력 곡선과 실측점"><line x1="70" y1="300" x2="590" y2="300" stroke="#0B2545" stroke-width="1.5"/><line x1="70" y1="30" x2="70" y2="300" stroke="#0B2545" stroke-width="1.5"/><text x="70" y="322" text-anchor="middle" font-size="15" fill="#5B6776">10</text><text x="236" y="322" text-anchor="middle" font-size="15" fill="#5B6776">12</text><text x="403" y="322" text-anchor="middle" font-size="15" fill="#5B6776">14</text><text x="570" y="322" text-anchor="middle" font-size="15" fill="#5B6776">16</text><text x="330" y="346" text-anchor="middle" font-size="15" fill="#5B6776">대수속력 (kn)</text><text x="22" y="165" font-size="15" fill="#5B6776" transform="rotate(-90 22 165)" text-anchor="middle">축마력 (kW)</text><path d="M70.0,239.7L90.8,235.1L111.7,230.2L132.5,225.1L153.3,219.7L174.2,214.1L195.0,208.3L215.8,202.2L236.7,195.8L257.5,189.1L278.3,182.2L299.2,175.0L320.0,167.5L340.8,159.7L361.7,151.6L382.5,143.2L403.3,134.5L424.2,125.5L445.0,116.2L465.8,106.5L486.7,96.5L507.5,86.1L528.3,75.4L549.2,64.4L570.0,53.0" fill="none" stroke="#0B2545" stroke-width="3.5"/><text x="470" y="150" font-size="15" font-weight="800" fill="#0B2545" text-anchor="end">기준 곡선 (입거 직후)</text><line x1="70" y1="134.5" x2="403.3" y2="134.5" stroke="#9AA6B2" stroke-dasharray="5 4"/><circle cx="403.3" cy="134.5" r="7" fill="#0B2545"/><circle cx="345.0" cy="134.5" r="7" fill="#B3261E"/><line x1="353.0" y1="134.5" x2="395.3" y2="134.5" stroke="#B3261E" stroke-width="3"/><text x="374.2" y="120.5" text-anchor="middle" font-size="16" font-weight="800" fill="#B3261E">속력 손실 −5%</text><text x="335.0" y="158.5" text-anchor="end" font-size="15" font-weight="700" fill="#B3261E">실측 13.3 kn</text><text x="413.3" y="158.5" font-size="15" font-weight="700" fill="#0B2545">기대 14.0 kn</text><text x="78" y="126.5" font-size="14" fill="#5B6776">같은 출력</text></svg></div>
+    <div class="col" style="flex:1.1">
+      <div class="rs">
+        <div><i>1</i><p><b>측정</b> · 대수속력 · 축마력(또는 연료) · 흘수 · 풍속과 풍향</p></div>
+        <div><i>2</i><p><b>걸러내기</b> · 강풍 · 얕은 수심 · 가감속 구간의 값 제외</p></div>
+        <div><i>3</i><p><b>보정</b> · 바람 저항을 빼고 기준 흘수 조건으로 환산</p></div>
+        <div class="ok"><i>4</i><p><b>비교</b> · 기준 곡선의 기대 속력과 실측 속력의 차이 = 속력 손실(%) · (13.3 − 14.0) ÷ 14.0 = −5%</p></div>
+        <div><i>5</i><p><b>지표 4가지</b> · 입거 효과 · 운항 중 성능 변화 · 정비 시점 · 정비 효과</p></div>
+      </div>
+      <div class="callout" style="margin-top:12px">기본 방법은 센서 자동 수집 · 정오보고로도 가능하나 정확도가 낮아 기간을 길게 잡음</div>
+    </div>
+  </div>
+  <p class="dg-n">ISO 19030 선체 · 프로펠러 성능 변화 측정(2016) · 그림의 수치는 설명용</p>
+  <aside class="notes">
+    <p>성능 분석에는 국제 표준이 있습니다. ISO 19030이고, 선체와 프로펠러 성능이 얼마나 변했는지 재는 방법입니다.</p>
+    <p>원리는 왼쪽 그림 하나입니다. 가로가 물에 대한 속력, 세로가 축마력입니다. 곡선은 입거 직후 깨끗한 선체의 기준입니다. 이 출력이면 14노트가 나와야 합니다. 그런데 지금은 같은 출력에 13.3노트입니다. 그 차이를 속력 손실이라고 부릅니다. 5%입니다.</p>
+    <p>오른쪽이 순서입니다. 먼저 속력, 축마력, 흘수, 바람을 잽니다. 다음으로 바람이 센 날, 얕은 바다, 속력을 올리거나 줄이는 구간의 값을 버립니다. 셋째, 남은 값에서 바람의 영향을 빼고 흘수를 기준 조건으로 맞춥니다. 넷째, 기준 곡선과 비교해 속력 손실을 구합니다.</p>
+    <p>이 값으로 네 가지를 봅니다. 입거가 얼마나 효과가 있었는지, 운항 중에 성능이 얼마나 떨어졌는지, 언제 청소해야 하는지, 청소가 효과가 있었는지입니다.</p>
+    <p>표준의 기본 방법은 센서 자동 수집입니다. 정오보고로도 할 수 있지만 하루에 한 점이라 정확도가 낮습니다. 그래서 비교 기간을 길게 잡습니다. 숫자는 설명용입니다.</p>
+  </aside>
+</section>
+<section class="slide quiz" data-time="17:01" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3b_performance.html#4">
   <style>section.quiz .ct .opts{margin-top:28px;gap:20px} section.quiz .ct .opt{font-size:28px;padding:30px 26px;align-items:center} section.quiz .ct .q{font-size:32px} section.quiz .ct .steps{margin-top:26px;font-size:19px}</style>
   <div class="kicker">퀴즈 · 감속</div>
   <h2>1 kn 감속 시 연료 절감률</h2>
@@ -5443,7 +5491,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오답도 보겠습니다. A는 속력이 줄어든 비율 7%만 본 값입니다. C는 세제곱을 그대로 쓴 값으로, 시간당 절감률입니다. 발전기 연료는 줄지 않기 때문에 선박 전체로는 약 12%입니다. 이 14%는 뒤의 속력 실습에서 다시 나옵니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:01" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3b_performance.html#5">
+<section class="slide p3-s" data-time="17:04" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3b_performance.html#5">
   <div class="kicker">속력–연료 곡선</div>
   <h2>속력–연료 기준 곡선과 현재 곡선</h2>
   <div class="row" style="gap:28px;align-items:center">
@@ -5490,7 +5538,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>성능 관리는 이 간격을 매달 추적하는 일입니다. 간격이 벌어지는 가장 흔한 원인이 다음 장입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:02" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3b_performance.html#6">
+<section class="slide p3-s" data-time="17:05" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3b_performance.html#6">
   <div class="kicker">선체·프로펠러 오손</div>
   <h2>선체·프로펠러 오손과 청소 효과</h2>
   <div class="row" style="gap:28px;align-items:center">
@@ -5525,7 +5573,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오른쪽 아래 사례는 원인을 가르는 방법입니다. 속력에 비해 축마력이 늘었으면 선체나 프로펠러 쪽입니다. 축마력에 비해 연료가 늘었으면 엔진, 곧 연료소비율 쪽입니다. 그래서 축마력 데이터와 연료 데이터를 함께 봅니다. 배 상태 다음은 운항 방법입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s dg" data-time="17:03" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p_diag.html#4">
+<section class="slide p3-s dg" data-time="17:06" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p_diag.html#4">
   <div class="kicker">성능 분석 · 의사결정 1</div>
   <h2>선체 청소 시점 결정: 늘어난 연료비와 청소비 비교</h2>
   <div class="row" style="gap:26px;align-items:start">
@@ -5551,7 +5599,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>이 판단은 정오보고의 속력과 연료가 맞아야 할 수 있습니다. 숫자는 설명용입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:04" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3b_performance.html#7">
+<section class="slide p3-s" data-time="17:07" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3b_performance.html#7">
   <div class="kicker">운항 최적화</div>
   <h2>운항 최적화 2가지: 웨더 라우팅, 적시 도착(JIT) · 설명용 예시(금액은 원화)</h2>
   <div class="row" style="gap:28px;align-items:stretch">
@@ -5583,7 +5631,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[시간이 밀렸으면 이 장은 건너뜀]</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:06" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3b_performance.html#8">
+<section class="slide p3-s" data-time="17:08" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3b_performance.html#8">
   <div class="kicker">최적 속력</div>
   <h2>탄소비용과 최적 속력</h2>
   <div class="row" style="gap:28px;align-items:start">
@@ -5629,7 +5677,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>속력 실습은 두 장 뒤에 있습니다. 그 전에 감속이 CII 등급을 어떻게 바꾸는지 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:07" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3c_checklist.html#1">
+<section class="slide p3-s" data-time="17:09" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3c_checklist.html#1">
   <style>
     /* p3a_validation.html과 같은 규칙 (단독 미리보기용 중복) */
     svg.p3-flow{max-width:100%;height:auto;display:block}
@@ -5691,7 +5739,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오른쪽 아래 줄을 보십시오. D가 3년 연속이거나 E가 한 번이면 시정조치계획을 내야 합니다. 실제로는 늘어나는 항해일수와 용선 조건을 함께 봅니다. 그리고 검증된 연간 데이터로 해야 합니다. 거리가 틀린 데이터로 계산하면 결정도 틀립니다.</p>
   </aside>
 </section>
-<section class="slide p3-s dg" data-time="17:08" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p_diag.html#5">
+<section class="slide p3-s dg" data-time="17:11" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p_diag.html#5">
   <div class="kicker">성능 분석 · 의사결정 2</div>
   <h2>컴플라이언스 시뮬레이션: 남은 기간의 선택지 비교</h2>
   <div class="sim">
@@ -5721,7 +5769,34 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>아래 세 칸이 정리입니다. 감속과 청소는 CII와 ETS에, 연료 전환은 FuelEU에 듣습니다. 그래서 하나만 고르지 않고 조합합니다. 지수는 설명용입니다. 다음 장에서 직접 값을 바꿔 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:09" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3c_checklist.html#2">
+<section class="slide p3-s dg" data-time="17:12" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p_diag.html#8">
+  <div class="kicker">컴플라이언스 시뮬레이션 · 최적 조건</div>
+  <h2>속력별 연료 · 탄소비용 · 시간비용: 합계가 가장 작은 속력</h2>
+  <table class="opt">
+    <thead><tr><th>속력</th><th>항해일수</th><th>연료 t</th><th>연료비</th><th>탄소비용 (EU ETS)</th><th>시간비용</th><th>합계 (천 유로)</th></tr></thead>
+    <tbody>
+      <tr><td>11.0 kn</td><td>41.7일</td><td>1,016</td><td>569</td><td>128</td><td>1,333</td><td>2,031</td></tr>
+      <tr class="hl"><td>11.8 kn · 최적</td><td>38.8일</td><td>1,132</td><td>634</td><td>143</td><td>1,243</td><td><b>2,020</b></td></tr>
+      <tr><td>13.0 kn</td><td>35.3일</td><td>1,327</td><td>743</td><td>168</td><td>1,128</td><td>2,039</td></tr>
+      <tr><td>14.0 kn · 현행</td><td>32.7일</td><td>1,506</td><td>843</td><td>191</td><td>1,048</td><td>2,081</td></tr>
+      <tr><td>15.0 kn</td><td>30.6일</td><td>1,701</td><td>952</td><td>215</td><td>978</td><td>2,145</td></tr>
+    </tbody>
+  </table>
+  <div class="g3" style="margin-top:14px">
+    <div class="card"><h3>느리게 가면</h3><p>연료비와 탄소비용 감소 · 항해일수가 늘어 <b>시간비용 증가</b></p></div>
+    <div class="card"><h3>최적 속력</h3><p>탄소비용 제외 12.6 kn → 포함 <b>11.8 kn</b> · 탄소비용이 붙으면 최적 속력이 내려감</p></div>
+    <div class="card"><h3>14.0 → 11.8 kn</h3><p>연료 −374 t · CO₂e −1,182 t · 비용 −6만 1천 유로 · 6.1일 지연</p></div>
+  </div>
+  <p class="dg-n">설명용 조건 · 거리 11,000 nm · 14 kn에서 주기관 42 t/일(속력의 세제곱 비례) · 보조기관 4 t/일 · 연료 €560/t · 배출권 €80 · EU↔비EU 50% · 시간비용 €32,000/일</p>
+  <aside class="notes">
+    <p>시뮬레이션이 실제로 계산하는 내용을 표로 펼쳤습니다. 한 항차를 속력만 바꿔 가며 다섯 번 계산한 것입니다. 금액 단위는 천 유로입니다.</p>
+    <p>현행 줄부터 보십시오. 14노트로 가면 32.7일, 연료 1,506톤입니다. 연료비 84만 3천, 탄소비용 19만 1천, 시간비용 104만 8천, 합계 208만 1천 유로입니다.</p>
+    <p>위로 올라가면 속력이 느려집니다. 연료비와 탄소비용은 줄고 시간비용은 늘어납니다. 시간비용은 용선료처럼 하루 늦을 때마다 드는 돈입니다. 합계가 가장 작은 줄이 11.8노트, 202만 유로입니다. 11노트까지 내리면 다시 올라갑니다.</p>
+    <p>가운데 카드를 보십시오. 탄소비용을 빼고 계산하면 최적 속력은 12.6노트입니다. 탄소비용을 넣으면 11.8노트로 내려갑니다. 배출권 가격이 오를수록 더 내려갑니다.</p>
+    <p>오른쪽 카드가 결론입니다. 14노트에서 11.8노트로 줄이면 연료 374톤, 배출 1,182톤이 줄고 비용은 6만 1천 유로가 줄어듭니다. 대신 6일 늦게 도착합니다. 조건은 설명용이고, 다음 장에서 값을 직접 바꿔 보겠습니다.</p>
+  </aside>
+</section>
+<section class="slide p3-s" data-time="17:13" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="p3c_checklist.html#2">
   <div class="kicker">성능 분석 정리</div>
   <h2>성능 분석과 데이터 품질</h2>
   <svg class="p3-flow" viewBox="0 0 1432 290" width="100%">
@@ -5745,7 +5820,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>앞의 두 가지는 오늘 검증 사례로 본 오류입니다. 마지막 실습에서 속력을 직접 바꿔 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide labslide" data-time="17:10" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="lab3b.html#1">
+<section class="slide labslide" data-time="17:14" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.5 성능 개선 :: 데이터 활용 다섯 단계 → 성능 정의 → 선체 청소 결정 → 최적 속력 → 컴플라이언스 시뮬레이션 → 실습" data-stage="6" data-src="lab3b.html#1">
   <style>
     #S1 .kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:8px}
     #S1 .kpi .out{padding:12px 16px}
@@ -5795,7 +5870,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>이 계산은 기준 속력의 소비량이 정확해야 맞습니다. 날씨를 보정한, 검증된 데이터로 만든 속력–연료 곡선이 있어야 합니다. 실무에서는 시운전 곡선과 운항 데이터를 흘수별로 보간해서 만듭니다. 성능은 여기까지입니다. 다음 장에서 오늘 본 오류를 한 번에 찾아보겠습니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="17:15" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.6 종합 실습과 점검 :: 항차 기록 오류 찾기 → 실무 점검 항목" data-stage="6" data-src="p3c_checklist.html#4">
+<section class="slide" data-time="17:19" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.6 종합 실습과 점검 :: 항차 기록 오류 찾기 → 실무 점검 항목" data-stage="6" data-src="p3c_checklist.html#4">
   <style>
     #bh table.t td{font-size:21px;padding:12px 16px}
     #bh .bug{display:none}
@@ -5824,7 +5899,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>넷째, 1월 1일 로그북이 엑셀 파일입니다. 다섯째, HFO 소비가 12.4톤인데 측심 보정이 18톤입니다. 마이너스 FOC입니다. 마지막 줄 대지거리는 맞게 적은 것입니다. 이 다섯 가지를 막는 점검 항목이 다음 장입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="17:18" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.6 종합 실습과 점검 :: 항차 기록 오류 찾기 → 실무 점검 항목" data-stage="6" data-src="p3c_checklist.html#3">
+<section class="slide p3-s" data-time="17:22" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.6 종합 실습과 점검 :: 항차 기록 오류 찾기 → 실무 점검 항목" data-stage="6" data-src="p3c_checklist.html#3">
   <div class="kicker">3교시 정리</div>
   <h2>실무 점검 항목</h2>
   <div class="g2" style="gap:24px 40px">
@@ -5850,7 +5925,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[16:43까지 여기 도착]</p>
   </aside>
 </section>
-<section class="slide" data-time="17:19" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_chain.html#1">
+<section class="slide" data-time="17:23" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_chain.html#1">
   <style>
     .rc{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:1fr auto;gap:14px;aspect-ratio:1432/520}
     .rc .c{background:#fff;border:1.5px solid var(--navy);border-radius:8px;padding:22px 18px 20px}
@@ -5879,7 +5954,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>회사에서 문제가 생기면 다섯 단계 중 어디서 틀어졌는지부터 짚어 보십시오. 단계가 정해지면 물어볼 사람이 정해집니다. 입력이면 배입니다. 처리면 육상에서 계산을 맡은 담당자나 프로그램 공급사입니다. 검증이면 검증 담당자, 정산이면 재무, 개선이면 운항팀입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="17:20" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#1">
+<section class="slide" data-time="17:24" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#1">
   <div class="kicker">전체 정리</div>
   <h2>요약과 후속 조치</h2>
   <table class="t" style="font-size:22px">
@@ -5904,7 +5979,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>맨 아래 줄은 내년 일정입니다. 2027년에는 ETS 100% 첫 정산, FuelEU 두 번째 주기, UK ETS 첫 보고가 겹칩니다. 기준 데이터는 지금 배에서 입력하고 있는 2026년 보고분입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="17:22" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#2">
+<section class="slide" data-time="17:26" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#2">
   <div class="kicker">인용 규정 · 자료</div>
   <h2>참고 자료</h2>
   <style>
@@ -5959,7 +6034,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[시간이 밀렸으면 이 장은 건너뜀]</p>
   </aside>
 </section>
-<section class="slide cover" data-time="17:23" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#3">
+<section class="slide cover" data-time="17:26" data-sec="정리|전체 정리" data-grp="" data-stage="0" data-src="p4_closing.html#3">
   <div class="in">
     <div class="kicker">Q &amp; A</div>
     <h1>질의응답</h1>
@@ -6808,7 +6883,27 @@ table.cnt{margin-top:12px;font-size:14.5px} table.cnt td,table.cnt th{padding:6p
 .fa{display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#0B7C87}
 .flb{border:2px dashed #0B7C87;border-top:0;height:26px;margin:0 10% 0;border-radius:0 0 14px 14px;position:relative}
 .flb span{position:absolute;left:50%;bottom:-13px;transform:translateX(-50%);background:#fff;padding:0 12px;font-size:16px;font-weight:800;color:#0B7C87;white-space:nowrap}
+.rs{display:flex;flex-direction:column;gap:10px}
+.rs>div{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start;border:1px solid var(--line);border-radius:8px;background:#fff;padding:10px 12px}
+.rs i{font-style:normal;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;display:inline-flex;align-items:center;justify-content:center}
+.rs b{color:var(--navy)}
+.rs p{margin:0;font-size:19px;line-height:1.45}
+.rs .ok{border-color:#0B7C87;background:#EEF8F9}
+.flw.au{grid-template-columns:1fr 26px 1fr 26px 1fr 26px 1fr}
+.opt{width:100%;border-collapse:collapse;font-size:21px;background:#fff;border:1.5px solid var(--navy)}
+.opt th{background:var(--navy);color:#fff;padding:10px 14px;font-size:18px;text-align:right}
+.opt th:first-child,.opt td:first-child{text-align:left;font-weight:800;color:var(--navy)}
+.opt th:first-child{color:#fff}
+.opt td{padding:10px 14px;border-top:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums}
+.opt tr.hl td{background:#EEF8F9;border-top:2px solid #0B7C87;border-bottom:2px solid #0B7C87}
+.opt tr.hl td:first-child{color:#0B7C87}
 </style>
+
+
+
+
+
+
 
 
 
