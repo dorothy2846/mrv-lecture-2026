@@ -893,7 +893,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>LNG선 A의 정오보고 한 건입니다. 왼쪽 표가 입력값입니다. 24시간에 427해리를 갔습니다. 주기관 두 대는 증발가스와 저유황유, 발전기는 증발가스와 초저유황 경유를 썼습니다. 그날 자연 증발가스가 88.31톤입니다.</p>
     <p>오른쪽 계산을 화살표 키로 한 단계씩 넘기겠습니다. [1] 연료를 CO₂로 바꿉니다. 유종마다 소비량에 배출계수를 곱해 더합니다. 증발가스 88.31톤에 2.750을 곱하면 242.9톤입니다. 저유황유 0.8톤은 2.5톤, 경유 0.5톤은 1.6톤입니다. 더하면 247.0톤입니다. [2] 수송작업입니다. 재화중량 94,325톤에 그날 거리 427해리를 곱하면 약 4,028만 톤해리입니다. 실은 화물이 아니라 선박 제원의 재화중량을 씁니다. [3] CO₂ 247.0톤을 그램으로 바꿔 수송작업으로 나누면 달성값입니다. 1톤을 1해리 옮기는 데 낸 CO₂ 그램 수입니다. 이 배는 6.132입니다. [4] 요구값은 선종과 크기로 정한 기준선에 그해 감축률을 반영한 값입니다. 6.50입니다. [5] 6.132를 6.50으로 나누면 0.94입니다. 0.92 초과 1.10 이하가 C라서 C등급입니다.</p>
     <p>등급 띠의 경계는 재화중량 10만 톤 미만 LNG선 기준입니다. 10만 톤 이상이면 경계가 더 촘촘합니다. LNG선은 따로 챙길 것이 있습니다. LNG와 증발가스는 합산합니다. 소형선은 기준선 계산에 용량 하한이 적용됩니다. 화물 속 질소를 차감하려면 화물 품질 증명서, COQ의 조성 데이터가 있어야 합니다.</p>
-    <p>그러면 이 C등급 하루치를 365일 모으면 연간 등급이 될까요. 안 됩니다. 일별 값에는 보정이 없고 하루치 거리만 분모로 씁니다. 접안과 투묘 중 연료도 빠져 있습니다. 연간 값에는 그 연료가 다 들어가고 보정도 적용됩니다. 저도 검증하면서 일별과 연간을 직접 비교하는 점검을 써 봤다가 그만뒀습니다. 연간 예측은 누적 데이터로 따로 하셔야 합니다. 다음 장에서 연도를 바꿔 가며 등급을 보겠습니다.</p>
+    <p>그러면 이 C등급 하루치를 365일 모으면 연간 등급이 될까요. 안 됩니다. 일별 값에는 보정이 없고 하루치 거리만 분모로 씁니다. 접안과 투묘 중 연료도 빠져 있습니다. 연간 값에는 그 연료가 다 들어가고 보정도 적용됩니다. 연간 예측은 누적 데이터로 따로 하셔야 합니다. 다음 장에서 연도를 바꿔 가며 등급을 보겠습니다.</p>
   </aside>
 </section>
 <section class="slide labslide" data-time="14:23" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 데이터 관리 개요" data-grp="1.2 해운 환경 규제|IMO: DCS 보고 → CII 등급" data-stage="1" data-src="lab1.html#2">
@@ -1001,7 +1001,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>실무에서 영향이 큰 것은 LNG선입니다. 이산화탄소만 보면 LNG가 유리하지만, 메탄 슬립이 많은 엔진은 메탄을 넣는 순간 비용이 올라갑니다. 엔진 종류를 정확히 입력해야 하는 이유입니다. 이어서 EU MRV의 보고 방식입니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="14:31" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 데이터 관리 개요" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_regulation.html#11">
+<section class="slide p1-lg" data-time="14:30" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 데이터 관리 개요" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_regulation.html#11">
   <div class="kicker">EU MRV · Reg. 2015/757 (2023/957 개정)</div>
   <h2>EU MRV: 항차 단위 모니터링 · 연간 보고</h2>
   <div class="row" style="align-items:stretch;gap:26px">
@@ -1173,7 +1173,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>셋째는 LNG 운반선 C입니다. LNG는 1톤당 CO₂가 2.750톤으로 낮습니다. 그런데 2026년분부터 타지 않고 빠져나간 메탄이 더해집니다. 그래서 이 배의 연료 1톤당 평균 배출량은 약 3.3톤으로 나옵니다. 연료 사용량이 많아 제출량도 세 척 가운데 가장 큽니다. ETS는 여기까지입니다. 다음은 같은 EU의 FuelEU입니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="14:38" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 데이터 관리 개요" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_why.html#4">
+<section class="slide p1-lg" data-time="14:37" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 데이터 관리 개요" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_why.html#4">
   <div class="kicker">FuelEU Maritime · 목적</div>
   <h2>FuelEU Maritime의 목적과 구조</h2>
   <div class="row" style="gap:20px;align-items:stretch">
@@ -1358,7 +1358,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>위쪽 막대를 움직여 비율을 바꿔 보겠습니다. 집약도 차이가 약 76으로 커서 조금만 섞어도 평균이 내려갑니다. 두 가지는 기억해 두십시오. 14.9는 예시값이고 실제로는 이 배의 증명서에 적힌 값을 써야 합니다. 바이오연료 가격은 시기와 지역마다 다르니 실제 판단은 견적으로 하셔야 합니다. 여기까지를 문제 하나로 확인하겠습니다.</p>
   </aside>
 </section>
-<section class="slide quiz" data-time="14:47" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 데이터 관리 개요" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_regulation.html#24">
+<section class="slide quiz" data-time="14:46" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 데이터 관리 개요" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_regulation.html#24">
   <div class="kicker">퀴즈 · FuelEU 대응 수단</div>
   <h2>FuelEU 준수 잔액 부족 시 대응 수단</h2>
   <div class="ct"><div class="q">케미컬 탱커 A · MGO만 사용 · 집약도 <b>90.77</b> &gt; 2026년 한도 <b>89.34</b> (gCO₂e/MJ)<br>부족분을 해소하는 수단이 <b>아닌</b> 것은?</div>
@@ -1370,7 +1370,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[5초 · R키] 답은 D입니다. 배출권은 EU ETS의 정산 수단입니다. FuelEU 준수 잔액과는 서로 대체되지 않습니다. 배출권을 더 내도 잔액은 그대로입니다. A, B, C는 모두 FuelEU가 인정합니다. A는 연료를 섞어 평균을 낮춥니다. 지속가능성 증명서가 있어야 합니다. B는 여러 선박의 잔액을 합산해 판정받습니다. C는 다음 해 것을 당겨 씁니다. 다음 해에 1.1배로 차감되고 2년 연속으로는 못 합니다. 아무 수단도 쓰지 않으면 벌금을 냅니다. EU는 여기까지입니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="14:50" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 데이터 관리 개요" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_regulation.html#18">
+<section class="slide p1-lg" data-time="14:49" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 데이터 관리 개요" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_regulation.html#18">
   <div class="kicker">UK ETS 해운</div>
   <h2>UK ETS 해운: 2026.7.1 시행</h2>
   <div class="row" style="align-items:stretch">
@@ -1887,7 +1887,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>이 일곱 가지를 사람이 규제별 엑셀로 매번 나누면 어긋납니다. 원천은 이벤트 단위로 한 벌만 남기십시오. 경계는 계산할 때 규칙으로 적용하는 편이 안전합니다. 여기까지를 세 문장으로 확인하겠습니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="15:19" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 데이터 관리 개요" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="p1_regulation.html#30">
+<section class="slide p1-lg" data-time="15:18" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 데이터 관리 개요" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="p1_regulation.html#30">
   <div class="kicker">O / X</div>
   <h2>규제 관련 오해 3가지</h2>
   <style>.ox td.ans>span{visibility:hidden}.ox.revealed td.ans>span{visibility:visible}.ox td.ans>span.x{font-weight:800;color:var(--red);font-size:24px}</style>
@@ -1941,7 +1941,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
 <div class="e" data-k="7" style="left:685.2px;top:669.5px;width:159.8px;height:166.4px;border:10.00px solid rgba(255,0,0,0.70);border-radius:50%;"></div>
 <aside class="notes"><p>IMO가 낸 감축 수단별 잠재량입니다. 선박 둘레의 동그라미마다 퍼센트가 적혀 있습니다. 운항 최적화는 1~10%입니다. 선체와 상부 구조 개선은 2~20%, 선체 오손 관리는 5~25%입니다. 아래쪽 가운데 수소와 합성연료는 80~100%입니다.</p><p>큰 폭의 감축은 연료에서 나옵니다. 그래서 연료를 하나씩 비교해 보겠습니다.</p></aside>
 </section>
-<section class="slide p1-lg ezs" data-time="15:21" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 데이터 관리 개요" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립" data-stage="0" data-src="p1_easy.html#4">
+<section class="slide p1-lg ezs" data-time="15:20" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 데이터 관리 개요" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립" data-stage="0" data-src="p1_easy.html#4">
   <div class="kicker">대체 연료 · 물성 비교</div>
   <h2>대체 연료별 물성과 선박 적용 조건</h2>
   <table class="ft">
@@ -2932,14 +2932,14 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     </g>
   </svg>
   <div class="g2" style="margin-top:14px">
-    <div class="case"><div class="ch">실데이터 · 바이오 사용 31척</div><div class="cb"><p>CO₂ 재계산 불일치 <b>2척</b> <span class="nw">(85 t · 615 t)</span><br>원인: 임의 C<sub>F</sub> 기재</p></div></div>
-    <div class="case"><div class="ch">실데이터 · 바이오 수급 74건 (2026)</div><div class="cb"><p>첨부 누락은 <b class="nw">전부 구형 양식</b>에서 발생<br>PoS 항목이 없던 보고 양식</p></div></div>
+    <div class="case"><div class="ch">오류 예 · 배출계수 임의 기재</div><div class="cb"><p>선박이 C<sub>F</sub>를 직접 적어 보냄<br>→ 육상 재계산 CO₂와 <b>불일치</b></p></div></div>
+    <div class="case"><div class="ch">오류 예 · PoS 첨부 누락</div><div class="cb"><p>PoS 항목이 없는 <b class="nw">구형 보고 양식</b><br>→ 첨부 없이 수급 보고</p></div></div>
   </div>
   <aside class="notes">
     <p>보정과 감면에는 공통 원칙이 있습니다. 위쪽 그림의 네 상자를 왼쪽부터 보십시오.</p>
     <p>배는 원천값만 보고합니다. 전력량, 리퍼 수, STS 작업 여부, PoS, 전력 인도증입니다. 감면 계산은 육상이 연간 단계에서 합니다. 그래서 매일 보는 일별 CII에는 보정이 들어 있지 않습니다. 일별 값이 D로 나와도 연간 등급과는 다를 수 있습니다.</p>
     <p>세 번째 상자에서 육상이 증빙을 판독하고, 마지막 상자의 검증기관은 증빙이 없으면 감면 전 값을 인정합니다. 그림 아래 굵은 줄대로, 배에서 원천값이 오지 않으면 육상은 감면을 계산할 수 없습니다.</p>
-    <p>아래 두 사례는 제가 검증하면서 본 실제 데이터입니다. 왼쪽, 바이오연료를 쓰는 31척 중 2척이 배출계수를 임의로 적어 보내서 재계산과 85톤, 615톤 차이가 났습니다. 오른쪽, 올해 바이오 수급 74건 가운데 첨부 누락은 전부 PoS 항목이 없던 옛 양식에서 나왔습니다. 양식에 항목이 없으면 배에서는 보내지 않습니다.</p>
+    <p>아래 두 상자는 자주 나오는 오류입니다. 왼쪽, 바이오연료를 쓰는 배가 배출계수를 임의로 적어 보내면 육상 재계산 값과 맞지 않습니다. 오른쪽, PoS 첨부 누락은 PoS 항목이 없는 옛 양식에서 나옵니다. 양식에 항목이 없으면 배에서는 보내지 않습니다.</p>
     <p>먼저 보정이 CII 산식의 어디에 들어가는지 보겠습니다.</p>
   </aside>
 </section>
@@ -3063,13 +3063,13 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
       <div class="ch"><span class="tag">사례 3</span>LNG선 N₂ 차감</div>
       <div class="cb">
         <p>화물 N₂ 차감 = 적·양하 시 <b>COQ 성분(Mol%)</b> + 밀도</p>
-        <p style="margin-top:8px">실데이터: CTMS(화물 계량 시스템)·COQ 미입력으로 <b class="red">공제 요약이 비어 있던 LNG선</b> 확인</p>
+        <p style="margin-top:8px">CTMS(화물 계량 시스템)·COQ 미입력 → <b class="red">공제량 계산 불가</b></p>
         <p class="small" style="margin-top:6px">조성 미입력은 검증에서 불일치로 지적</p>
       </div>
     </div>
   </div>
   <aside class="notes">
-    <p>감면 데이터에서 실제로 걸리는 사례 세 가지입니다. 첫째, 항차조정입니다. 지침이 인정하는 건 두 가지입니다. 선박 안전이나 인명 구조 때문에 정상 항해를 못 한 경우, 그리고 내빙등급선이 얼음 구역을 항해한 경우입니다. 올해 호르무즈 해협 때문에 우회하거나 대기한 배가 많았는데, 이게 자동으로 인정되는 건 아닙니다. 기국이나 선급에 먼저 확인하셔야 합니다. 인정받으려면 배가 조정 시작과 종료를 이벤트로 남기고 사유를 골라야 합니다. 구간 증빙이 없으면 공제할 수 없습니다. 제가 검증할 때는 공제량이 연간 배출의 10%를 넘으면 집중적으로 보는데, 이 10%는 규정값이 아니라 예시 기준입니다. 회사 기준은 내부 절차에 따로 정해 두십시오.</p>
+    <p>감면 데이터에서 실제로 걸리는 사례 세 가지입니다. 첫째, 항차조정입니다. 지침이 인정하는 건 두 가지입니다. 선박 안전이나 인명 구조 때문에 정상 항해를 못 한 경우, 그리고 내빙등급선이 얼음 구역을 항해한 경우입니다. 올해 호르무즈 해협 때문에 우회하거나 대기한 배가 많았는데, 이게 자동으로 인정되는 건 아닙니다. 기국이나 선급에 먼저 확인하셔야 합니다. 인정받으려면 배가 조정 시작과 종료를 이벤트로 남기고 사유를 골라야 합니다. 구간 증빙이 없으면 공제할 수 없습니다. 공제량이 연간 배출의 10%를 넘으면 집중적으로 확인하는 식으로 기준을 둘 수 있습니다. 이 10%는 규정값이 아니라 예시 기준입니다. 회사 기준은 내부 절차에 따로 정해 두십시오.</p>
     <p>둘째, 탱커의 STS입니다. 선박 간 화물 이송을 했으면 화물작업 보고에서 STS 체크를 해야 보정 대상이 됩니다. 체크를 안 하면 일반 화물작업으로 처리되어 보정 근거가 사라집니다.</p>
     <p>셋째, LNG선 질소 차감입니다. 화물 LNG 속 질소는 연료가 아니니 빼야 하는데, 그러려면 적·양하 때 COQ의 성분과 밀도를 입력해야 합니다. 실제로 이 입력이 빠져 공제 요약이 비어 있던 LNG선이 있었습니다.</p>
     <p>세 사례 모두 입력이 빠져도 경고가 없습니다. 체크박스 하나, 이벤트 하나가 빠지면 감면만 조용히 빠집니다.</p>
@@ -3313,7 +3313,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     </div>
   </div>
   <aside class="notes">
-    <p>앞 장의 흐름에서 실제로 틀어지는 여섯 군데를 왼쪽 표에 모았습니다. 제가 검증하면서 본 것들입니다. 오른쪽 열은 그 오류가 어느 단계에서 드러나는지입니다.</p>
+    <p>앞 장의 흐름에서 실제로 틀어지는 여섯 군데를 왼쪽 표에 모았습니다. 오른쪽 열은 그 오류가 어느 단계에서 드러나는지입니다.</p>
     <p>첫 줄이 가장 흔합니다. PoS가 아직 안 왔다고 배치 구분을 미루고, 그 사이 소비를 화석 유종으로 보고하는 경우입니다. 나중에 PoS가 와도 이미 쓴 연료는 화석으로 기록돼 있습니다. PoS가 없어도 벙커링 날부터 배치 번호를 붙여 보고하고 PoS 항목만 비워 두면 됩니다.</p>
     <p>둘째 줄은 PoS를 확인하지 않고 RED 적합으로 보고한 경우입니다. 다섯째 줄은 단위입니다. 0.0372와 37.2는 천 배 차이인데 단위가 다를 뿐 둘 다 맞는 숫자입니다. 그래서 1 미만이면 MJ/g로 판별합니다.</p>
     <p>오른쪽 카드는 육상에서 PoS를 판독해 대조할 때의 예시 기준입니다. 수량과 에너지는 2%, 발열량과 배출계수는 1%입니다. 계측값이 아니라 계산값이라 더 좁게 잡았습니다. 규정값이 아니니 회사가 값을 정해 내부 절차에 적어 두시고, 검증기관 기준은 별개로 보셔야 합니다.</p>
@@ -3451,7 +3451,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>반대로 배가 시각을 틀리게 보고하면 육상 계산은 그 시각을 그대로 따라갑니다. 다음 장부터 레그 분할과 EU 범위 판정을 차례로 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p2" data-time="15:52" data-sec="2교시|선박 보고와 육상 처리" data-grp="2.4 육상 처리 :: 계산 체인 → 레그 분할 → EU 범위 → 기항 판정" data-stage="3" data-src="p2_bonus.html#7">
+<section class="slide p2" data-time="15:51" data-sec="2교시|선박 보고와 육상 처리" data-grp="2.4 육상 처리 :: 계산 체인 → 레그 분할 → EU 범위 → 기항 판정" data-stage="3" data-src="p2_bonus.html#7">
   <div class="kicker">처리 · 레그 분할</div>
   <h2>레그 분할 기준: 출항 보고</h2>
   <p style="margin:-4px 0 14px">항차 = 화물 기항 간 구간(EU 기준) · 레그 = 출항 보고 간 구간(계산 단위)</p>
@@ -4081,7 +4081,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
   </svg>
   <aside class="notes">
     <p>육상 검증은 성격이 다른 두 단계로 나눕니다. 위쪽이 재계산, 아래쪽이 증빙 대조입니다.</p>
-    <p>[위 12칸] 재계산 검증은 저장된 계산값을 규정 수식으로 다시 계산해 보는 일입니다. CO₂, CII, ETS 비율, FuelEU 잔액을 다시 계산해서 저장값과 같은지 봅니다. 직전 잔량에서 소비를 빼고 수급을 더하면 지금 잔량이 되는지, 연료 질량수지도 여기에 들어갑니다. 제가 검증할 때는 이런 검사를 약 88개 두고 매일 돌립니다. 처음 시작하신다면 화면의 열두 가지면 충분합니다.</p>
+    <p>[위 12칸] 재계산 검증은 저장된 계산값을 규정 수식으로 다시 계산해 보는 일입니다. CO₂, CII, ETS 비율, FuelEU 잔액을 다시 계산해서 저장값과 같은지 봅니다. 직전 잔량에서 소비를 빼고 수급을 더하면 지금 잔량이 되는지, 연료 질량수지도 여기에 들어갑니다. 처음 시작하신다면 화면의 열두 가지면 충분합니다.</p>
     <p>[아래 9칸] 증빙 대조는 보고 한 건을 검증 한 건으로 잡습니다. 첨부된 BDN, 로그북, 화물 서류, PoS를 읽고 보고값과 비교합니다. 대상은 아홉 종류입니다. 왼쪽 다섯 개는 문서와 맞추는 것이고, 오른쪽 네 개는 데이터에 이상 신호가 있는지 보는 것입니다.</p>
     <p>맨 아래 판정 규칙을 보십시오. 대조는 그 보고에 첨부된 증빙 안에서만 합니다. 다른 날 보고의 서류를 끌어다 맞춰 주지 않습니다. 개정본이 있으면 최신본만 보고, 완료 처리는 사람이 합니다. 그래서 선박에는 증빙을 해당 보고에 정확히 붙이라고 안내해야 합니다.</p>
   </aside>
@@ -4148,7 +4148,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>D가 틀린 이유도 화면에 있습니다. BDN은 MARPOL에서 3년 보관하도록 정한 서류라 선택 사항이 아닙니다. B의 판정 불가를 언제 쓰는지는 다음 장에 나옵니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:08" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.1 검증 구조와 기준 :: 검증 목적 → 두 단계 → 처리 절차 → 판정 원칙 → 허용오차" data-stage="4" data-src="p3a_validation.html#6">
+<section class="slide p3-s" data-time="16:07" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.1 검증 구조와 기준 :: 검증 목적 → 두 단계 → 처리 절차 → 판정 원칙 → 허용오차" data-stage="4" data-src="p3a_validation.html#6">
   <div class="kicker">판정 원칙</div>
   <h2>검증 건 판정 원칙</h2>
   <div class="row" style="gap:30px;align-items:center">
@@ -4235,7 +4235,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
   </div>
   <aside class="notes">
     <p>"얼마나 달라도 일치로 봅니까?" 검증을 하면 가장 자주 받는 질문입니다. 왼쪽 표가 그 기준입니다.</p>
-    <p>먼저 제목 아래 한 줄을 보십시오. 이 값들은 제가 검증에 쓰는 예시 기준입니다. 규정값이 아니고 검증기관 기준과도 별개입니다. 회사가 직접 정해서 절차서에 적어 두셔야 합니다. 표에서는 색이 들어간 네 줄만 읽겠습니다.</p>
+    <p>먼저 제목 아래 한 줄을 보십시오. 이 값들은 예시 기준입니다. 규정값이 아니고 검증기관 기준과도 별개입니다. 회사가 직접 정해서 절차서에 적어 두셔야 합니다. 표에서는 색이 들어간 네 줄만 읽겠습니다.</p>
     <p>[수량 행] BDN 수량은 ±1% 또는 0.5톤 중 넉넉한 쪽입니다. 오른쪽 위 그림을 보십시오. BDN이 300톤이면 297톤에서 303톤까지가 일치 구간입니다. 301.2톤은 일치, 305톤은 불일치입니다.</p>
     <p>[점도 행] 점도는 조건이 하나 더 붙습니다. 1% 안이라도 20 cSt 경계를 넘으면 불일치입니다. 오른쪽 아래 그림에서 BDN은 19.9, 보고는 20.1입니다. 차이는 0.2뿐이지만 경계의 반대편에 있습니다. 이 예시에서 20은 유종을 나누는 분류 기준이라 불일치로 봅니다.</p>
     <p>[ROB 행] 로그북 잔량은 1톤 미만입니다. 1월 1일과 7월 1일, 그리고 잔량 보정 때 봅니다. [첨부 형식 행] 첨부는 PDF와 이미지만 인정합니다. 엑셀, 워드, 한글 파일은 누구나 고칠 수 있어서 다시 올려 달라고 합니다. 이 두 줄은 뒤에 사례로 다시 나옵니다.</p>
@@ -4480,7 +4480,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>LSMGO는 소비가 없어 이월과 잔량이 같습니다. 마지막으로 벙커링 당일의 로그북입니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:20" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3e_evidence.html#9">
+<section class="slide p3-s" data-time="16:19" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3e_evidence.html#9">
   <div class="kicker">증빙 대조 · 기관 로그북 실물 3</div>
   <h2>벙커링 당일의 로그북: 수급량은 비고란에 기재</h2>
   <div class="rd" style="grid-template-columns:1.05fr .95fr">
@@ -4624,7 +4624,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>한 가지 조심할 칸이 있습니다. 맨 아래 줄의 왼쪽 WEIGHT 칸에는 2,260.40이 적혀 있습니다. 직전 값이 그대로 남은 것입니다. 이 칸을 읽으면 무게가 1,753톤 모자라게 보고됩니다. 합계는 오른쪽 TTL WT 칸에서 읽습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:26" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#7">
+<section class="slide p3-s" data-time="16:25" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.2 증빙 서류 읽는 법 :: 대조 기준 → 연료 서류(BDN · 기관 로그북 · 벙커링 대조) → 화물 서류 → 오류 유형" data-stage="4" data-src="p3_xcheck.html#7">
   <div class="kicker">증빙 대조 · 자동차선 적하 요약서</div>
   <h2>적하 요약서 한 장 전체: 화물 합계, 재화중량 검산, 서명</h2>
   <div class="rd" style="grid-template-columns:auto 1fr">
@@ -4884,7 +4884,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
             <div><div class="lb">저장된 등급</div><div class="v ng">D · E</div></div>
             <div><div class="lb">재계산 등급</div><div class="v">A</div></div>
           </div>
-          <p>저장값과 재계산값이 다른 선박 <b>21척</b> → 원인 확인 대상 · 그중 LNG선 4척은 D·E ↔ A</p>
+          <p>저장값과 재계산값이 다른 선박 → <b>원인 확인 대상</b> · LNG선은 D·E ↔ A까지 차이</p>
           <p style="margin-top:8px">확인 항목: LNG선 전용 경계값 적용, BOG·N₂ 처리</p>
         </div>
       </div>
@@ -4893,7 +4893,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
   </div>
   <aside class="notes">
     <p>저장된 등급은 D나 E인데 다시 계산하니 A가 나온 사례입니다. 오른쪽 사례 상자부터 보십시오.</p>
-    <p>제가 검증하는 선대를 전부 재계산했더니 저장값과 재계산값이 다른 선박이 21척이었습니다. 그중 LNG선 4척이 D·E와 A로 갈렸습니다. 한두 칸 차이가 아닙니다. 어느 쪽이 맞는지는 배마다 원인을 확인해야 압니다.</p>
+    <p>선대를 전부 재계산해 보면 저장값과 재계산값이 다른 선박이 나옵니다. LNG선에서는 D·E와 A로 갈리기도 합니다. 한두 칸 차이가 아닙니다. 어느 쪽이 맞는지는 배마다 원인을 확인해야 압니다.</p>
     <p>이렇게 크게 벌어지는 이유는 왼쪽 눈금에 있습니다. 등급 경계값이 선종마다 다릅니다. 벌크선은 0.86, 0.94, 1.06, 1.18입니다. LNG선은 0.78, 0.92, 1.10, 1.37입니다. 이 눈금은 10만 DWT 미만이고, 10만 DWT 이상은 0.89, 0.98, 1.06, 1.13으로 또 다릅니다. 선종이나 크기 구간을 잘못 고르면 같은 비율인데 등급이 달라집니다.</p>
     <p>왼쪽 아래 목록처럼 LNG선은 설정이 세 가지 더 있습니다. 증발가스 소비를 LNG에 합쳤는지, 화물 속 질소를 뺐는지, 용량 하한 6만 5천을 적용했는지입니다. 그래서 연말에 SoC를 받기 전에 독립적으로 한 번 재계산해 보시길 권합니다.</p>
   </aside>
@@ -5247,7 +5247,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>BDN 방식으로 배출량을 산정하는 회사라면 B가 그대로 보고 숫자가 됩니다. 디벙커링, 재분류, 측심 보정은 드물게 생겨서 빠뜨리기 쉽습니다. 하나만 빠져도 연간 배출량이 틀어집니다. 증발가스처럼 잔량이 없는 연료는 이 비교에서 뺍니다. 다음은 벙커링 보고 한 건을 직접 판정해 보는 실습입니다.</p>
   </aside>
 </section>
-<section class="slide labslide" data-time="16:49" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 실습" data-stage="4" data-src="lab3a.html#1">
+<section class="slide labslide" data-time="16:48" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.3 오류 사례 :: 사례 → 연간 연료 대조 → 실습" data-stage="4" data-src="lab3a.html#1">
   <div class="kicker">3교시 · 증빙 대조 실습</div>
   <h2 style="margin-bottom:12px">벙커링 보고 검증 실습</h2>
   <div class="lab" id="V1">
@@ -5308,7 +5308,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>마지막 줄이 공통 항목입니다. 수정 가능한 파일, BDN 중복 첨부, 잔량 연속성입니다. 여기가 틀리면 위의 모든 규제 보고가 함께 틀립니다. 여기까지가 사내 점검 항목이고, 검증기관이 지적하는 항목은 다음 장에 있습니다.</p>
   </aside>
 </section>
-<section class="slide p3-s" data-time="16:55" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p3a_validation.html#21">
+<section class="slide p3-s" data-time="16:54" data-sec="3교시|검증 · 보고·정산 · 개선" data-grp="3.4 보고·정산과 활용 :: 규제별 점검 → 검증기관 지적 사항 → 마감 일정 → 부서별 활용 → 데이터 표준 · 월 마감 · 변경 관리 · 용선 정산" data-stage="5" data-src="p3a_validation.html#21">
   <div class="kicker">검증기관 관점</div>
   <h2>검증기관 주요 지적 사항</h2>
   <table class="t">
@@ -6156,7 +6156,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <div><b>4</b>&nbsp; EUA 가격 입력 → 결과 즉시 변경</div>
   </div>
   <aside class="notes">
-    <p>같은 비교를 웹 화면 예시로 3분만 보겠습니다. [앱 전환] 남은 기간 비용을 미리 계산해 보는 화면입니다. 올해 실제 운항이 위에 깔려 있습니다. 남은 기간을 어떻게 갈지 플랜을 고르면 CII 등급과 비용이 같이 나옵니다. 아래쪽은 남은 기간 연료를 바꾸면 얼마인지입니다. HFO부터 B30까지 비교합니다. [EUA 칸 바꿔 보기] 배출권 가격 하나를 바꾸면 순서가 바뀝니다. [복귀] 도구는 무엇이든 괜찮습니다. 운항과 재무가 남은 기간 속력과 연료를 정하려면 세 가지가 한 화면에 같이 있어야 합니다. 올해 실적 연료, 남은 기간 계획, 배출권 가격 가정입니다. 여기에 들어가는 값도 정오보고 한 줄입니다. 규제는 여기까지입니다. 다음은 비용을 줄이는 수단, 대체 연료입니다.</p>
+    <p>같은 비교를 웹 화면 예시로 3분만 보겠습니다. [앱 전환] 남은 기간 비용을 미리 계산해 보는 화면입니다. 올해 실제 운항이 위에 깔려 있습니다. 남은 기간을 어떻게 갈지 플랜을 고르면 CII 등급과 비용이 같이 나옵니다. 아래쪽은 남은 기간 연료를 바꾸면 얼마인지입니다. HFO부터 B30까지 비교합니다. [EUA 칸 바꿔 보기] 배출권 가격 하나를 바꾸면 순서가 바뀝니다. [복귀] 도구는 무엇이든 괜찮습니다. 운항과 재무가 남은 기간 속력과 연료를 정하려면 세 가지가 한 화면에 같이 있어야 합니다. 올해 실적 연료, 남은 기간 계획, 배출권 가격 가정입니다. 여기에 들어가는 값도 정오보고 한 줄입니다. 성능 개선은 여기까지입니다. 다음은 오늘 내용을 한 항차 기록에 적용해 보는 종합 실습입니다.</p>
     <p>[네트워크·로그인 문제 시: 앱을 열지 말고 이 캡처로 설명. 고객사·선박명이 보이지 않는 데모 계정만 사용]</p>
     <p>[캡처로 설명할 때] 오른쪽 숫자 세 개만 보시면 됩니다. 이 배는 감속 10%에 B30을 쓰는 플랜 A가 7만 9,210유로로 나왔습니다. 아래는 남은 기간 연료를 바꿨을 때의 비용입니다. 지금 쓰는 혼합이 24만 3,968유로이고, 연료별로 몇천 유로씩 차이가 납니다. 이 화면의 배출권 가격은 70유로입니다. 오늘 본문 예시는 80유로이니 숫자를 섞어 보시면 안 됩니다. 항구 이름은 가렸습니다. 성능 개선은 여기까지입니다. 다음 장에서 오늘 본 오류를 한 번에 찾아보겠습니다.</p>
   </aside>
