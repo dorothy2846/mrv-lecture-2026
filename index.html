@@ -3620,13 +3620,10 @@ section.slide.pp>h2.ppt{display:none}
   <h2>웹 시연: 레그별 EU 범위와 EU ETS 대상량 (실제 운항 데이터)</h2>
   <div class="lv">
     <div class="side">
-      <h3>1. 접속</h3>
-      <form id="lv_f" autocomplete="on"><input id="lv_u" type="email" placeholder="이메일" autocomplete="username"><input id="lv_p" type="password" placeholder="비밀번호" autocomplete="current-password">
-      <div class="btns two"><button class="pri" type="submit">실시간 조회</button><button type="button" id="lv_out">저장본 보기</button></div></form>
-      <div class="stt" id="lv_st"></div>
-      <h3>2. 선박</h3><div class="btns" id="lv_ships"></div>
-      <h3>3. 조회 조건</h3><div class="btns two" id="lv_yr"></div>
-      <div class="btns two" style="margin-top:6px" id="lv_bio"><button type="button" data-b="0">혼합유 그대로</button><button type="button" data-b="1">바이오분 분리</button></div>
+      <h3>선박 (대표 선종)</h3><div class="btns" id="lv_ships"></div>
+      <h3>조회 연도</h3><div class="btns two" id="lv_yr"></div>
+      <h3>바이오 혼합유 표시</h3><div class="btns two" id="lv_bio"><button type="button" data-b="0">혼합유 그대로</button><button type="button" data-b="1">바이오분 분리</button></div>
+      <div class="stt" id="lv_st" style="margin-top:14px"></div>
     </div>
     <div>
       <div class="sum"><div><small>레그 수</small><b id="lv_n">–</b></div><div><small>EU 역내 배출 (100%)</small><b id="lv_a">–</b></div><div><small>EU↔비EU 배출 (50%)</small><b id="lv_b">–</b></div><div class="k"><small>EU ETS 대상량 tCO₂e</small><b id="lv_t">–</b></div><div class="k"><small>비용 (EUA €80)</small><b id="lv_c">–</b></div></div>
@@ -3637,11 +3634,10 @@ section.slide.pp>h2.ppt{display:none}
   </div>
   <aside class="notes">
     <p>여기서는 실제 운항 데이터를 화면에서 직접 조회합니다. 선박명과 항구명은 가렸고, 항구는 국가 코드만 표시합니다.</p>
-    <p>왼쪽에서 접속한 뒤 선박을 고릅니다. 오른쪽 표의 한 줄이 레그 하나입니다. 출발 항구와 도착 항구의 국가, 구분, 항해 시간, 거리, 연료별 소모량, 온실가스 배출량이 나옵니다.</p>
+    <p>왼쪽에서 선박을 고릅니다. 연료가 다른 대표 선종 세 척입니다. 오른쪽 표의 한 줄이 레그 하나입니다. 출발 항구와 도착 항구의 국가, 구분, 항해 시간, 거리, 연료별 소모량, 온실가스 배출량이 나옵니다.</p>
     <p>구분 칸을 보십시오. EU 항구 간과 EU 항내는 100%, EU 출항과 EU 입항은 50%입니다. 1교시에 본 산입 비율이 레그마다 자동으로 붙어 있습니다.</p>
     <p>위 숫자는 이 표를 그대로 더한 값입니다. EU 역내 배출에 100%, EU와 비EU 사이 배출에 50%를 곱해 더하면 EU ETS 대상량이 됩니다.</p>
     <p>표에서 한 줄을 누르면 그 레그가 얼마로 산입되는지 아래에 계산이 나옵니다. 바이오분 분리를 누르면 혼합유가 화석분과 바이오분으로 나뉘어 표시됩니다.</p>
-    <p>접속이 안 되면 저장본 보기를 누릅니다. 같은 데이터를 미리 받아 둔 것입니다.</p>
   </aside>
 </section>
 <section class="slide labslide" data-time="16:02" data-sec="2교시|선박 입력과 육상 처리" data-grp="2.5 시연과 실습 :: 웹 화면 예시 → 입력 검사 → EU 범위 판정" data-stage="2" data-src="lab2.html#1">
@@ -6035,12 +6031,12 @@ section.slide.pp>h2.ppt{display:none}
 
 <!-- extras: demo_live.html -->
 <style>
-.lv{display:grid;grid-template-columns:330px 1fr;gap:22px;align-items:start}
+.lv{display:grid;grid-template-columns:310px 1fr;gap:22px;align-items:start}
 .lv .side{border:1px solid var(--line);border-radius:8px;padding:14px 16px;background:#fff}
 .lv .side h3{font-size:17px;color:#5B6776;font-weight:700;margin:12px 0 6px} .lv .side h3:first-child{margin-top:0}
 .lv input[type=email],.lv input[type=password],.lv input[type=text]{width:100%;font:inherit;font-size:17px;padding:7px 9px;border:1.5px solid var(--line);border-radius:6px;margin-bottom:6px;box-sizing:border-box}
 .lv button{font:inherit;font-size:17px;font-weight:700;padding:8px 10px;border-radius:6px;border:1.5px solid var(--navy);background:#fff;color:var(--navy);cursor:pointer}
-.lv button.on,.lv button.pri{background:var(--navy);color:#fff} .lv .btns{display:grid;gap:6px} .lv .btns.two{grid-template-columns:1fr 1fr} .lv .btns button small{display:block;font-weight:400;font-size:14px}
+.lv button.on,.lv button.pri{background:var(--navy);color:#fff} .lv .btns{display:grid;gap:6px} .lv .btns.two{grid-template-columns:1fr 1fr} .lv .btns button small{display:block;font-weight:400;font-size:14px} .lv #lv_ships button{padding:12px 10px;font-size:19px}
 .lv .stt{font-size:15.5px;line-height:1.45;margin-top:8px;padding:7px 9px;border-radius:6px;background:var(--sky);color:var(--navy)} .lv .stt.live{background:var(--green2);color:var(--green);font-weight:700} .lv .stt.err{background:var(--red2);color:var(--red)}
 .lv .sum{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:10px} .lv .sum div{border:1px solid var(--line);border-radius:8px;padding:8px 12px;background:#fff} .lv .sum small{display:block;font-size:14.5px;color:#5B6776} .lv .sum b{font-size:25px;color:var(--navy);font-variant-numeric:tabular-nums} .lv .sum div.k{background:var(--navy);border-color:var(--navy)} .lv .sum div.k small{color:#c9d6e4} .lv .sum div.k b{color:#fff}
 .lv .tw{height:372px;overflow:auto;border:1px solid var(--line);border-radius:8px;background:#fff}
@@ -6057,7 +6053,6 @@ section.slide.pp>h2.ppt{display:none}
   const KD={between:['EU 항구 간','f',1],within:['EU 항내','f',1],departed:['EU 출항','h',.5],arrived:['EU 입항','h',.5]};
   const num=s=>{const m=/-?[\d,]+(\.\d+)?/.exec(String(s==null?'':s));return m?+m[0].replace(/,/g,''):0};
   let tok=null,keys={},si=0,yr=SNAP[0].y,bio=0,rows=[],fc=[];
-  try{tok=sessionStorage.getItem('lv_tok')}catch(e){}
   const st=(t,c)=>{$('lv_st').textContent=t;$('lv_st').className='stt'+(c?' '+c:'')};
   const hex=async s=>[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))].map(b=>b.toString(16).padStart(2,'0')).join('');
   const get=async p=>{const r=await fetch(API+p,{headers:{Authorization:'Bearer '+tok}});if(!r.ok)throw new Error(r.status);return r.json()};
@@ -6075,7 +6070,7 @@ section.slide.pp>h2.ppt{display:none}
         d=fromApi(c.success.columns,l.success||[]);st('실시간 데이터 · '+new Date().toLocaleTimeString('ko-KR')+' 조회','live');}
       else st('이 계정에서 해당 선박을 찾지 못해 저장본을 표시합니다.','err');}
       catch(e){if(String(e.message)==='401'){tok=null;try{sessionStorage.removeItem('lv_tok')}catch(x){}}st('실시간 조회 실패('+e.message+') · 저장본을 표시합니다.','err');}}
-    if(!d){d=(yr===s.y)?(bio?s.b:s.a):{fc:(bio?s.b:s.a).fc,rows:[]};if(!tok)st('저장본 표시 중 (2026.11.22 조회분)'+(yr!==s.y?' · 이 연도는 저장본 없음':''));}
+    if(!d){d=(yr===s.y)?(bio?s.b:s.a):{fc:(bio?s.b:s.a).fc,rows:[]};st('실제 운항 데이터 · 2026.11.22 조회'+(yr!==s.y?' · 이 선박은 '+s.y+'년에 EU 기항':''));}
     rows=d.rows;fc=d.fc;draw();}
   function draw(){let a=0,b=0;
     let h='<tr><th>항차</th><th>레그</th><th>출발</th><th>도착</th><th>구분</th><th>항해 h</th><th>거리 NM</th><th>화물 t</th>'+fc.map(c=>'<th>'+c[1]+' t</th>').join('')+'<th>GHG tCO₂e</th><th>산입</th></tr>';
@@ -6093,12 +6088,6 @@ section.slide.pp>h2.ppt{display:none}
   $('lv_tab').addEventListener('click',e=>{const tr=e.target.closest('tr[data-i]');if(!tr)return;$('lv_tab').querySelectorAll('tr.sel').forEach(x=>x.classList.remove('sel'));tr.classList.add('sel');
     const r=rows[+tr.dataset.i],k=KD[kindOf(r[6])]||['-','h',0],g=num(r[11]);
     $('lv_pick').innerHTML='<b>항차 '+r[0]+' · 레그 '+r[1]+'</b> ('+(r[2]||'–')+' 항구 → '+(r[4]||'–')+' 항구, '+k[0]+'): 배출 '+N(g,2)+' tCO₂e × '+(k[2]*100)+'% = <b>'+N(g*k[2],2)+' EUA</b> → × €80 = <b>€'+N(g*k[2]*80)+'</b>';});
-  $('lv_f').addEventListener('submit',async e=>{e.preventDefault();e.stopPropagation();const u=$('lv_u').value.trim(),p=$('lv_p').value;if(!u||!p){st('이메일과 비밀번호를 입력하십시오.','err');return;}st('접속 중…');
-    try{const r=await fetch(API+'v1/api/auth',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({value:btoa(u+'^&*'+p)})});if(!r.ok)throw new Error(r.status);const j=await r.json();
-      tok=(j.data&&j.data.accessToken)||j.accessToken||(j.success&&j.success.accessToken);if(!tok)throw new Error('토큰 없음');try{sessionStorage.setItem('lv_tok',tok)}catch(x){}$('lv_p').value='';keys={};load();}
-    catch(err){st('접속 실패('+err.message+') · 저장본을 표시합니다.','err');}});
-  $('lv_out').addEventListener('click',()=>{tok=null;try{sessionStorage.removeItem('lv_tok')}catch(x){}load();});
-  ['lv_u','lv_p'].forEach(id=>$(id).addEventListener('keydown',e=>e.stopPropagation()));
   load();
 })();
 </script>
