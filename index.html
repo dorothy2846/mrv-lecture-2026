@@ -978,7 +978,30 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>가운데 화살표가 두 제도의 관계입니다. MRV에서 검증된 배출량이 ETS 계산의 입력입니다. 맨 아래 산식에서 실무자가 챙길 항은 지역계수입니다. 이 판정은 항차 기록에서 나옵니다. 먼저 보고 제도인 MRV부터 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="14:29" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_regulation.html#11">
+<section class="slide" data-time="14:29" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_why.html#10">
+  <div class="kicker">EU · 대상 가스</div>
+  <h2>CH₄(메탄)와 N₂O(아산화질소): CO₂ 외 온실가스 2종</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+    <div class="card" style="padding:18px 22px"><span class="k">CH₄</span><h3>메탄</h3><ul class="b" style="font-size:20px"><li>LNG의 주성분</li><li>LNG 엔진에서 타지 않고 빠져나가는 양 = <b>메탄 슬립</b></li><li>같은 무게의 CO₂보다 온실효과 <b>28배</b> (100년 기준)</li></ul></div>
+    <div class="card" style="padding:18px 22px"><span class="k">N₂O</span><h3>아산화질소</h3><ul class="b" style="font-size:20px"><li>연료가 고온에서 탈 때 소량 발생</li><li>모든 연료 · 모든 엔진에서 발생</li><li>같은 무게의 CO₂보다 온실효과 <b>265배</b> (100년 기준)</li></ul></div>
+  </div>
+  <table class="t compact" style="font-size:19px;margin-top:16px"><tr><th style="width:26%">규제</th><th style="width:30%">CH₄ · N₂O 포함</th><th style="width:14%">CH₄ 배수</th><th style="width:14%">N₂O 배수</th><th>근거</th></tr>
+  <tr><td><b>IMO DCS · CII</b></td><td>미포함 (CO₂만)</td><td>-</td><td>-</td><td>-</td></tr>
+  <tr><td><b>EU MRV</b></td><td>2024년분부터 보고</td><td>28</td><td>265</td><td>IPCC 5차 보고서</td></tr>
+  <tr><td><b>EU ETS</b></td><td>2026년분부터 배출권 대상</td><td>28</td><td>265</td><td>IPCC 5차 보고서</td></tr>
+  <tr><td><b>FuelEU Maritime</b></td><td>2025년 시행 때부터 포함</td><td>25</td><td>298</td><td>재생에너지지침(RED II) · IPCC 4차</td></tr></table>
+  <div class="callout" style="margin-top:14px;font-size:20px">CO₂ 환산량(CO₂eq) = CO₂ + CH₄ × 배수 + N₂O × 배수 · 예: 메탄 1 t = EU MRV 기준 CO₂ 28 t</div>
+  <p class="small" style="margin-top:8px"><b>약어</b> 배수 = 지구온난화지수(GWP, Global Warming Potential) · CO₂eq 이산화탄소 환산량</p>
+  <aside class="notes">
+    <p>앞 장에 CH₄와 N₂O가 나왔습니다. 무엇인지 짚고 갑니다. 둘 다 이산화탄소 말고 선박에서 나오는 온실가스입니다.</p>
+    <p>CH₄는 메탄입니다. LNG의 주성분입니다. LNG 엔진에서 타지 않고 그대로 빠져나가는 것을 메탄 슬립이라고 합니다. 같은 무게의 이산화탄소보다 온실효과가 28배입니다.</p>
+    <p>N₂O는 아산화질소입니다. 연료가 고온에서 탈 때 조금씩 생깁니다. 양은 적지만 온실효과가 265배입니다.</p>
+    <p>두 가스는 양에 이 배수를 곱해 이산화탄소로 환산한 뒤 더합니다. 이 합계가 CO₂ 환산량입니다. 메탄 1톤은 이산화탄소 28톤으로 계산됩니다.</p>
+    <p>아래 표를 보십시오. 규제마다 다릅니다. IMO의 DCS와 CII는 이산화탄소만 봅니다. EU MRV는 2024년분부터 보고하고, EU ETS는 2026년분부터 배출권 대상입니다. FuelEU는 시작부터 포함합니다. 배수도 다릅니다. EU MRV와 ETS는 28과 265, FuelEU는 25와 298입니다. 같은 메탄 슬립이라도 규제에 따라 환산량이 달라지므로 계수를 규제별로 따로 둡니다.</p>
+    <p>실무에서 영향이 큰 것은 LNG선입니다. 이산화탄소만 보면 LNG가 유리하지만, 메탄 슬립이 많은 엔진은 메탄을 넣는 순간 비용이 올라갑니다. 엔진 종류를 정확히 입력해야 하는 이유입니다. 이어서 EU MRV의 보고 방식입니다.</p>
+  </aside>
+</section>
+<section class="slide p1-lg" data-time="14:30" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_regulation.html#11">
   <div class="kicker">EU MRV · Reg. 2015/757 (2023/957 개정)</div>
   <h2>EU MRV: 항차 단위 모니터링 · 연간 보고</h2>
   <div class="row" style="align-items:stretch;gap:26px">
@@ -1017,7 +1040,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[오른쪽 그림] 부산에서 로테르담, 함부르크를 거쳐 뉴욕으로 가는 배입니다. 중간에 싱가포르에서 벙커링만 했습니다. 기항이 아니니 부산에서 로테르담까지가 한 항차로 이어집니다. 이 배의 기록은 아래 표의 네 가지로 나뉩니다. EU로 들어오는 항차, EU 안의 항차, EU에서 나가는 항차, EU 항내입니다. MRV에는 네 가지 모두 전량을 보고합니다. ETS는 이 보고값에 항차 종류별 비율을 적용합니다. 다음 장에서 봅니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg ezs" data-time="14:31" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_easy.html#2">
+<section class="slide p1-lg ezs" data-time="14:32" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_easy.html#2">
   <div class="kicker">EU ETS · 적용 범위</div>
   <h2>EU ETS 적용 범위: 항차 종류별 산입 비율</h2>
   <div class="lanehd"><span>항차 종류 <button type="button" class="rp" data-rp style="position:static;margin-left:8px">↻ 다시 재생</button></span><span class="z"><span>비EU 해역</span><span>EU/EEA 해역</span></span><span>배출량 중 산입 비율</span></div>
@@ -1049,7 +1072,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>항구 구분 하나가 틀리면 0%, 50%, 100%가 바뀝니다. 판정 방법은 2교시 기항 판정에서 다룹니다. 이 비율이 들어가는 ETS 산식이 다음 장입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="14:32" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_regulation.html#14">
+<section class="slide" data-time="14:33" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_regulation.html#14">
   <div class="kicker">EU ETS 해운</div>
   <h2>EU ETS 해운: 제출량 산식과 도입 비율</h2>
   <div class="formula" style="font-size:24px">제출량 = Σ (CO₂ + CH₄×28 + N₂O×265) × 지역계수(EU 내·항내 1.0 / EU↔비EU 0.5) × 도입 비율</div>
@@ -1080,7 +1103,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>다음 장으로 넘어가기 전에 하나 생각해 보십시오. 운항이 똑같은 선박 한 척의 ETS 비용이 2025년분에서 2026년분으로 가면 얼마나 늘까요. 화면 아래의 10%, 25%, 약 45%, 두 배 가운데 하나입니다. [5초]</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-loss="467900" data-time="14:33" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_regulation.html#15">
+<section class="slide p1-lg" data-loss="467900" data-time="14:35" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="1" data-src="p1_regulation.html#15">
   <div class="kicker">EU ETS · 계산 예</div>
   <h2>EU ETS 비용 계산 예: 케미컬 탱커 A</h2>
   <div class="row" style="align-items:flex-start;gap:26px">
@@ -1094,7 +1117,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
       <div class="calc">
       <div class="cs"><i>1</i><span class="lb">연료 → CO₂</span><span class="ex" id="et_e1">1,673 × 3.206 · 230 × 3.206</span><span class="rs" id="et_r1">= 5,364 t · 737 t</span><small>MGO 배출계수 3.206 · 바이오디젤은 지속가능성 증명 인정 시 CO₂ 0</small></div>
       <div class="cs"><i>2</i><span class="lb">지역계수 적용</span><span class="ex" id="et_e2">5,364 × 1.0 + 737 × 0.5</span><span class="rs" id="et_r2">= 5,732 t</span><small>EU 항구 간·항내 100% · EU↔비EU 50%</small></div>
-      <div class="cs"><i>3</i><span class="lb">CH₄·N₂O 가산</span><span class="ex" id="et_e3">(1,673 + 562 + (230 + 37) × 0.5) × 0.049</span><span class="rs" id="et_r3">= +116 tCO₂e</span><small>바이오분 포함 · 연료 1 t당 0.049 · 2026년분부터</small></div>
+      <div class="cs"><i>3</i><span class="lb">CH₄·N₂O 가산</span><span class="ex" id="et_e3">(1,673 + 562 + (230 + 37) × 0.5) × 0.049</span><span class="rs" id="et_r3">= +116 tCO₂e</span><small>연료 1 t당 CH₄ 0.00005 × 28 + N₂O 0.00018 × 265 = 0.049 · 2026년분부터</small></div>
       <div class="cs"><i>4</i><span class="lb">2026년분 제출량</span><span class="ex" id="et_e4">(5,732 + 116) × 100%</span><span class="rs" id="et_r4">= 5,849 EUA</span><small>도입 비율 2024년분 40% → 2025년분 70% → 2026년분 100%</small></div>
       <div class="cs"><i>5</i><span class="lb">2026년분 비용</span><span class="ex" id="et_e5">5,849 × €80</span><span class="rs" id="et_r5">= €467,920</span></div>
       <div class="cs"><i>6</i><span class="lb">2025년분 규칙이면</span><span class="ex" id="et_e6">5,732 × 70% × €80</span><span class="rs" id="et_r6">= €321,000</span><small>2025년분은 CO₂만 70% · 같은 운항 기준 비교</small></div>
@@ -1119,7 +1142,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>이제 데이터 하나가 틀렸다고 해 보겠습니다. EU 항구 간 항차가 EU와 비EU 사이로 잘못 분류되면 계수가 50%로 바뀝니다. 바이오디젤의 증명서가 빠지면 599톤에 배출계수가 붙습니다. 배출권 가격이 오르면 같은 오류의 비용도 커집니다. 위쪽 가정 칸의 숫자를 바꾸면 모든 단계가 다시 계산됩니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="14:35" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="0" data-src="p1_why.html#8">
+<section class="slide p1-lg" data-time="14:36" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|EU: MRV 보고 → ETS 배출권" data-stage="0" data-src="p1_why.html#8">
   <div class="kicker">EU ETS · 연료별 비교</div>
   <h2>EU ETS 제출량 비교: 연료가 다른 선박 3척</h2>
   <div class="shipsel" id="sc_sel"></div>
@@ -1150,7 +1173,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>셋째는 LNG 운반선 C입니다. LNG는 1톤당 CO₂가 2.750톤으로 낮습니다. 그런데 2026년분부터 타지 않고 빠져나간 메탄이 더해집니다. 그래서 이 배의 연료 1톤당 평균 배출량은 약 3.3톤으로 나옵니다. 연료 사용량이 많아 제출량도 세 척 가운데 가장 큽니다. ETS는 여기까지입니다. 다음은 같은 EU의 FuelEU입니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="14:36" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_why.html#4">
+<section class="slide p1-lg" data-time="14:37" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_why.html#4">
   <div class="kicker">FuelEU Maritime · 목적</div>
   <h2>FuelEU Maritime의 목적과 구조</h2>
   <div class="row" style="gap:20px;align-items:stretch">
@@ -1183,7 +1206,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오른쪽 표의 '연료 절감' 줄을 보십시오. ETS는 비용이 줄지만 FuelEU는 집약도가 그대로입니다. 맨 아래 줄에 숫자가 있습니다. 중유는 91.7, 저유황 중유는 91.4로 한도 89.34보다 높습니다. 화석연료만 쓰는 배는 속력을 줄여도 해마다 적자입니다. 적자를 없애려면 집약도가 낮은 연료를 섞어야 합니다. 계산 순서는 다음 장에 있습니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="14:37" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="0" data-src="p1_why.html#7">
+<section class="slide p1-lg" data-time="14:39" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="0" data-src="p1_why.html#7">
   <div class="kicker">FuelEU Maritime · 작동 순서</div>
   <h2>FuelEU Maritime 작동 순서: 연료의 연간 평균 집약도를 한도와 비교</h2>
   <div class="fm">
@@ -1206,7 +1229,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>마지막 줄이 ETS와 다른 점입니다. ETS는 배출한 만큼 냅니다. FuelEU는 평균이 한도 이하이면 비용이 0입니다. 속력을 줄이면 연료는 줄지만 평균은 그대로입니다. 평균은 연료 종류를 바꿔야 변합니다. 다음 장에서 숫자를 넣어 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide" data-noabbr data-time="14:38" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_visual.html#10">
+<section class="slide" data-noabbr data-time="14:40" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_visual.html#10">
   <div class="kicker">FuelEU Maritime · 계산 그림</div>
   <h2>FuelEU 계산 예: 연료 구성에 따른 흑자와 적자</h2>
   <div class="fxw">
@@ -1227,7 +1250,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>바이오 10%로 만든 흑자가 A의 적자보다 두 배 넘게 큽니다. B 한 척이 A 같은 배 두 척의 적자를 풀링으로 메울 수 있습니다. 바이오를 에너지 기준 약 3%만 섞어도 평균이 2025년 한도와 같아집니다. 이번에는 앞에서 본 케미컬 탱커 A의 숫자로 벌금을 계산해 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-loss="93300" data-time="14:40" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_regulation.html#17">
+<section class="slide p1-lg" data-loss="93300" data-time="14:41" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_regulation.html#17">
   <div class="kicker">FuelEU · 계산 예</div>
   <h2>FuelEU 준수 잔액과 벌금 계산 예: 케미컬 탱커 A가 MGO만 쓴 경우</h2>
   <div class="row" style="align-items:flex-start;gap:26px">
@@ -1266,7 +1289,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오른쪽 표가 적자를 해소하는 수단입니다. 연료 전환, 풀링, 뱅킹, 차입입니다. 풀링은 회사 간에도 됩니다. 그래서 흑자를 사고파는 시장이 이미 생겼습니다. 다만 풀링 상대가 되려면 내 배의 잔액이 검증된 숫자여야 합니다. 검증 안 된 흑자는 아무도 사 주지 않습니다. 풀링은 뒤의 실습에서 직접 해 보겠습니다. 이 배가 실제로 쓴 바이오디젤을 넣으면 결과가 어떻게 바뀌는지는 다음 장입니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="14:42" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_why.html#5">
+<section class="slide p1-lg" data-time="14:43" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_why.html#5">
   <div class="kicker">FuelEU Maritime · 바이오연료</div>
   <h2>FuelEU에서 바이오연료의 효과</h2>
   <div class="row" style="align-items:flex-start;gap:24px">
@@ -1305,7 +1328,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>위쪽 막대를 움직여 비율을 바꿔 보겠습니다. 집약도 차이가 약 76으로 커서 조금만 섞어도 평균이 내려갑니다. 두 가지는 기억해 두십시오. 14.9는 예시값이고 실제로는 이 배의 증명서에 적힌 값을 써야 합니다. 바이오연료 가격은 시기와 지역마다 다르니 실제 판단은 견적으로 하셔야 합니다. 여기까지를 문제 하나로 확인하겠습니다.</p>
   </aside>
 </section>
-<section class="slide quiz" data-time="14:43" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_regulation.html#24">
+<section class="slide quiz" data-time="14:45" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|FuelEU Maritime" data-stage="1" data-src="p1_regulation.html#24">
   <div class="kicker">퀴즈 · FuelEU 대응 수단</div>
   <h2>FuelEU 준수 잔액 부족 시 대응 수단</h2>
   <div class="ct"><div class="q">케미컬 탱커 A · MGO만 사용 · 집약도 <b>90.77</b> &gt; 2026년 한도 <b>89.34</b> (gCO₂e/MJ)<br>부족분을 해소하는 수단이 <b>아닌</b> 것은?</div>
@@ -1317,7 +1340,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[5초 · R키] 답은 D입니다. 배출권은 EU ETS의 정산 수단입니다. FuelEU 준수 잔액과는 서로 대체되지 않습니다. 배출권을 더 내도 잔액은 그대로입니다. A, B, C는 모두 FuelEU가 인정합니다. A는 연료를 섞어 평균을 낮춥니다. 지속가능성 증명서가 있어야 합니다. B는 여러 선박의 잔액을 합산해 판정받습니다. C는 다음 해 것을 당겨 씁니다. 다음 해에 1.1배로 차감되고 2년 연속으로는 못 합니다. 아무 수단도 쓰지 않으면 벌금을 냅니다. EU는 여기까지입니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="14:46" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_regulation.html#18">
+<section class="slide p1-lg" data-time="14:48" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_regulation.html#18">
   <div class="kicker">UK ETS 해운</div>
   <h2>UK ETS 해운: 2026.7.1 시행</h2>
   <div class="row" style="align-items:stretch">
@@ -1356,7 +1379,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>EU와의 비교, 제외와 감면, 2028년 변경은 다음 장부터 그림과 표로 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide" data-noabbr data-time="14:48" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_visual.html#1">
+<section class="slide" data-noabbr data-time="14:49" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_visual.html#1">
   <div class="kicker">UK ETS 해운 · 적용 범위</div>
   <h2>UK ETS 적용 범위: 항차 종류별 EU ETS와의 비교</h2>
   <div class="ukl">
@@ -1393,7 +1416,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>다음 장은 UK ETS에서 빠지거나 줄어드는 경우입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="14:49" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_uk.html#1">
+<section class="slide" data-time="14:50" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_uk.html#1">
   <style>
     table.uk{width:100%;border-collapse:collapse;font-size:18px;line-height:1.4;background:#fff;border:1.5px solid var(--navy)}
     table.uk th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-size:17px;white-space:nowrap}
@@ -1429,7 +1452,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[적격연료] 바이오연료와 RFNBO, 곧 비생물 기원 재생연료는 자동으로 0이 되지 않습니다. RED 인증서와 구매·인도 증빙을 갖춰 감축 청구를 따로 해야 합니다. RED는 EU 재생에너지 지침입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="14:50" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_uk.html#5">
+<section class="slide" data-time="14:51" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_uk.html#5">
   <div class="kicker">UK ETS 해운 · 보고 절차</div>
   <h2>UK MRV 폐지 이후의 보고: UK ETS 안에서 하는 일 4가지</h2>
   <div class="ukm">
@@ -1468,7 +1491,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>2028년에 영국이 국제항해 50%를 넣으면 아일랜드 항로도 합쳐서 100%가 됩니다. 그때 이 감면은 없어집니다. 2028년 내용은 설명서 기준이고 법문은 아직 나오지 않았습니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="14:51" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_uk.html#2">
+<section class="slide" data-time="14:53" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_uk.html#2">
   <div class="kicker">EU와 영국 비교 · 범위</div>
   <h2>EU MRV·ETS와 UK ETS 비교: 대상과 범위</h2>
   <table class="uk">
@@ -1490,7 +1513,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[단계적 도입] EU는 40, 70, 100%로 올렸습니다. 영국은 첫해부터 100%입니다. 나머지 줄은 자료로 보십시오.</p>
   </aside>
 </section>
-<section class="slide" data-time="14:52" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_uk.html#3">
+<section class="slide" data-time="14:54" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_uk.html#3">
   <div class="kicker">EU와 영국 비교 · 의무와 기한</div>
   <h2>EU MRV·ETS와 UK ETS 비교: 의무와 기한</h2>
   <table class="uk">
@@ -1513,7 +1536,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>보고서는 둘 다 3월 31일입니다. 제출 시스템만 EU는 THETIS, 영국은 METS로 다릅니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="14:53" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_uk.html#4">
+<section class="slide" data-time="14:54" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_uk.html#4">
   <div class="kicker">영국–EU ETS 연계 · 2026.11.20 타결</div>
   <h2>2028년 UK ETS 변경 사항 (연계 설명서 기준)</h2>
   <div class="row" style="gap:32px;align-items:stretch">
@@ -1544,7 +1567,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[오른쪽 아래] 영국에 기항하는 배가 지금 할 일은 세 가지입니다. 첫 활동일부터 42일 안에 모니터링 계획 신청, 2027년 3월 31일 첫 연간배출보고서, 항구 마스터의 북아일랜드와 그레이트브리튼 구분입니다. 다음 장은 영국의 연료 규제 협의안입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="14:54" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_uk.html#6">
+<section class="slide" data-time="14:55" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|UK ETS" data-stage="1" data-src="p1_uk.html#6">
   <div class="kicker">영국 · 연료 규제 협의안</div>
   <h2>영국 선박 연료 규제: 2026.11.16 협의 개시</h2>
   <table class="t" style="font-size:22px">
@@ -1564,7 +1587,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>유럽 밖에서는 중국이 따로 보고를 받습니다.</p>
   </aside>
 </section>
-<section class="slide" data-noabbr data-time="14:54" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|중국 MSA" data-stage="1" data-src="p1_visual.html#6">
+<section class="slide" data-noabbr data-time="14:56" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|중국 MSA" data-stage="1" data-src="p1_visual.html#6">
   <div class="kicker">중국 · 해사국(MSA) 보고 제도</div>
   <h2>중국 MSA 선박 에너지소비 데이터 보고</h2>
   <div class="cnw" style="zoom:1.32">
@@ -1599,7 +1622,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>올해 4월에 해사국이 방향을 발표했습니다. 2030년까지 해운 탄소배출 MRV 제도를 갖추고, 국제항해선의 탄소집약도를 2025년보다 15% 이상 낮추겠다는 내용입니다. 외국적 선박에 무엇이 추가되는지는 이 문서에 없습니다. 중국에 자주 기항하는 회사는 해사국 후속 고시를 보셔야 합니다. 지역 규제는 여기까지이고, 다시 IMO입니다.</p>
   </aside>
 </section>
-<section class="slide" data-noabbr data-time="14:56" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|IMO NZF" data-stage="1" data-src="p1_visual.html#8">
+<section class="slide" data-noabbr data-time="14:58" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|IMO NZF" data-stage="1" data-src="p1_visual.html#8">
   <div class="kicker">IMO 중기 조치 · NZF의 위치</div>
   <h2>IMO 중기 조치의 의미와 넷제로 프레임워크(NZF)</h2>
   <div class="mt3">
@@ -1636,7 +1659,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>오른쪽 그림에 선이 두 개 있습니다. 위가 기본 목표, 아래가 직접 준수 목표입니다. A 선박은 기본 목표도 넘었습니다. 그 초과분에 톤당 380달러를 내고, 두 선 사이 구간에는 100달러를 냅니다. B 선박은 두 선 사이에 있어서 부족분에 톤당 100달러입니다. C 선박은 아래 선보다 낮습니다. 잉여 단위를 받아 팔거나 2년까지 이월합니다. 숫자는 작년 4월 승인안의 값이고, 채택 전이라 바뀔 수 있습니다. 그 채택이 왜 미뤄졌는지가 다음 장입니다.</p>
   </aside>
 </section>
-<section class="slide" data-noabbr data-time="14:58" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|IMO NZF" data-stage="1" data-src="p1_visual.html#9">
+<section class="slide" data-noabbr data-time="14:59" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|IMO NZF" data-stage="1" data-src="p1_visual.html#9">
   <div class="kicker">IMO NZF · 채택 연기</div>
   <h2>NZF 채택 연기: 경과와 사유</h2>
   <div class="dl5">
@@ -1661,7 +1684,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>실무에서는 결과를 기다릴 필요가 없습니다. NZF가 요구하는 데이터는 IMO DCS 연료 데이터에 연료 전주기 계수와 연료 인증을 더한 것입니다. FuelEU에서 이미 관리하는 것과 같습니다. 규제를 하나씩 봤으니, 이제 연료 1톤을 모든 규제에 한꺼번에 넣어 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide" data-loss="158" data-time="15:00" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="p0_opening.html#5">
+<section class="slide" data-loss="158" data-time="15:01" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="p0_opening.html#5">
   <div class="kicker">사례</div>
   <h2>연료 1톤의 규제별 산정값</h2>
   <div class="row" style="align-items:flex-start;gap:26px">
@@ -1693,7 +1716,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>EUA 80유로는 설명용 가정이고, 91.7은 FuelEU 부속서 II 기본값으로 계산한 값입니다. 같은 계산을 다음 장 계산기에서 숫자를 바꿔 가며 해 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide labslide" data-time="15:01" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="lab1.html#1">
+<section class="slide labslide" data-time="15:03" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="lab1.html#1">
   <div class="kicker">1교시 · 규제 비용 계산기</div>
   <h2 style="margin-bottom:18px">규제별 비용 계산기</h2>
   <div class="lab row" id="L1" style="gap:26px">
@@ -1740,7 +1763,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[계수 근거, 질문이 나오면: FuelEU WtW는 GWP 25/298 기준으로 HFO 91.7, VLSFO 91.4, MGO 90.8, LNG 76.1 또는 89.2. EU ETS GWP 28/265. 한도 89.3368, 2030년 85.6904. 벌금 VLSFO 환산 톤당 2,400유로. 인증 바이오의 IMO 배출계수는 WtW 집약도 × LCV, MEPC.1/Circ.905]</p>
   </aside>
 </section>
-<section class="slide labslide" data-time="15:07" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="lab1.html#3">
+<section class="slide labslide" data-time="15:08" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="lab1.html#3">
   <div class="kicker">1교시 · FuelEU 풀링 시뮬레이터</div>
   <h2 style="margin-bottom:14px">FuelEU 풀링·뱅킹·차입 시뮬레이터</h2>
   <div class="lab" id="L3">
@@ -1764,7 +1787,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>풀링 계산은 모두 선박별 에너지와 온실가스 집약도에서 나옵니다. 그 둘은 연료별 소비량과 PoS 같은 증빙에서 나옵니다. 여기까지 규제를 하나씩 계산했습니다. 다음 장은 규제끼리 어디가 다른지를 한 표에 모은 것입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="15:11" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="p1_core.html#1">
+<section class="slide" data-time="15:13" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="p1_core.html#1">
   <style>
     .imu-key{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1.5px solid var(--navy);border-radius:8px;background:#EEF6F8;margin-bottom:14px;overflow:hidden}
     .imu-key div{padding:10px 16px;font-size:19px;line-height:1.4;color:var(--ink);border-left:1px solid var(--line)}
@@ -1811,7 +1834,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>표 아래 줄은 책임주체입니다. EU는 선주가 원칙이고 위임 문서가 있으면 ISM 회사입니다. 영국은 등록선주가 원칙입니다. 다음 장은 이 가운데 실무에서 어긋나기 쉬운 경계 일곱 가지입니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="15:13" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="p1_regulation.html#22">
+<section class="slide p1-lg" data-time="15:15" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="p1_regulation.html#22">
   <div class="kicker">규제 간 경계 비교</div>
   <h2>규제 간 경계 차이 7가지</h2>
   <table class="t compact" style="font-size:18px">
@@ -1833,7 +1856,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>이 일곱 가지를 사람이 규제별 엑셀로 매번 나누면 어긋납니다. 원천은 이벤트 단위로 한 벌만 남기십시오. 경계는 계산할 때 규칙으로 적용하는 편이 안전합니다. 여기까지를 세 문장으로 확인하겠습니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="15:15" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="p1_regulation.html#30">
+<section class="slide p1-lg" data-time="15:16" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="1" data-src="p1_regulation.html#30">
   <div class="kicker">O / X</div>
   <h2>규제 관련 오해 3가지</h2>
   <style>.ox td.ans>span{visibility:hidden}.ox.revealed td.ans>span{visibility:visible}.ox td.ans>span.x{font-weight:800;color:var(--red);font-size:24px}</style>
@@ -1848,7 +1871,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>세 개 다 X입니다. 첫째, 일별 CII에는 보정계수가 없고 하루치 거리만 분모로 씁니다. 모아도 연간 등급이 되지 않습니다. 둘째, 기항은 화물이나 여객 작업을 한 정박만 인정됩니다. 벙커링이나 선원교대만 한 항구에서는 항차가 끊기지 않습니다. 셋째, ETS는 올해 배출분부터 메탄과 아산화질소까지 제출합니다. 다음 장에서 지금까지 본 규제를 한 표로 모아 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide pp" data-pp="50" style="background:#F2F2F2" data-time="15:16" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="0" data-src="p1_seminar.html#50">
+<section class="slide pp" data-pp="50" style="background:#F2F2F2" data-time="15:17" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.2 해운 환경 규제|종합: 연료 1톤 계산" data-stage="0" data-src="p1_seminar.html#50">
 <h2 class="ppt">규제와 감축 기술의 불확실성</h2>
 <div class="e" data-k="1" style="left:147.5px;top:109.4px;width:1305.0px;height:173.7px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:66.7px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">환경 규제와 감축 기술의 불확실하고 복잡함</span><span style="font-size:66.7px;color:#3F3F3F;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">.</span></div><div style="text-align:center;line-height:1.20;"><span style="font-size:66.7px;color:#F47264;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">해운선사의 대응 전략 수립이 어려움</span><span style="font-size:66.7px;color:#F47264;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;"></span><span style="font-size:66.7px;color:#F47264;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;"></span><span style="font-size:66.7px;color:#F47264;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;"></span><span style="font-size:66.7px;color:#F47264;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;"></span></div></div></div>
 <div class="e" data-k="2" style="left:55.8px;top:315.6px;width:698.2px;height:465.9px;"><table class="cx50"><tr><th colspan="2">규제</th><th>대상 선박</th><th>배출 영역</th><th>배출 대상</th><th>규제 영향</th></tr><tr><td class="g" rowspan="5">IMO</td><td>EEDI</td><td>≥ 400 GT</td><td>선박</td><td>CO₂</td><td>증서</td></tr><tr><td>EEXI</td><td>≥ 400 GT</td><td>선박</td><td>CO₂</td><td>증서</td></tr><tr><td>DCS</td><td>≥ 5,000 GT</td><td>선박</td><td>CO₂</td><td>증서</td></tr><tr><td>CII</td><td>≥ 5,000 GT</td><td>선박</td><td>CO₂</td><td>등급</td></tr><tr><td>NZF (미채택)</td><td>≥ 5,000 GT</td><td>전주기</td><td>CO₂·CH₄·N₂O</td><td>금융</td></tr><tr><td class="g" rowspan="3">EU</td><td>MRV</td><td>≥ 5,000 GT</td><td>선박</td><td>CO₂·CH₄·N₂O</td><td>증서</td></tr><tr><td>ETS</td><td>≥ 5,000 GT</td><td>선박</td><td>CO₂·CH₄·N₂O</td><td>금융</td></tr><tr><td>FuelEU Maritime</td><td>&gt; 5,000 GT</td><td>전주기</td><td>CO₂·CH₄·N₂O</td><td>금융</td></tr><tr><td class="g" rowspan="1">영국</td><td>UK ETS</td><td>≥ 5,000 GT</td><td>선박</td><td>CO₂·CH₄·N₂O</td><td>금융</td></tr></table></div>
@@ -1859,7 +1882,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
 <img class="e" data-k="8" src="img/seminar/5125a8e32ba2_660.jpg" style="left:1213.8px;top:315.6px;width:330.5px;height:216.1px;" alt="">
 <aside class="notes"><p>여기까지 본 규제를 한 표에 모으면 왼쪽과 같습니다. 대상 선박, 배출을 세는 영역, 대상 가스, 결과가 규제마다 다릅니다. NZF는 아직 채택되지 않았습니다.</p><p>오른쪽은 대응 수단입니다. 감축 장치도 여러 가지이고 연료도 여러 가지입니다. 같은 메탄올도 생산 방식에 따라 배출량이 달라집니다. 규제도 많고 선택지도 많아서 선사가 전략을 세우기 어렵습니다. 그래서 다음 절에서 감축 수단과 연료를 하나씩 봅니다.</p></aside>
 </section>
-<section class="slide pp" data-pp="53" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="15:16" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_seminar.html#53">
+<section class="slide pp" data-pp="53" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="15:18" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_seminar.html#53">
 <h2 class="ppt">탈탄소 3가지 옵션</h2>
 <div class="e" data-k="1" style="left:492.5px;top:67.0px;width:614.9px;height:101.0px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:73.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">탈탄소</span><span style="font-size:73.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;"> </span><span style="font-size:73.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">3</span><span style="font-size:73.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">가지 옵션</span></div></div></div>
 <div class="e" data-k="2" style="left:104.8px;top:257.0px;width:310.3px;height:92.9px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">Reduce</span></div></div></div>
@@ -1876,7 +1899,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
 <div class="e" data-k="13" style="left:1133.6px;top:590.8px;width:358.3px;height:249.3px;overflow:hidden"><img src="img/seminar/47967a8b2cb5_716.jpg" style="position:absolute;left:-0.0px;top:-0.0px;width:358.3px;height:378.7px" alt=""></div>
 <aside class="notes"><p>규제 비용을 줄이려면 배출을 줄여야 합니다. 방법은 화면의 세 가지입니다. 줄이기, 안 내기, 없애기입니다. 줄이기는 에너지 절감 장치, 효율 운항, 저탄소 연료입니다. 안 내기는 무탄소 연료입니다. 없애기는 탄소 포집과 탄소 제거 프로젝트입니다. 어느 수단이 얼마나 줄이는지가 다음 장입니다.</p></aside>
 </section>
-<section class="slide pp" data-pp="54" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="15:16" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_seminar.html#54">
+<section class="slide pp" data-pp="54" style="background:linear-gradient(180deg,#CEEAE8 0%,#E4F3F2 50%,#F7FBFB 100%)" data-time="15:18" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_seminar.html#54">
 <h2 class="ppt">감축 수단별 잠재량 (IMO)</h2>
 <img class="e" data-k="1" src="img/seminar/44f7c821fe19_1629.jpg" style="left:231.7px;top:153.3px;width:1136.7px;height:710.3px;" alt="">
 <div class="e" data-k="2" style="left:1433.3px;top:863.6px;width:166.7px;height:36.4px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;">자료 출처 </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;">:</span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;"> </span><span style="font-size:20.0px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:300;">IMO</span></div></div></div>
@@ -1887,7 +1910,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
 <div class="e" data-k="7" style="left:685.2px;top:669.5px;width:159.8px;height:166.4px;border:10.00px solid rgba(255,0,0,0.70);border-radius:50%;"></div>
 <aside class="notes"><p>IMO가 낸 감축 수단별 잠재량입니다. 선박 둘레의 동그라미마다 퍼센트가 적혀 있습니다. 운항 최적화는 1~10%입니다. 선체와 상부 구조 개선은 2~20%, 선체 오손 관리는 5~25%입니다. 아래쪽 가운데 수소와 합성연료는 80~100%입니다.</p><p>큰 폭의 감축은 연료에서 나옵니다. 그래서 연료를 하나씩 비교해 보겠습니다.</p></aside>
 </section>
-<section class="slide p1-lg ezs" data-time="15:17" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_easy.html#4">
+<section class="slide p1-lg ezs" data-time="15:18" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_easy.html#4">
   <div class="kicker">대체 연료 · 물성 비교</div>
   <h2>대체 연료별 물성과 선박 적용 조건</h2>
   <table class="ft">
@@ -1909,7 +1932,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>연료를 만드는 단계의 배출까지 넣으면 순서가 달라집니다. 다음 장이 그 범위입니다.</p>
   </aside>
 </section>
-<section class="slide pp" data-pp="58" style="background:#F2F2F2" data-time="15:18" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_seminar.html#58">
+<section class="slide pp" data-pp="58" style="background:#F2F2F2" data-time="15:20" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_seminar.html#58">
 <h2 class="ppt">전주기 관점: Well-to-Wake</h2>
 <div class="e" data-k="1" style="left:276.7px;top:42.7px;width:1046.6px;height:76.7px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:53.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">전주기</span><span style="font-size:53.3px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;"> 관점에서 연료 탄소 배출량 산정 필요</span></div></div></div>
 <img class="e" data-k="2" src="img/seminar/a20827545c3b_1102.jpg" style="left:89.0px;top:150.7px;width:1382.7px;height:598.5px;" alt="">
@@ -1919,7 +1942,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
 <div class="e" data-k="6" style="left:104.3px;top:607.8px;width:102.1px;height:109.1px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:40.0px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">전통</span></div><div style="text-align:center;line-height:1.20;"><span style="font-size:40.0px;color:#FFFFFF;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:500;">방식</span></div></div></div>
 <aside class="notes"><p>연료의 배출을 어디서부터 세느냐는 그림입니다. 위쪽 괄호를 보십시오. 생산에서 항구 저장까지가 Well-to-Tank입니다. 선박에서 쓰는 마지막 칸이 Tank-to-Wake입니다. 둘을 합친 것이 Well-to-Wake, 전주기입니다.</p><p>세 줄은 연료를 만드는 방식입니다. 위에서부터 재생에너지, 탄소 포집, 전통 방식입니다. 선박에서 쓰는 마지막 칸은 같아도 앞 단계가 다릅니다. FuelEU는 이 전주기로 계산합니다. LNG를 예로 선박 쪽 숫자부터 보겠습니다.</p></aside>
 </section>
-<section class="slide p1-lg ezs" data-time="15:19" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_easy.html#5">
+<section class="slide p1-lg ezs" data-time="15:20" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_easy.html#5">
   <div class="kicker">대체 연료 · LNG</div>
   <h2>LNG: 엔진 종류별 메탄 슬립과 온실가스 배출</h2>
   <div class="engsel" id="lng_sel"></div>
@@ -1947,7 +1970,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>같은 LNG선이라도 엔진 종류에 따라 ETS 비용과 FuelEU 값이 달라집니다. 엔진 종류를 잘못 입력하면 이 차이가 그대로 오류가 됩니다. 이번에는 생산 단계까지 넣은 전주기 값입니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg ezs" data-time="15:20" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_easy.html#6">
+<section class="slide p1-lg ezs" data-time="15:22" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p1_easy.html#6">
   <div class="kicker">대체 연료 · 전주기 비교</div>
   <h2>연료별 전주기 온실가스 집약도와 FuelEU 한도</h2>
   <div class="yrs" id="lim_y"></div>
@@ -1962,7 +1985,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>맨 아래 인증 바이오디젤은 2050년 한도보다도 낮습니다. 그래서 화석 연료에 조금만 섞어도 평균이 한도 아래로 내려갑니다. 화석 LNG는 2030년대까지의 수단입니다. 그 뒤는 바이오와 합성 연료의 비율이 결정합니다. 다음 장에서 연료별로 규제가 어떻게 계산하는지 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide dg" data-time="15:21" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p_diag.html#10">
+<section class="slide dg" data-time="15:23" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p_diag.html#10">
   <div class="kicker">대체 연료 · 규제별 계산</div>
   <h2>메탄올 · 암모니아 · 수소 · 바이오 · e-연료: 규제가 계산하는 방식</h2>
   <table class="opt lf">
@@ -1989,7 +2012,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>아래 세 가지만 기억하시면 됩니다. IMO와 EU ETS는 연소 기준, FuelEU는 전주기 기준입니다. 같은 메탄올이라도 증명서가 있느냐에 따라 값이 갈립니다. 그리고 이 연료를 쓰는 배는 대부분 이중연료선이라, 주연료와 파일럿 연료를 따로 보고해야 합니다. 새 연료를 배에 쓰는 일 자체도 쉽지 않습니다. 다음 장에서 암모니아를 예로 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide dg" data-time="15:23" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p_diag.html#12">
+<section class="slide dg" data-time="15:25" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.3 대체 연료 :: 감축 수단 → 연료별 배출계수와 물성 → 전주기 관점 → LNG 메탄 슬립 → FuelEU 한도와 연료 → 적용 과제" data-stage="0" data-src="p_diag.html#12">
   <div class="kicker">대체 연료 · 적용 과제</div>
   <h2>암모니아 연료의 과제 6가지</h2>
   <table class="opt lf">
@@ -2015,7 +2038,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>보고 쪽에서는 파일럿 연료 분리, 아산화질소 배출값, 생산 방식 증명서가 새로 생깁니다. 대체 연료는 여기까지이고, 이제 선사가 할 수 있는 대응 방안입니다.</p>
   </aside>
 </section>
-<section class="slide dg" data-time="15:24" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|하드웨어 :: 하드웨어 → 소프트웨어 → 데이터 관리 (2·3교시 개요)" data-stage="0" data-src="p_diag.html#13">
+<section class="slide dg" data-time="15:26" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|하드웨어 :: 하드웨어 → 소프트웨어 → 데이터 관리 (2·3교시 개요)" data-stage="0" data-src="p_diag.html#13">
   <div class="kicker">대응 방안 · 하드웨어</div>
   <h2>하드웨어 기반 탄소 저감 기술 5가지</h2>
   <table class="opt lf">
@@ -2031,13 +2054,13 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
   <div class="callout" style="margin-top:14px">효과는 설치 전후의 검증된 운항 데이터로 비교 · 선체 청소는 3교시 성능 분석에서 계산</div>
   <aside class="notes"><p>대응 방안은 하드웨어부터 봅니다. 표에 대표 기술 다섯 가지가 있습니다. 오른쪽 칸은 효과를 확인하는 데이터입니다. 로터 세일은 수직으로 세운 대형 로터로 추진력을 보탭니다. 공기윤활은 선저에 공기층을 만들어 물과의 마찰을 줄입니다. PBCF는 프로펠러 뒤 소용돌이를 줄이는 장치입니다. 선체 청소는 부착생물 때문에 떨어진 효율을 되돌립니다. 폐열 회수는 배기의 열을 전력으로 바꿉니다.</p><p>이 가운데 선체 청소는 3교시 성능 분석에서 효과를 숫자로 봅니다.</p></aside>
 </section>
-<section class="slide pp" data-pp="73" style="background:#F2F2F2" data-time="15:25" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|소프트웨어" data-stage="0" data-src="p1_seminar.html#73">
+<section class="slide pp" data-pp="73" style="background:#F2F2F2" data-time="15:27" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|소프트웨어" data-stage="0" data-src="p1_seminar.html#73">
 <h2 class="ppt">환경 규제 대응: 계측 · 보고 · 업무</h2>
 <div class="e" data-k="1" style="left:91.1px;top:61.7px;width:1417.7px;height:92.9px;"><div class="tx" style="display:flex;flex-direction:column;justify-content:center;padding:6.0px 12.0px 6.0px 12.0px;white-space:pre;overflow:visible;align-items:center;"><div style="text-align:center;line-height:1.20;"><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">환경 규제 대응 </span><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">(</span><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">투명한 데이터 계측</span><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">, </span><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">보고</span><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">, </span><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">업무</span><span style="font-size:66.7px;color:#5C5C5C;font-family:'GmarketSans',Pretendard,'Malgun Gothic',sans-serif;font-weight:700;">)</span></div></div></div>
 <img class="e" data-k="2" src="img/seminar/a264def94443_1890.png" style="left:43.9px;top:168.8px;width:1512.1px;height:720.1px;" alt="">
 <aside class="notes"><p>하드웨어 다음은 소프트웨어, 곧 일하는 방식입니다. 화면 위에 네 단어가 있습니다. Measure, Report, Reduce, Remove입니다. 왼쪽 두 칸이 규제 대응 업무입니다. 데이터를 모으고, 전달하고, 검증해서 규제별로 보고합니다. 오른쪽 두 칸은 줄이는 일입니다. 최적 운항, 절감 장치, 대체 연료, 배출권 거래입니다.</p><p>2교시와 3교시는 왼쪽을 자세히 봅니다. 오른쪽은 3교시 끝에 다룹니다.</p></aside>
 </section>
-<section class="slide dg" data-time="15:26" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|소프트웨어" data-stage="0" data-src="p_diag.html#14">
+<section class="slide dg" data-time="15:27" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|소프트웨어" data-stage="0" data-src="p_diag.html#14">
   <div class="kicker">대응 방안 · 보고 데이터</div>
   <h2>규제 보고에 필요한 데이터와 수집 주기</h2>
   <table class="opt lf">
@@ -2057,7 +2080,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
   </table>
   <aside class="notes"><p>왼쪽 업무에 필요한 데이터입니다. 위 표를 보십시오. EU MRV는 운항시간, 거리, 연료소모량, 화물량, 묘박시간을 요구합니다. IMO DCS는 운항시간, 거리, 연료소모량입니다. 증빙은 둘 다 항차보고서, 로그북, BDN입니다.</p><p>아래 표는 수집 방식 세 가지입니다. 매일 보고, 항차 보고, 검증기관 보고서입니다. 매일 보고는 선박이 매일 입력해야 하지만 활용도가 높습니다. 항차 보고는 1~3개월, 검증기관 보고서는 1년에 한 번이라 활용도가 낮습니다. 어느 방식을 택하든 2교시에 보는 입력 항목은 같습니다.</p></aside>
 </section>
-<section class="slide quiz" data-time="15:26" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="0" data-src="p0_opening.html#2">
+<section class="slide quiz" data-time="15:28" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="0" data-src="p0_opening.html#2">
   <div class="kicker">퀴즈 · 정오보고 연료 1톤</div>
   <h2>정오보고에서 연료 1톤이 빠진 경우</h2>
   <div class="ct"><div class="q">기관장이 정오보고 연료를 <b>매일 1톤씩 적게</b> 적었습니다.<br>EU↔비EU 항차(50%) 1년, EUA €80. <b>장부에서 빠진 탄소비용</b>은?</div>
@@ -2070,7 +2093,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>덜 적었으니 이득일까요. 그렇지 않습니다. 연말에 BDN과 탱크 잔량으로 맞춰 보면 365톤이 빕니다. 검증기관이 거기서 멈춥니다. 빠진 배출권은 모두 제출해야 합니다. 기한을 넘긴 양에는 톤당 100유로 벌금이 따로 붙습니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="15:29" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="0" data-src="p0_thread.html#1">
+<section class="slide" data-time="15:31" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="0" data-src="p0_thread.html#1">
   <style>
     .th-def{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border:1.5px solid var(--navy);border-radius:8px;overflow:hidden;background:#fff}
     .th-def>div{padding:18px 16px 18px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
@@ -2106,7 +2129,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>화면 위쪽 머리말에 이 다섯 단계가 작게 표시됩니다. 남색으로 칠해진 칸이 지금 이야기하는 단계입니다. 다음 장에서 배 한 척을 이 다섯 단계에 올려 보겠습니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="15:31" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="0" data-src="p0_thread.html#2">
+<section class="slide" data-time="15:33" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="0" data-src="p0_thread.html#2">
   <style>
     .th-flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:22px}
     .th-flow .c{background:#fff;border:1.5px solid var(--navy);border-radius:8px;padding:14px 12px 12px;display:flex;flex-direction:column;gap:10px;position:relative}
@@ -2143,7 +2166,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[아래 '오류 예' 줄을 가리키며] 단계마다 틀리는 방식이 다릅니다. 오늘 사례 대부분이 이 줄 가운데 하나입니다. 사례가 나오면 어느 단계에서 틀린 것인지만 짚어 보십시오. 다음 장은 같은 다섯 단계를 규제별로 펼친 표입니다.</p>
   </aside>
 </section>
-<section class="slide" data-time="15:34" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="1" data-src="p1_chain.html#1">
+<section class="slide" data-time="15:35" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="1" data-src="p1_chain.html#1">
   <style>
     table.ch5{width:100%;border-collapse:separate;border-spacing:0;font-size:19px;line-height:1.45;background:#fff;border:1.5px solid var(--navy);border-radius:8px;overflow:hidden}
     table.ch5 th{background:var(--navy);color:#fff;font-size:19px;padding:10px 14px;text-align:left;font-weight:700}
@@ -2171,7 +2194,7 @@ body.laser input,body.laser select,body.laser button,body.laser a,body.laser .la
     <p>[UK ETS 줄] 영국 줄은 앞에서 본 그대로입니다. 데이터에서는 영국 항구를 따로 골라내는 것이 출발입니다. 항목별로 어느 규제가 쓰는지는 2교시에 표로 봅니다.</p>
   </aside>
 </section>
-<section class="slide p1-lg" data-time="15:35" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="1" data-src="p1_regulation.html#29">
+<section class="slide p1-lg" data-time="15:37" data-sec="1교시|환경 규제 배경 · 규제 · 대체 연료 · 대응 방안" data-grp="1.4 대응 방안|데이터 관리" data-stage="1" data-src="p1_regulation.html#29">
   <div class="kicker">1교시</div>
   <h2>1교시 정리</h2>
   <div class="p1-kf">
@@ -6877,9 +6900,10 @@ table.cnt{margin-top:12px;font-size:14.5px} table.cnt td,table.cnt th{padding:6p
 .shipsel{display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--navy);border-radius:8px;overflow:hidden;margin-bottom:16px}
 .shipsel button{font:inherit;font-size:19px;padding:10px 12px;border:0;border-right:1.5px solid var(--navy);background:#fff;color:var(--navy);cursor:pointer;font-weight:700} .shipsel button:last-child{border-right:0} .shipsel button.on{background:var(--navy);color:#fff}
 .sctab td:nth-child(n+2),.sctab th:nth-child(n+2){text-align:right;font-variant-numeric:tabular-nums} .sctab tr:last-child td{border-top:2px solid var(--navy);font-weight:700}
-.sccmp{margin-top:16px;border:1px solid #dfe5ec;border-radius:8px;padding:12px 16px} .sccmp .hd{font-size:16px;color:#5B6776;font-weight:700;margin-bottom:8px}
-.sccmp .r{display:grid;grid-template-columns:128px 1fr 104px;align-items:center;gap:10px;font-size:17px;margin-top:6px} .sccmp .r b{font-weight:700;color:var(--navy)}
-.sccmp .r i{display:block;height:18px;border-radius:3px;background:#c9d3df} .sccmp .r.on i{background:#0FA3B1} .sccmp .r span:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+.sccmp{margin-top:10px;border:1px solid #dfe5ec;border-radius:8px;padding:8px 16px} .sccmp .hd{font-size:15px;color:#5B6776;font-weight:700;margin-bottom:2px}
+.p1-lg .sctab td,.p1-lg .sctab th{padding-top:5px!important;padding-bottom:5px!important;font-size:18px!important}
+.sccmp .r{display:grid;grid-template-columns:128px 1fr 104px;align-items:center;gap:10px;font-size:16px;margin-top:3px} .sccmp .r b{font-weight:700;color:var(--navy)}
+.sccmp .r i{display:block;height:14px;border-radius:3px;background:#c9d3df} .sccmp .r.on i{background:#0FA3B1} .sccmp .r span:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
 .scin{flex-wrap:nowrap} .scin input{width:86px}
 </style>
 
@@ -6987,6 +7011,8 @@ table.cnt{margin-top:12px;font-size:14.5px} table.cnt td,table.cnt th{padding:6p
 .pva{display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:34px;font-weight:800;color:#0B7C87}
 .pva i{font-style:normal;font-size:14px;font-weight:700;text-align:center;line-height:1.3;color:#0B7C87}
 </style>
+
+
 
 <!-- extras: p1_regulation.html -->
 <style>.pctk{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}.pctk div{border:1.5px solid var(--line);border-left:5px solid var(--teal);border-radius:6px;background:#fff;padding:9px 14px;font-size:16.5px;line-height:1.4}.pctk b{display:block;font-size:18px;color:var(--navy)}</style>
